@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "diagnostic": "ATLAS CONNECTIVITY DIFFERENCE ANALYSIS",
+    "timestamp": "2026-08-21T02:10:00.000Z",
+    "mode": "READ-ONLY DIAGNOSTIC",
+    "status": "ROOT_CAUSE_IDENTIFIED"
+  },
+  "comparison": {
+    "audit_indexes": {
+      "file": "src/audit/index-forensic-audit.ts",
+      "connection_method": "mongoose.createConnection()",
+      "uri_source": "process.env.MONGODB_URI",
+      "connection_options": {
+        "readPreference": "primaryPreferred"
+      },
+      "dns_configuration": {
+        "configured": true,
+        "servers": ["8.8.8.8", "1.1.1.1"],
+        "line": 24,
+        "code": "dns.setServers(['8.8.8.8', '1.1.1.1']);"
+      },
+      "imports": {
+        "dns": true,
+        "mongoose": true,
+        "dotenv": true
+      },
+      "result": "✅ ATLAS CONNECTED"
+    },
+    "audit_relevance": {
+      "file": "src/audit/index-relevance-audit.ts",
+      "connection_method": "mongoose.createConnection()",
+      "uri_source": "process.env.MONGODB_URI",
+      "connection_options": {
+        "readPreference": "primaryPreferred"
+      },
+      "dns_configuration": {
+        "configured": false,
+        "servers": null,
+        "line": null,
+        "code": null
+      },
+      "imports": {
+        "dns": false,
+        "mongoose": true,
+        "dotenv": true
+      },
+      "result": "❌ querySrv ECONNREFUSED"
+    }
+  },
+  "root_cause": {
+    "identified": true,
+    "category": "DNS_CONFIGURATION_MISSING",
+    "description": "audit:relevance does NOT configure DNS servers before attempting MongoDB Atlas connection",
+    "technical_explanation": "MongoDB Atlas uses SRV records (_mongodb._tcp) for cluster discovery. Without explicit DNS server configuration, Node.js may use system DNS which can fail to resolve SRV records properly on some Windows configurations.",
+    "evidence": [
+      {
+        "file": "index-forensic-audit.ts",
+        "line": 24,
+        "code": "dns.setServers(['8.8.8.8', '1.1.1.1']);",
+        "status": "PRESENT"
+      },
+      {
+        "file": "index-relevance-audit.ts",
+        "line": null,
+        "code": null,
+        "status": "MISSING"
+      }
+    ],
+    "why_it_matters": {
+      "mongodb_srv": "mongodb+srv:// URIs require DNS SRV record resolution",
+      "windows_dns": "Windows system DNS may not reliably resolve SRV records",
+      "google_dns": "8.8.8.8 and 1.1.1.1 (Cloudflare) are known to handle SRV records correctly",
+      "node_behavior": "Node.js dns module uses system DNS by default unless explicitly configured"
+    }
+  },
+  "verification": {
+    "network_tests_passed": true,
+    "srv_resolution": "SUCCESS (manual test)",
+    "tcp_connectivity": "SUCCESS (all 3 Atlas nodes)",
+    "ip_whitelist": "CONFIGURED (196.225.77.167)",
+    "credentials": "VALID (audit:indexes proves this)",
+    "mongodb_uri_format": "VALID (both scripts use same URI)",
+    "mongoose_version": "IDENTICAL (both use same imports)"
+  },
+  "affected_components": {
+    "working": [
+      "src/audit/index-forensic-audit.ts"
+    ],
+    "broken": [
+      "src/audit/index-relevance-audit.ts"
+    ]
+  },
+  "proposed_fix": {
+    "type": "ADD_DNS_CONFIGURATION",
+    "minimal": true,
+    "safe": true,
+    "file": "src/audit/index-relevance-audit.ts",
+    "change": {
+      "action": "ADD_IMPORT",
+      "line": "After line 24 (after dotenv import)",
+      "code": "import dns from 'dns';"
+    },
+    "additional_change": {
+      "action": "ADD_DNS_CONFIG",
+      "line": "After line 26 (after dotenv.config())",
+      "code": "dns.setServers(['8.8.8.8', '1.1.1.1']);"
+    },
+    "risk_assessment": {
+      "data_modification": false,
+      "index_modification": false,
+      "connection_behavior": "Improved DNS resolution only",
+      "reversible": true,
+      "impact": "POSITIVE - Enables Atlas connectivity"
+    }
+  },
+  "guarantees": {
+    "no_data_modified": true,
+    "no_indexes_modified": true,
+    "no_credentials_changed": true,
+    "no_atlas_config_changed": true,
+    "read_only_maintained": true
+  },
+  "verdict": "ROOT_CAUSE_IDENTIFIED",
+  "conclusion": "audit:indexes succeeds because it configures DNS servers (8.8.8.8, 1.1.1.1) before connecting to Atlas. audit:relevance fails because it relies on Windows system DNS which cannot reliably resolve MongoDB SRV records.",
+  "next_steps": [
+    "1. Review this diagnostic report",
+    "2. Validate the proposed fix (add DNS configuration)",
+    "3. Apply minimal fix with explicit approval",
+    "4. Re-run audit:relevance to confirm resolution"
+  ]
+}

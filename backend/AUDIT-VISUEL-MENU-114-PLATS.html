@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Visuel Menu BIZZ'ART — 114 Plats</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .stats-bar {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .stat-icon { font-size: 1.5em; }
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .progress-bar {
+            flex: 1;
+            min-width: 300px;
+        }
+        .progress-bar-inner {
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .controls {
+            padding: 20px 30px;
+            background: white;
+            border-bottom: 2px solid #e0e0e0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        select {
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            background: white;
+            transition: border-color 0.3s;
+        }
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        .btn-danger:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+        }
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        .btn-success:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        .grid {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .card.confirmed { border-color: #28a745; }
+        .card.uncertain { border-color: #ffc107; }
+        .card.wrong { border-color: #dc3545; }
+        .card.missing { border-color: #6c757d; }
+        .card-header {
+            background: #f8f9fa;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+        .card-number {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .card-category {
+            background: #764ba2;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+        .card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .card-image:hover { transform: scale(1.05); }
+        .card-body { padding: 15px; }
+        .card-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .card-description {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            max-height: 60px;
+            overflow: hidden;
+        }
+        .card-price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .card-url {
+            font-size: 0.75em;
+            color: #999;
+            word-break: break-all;
+            margin-bottom: 15px;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            max-height: 40px;
+            overflow: hidden;
+        }
+        .card-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        .status-btn {
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: all 0.2s;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .status-btn:hover { transform: scale(1.05); }
+        .status-btn.active {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .status-btn.confirmed {
+            border-color: #28a745;
+            background: #28a745;
+            color: white;
+        }
+        .status-btn.uncertain {
+            border-color: #ffc107;
+            background: #ffc107;
+            color: #333;
+        }
+        .status-btn.wrong {
+            border-color: #dc3545;
+            background: #dc3545;
+            color: white;
+        }
+        .status-btn.missing {
+            border-color: #6c757d;
+            background: #6c757d;
+            color: white;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal.active { display: flex; }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        .modal-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .no-results {
+            text-align: center;
+            padding: 60px;
+            color: #999;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍕 Audit Visuel Menu BIZZ'ART</h1>
+            <p>Validation des 114 plats et leurs photos — Mode READ-ONLY</p>
+        </div>
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-icon">📊</span>
+                <div>
+                    <div class="stat-value" id="stat-total">114</div>
+                    <div class="stat-label">Total</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">🟢</span>
+                <div>
+                    <div class="stat-value" id="stat-confirmed">0</div>
+                    <div class="stat-label">Confirmed</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">🟡</span>
+                <div>
+                    <div class="stat-value" id="stat-uncertain">0</div>
+                    <div class="stat-label">Uncertain</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">🔴</span>
+                <div>
+                    <div class="stat-value" id="stat-wrong">0</div>
+                    <div class="stat-label">Wrong</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">⚫</span>
+                <div>
+                    <div class="stat-value" id="stat-missing">0</div>
+                    <div class="stat-label">Missing</div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner">
+                    <div class="progress-bar-fill" id="progress-fill">0 / 114 vérifiés</div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="🔍 Rechercher un plat...">
+            </div>
+            <select id="category-filter">
+                <option value="">Toutes les catégories</option>
+                <option value="les-pizzas">Les Pizzas</option><option value="pates">Pâtes</option><option value="plats-espagnol">Plats Espagnol</option><option value="salade">Salade</option><option value="volailles">Volailles</option><option value="viandes">Viandes</option><option value="fruits-de-mer">Fruits de mer</option><option value="tacos">Tacos</option><option value="makioub">MAkIOUB</option><option value="supplement">Supplement</option><option value="soda">Soda</option>
+            </select>
+            <select id="status-filter">
+                <option value="">Tous les statuts</option>
+                <option value="CONFIRMED">🟢 Confirmed</option>
+                <option value="UNCERTAIN">🟡 Uncertain</option>
+                <option value="WRONG_DISH">🔴 Wrong Dish</option>
+                <option value="MISSING">⚫ Missing</option>
+                <option value="PENDING">⚪ Non vérifiés</option>
+            </select>
+            <button class="btn btn-success" onclick="exportJSON()">📥 Export JSON</button>
+            <button class="btn btn-danger" onclick="resetValidations()">🔄 Reset</button>
+        </div>
+        <div id="content" class="grid"></div>
+    </div>
+    <div class="modal" id="image-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img class="modal-image" id="modal-image" src="" alt="">
+        </div>
+    </div>
+    <script>
+        const allDishes = [{"id":"6a845a7a2876405dd5375d1f","number":1,"category":"Pâtes","categorySlug":"pates","name":"Pâtes BIZZ'Art","description":"Sauce Blanche, Crevettes, Chevrettes, Moules, épinard, Cheddar, Parmesan","price":27.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg","slug":"pates-bizzart"},{"id":"6a845a7a2876405dd5375d46","number":2,"category":"Plats Espagnol","categorySlug":"plats-espagnol","name":"Paella 1 Personne","description":"","price":34,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg","slug":"paella-1-personne"},{"id":"6a845a7a2876405dd5375d58","number":3,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza Margherita","description":"Sauce tomate + Mozzarella","price":14.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png","slug":"pizza-margherita"},{"id":"6a845a7a2876405dd5375d8b","number":4,"category":"Salade","categorySlug":"salade","name":"Salade César","description":"Laitue, Tomates, Maïs, Jambon, Mozzarella, Poulet","price":15.8,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png","slug":"salade-cesar"},{"id":"6a845a7a2876405dd5375da0","number":5,"category":"Volailles","categorySlug":"volailles","name":"Escalope Ou Cuisse de Poulet","description":"","price":18,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png","slug":"escalope-ou-cuisse-de-poulet"},{"id":"6a845a7b2876405dd5375dca","number":6,"category":"Viandes","categorySlug":"viandes","name":"Steak Grillé","description":"","price":26,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg","slug":"steak-grille"},{"id":"6a845a7b2876405dd5375df1","number":7,"category":"Fruits de mer","categorySlug":"fruits-de-mer","name":"Plateau Fruits de mer","description":"","price":50,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg","slug":"plateau-fruits-de-mer"},{"id":"6a845a7b2876405dd5375e09","number":8,"category":"Tacos","categorySlug":"tacos","name":"Poulet grillé","description":"Taille L: 9.5 DT | Taille XL: 13 DT","price":9.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg","slug":"poulet-grille"},{"id":"6a845a7b2876405dd5375e18","number":9,"category":"MAkIOUB","categorySlug":"makioub","name":"Thon","description":"","price":8.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg","slug":"thon"},{"id":"6a845a7b2876405dd5375e2a","number":10,"category":"Soda","categorySlug":"soda","name":"Eau Minérale 1/2L","description":"","price":1.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png","slug":"eau-minerale-12l"},{"id":"6a8599cf0676fa99edaa848e","number":11,"category":"Supplement","categorySlug":"supplement","name":"Frite","description":"","price":3.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"frite-pizza"},{"id":"6a845a7a2876405dd5375d22","number":12,"category":"Pâtes","categorySlug":"pates","name":"Pâtes Bolognaise","description":"Viande Hachée, Fromage Gruyère râpé","price":21.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg","slug":"pates-bolognaise"},{"id":"6a845a7a2876405dd5375d49","number":13,"category":"Plats Espagnol","categorySlug":"plats-espagnol","name":"Paella Royale","description":"","price":63.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787152546/bizzart/menu/paella-royale.png","slug":"paella-royale"},{"id":"6a845a7a2876405dd5375d5b","number":14,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza Thon","description":"Sauce Tomate + Mozzarella + Câpres + Olives + Tomates Fraîches","price":16.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png","slug":"pizza-thon"},{"id":"6a845a7a2876405dd5375d8e","number":15,"category":"Salade","categorySlug":"salade","name":"Salade Bizz'Art","description":"Laitue, Tomates, Maïs, Mozzarella, Parmesan, Fruits Secs, Poulet","price":20.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png","slug":"salade-bizzart"},{"id":"6a845a7a2876405dd5375da3","number":16,"category":"Volailles","categorySlug":"volailles","name":"Escalope Panée","description":"","price":19.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg","slug":"escalope-panee"},{"id":"6a845a7b2876405dd5375dcd","number":17,"category":"Viandes","categorySlug":"viandes","name":"Steak","description":"Champignon, Bizz'Art, Fromage, Poivre","price":30,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg","slug":"steak"},{"id":"6a845a7b2876405dd5375df4","number":18,"category":"Fruits de mer","categorySlug":"fruits-de-mer","name":"Crevettes sautées ou grillées","description":"","price":28.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png","slug":"crevettes-sautees-ou-grillees"},{"id":"6a845a7b2876405dd5375e0c","number":19,"category":"Tacos","categorySlug":"tacos","name":"Poulet Mexicain","description":"Taille L: 10 DT | Taille XL: 13.5 DT","price":10,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg","slug":"poulet-mexicain"},{"id":"6a845a7b2876405dd5375e1b","number":20,"category":"MAkIOUB","categorySlug":"makioub","name":"Poulet grillé","description":"","price":9.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg","slug":"poulet-grille-84"},{"id":"6a845a7b2876405dd5375e2d","number":21,"category":"Soda","categorySlug":"soda","name":"Eau Minérale 1L","description":"","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg","slug":"eau-minerale-1l"},{"id":"6a8599cf0676fa99edaa8491","number":22,"category":"Supplement","categorySlug":"supplement","name":"Gruyère","description":"","price":3.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"gruyere-pizza"},{"id":"6a845a7a2876405dd5375d25","number":23,"category":"Pâtes","categorySlug":"pates","name":"Pâtes l'Arrabiata","description":"Thon, Câpres, Piment séché, Olive","price":18.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png","slug":"pates-larrabiata"},{"id":"6a845a7a2876405dd5375d4c","number":24,"category":"Plats Espagnol","categorySlug":"plats-espagnol","name":"Risotto Bizz'Art","description":"Sauce Blanche, Cheddar, Chevrettes, Crevettes, Moules, Parmesan","price":32,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg","slug":"risotto-bizzart"},{"id":"6a845a7a2876405dd5375d5e","number":25,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza 4 Fromages sauce tomate","description":"Mozzarella + Fromage Gruyère + Gouta + Emmental","price":18,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg","slug":"pizza-4-fromages-sauce-tomate"},{"id":"6a845a7a2876405dd5375d91","number":26,"category":"Salade","categorySlug":"salade","name":"Salade du Chef","description":"Laitue, Tomates, Maïs, Mozzarella, Parmesan, Fruits secs, Burrata, Poulet","price":24.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png","slug":"salade-du-chef"},{"id":"6a845a7a2876405dd5375da6","number":27,"category":"Volailles","categorySlug":"volailles","name":"Escalope à la crème","description":"","price":20.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg","slug":"escalope-a-la-creme"},{"id":"6a845a7b2876405dd5375dd0","number":28,"category":"Viandes","categorySlug":"viandes","name":"Steak Farci","description":"","price":32.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png","slug":"steak-farci"},{"id":"6a845a7b2876405dd5375df7","number":29,"category":"Fruits de mer","categorySlug":"fruits-de-mer","name":"Poisson du jour","description":"Dorade ou Loup","price":24,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg","slug":"poisson-du-jour"},{"id":"6a845a7b2876405dd5375e0f","number":30,"category":"Tacos","categorySlug":"tacos","name":"Poulet Pané","description":"Taille L: 10 DT | Taille XL: 13.5 DT","price":10,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg","slug":"poulet-pane"},{"id":"6a845a7b2876405dd5375e1e","number":31,"category":"MAkIOUB","categorySlug":"makioub","name":"Poulet Mexicain","description":"","price":10,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg","slug":"poulet-mexicain-85"},{"id":"6a845a7b2876405dd5375e30","number":32,"category":"Soda","categorySlug":"soda","name":"Eau Gazeuse","description":"","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg","slug":"eau-gazeuse"},{"id":"6a8599cf0676fa99edaa8494","number":33,"category":"Supplement","categorySlug":"supplement","name":"Emmental","description":"","price":3.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"emmental-pizza"},{"id":"6a845a7a2876405dd5375d28","number":34,"category":"Pâtes","categorySlug":"pates","name":"Pâtes du Chef","description":"Sauce Taro, Chevrettes, Crevettes, Moules, Piment, Champignons, Cheddar, Parmesan","price":29,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg","slug":"pates-du-chef"},{"id":"6a845a7a2876405dd5375d4f","number":35,"category":"Plats Espagnol","categorySlug":"plats-espagnol","name":"Risotto Poulet-Champignons","description":"","price":28,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg","slug":"risotto-poulet-champignons"},{"id":"6a845a7a2876405dd5375d61","number":36,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza 4 Fromages sauce blanche","description":"Mozzarella + Gruyère + Gouta + Emmental","price":18.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg","slug":"pizza-4-fromages-sauce-blanche"},{"id":"6a845a7a2876405dd5375d94","number":37,"category":"Salade","categorySlug":"salade","name":"Salade Fruits de Mer","description":"","price":28,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg","slug":"salade-fruits-de-mer"},{"id":"6a845a7a2876405dd5375da9","number":38,"category":"Volailles","categorySlug":"volailles","name":"Escalope sauce Champignon","description":"","price":21.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png","slug":"escalope-sauce-champignon"},{"id":"6a845a7b2876405dd5375dd3","number":39,"category":"Viandes","categorySlug":"viandes","name":"Foie Grillé","description":"","price":25,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg","slug":"foie-grille"},{"id":"6a845a7b2876405dd5375dfa","number":40,"category":"Fruits de mer","categorySlug":"fruits-de-mer","name":"Fruits de Mer Sautés","description":"","price":35,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg","slug":"fruits-de-mer-sautes"},{"id":"6a845a7b2876405dd5375e12","number":41,"category":"Tacos","categorySlug":"tacos","name":"Cordon Bleu","description":"Taille L: 10.7 DT | Taille XL: 14.5 DT","price":10.7,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg","slug":"cordon-bleu-81"},{"id":"6a845a7b2876405dd5375e21","number":42,"category":"MAkIOUB","categorySlug":"makioub","name":"Poulet Pané","description":"","price":10,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg","slug":"poulet-pane-86"},{"id":"6a845a7b2876405dd5375e33","number":43,"category":"Soda","categorySlug":"soda","name":"Soda","description":"Coca, Fanta, Boga...","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg","slug":"soda"},{"id":"6a8599cf0676fa99edaa8497","number":44,"category":"Supplement","categorySlug":"supplement","name":"Edam","description":"","price":3.4,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"edam-pizza"},{"id":"6a845a7a2876405dd5375d2b","number":45,"category":"Pâtes","categorySlug":"pates","name":"Pâtes Maison","description":"Sauce Blanche, épinard, Cheddar, Parmesan, Poulet","price":26,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png","slug":"pates-maison"},{"id":"6a845a7a2876405dd5375d52","number":46,"category":"Plats Espagnol","categorySlug":"plats-espagnol","name":"Gratin Poulet","description":"","price":23,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png","slug":"gratin-poulet"},{"id":"6a845a7a2876405dd5375d64","number":47,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Reine","description":"Sauce Tomate + Mozzarella + Champignons + Jambon","price":18,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg","slug":"reine"},{"id":"6a845a7a2876405dd5375d97","number":48,"category":"Salade","categorySlug":"salade","name":"Salade de Crevettes Panées","description":"Laitue, Tomates, Maïs, Parmesan, Crevettes Panées","price":22,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg","slug":"salade-de-crevettes-panees"},{"id":"6a845a7a2876405dd5375dac","number":49,"category":"Volailles","categorySlug":"volailles","name":"Escalope sauce Épinard","description":"","price":21,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg","slug":"escalope-sauce-epinard"},{"id":"6a845a7b2876405dd5375dd6","number":50,"category":"Viandes","categorySlug":"viandes","name":"Foie à la Lyonnaise","description":"","price":28,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg","slug":"foie-a-la-lyonnaise"},{"id":"6a845a7b2876405dd5375dfd","number":51,"category":"Fruits de mer","categorySlug":"fruits-de-mer","name":"Seiche gratinée aux crevettes et au miel","description":"","price":32,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg","slug":"seiche-gratinee-aux-crevettes-et-au-miel"},{"id":"6a845a7b2876405dd5375e15","number":52,"category":"Tacos","categorySlug":"tacos","name":"Viande Hachée","description":"Taille L: 11 DT | Taille XL: 15 DT","price":11,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png","slug":"viande-hachee"},{"id":"6a845a7b2876405dd5375e24","number":53,"category":"MAkIOUB","categorySlug":"makioub","name":"Cordon Bleu","description":"","price":10.7,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg","slug":"cordon-bleu-87"},{"id":"6a845a7b2876405dd5375e36","number":54,"category":"Soda","categorySlug":"soda","name":"Pétillante","description":"","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg","slug":"petillante"},{"id":"6a8599cf0676fa99edaa849a","number":55,"category":"Supplement","categorySlug":"supplement","name":"Champignon","description":"","price":3.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"champignon-pizza"},{"id":"6a845a7a2876405dd5375d2e","number":56,"category":"Pâtes","categorySlug":"pates","name":"Pâtes à L'italienne","description":"Sauce Blanche, Champignons, Cheddar, Parmesan, Burrata, Fruits Secs, Poulet","price":32.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png","slug":"pates-a-litalienne"},{"id":"6a845a7a2876405dd5375d55","number":57,"category":"Plats Espagnol","categorySlug":"plats-espagnol","name":"Gratin Fruits de Mer","description":"","price":29.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png","slug":"gratin-fruits-de-mer"},{"id":"6a845a7a2876405dd5375d67","number":58,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Piquante","description":"Sauce Piquante + Sauce tomate + Viande de boeuf + Tomate Fraîche +Poivrons + Mozzarella","price":18,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg","slug":"piquante"},{"id":"6a845a7a2876405dd5375d9a","number":59,"category":"Salade","categorySlug":"salade","name":"Salade Saumon","description":"Laitue, Tomates, Roquette, Saumon, Mozarella","price":24,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg","slug":"salade-saumon"},{"id":"6a845a7a2876405dd5375daf","number":60,"category":"Volailles","categorySlug":"volailles","name":"Escalope sauce Gorgonzola","description":"","price":22,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg","slug":"escalope-sauce-gorgonzola"},{"id":"6a845a7b2876405dd5375dd9","number":61,"category":"Viandes","categorySlug":"viandes","name":"Grillade Mixte","description":"","price":32,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png","slug":"grillade-mixte"},{"id":"6a845a7b2876405dd5375e00","number":62,"category":"Fruits de mer","categorySlug":"fruits-de-mer","name":"Symphonie Fruits de mer","description":"2 personnes","price":76,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg","slug":"symphonie-fruits-de-mer"},{"id":"6a845a7b2876405dd5375e27","number":63,"category":"MAkIOUB","categorySlug":"makioub","name":"Spécial","description":"escalope, chawerma, Fslice","price":11,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg","slug":"special"},{"id":"6a845a7b2876405dd5375e39","number":64,"category":"Soda","categorySlug":"soda","name":"Citronnade","description":"","price":3.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg","slug":"citronnade"},{"id":"6a8599cf0676fa99edaa849d","number":65,"category":"Supplement","categorySlug":"supplement","name":"Thon","description":"","price":4,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"thon-pizza"},{"id":"6a845a7a2876405dd5375d31","number":66,"category":"Pâtes","categorySlug":"pates","name":"Pâtes Fruits de Mer","description":"","price":32,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg","slug":"pates-fruits-de-mer"},{"id":"6a845a7a2876405dd5375d6a","number":67,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Chicken","description":"Sauce Blanche + Poulet + Oignons + Champignons + Emmental + Mozzarella + Poivrons","price":19,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg","slug":"chicken"},{"id":"6a845a7a2876405dd5375d9d","number":68,"category":"Salade","categorySlug":"salade","name":"Salade Roquette","description":"Fromage Pané, Parmésan et miel","price":12.8,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg","slug":"salade-roquette"},{"id":"6a845a7a2876405dd5375db2","number":69,"category":"Volailles","categorySlug":"volailles","name":"Cordon Bleu","description":"","price":23,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg","slug":"cordon-bleu"},{"id":"6a845a7b2876405dd5375ddc","number":70,"category":"Viandes","categorySlug":"viandes","name":"Grillade Royale","description":"","price":43,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg","slug":"grillade-royale"},{"id":"6a845a7b2876405dd5375e03","number":71,"category":"Fruits de mer","categorySlug":"fruits-de-mer","name":"Symphonie Terre-Mer","description":"2 personnes","price":74,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png","slug":"symphonie-terre-mer"},{"id":"6a845a7b2876405dd5375e3c","number":72,"category":"Soda","categorySlug":"soda","name":"Délio","description":"","price":2,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg","slug":"delio"},{"id":"6a8599cf0676fa99edaa84a0","number":73,"category":"Supplement","categorySlug":"supplement","name":"Jambon","description":"","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"jambon-pizza"},{"id":"6a845a7a2876405dd5375d34","number":74,"category":"Pâtes","categorySlug":"pates","name":"Ravioli Saumon","description":"","price":32,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg","slug":"ravioli-saumon"},{"id":"6a845a7a2876405dd5375d6d","number":75,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Napolitaine","description":"Sauce Tomate + Mozzarella + Câpres + Olives +Anchois","price":17,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg","slug":"napolitaine"},{"id":"6a845a7a2876405dd5375db5","number":76,"category":"Volailles","categorySlug":"volailles","name":"Escalope Bizz'Art","description":"","price":23.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png","slug":"escalope-bizzart"},{"id":"6a845a7b2876405dd5375ddf","number":77,"category":"Viandes","categorySlug":"viandes","name":"Panorama de Viande","description":"Viande, Foie, Côtelette, côte à l'os, Merguez, Escalope grillée, Escalope panée","price":65,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg","slug":"panorama-de-viande"},{"id":"6a845a7b2876405dd5375e06","number":78,"category":"Fruits de mer","categorySlug":"fruits-de-mer","name":"Symphonie Terre-Mer","description":"4 personnes - Mixte Fruits de mer à la crème : Seiche grillée, Calamar dorite, 2 Poissons de jour / Mixte de viande : Côte à l'os, Côtelette Foie, Escalope grillée, Escalope panée, Merguez, Steak","price":142,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png","slug":"symphonie-terre-mer-77"},{"id":"6a845a7b2876405dd5375e3f","number":79,"category":"Soda","categorySlug":"soda","name":"Orangina","description":"","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg","slug":"orangina"},{"id":"6a8599cf0676fa99edaa84a3","number":80,"category":"Supplement","categorySlug":"supplement","name":"Poulet","description":"","price":5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"poulet-pizza"},{"id":"6a845a7a2876405dd5375d37","number":81,"category":"Pâtes","categorySlug":"pates","name":"Ravioli Crevette","description":"","price":30,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png","slug":"ravioli-crevette"},{"id":"6a845a7a2876405dd5375d70","number":82,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pepperoni","description":"Sauce Tomate + Mozzarella + Poivron + Tomate Frâiche + Saucisse","price":16.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg","slug":"pepperoni"},{"id":"6a845a7a2876405dd5375db8","number":83,"category":"Volailles","categorySlug":"volailles","name":"Escalope du Chef","description":"","price":25.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg","slug":"escalope-du-chef"},{"id":"6a845a7b2876405dd5375de2","number":84,"category":"Viandes","categorySlug":"viandes","name":"Côtelette d'agneau","description":"","price":35,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png","slug":"cotelette-dagneau"},{"id":"6a845a7b2876405dd5375e42","number":85,"category":"Soda","categorySlug":"soda","name":"Sprite","description":"","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg","slug":"sprite"},{"id":"6a8599cf0676fa99edaa84a6","number":86,"category":"Supplement","categorySlug":"supplement","name":"Chawarma","description":"","price":4,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"chawarma-pizza"},{"id":"6a845a7a2876405dd5375d3a","number":87,"category":"Pâtes","categorySlug":"pates","name":"Ravioli Viande","description":"","price":26,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png","slug":"ravioli-viande"},{"id":"6a845a7a2876405dd5375d73","number":88,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"4 Saisons","description":"Sauce Tomate + Jambon + Champignon + Poivron + Tomate Fraîche + Olive","price":17.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg","slug":"4-saisons"},{"id":"6a845a7b2876405dd5375dbb","number":89,"category":"Volailles","categorySlug":"volailles","name":"Involtini","description":"","price":22,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg","slug":"involtini"},{"id":"6a845a7b2876405dd5375de5","number":90,"category":"Viandes","categorySlug":"viandes","name":"Côte à L'os Grillée","description":"","price":33,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg","slug":"cote-a-los-grillee"},{"id":"6a8599cf0676fa99edaa84a9","number":91,"category":"Supplement","categorySlug":"supplement","name":"Pepperoni","description":"","price":4,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"pepperoni-pizza"},{"id":"6a845a7a2876405dd5375d3d","number":92,"category":"Pâtes","categorySlug":"pates","name":"Pâtes sauce pesto","description":"Pesto crevettes et parmesan","price":29,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg","slug":"pates-sauce-pesto"},{"id":"6a845a7a2876405dd5375d76","number":93,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza Bizz'art","description":"Sauce Blanche + Champignon + Poulet + 4 Fromages + Jambon","price":20.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg","slug":"pizza-bizzart"},{"id":"6a845a7b2876405dd5375dbe","number":94,"category":"Volailles","categorySlug":"volailles","name":"Escalope Orientale","description":"","price":23,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg","slug":"escalope-orientale"},{"id":"6a845a7b2876405dd5375de8","number":95,"category":"Viandes","categorySlug":"viandes","name":"Côte à L'os Bizz'Art","description":"Fromage, Champignons, 4 poivre","price":40,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg","slug":"cote-a-los-bizzart"},{"id":"6a8599cf0676fa99edaa84ac","number":96,"category":"Supplement","categorySlug":"supplement","name":"Gruyère","description":"Prix variable selon le sandwich (3.0 - 4.0 DT)","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"gruyere-sandwich"},{"id":"6a845a7a2876405dd5375d40","number":97,"category":"Pâtes","categorySlug":"pates","name":"Lasagne Bolognaise","description":"","price":21.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg","slug":"lasagne-bolognaise"},{"id":"6a845a7a2876405dd5375d79","number":98,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza Anglaise","description":"Sauce Blanche + Mozzarella + 4 Fromages + Roquefort + Jambon + Basilic","price":19,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg","slug":"pizza-anglaise"},{"id":"6a845a7b2876405dd5375dc1","number":99,"category":"Volailles","categorySlug":"volailles","name":"Suprême","description":"Bizz'Art, Épinard, Fromage, Champignons","price":24,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png","slug":"supreme"},{"id":"6a845a7b2876405dd5375deb","number":100,"category":"Viandes","categorySlug":"viandes","name":"Filet de boeuf","description":"","price":36,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg","slug":"filet-de-boeuf"},{"id":"6a8599cf0676fa99edaa84af","number":101,"category":"Supplement","categorySlug":"supplement","name":"Emmental","description":"Prix variable selon le sandwich (3.0 - 4.0 DT)","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"emmental-sandwich"},{"id":"6a845a7a2876405dd5375d43","number":102,"category":"Pâtes","categorySlug":"pates","name":"Lasagne Fruits De Mer","description":"","price":32,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg","slug":"lasagne-fruits-de-mer"},{"id":"6a845a7a2876405dd5375d7c","number":103,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza BURRATA","description":"Sauce Tomate ou sauce blanche + Mozzarella + Gruyère + Parmesan +Tomates + Burrata","price":22.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg","slug":"pizza-burrata"},{"id":"6a845a7b2876405dd5375dc4","number":104,"category":"Volailles","categorySlug":"volailles","name":"Suprême Maison","description":"Sauce Taro, Fruits Secs, Parmesan","price":25,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg","slug":"supreme-maison"},{"id":"6a845a7b2876405dd5375dee","number":105,"category":"Viandes","categorySlug":"viandes","name":"Filet de boeuf sauce au choix","description":"","price":42,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg","slug":"filet-de-boeuf-sauce-au-choix"},{"id":"6a8599cf0676fa99edaa84b2","number":106,"category":"Supplement","categorySlug":"supplement","name":"Edam","description":"Prix variable selon le sandwich (3.0 - 4.0 DT)","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"edam-sandwich"},{"id":"6a845a7a2876405dd5375d7f","number":107,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza Fruit de mer","description":"","price":28.5,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg","slug":"pizza-fruit-de-mer"},{"id":"6a845a7b2876405dd5375dc7","number":108,"category":"Volailles","categorySlug":"volailles","name":"Poulet à l'italienne","description":"","price":28,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png","slug":"poulet-a-litalienne"},{"id":"6a8599cf0676fa99edaa84b5","number":109,"category":"Supplement","categorySlug":"supplement","name":"Champignon","description":"Prix variable selon le sandwich (3.0 - 4.0 DT)","price":3,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"champignon-sandwich"},{"id":"6a845a7a2876405dd5375d82","number":110,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza Saumon","description":"Sauce Blanche + 4 Fromages + Saumon + Basilic","price":26,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg","slug":"pizza-saumon"},{"id":"6a8599cf0676fa99edaa84b8","number":111,"category":"Supplement","categorySlug":"supplement","name":"Oeuf","description":"","price":1,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"oeuf-sandwich"},{"id":"6a845a7a2876405dd5375d85","number":112,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza Végétarienne","description":"Fromage + Courgette + Aubergine + champignon + oignon caramélisé + Sauce Aux Choix","price":20,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg","slug":"pizza-vegetarienne"},{"id":"6a8599cf0676fa99edaa84bb","number":113,"category":"Supplement","categorySlug":"supplement","name":"Slice","description":"","price":1,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png","slug":"slice-sandwich"},{"id":"6a845a7a2876405dd5375d88","number":114,"category":"Les Pizzas","categorySlug":"les-pizzas","name":"Pizza Chevrettes","description":"4 Fromage + Chevrette","price":20,"image":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg","slug":"pizza-chevrettes"}];
+        let validations = {};
+
+        function loadValidations() {
+            const saved = localStorage.getItem('bizzart-menu-validations');
+            if (saved) {
+                validations = JSON.parse(saved);
+                console.log('✅ Validations chargées:', Object.keys(validations).length);
+            }
+        }
+
+        function saveValidations() {
+            localStorage.setItem('bizzart-menu-validations', JSON.stringify(validations));
+        }
+
+        function renderDishes() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const categoryFilter = document.getElementById('category-filter').value;
+            const statusFilter = document.getElementById('status-filter').value;
+
+            let filtered = allDishes.filter(dish => {
+                if (searchTerm && !dish.name.toLowerCase().includes(searchTerm)) return false;
+                if (categoryFilter && dish.categorySlug !== categoryFilter) return false;
+                if (statusFilter) {
+                    const dishStatus = validations[dish.id] || 'PENDING';
+                    if (statusFilter !== dishStatus) return false;
+                }
+                return true;
+            });
+
+            const content = document.getElementById('content');
+            if (filtered.length === 0) {
+                content.innerHTML = '<div class="no-results">Aucun plat ne correspond aux filtres.</div>';
+                return;
+            }
+
+            content.innerHTML = filtered.map(dish => {
+                const status = validations[dish.id] || '';
+                const statusClass = status.toLowerCase().replace('_', '');
+                return `
+                    <div class="card ${statusClass}">
+                        <div class="card-header">
+                            <span class="card-number">#${dish.number}</span>
+                            <span class="card-category">${dish.category}</span>
+                        </div>
+                        <img class="card-image" src="${dish.image}" alt="${dish.name}" onclick="openModal('${dish.image}')" 
+                             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2220%22>Image manquante</text></svg>'">
+                        <div class="card-body">
+                            <div class="card-title">${dish.name}</div>
+                            ${dish.description ? `<div class="card-description">${dish.description}</div>` : ''}
+                            <div class="card-price">${dish.price.toFixed(2)} DT</div>
+                            <div class="card-url">${dish.image}</div>
+                            <div class="card-actions">
+                                <button class="status-btn ${status === 'CONFIRMED' ? 'confirmed active' : ''}" onclick="setStatus('${dish.id}', 'CONFIRMED')">🟢 Correct</button>
+                                <button class="status-btn ${status === 'UNCERTAIN' ? 'uncertain active' : ''}" onclick="setStatus('${dish.id}', 'UNCERTAIN')">🟡 Incertain</button>
+                                <button class="status-btn ${status === 'WRONG_DISH' ? 'wrong active' : ''}" onclick="setStatus('${dish.id}', 'WRONG_DISH')">🔴 Mauvais</button>
+                                <button class="status-btn ${status === 'MISSING' ? 'missing active' : ''}" onclick="setStatus('${dish.id}', 'MISSING')">⚫ Absent</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function setStatus(dishId, status) {
+            validations[dishId] = status;
+            saveValidations();
+            renderDishes();
+            updateStats();
+        }
+
+        function updateStats() {
+            const confirmed = Object.values(validations).filter(v => v === 'CONFIRMED').length;
+            const uncertain = Object.values(validations).filter(v => v === 'UNCERTAIN').length;
+            const wrong = Object.values(validations).filter(v => v === 'WRONG_DISH').length;
+            const missing = Object.values(validations).filter(v => v === 'MISSING').length;
+            const verified = confirmed + uncertain + wrong + missing;
+            const percentage = (verified / 114 * 100).toFixed(1);
+
+            document.getElementById('stat-confirmed').textContent = confirmed;
+            document.getElementById('stat-uncertain').textContent = uncertain;
+            document.getElementById('stat-wrong').textContent = wrong;
+            document.getElementById('stat-missing').textContent = missing;
+            document.getElementById('progress-fill').textContent = `${verified} / 114 vérifiés (${percentage}%)`;
+            document.getElementById('progress-fill').style.width = `${percentage}%`;
+        }
+
+        function openModal(imageSrc) {
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('image-modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('image-modal').classList.remove('active');
+        }
+
+        function exportJSON() {
+            const report = {
+                date: new Date().toISOString(),
+                total: allDishes.length,
+                statistics: {
+                    confirmed: Object.values(validations).filter(v => v === 'CONFIRMED').length,
+                    uncertain: Object.values(validations).filter(v => v === 'UNCERTAIN').length,
+                    wrong_dish: Object.values(validations).filter(v => v === 'WRONG_DISH').length,
+                    missing: Object.values(validations).filter(v => v === 'MISSING').length,
+                    pending: allDishes.length - Object.keys(validations).length
+                },
+                dishes: allDishes.map(dish => ({
+                    number: dish.number,
+                    id: dish.id,
+                    category: dish.category,
+                    name: dish.name,
+                    price: dish.price,
+                    image: dish.image,
+                    status: validations[dish.id] || 'PENDING'
+                }))
+            };
+            const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `audit-menu-bizzart-${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function resetValidations() {
+            if (confirm('⚠️ Êtes-vous sûr de vouloir réinitialiser toutes les validations ?')) {
+                validations = {};
+                localStorage.removeItem('bizzart-menu-validations');
+                renderDishes();
+                updateStats();
+            }
+        }
+
+        document.getElementById('search-input').addEventListener('input', renderDishes);
+        document.getElementById('category-filter').addEventListener('change', renderDishes);
+        document.getElementById('status-filter').addEventListener('change', renderDishes);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+        document.getElementById('image-modal').addEventListener('click', (e) => { if (e.target.id === 'image-modal') closeModal(); });
+
+        loadValidations();
+        renderDishes();
+        updateStats();
+    </script>
+</body>
+</html>

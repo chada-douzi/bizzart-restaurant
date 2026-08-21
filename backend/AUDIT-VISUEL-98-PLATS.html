@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Visuel BIZZ'ART - Validation par Photos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .container { max-width: 1800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h1 { font-size: 28px; margin-bottom: 10px; color: #333; }
+    .header { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #e0e0e0; }
+    
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+    .stat-card { background: #f8f9fa; padding: 15px 20px; border-radius: 6px; }
+    .stat-card h3 { font-size: 12px; color: #666; margin-bottom: 5px; text-transform: uppercase; }
+    .stat-card p { font-size: 28px; font-weight: bold; color: #2196F3; }
+    .stat-card.success p { color: #4CAF50; }
+    .stat-card.warning p { color: #FF9800; }
+    .stat-card.danger p { color: #f44336; }
+    
+    .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #ddd; }
+    .tab { padding: 10px 20px; cursor: pointer; background: none; border: none; font-size: 16px; color: #666; border-bottom: 3px solid transparent; }
+    .tab.active { color: #2196F3; border-bottom-color: #2196F3; font-weight: 600; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    
+    .photo-card { background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+    .photo-card.validated { border-color: #4CAF50; background: #f1f8f4; }
+    .photo-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    .photo-number { font-size: 18px; font-weight: bold; color: #333; }
+    .photo-status { padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+    .photo-status.pending { background: #FFF3E0; color: #F57C00; }
+    .photo-status.validated { background: #E8F5E9; color: #4CAF50; }
+    
+    .photo-main { display: grid; grid-template-columns: 400px 1fr; gap: 30px; }
+    .photo-display { position: relative; }
+    .photo-display img { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+    .photo-display img:hover { transform: scale(1.02); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .photo-info { font-size: 12px; color: #666; margin-top: 10px; }
+    
+    .photo-details { }
+    .usage-badge { display: inline-block; padding: 4px 10px; background: #E3F2FD; color: #1976D2; border-radius: 4px; font-size: 13px; font-weight: 600; margin-bottom: 15px; }
+    .usage-badge.warning { background: #FFF3E0; color: #F57C00; }
+    .usage-badge.danger { background: #FFEBEE; color: #c62828; }
+    
+    .plat-list { max-height: 200px; overflow-y: auto; background: #f8f9fa; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+    .plat-item { padding: 8px 0; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; }
+    .plat-item:last-child { border-bottom: none; }
+    .plat-name { font-weight: 500; color: #333; }
+    .plat-category { font-size: 12px; color: #666; padding: 2px 8px; background: white; border-radius: 3px; }
+    
+    .validation-form { background: #fff; padding: 20px; border-radius: 6px; border: 1px solid #e0e0e0; }
+    .form-section { margin-bottom: 20px; }
+    .form-section h4 { font-size: 14px; color: #666; margin-bottom: 10px; text-transform: uppercase; }
+    .radio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .radio-option { display: flex; align-items: center; padding: 10px; border: 2px solid #e0e0e0; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
+    .radio-option:hover { border-color: #2196F3; background: #f8f9fa; }
+    .radio-option input[type="radio"] { margin-right: 8px; }
+    .radio-option.selected { border-color: #2196F3; background: #E3F2FD; }
+    
+    .plat-selector { margin-top: 15px; }
+    .plat-search { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 10px; }
+    .plat-checkboxes { max-height: 250px; overflow-y: auto; background: #f8f9fa; padding: 15px; border-radius: 6px; }
+    .plat-checkbox { display: flex; align-items: center; padding: 8px; border-bottom: 1px solid #e0e0e0; }
+    .plat-checkbox:last-child { border-bottom: none; }
+    .plat-checkbox input[type="checkbox"] { margin-right: 10px; }
+    .plat-checkbox label { flex: 1; cursor: pointer; }
+    
+    .action-buttons { display: flex; gap: 10px; margin-top: 20px; }
+    .btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.2s; }
+    .btn-primary { background: #2196F3; color: white; }
+    .btn-primary:hover { background: #1976D2; }
+    .btn-success { background: #4CAF50; color: white; }
+    .btn-success:hover { background: #45a049; }
+    .btn-secondary { background: #757575; color: white; }
+    .btn-secondary:hover { background: #616161; }
+    .btn-danger { background: #f44336; color: white; }
+    .btn-danger:hover { background: #d32f2f; }
+    
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); }
+    .modal-content { margin: 50px auto; max-width: 90vw; max-height: 90vh; display: block; border-radius: 8px; }
+    .modal-close { position: absolute; top: 20px; right: 35px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
+    .modal-close:hover { color: #ccc; }
+    
+    .inventory-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .inventory-table thead { background: #f8f9fa; }
+    .inventory-table th { padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: #333; border-bottom: 2px solid #ddd; }
+    .inventory-table td { padding: 12px; border-bottom: 1px solid #e0e0e0; font-size: 14px; }
+    .inventory-table tr:hover { background: #f8f9fa; }
+    
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+    .badge-success { background: #E8F5E9; color: #4CAF50; }
+    .badge-warning { background: #FFF3E0; color: #F57C00; }
+    .badge-danger { background: #FFEBEE; color: #f44336; }
+    .badge-info { background: #E3F2FD; color: #2196F3; }
+    
+    .progress-bar { height: 8px; background: #e0e0e0; border-radius: 4px; margin: 20px 0; overflow: hidden; }
+    .progress-fill { height: 100%; background: #4CAF50; transition: width 0.3s; }
+    
+    .alert { padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+    .alert-info { background: #E3F2FD; color: #1976D2; border-left: 4px solid #2196F3; }
+    .alert-success { background: #E8F5E9; color: #2E7D32; border-left: 4px solid #4CAF50; }
+    .alert-warning { background: #FFF3E0; color: #E65100; border-left: 4px solid #FF9800; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔍 Audit Visuel Professionnel — BIZZ'ART</h1>
+      <p style="color: #666; margin-top: 10px;">Validation par Photos Uniques (35 photos → 98 plats)</p>
+      
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressBar" style="width: 0%;"></div>
+      </div>
+      <p style="text-align: center; font-size: 14px; color: #666; margin-top: 5px;">
+        <span id="progressText">0 / 35 photos validées</span>
+      </p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Photos Uniques</h3>
+          <p>35</p>
+        </div>
+        <div class="stat-card success">
+          <h3>Photos Validées</h3>
+          <p id="statsValidated">0</p>
+        </div>
+        <div class="stat-card warning">
+          <h3>Photos Restantes</h3>
+          <p id="statsRemaining">35</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Plats</h3>
+          <p>98</p>
+        </div>
+        <div class="stat-card success">
+          <h3>Plats OK</h3>
+          <p id="statsPlatsOK">0</p>
+        </div>
+        <div class="stat-card danger">
+          <h3>Nouvelles Photos</h3>
+          <p id="statsNouvellesPhotos">0</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('photos')">📸 Photos Uniques (35)</button>
+      <button class="tab" onclick="showTab('inventory')">📋 Nouvelles Photos Nécessaires</button>
+      <button class="tab" onclick="showTab('duplicates')">🔁 Doublons</button>
+      <button class="tab" onclick="showTab('plats')">🍽️ Liste des Plats (98)</button>
+      <button class="tab" onclick="showTab('export')">💾 Export</button>
+    </div>
+
+    <div id="photos-tab" class="tab-content active">
+      <div class="alert alert-info">
+        <strong>Mode principal :</strong> Validez les 35 photos uniques au lieu de parcourir les 98 plats individuellement. 
+        Pour chaque photo, identifiez son contenu et sélectionnez le(s) plat(s) correspondant(s).
+      </div>
+      
+      <div class="action-buttons" style="margin-bottom: 20px;">
+        <button class="btn btn-success" onclick="saveProgress()">💾 Sauvegarder</button>
+        <button class="btn btn-secondary" onclick="loadProgress()">↩️ Reprendre</button>
+        <button class="btn btn-danger" onclick="confirmReset()">🗑️ Réinitialiser</button>
+      </div>
+      
+      <div id="photosContainer"></div>
+    </div>
+
+    <div id="inventory-tab" class="tab-content">
+      <div class="alert alert-warning">
+        <strong>Plats nécessitant une nouvelle photo</strong><br>
+        Cette liste est calculée automatiquement après validation des photos uniques.
+      </div>
+      <div id="inventoryContainer"></div>
+    </div>
+
+    <div id="duplicates-tab" class="tab-content">
+      <h2 style="margin-bottom: 20px;">Analyse des Doublons</h2>
+      <div id="duplicatesContainer"></div>
+    </div>
+
+    <div id="plats-tab" class="tab-content">
+      <h2 style="margin-bottom: 20px;">Liste des 98 Plats</h2>
+      <div id="platsContainer"></div>
+    </div>
+
+    <div id="export-tab" class="tab-content">
+      <h2 style="margin-bottom: 20px;">Export de l'Audit</h2>
+      <div class="action-buttons">
+        <button class="btn btn-primary" onclick="exportFinalJSON()">📄 Exporter Audit Final (JSON)</button>
+        <button class="btn btn-primary" onclick="exportInventoryCSV()">📊 Exporter Inventaire (CSV)</button>
+        <button class="btn btn-primary" onclick="exportDoublonsJSON()">🔁 Exporter Doublons (JSON)</button>
+      </div>
+      <pre id="exportPreview" style="background: #f5f5f5; padding: 20px; border-radius: 6px; margin-top: 20px; overflow: auto; max-height: 500px; display: none;"></pre>
+    </div>
+  </div>
+
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    let auditData = null;
+    let validationState = {};
+    const STORAGE_KEY = 'bizzart-photo-validation-v2';
+
+    // Charger les données JSON
+    fetch('AUDIT-VISUEL-98-PLATS.json')
+      .then(res => res.json())
+      .then(data => {
+        auditData = data;
+        loadProgress();
+        initializePhotosView();
+        updateStats();
+      })
+      .catch(err => {
+        console.error('Erreur chargement données:', err);
+        alert('Erreur lors du chargement des données');
+      });
+
+    function initializePhotosView() {
+      const container = document.getElementById('photosContainer');
+      container.innerHTML = '';
+
+      // Grouper les plats par photo
+      const photoGroups = {};
+      auditData.menuItems.forEach(item => {
+        const url = item.image;
+        if (!photoGroups[url]) {
+          photoGroups[url] = [];
+        }
+        photoGroups[url].push(item);
+      });
+
+      // Créer une carte pour chaque photo unique
+      let photoIndex = 1;
+      Object.entries(photoGroups).forEach(([url, plats]) => {
+        const photoId = `photo_${photoIndex}`;
+        const validation = validationState[photoId] || {};
+        const isValidated = validation.validated || false;
+        
+        const card = createPhotoCard(photoId, photoIndex, url, plats, validation, isValidated);
+        container.appendChild(card);
+        photoIndex++;
+      });
+    }
+
+    function createPhotoCard(photoId, photoIndex, url, plats, validation, isValidated) {
+      const card = document.createElement('div');
+      card.className = `photo-card ${isValidated ? 'validated' : ''}`;
+      card.id = photoId;
+
+      const usageCount = plats.length;
+      let usageBadgeClass = '';
+      if (usageCount === 1) usageBadgeClass = '';
+      else if (usageCount <= 3) usageBadgeClass = 'warning';
+      else usageBadgeClass = 'danger';
+
+      const photoFilename = url.split('/').pop();
+      const categories = [...new Set(plats.map(p => p.categoryName))];
+
+      card.innerHTML = `
+        <div class="photo-card-header">
+          <div class="photo-number">PHOTO #${photoIndex}</div>
+          <div class="photo-status ${isValidated ? 'validated' : 'pending'}">
+            ${isValidated ? '✅ VALIDÉE' : '⏳ EN ATTENTE'}
+          </div>
+        </div>
+
+        <div class="photo-main">
+          <div class="photo-display">
+            <img src="audit-photos/${photoFilename}" alt="Photo ${photoIndex}" onclick="openModal(this.src)">
+            <div class="photo-info">
+              <strong>Fichier:</strong> ${photoFilename}<br>
+              <strong>URL:</strong> ${url.substring(0, 50)}...
+            </div>
+          </div>
+
+          <div class="photo-details">
+            <div class="usage-badge ${usageBadgeClass}">
+              Utilisée par ${usageCount} plat${usageCount > 1 ? 's' : ''}
+            </div>
+
+            <div class="plat-list">
+              ${plats.map(p => `
+                <div class="plat-item">
+                  <span class="plat-name">${p.nameFr}</span>
+                  <span class="plat-category">${p.categoryName}</span>
+                </div>
+              `).join('')}
+            </div>
+
+            ${categories.length > 1 ? `
+              <div style="margin-bottom: 15px; font-size: 13px; color: #666;">
+                <strong>Catégories:</strong> ${categories.join(', ')}
+              </div>
+            ` : ''}
+
+            <div class="validation-form">
+              <div class="form-section">
+                <h4>À quoi correspond cette photo ?</h4>
+                <div class="radio-grid">
+                  ${['Pizza', 'Pâtes', 'Viande', 'Volaille', 'Poisson', 'Fruits de mer', 'Salade', 'Dessert', 'Boisson', 'Autre', 'Impossible à identifier'].map(type => `
+                    <div class="radio-option ${validation.photoType === type ? 'selected' : ''}">
+                      <input type="radio" name="${photoId}_type" value="${type}" 
+                        ${validation.photoType === type ? 'checked' : ''} 
+                        onchange="updatePhotoType('${photoId}', '${type}')">
+                      <label>${type}</label>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h4>Origine</h4>
+                <div class="radio-grid">
+                  ${['Vraie photo Bizz\'Art', 'Probablement Bizz\'Art', 'Stock/générique', 'Inconnue'].map(origin => `
+                    <div class="radio-option ${validation.origin === origin ? 'selected' : ''}">
+                      <input type="radio" name="${photoId}_origin" value="${origin}" 
+                        ${validation.origin === origin ? 'checked' : ''}
+                        onchange="updateOrigin('${photoId}', '${origin}')">
+                      <label>${origin}</label>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div class="form-section plat-selector">
+                <h4>Plat(s) correspondant(s)</h4>
+                <input type="text" class="plat-search" placeholder="Rechercher un plat..." 
+                  oninput="filterPlatsForPhoto('${photoId}', this.value)">
+                <div class="plat-checkboxes" id="${photoId}_plats">
+                  ${plats.map(p => `
+                    <div class="plat-checkbox">
+                      <input type="checkbox" id="${photoId}_${p._id}" value="${p._id}"
+                        ${validation.matchingPlats && validation.matchingPlats.includes(p._id) ? 'checked' : ''}
+                        onchange="updateMatchingPlats('${photoId}')">
+                      <label for="${photoId}_${p._id}">${p.nameFr} (${p.categoryName})</label>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div class="action-buttons">
+                <button class="btn btn-success" onclick="validatePhoto('${photoId}')">
+                  ✅ Valider cette photo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      return card;
+    }
+
+    function updatePhotoType(photoId, type) {
+      if (!validationState[photoId]) validationState[photoId] = {};
+      validationState[photoId].photoType = type;
+      
+      document.querySelectorAll(`input[name="${photoId}_type"]`).forEach(radio => {
+        radio.parentElement.classList.toggle('selected', radio.value === type);
+      });
+      
+      autoSave();
+    }
+
+    function updateOrigin(photoId, origin) {
+      if (!validationState[photoId]) validationState[photoId] = {};
+      validationState[photoId].origin = origin;
+      
+      document.querySelectorAll(`input[name="${photoId}_origin"]`).forEach(radio => {
+        radio.parentElement.classList.toggle('selected', radio.value === origin);
+      });
+      
+      autoSave();
+    }
+
+    function updateMatchingPlats(photoId) {
+      if (!validationState[photoId]) validationState[photoId] = {};
+      
+      const checkboxes = document.querySelectorAll(`#${photoId}_plats input[type="checkbox"]:checked`);
+      validationState[photoId].matchingPlats = Array.from(checkboxes).map(cb => cb.value);
+      
+      autoSave();
+    }
+
+    function filterPlatsForPhoto(photoId, searchTerm) {
+      const container = document.getElementById(`${photoId}_plats`);
+      const checkboxes = container.querySelectorAll('.plat-checkbox');
+      
+      checkboxes.forEach(cb => {
+        const label = cb.querySelector('label').textContent.toLowerCase();
+        cb.style.display = label.includes(searchTerm.toLowerCase()) ? 'flex' : 'none';
+      });
+    }
+
+    function validatePhoto(photoId) {
+      const validation = validationState[photoId];
+      
+      if (!validation || !validation.photoType || !validation.origin) {
+        alert('⚠️ Veuillez remplir tous les champs obligatoires (Type et Origine)');
+        return;
+      }
+      
+      validation.validated = true;
+      validation.validatedAt = new Date().toISOString();
+      
+      const card = document.getElementById(photoId);
+      card.classList.add('validated');
+      card.querySelector('.photo-status').className = 'photo-status validated';
+      card.querySelector('.photo-status').textContent = '✅ VALIDÉE';
+      
+      saveProgress();
+      updateStats();
+      updateInventory();
+      
+      // Scroll vers la prochaine photo non validée
+      const nextPhoto = document.querySelector('.photo-card:not(.validated)');
+      if (nextPhoto) {
+        nextPhoto.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        alert('🎉 Toutes les photos ont été validées !');
+      }
+    }
+
+    function updateStats() {
+      const totalPhotos = Object.keys(validationState).length;
+      const validated = Object.values(validationState).filter(v => v.validated).length;
+      const remaining = 35 - validated;
+      
+      document.getElementById('statsValidated').textContent = validated;
+      document.getElementById('statsRemaining').textContent = remaining;
+      document.getElementById('progressText').textContent = `${validated} / 35 photos validées`;
+      document.getElementById('progressBar').style.width = `${(validated / 35) * 100}%`;
+      
+      // Calculer les plats OK et nouvelles photos nécessaires
+      const platStats = calculatePlatStats();
+      document.getElementById('statsPlatsOK').textContent = platStats.ok;
+      document.getElementById('statsNouvellesPhotos').textContent = platStats.nouvelles;
+    }
+
+    function calculatePlatStats() {
+      let platsOK = 0;
+      let platsNouvellesPhotos = 0;
+      
+      if (!auditData) return { ok: 0, nouvelles: 0 };
+      
+      auditData.menuItems.forEach(plat => {
+        const photoValidation = findValidationForPlat(plat._id);
+        
+        if (photoValidation && photoValidation.validated) {
+          if (photoValidation.matchingPlats && photoValidation.matchingPlats.includes(plat._id)) {
+            platsOK++;
+          } else {
+            platsNouvellesPhotos++;
+          }
+        }
+      });
+      
+      return { ok: platsOK, nouvelles: platsNouvellesPhotos };
+    }
+
+    function findValidationForPlat(platId) {
+      const plat = auditData.menuItems.find(p => p._id === platId);
+      if (!plat) return null;
+      
+      const photoGroups = {};
+      auditData.menuItems.forEach(item => {
+        if (!photoGroups[item.image]) photoGroups[item.image] = [];
+        photoGroups[item.image].push(item);
+      });
+      
+      let photoIndex = 1;
+      for (const [url, plats] of Object.entries(photoGroups)) {
+        if (plats.find(p => p._id === platId)) {
+          const photoId = `photo_${photoIndex}`;
+          return validationState[photoId];
+        }
+        photoIndex++;
+      }
+      
+      return null;
+    }
+
+    function updateInventory() {
+      const container = document.getElementById('inventoryContainer');
+      const nouvelles = [];
+      
+      auditData.menuItems.forEach(plat => {
+        const validation = findValidationForPlat(plat._id);
+        
+        if (!validation || !validation.validated) {
+          nouvelles.push({
+            plat,
+            probleme: 'Photo non validée',
+            raison: 'En attente de validation'
+          });
+        } else if (!validation.matchingPlats || !validation.matchingPlats.includes(plat._id)) {
+          let raison = '';
+          if (validation.origin === 'Stock/générique') {
+            raison = 'Photo générique/stock';
+          } else if (validation.origin === 'Inconnue') {
+            raison = 'Origine inconnue';
+          } else if (validation.matchingPlats && validation.matchingPlats.length > 0) {
+            raison = 'Photo correspond à un autre plat';
+          } else {
+            raison = 'Aucun plat correspondant identifié';
+          }
+          
+          nouvelles.push({
+            plat,
+            probleme: 'Nouvelle photo nécessaire',
+            raison
+          });
+        }
+      });
+      
+      if (nouvelles.length === 0) {
+        container.innerHTML = '<div class="alert alert-success">✅ Tous les plats ont une photo valide !</div>';
+        return;
+      }
+      
+      let html = `
+        <p style="margin-bottom: 20px;"><strong>${nouvelles.length} plat(s)</strong> nécessitent une nouvelle photo.</p>
+        <table class="inventory-table">
+          <thead>
+            <tr>
+              <th>Plat</th>
+              <th>Catégorie</th>
+              <th>Photo actuelle</th>
+              <th>Problème</th>
+              <th>Raison</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${nouvelles.map(item => `
+              <tr>
+                <td><strong>${item.plat.nameFr}</strong></td>
+                <td><span class="badge badge-info">${item.plat.categoryName}</span></td>
+                <td><small>${item.plat.image.split('/').pop()}</small></td>
+                <td><span class="badge badge-warning">${item.probleme}</span></td>
+                <td>${item.raison}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+      
+      container.innerHTML = html;
+    }
+
+    function saveProgress() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(validationState));
+      alert('✅ Progression sauvegardée');
+    }
+
+    function loadProgress() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        validationState = JSON.parse(saved);
+        if (auditData) {
+          initializePhotosView();
+          updateStats();
+          updateInventory();
+        }
+      }
+    }
+
+    function confirmReset() {
+      if (confirm('⚠️ Êtes-vous sûr de vouloir réinitialiser toutes les validations ?')) {
+        validationState = {};
+        localStorage.removeItem(STORAGE_KEY);
+        initializePhotosView();
+        updateStats();
+        updateInventory();
+        alert('✅ Validation réinitialisée');
+      }
+    }
+
+    let autoSaveTimer;
+    function autoSave() {
+      clearTimeout(autoSaveTimer);
+      autoSaveTimer = setTimeout(() => {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(validationState));
+      }, 2000);
+    }
+
+    function exportFinalJSON() {
+      const finalAudit = {
+        version: 2,
+        generatedAt: new Date().toISOString(),
+        totalPhotos: 35,
+        totalPlats: 98,
+        photosValidated: Object.values(validationState).filter(v => v.validated).length,
+        validations: validationState,
+        platAssignments: auditData.menuItems.map(plat => {
+          const validation = findValidationForPlat(plat._id);
+          const isMatching = validation && validation.matchingPlats && validation.matchingPlats.includes(plat._id);
+          
+          return {
+            platId: plat._id,
+            nameFr: plat.nameFr,
+            category: plat.categoryName,
+            currentImage: plat.image,
+            photoValidated: validation ? validation.validated : false,
+            photoType: validation ? validation.photoType : null,
+            photoOrigin: validation ? validation.origin : null,
+            isCorrect: isMatching,
+            needsNewPhoto: !isMatching,
+            classification: isMatching ? 'MATCH' : 'NOUVELLE_PHOTO_NECESSAIRE'
+          };
+        })
+      };
+      
+      downloadJSON(finalAudit, `AUDIT-VISUEL-FINAL-BIZZART-${Date.now()}.json`);
+      document.getElementById('exportPreview').textContent = JSON.stringify(finalAudit, null, 2);
+      document.getElementById('exportPreview').style.display = 'block';
+    }
+
+    function exportInventoryCSV() {
+      let csv = 'ID,Nom,Catégorie,Photo Actuelle,Problème,Raison\n';
+      
+      auditData.menuItems.forEach(plat => {
+        const validation = findValidationForPlat(plat._id);
+        
+        if (!validation || !validation.validated || !validation.matchingPlats || !validation.matchingPlats.includes(plat._id)) {
+          let raison = validation && validation.origin === 'Stock/générique' ? 'Photo générique' : 'Nouvelle photo nécessaire';
+          csv += `"${plat._id}","${plat.nameFr}","${plat.categoryName}","${plat.image}","Nouvelle photo nécessaire","${raison}"\n`;
+        }
+      });
+      
+      downloadCSV(csv, `INVENTAIRE-NOUVELLES-PHOTOS-BIZZART-${Date.now()}.csv`);
+    }
+
+    function exportDoublonsJSON() {
+      const duplicates = auditData.duplicateAnalysis || [];
+      downloadJSON(duplicates, `RAPPORT-DOUBLONS-BIZZART-${Date.now()}.json`);
+    }
+
+    function downloadJSON(data, filename) {
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+    }
+
+    function downloadCSV(csv, filename) {
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+    }
+
+    function showTab(tabName) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tabName + '-tab').classList.add('active');
+      
+      if (tabName === 'inventory') {
+        updateInventory();
+      }
+    }
+
+    function openModal(src) {
+      document.getElementById('imageModal').style.display = 'block';
+      document.getElementById('modalImage').src = src;
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    // Auto-save every 30 seconds
+    setInterval(() => {
+      if (Object.keys(validationState).length > 0) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(validationState));
+      }
+    }, 30000);
+  </script>
+</body>
+</html>

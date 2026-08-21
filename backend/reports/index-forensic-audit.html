@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Forensique des Index</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #334155; }
+    .header h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #f1f5f9; }
+    .header p { color: #94a3b8; }
+    .status-badge { display: inline-block; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; margin-top: 1rem; background: #f59e0b; color: white; }
+    .section { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid #334155; }
+    .section h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #f1f5f9; border-bottom: 2px solid #334155; padding-bottom: 0.5rem; }
+    .section h3 { font-size: 1.2rem; margin: 1rem 0 0.5rem 0; color: #cbd5e1; }
+    .metric { display: flex; justify-content: space-between; padding: 0.75rem; margin: 0.5rem 0; background: #0f172a; border-radius: 6px; }
+    .metric-label { color: #94a3b8; }
+    .metric-value { font-weight: 600; color: #f1f5f9; }
+    .success { color: #10b981; }
+    .failure { color: #ef4444; }
+    .warning { color: #f59e0b; }
+    .index-detail { background: #0f172a; padding: 1rem; margin: 0.5rem 0; border-radius: 6px; border-left: 3px solid #f59e0b; }
+    .index-detail ul { margin-left: 1.5rem; margin-top: 0.5rem; }
+    .index-detail li { color: #94a3b8; margin: 0.25rem 0; }
+    .footer { text-align: center; margin-top: 2rem; padding: 1rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>⚠️ AUDIT FORENSIQUE DES INDEX LOCAL ↔ MONGODB ATLAS</h1>
+      <p>Timestamp: 2026-08-21T05:07:12.817Z</p>
+      <p>Mode: READ-ONLY ABSOLU</p>
+      <div class="status-badge">MISMATCH</div>
+    </div>
+
+    <div class="section">
+      <h2>📊 Résumé Exécutif</h2>
+      <div class="metric">
+        <span class="metric-label">Collections Vérifiées</span>
+        <span class="metric-value">7</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Perfect Matches</span>
+        <span class="metric-value success">7</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Functional Mismatches</span>
+        <span class="metric-value success">0</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">LOCAL Only</span>
+        <span class="metric-value warning">23</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">ATLAS Only</span>
+        <span class="metric-value success">0</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Cosmetic Differences</span>
+        <span class="metric-value warning">0</span>
+      </div>
+    </div>
+
+    
+        <div class="section">
+          <h2>⚠️ reservations</h2>
+          
+          <div class="metric">
+            <span class="metric-label">LOCAL Indexes</span>
+            <span class="metric-value">6</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">ATLAS Indexes</span>
+            <span class="metric-value">1</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Matching</span>
+            <span class="metric-value success">1</span>
+          </div>
+          
+            <div class="metric">
+              <span class="metric-label">Missing on ATLAS</span>
+              <span class="metric-value failure">5</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div class="section">
+          <h2>⚠️ menuitems</h2>
+          
+          <div class="metric">
+            <span class="metric-label">LOCAL Indexes</span>
+            <span class="metric-value">5</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">ATLAS Indexes</span>
+            <span class="metric-value">1</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Matching</span>
+            <span class="metric-value success">1</span>
+          </div>
+          
+            <div class="metric">
+              <span class="metric-label">Missing on ATLAS</span>
+              <span class="metric-value failure">4</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div class="section">
+          <h2>⚠️ reviews</h2>
+          
+          <div class="metric">
+            <span class="metric-label">LOCAL Indexes</span>
+            <span class="metric-value">5</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">ATLAS Indexes</span>
+            <span class="metric-value">1</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Matching</span>
+            <span class="metric-value success">1</span>
+          </div>
+          
+            <div class="metric">
+              <span class="metric-label">Missing on ATLAS</span>
+              <span class="metric-value failure">4</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div class="section">
+          <h2>⚠️ menucategories</h2>
+          
+          <div class="metric">
+            <span class="metric-label">LOCAL Indexes</span>
+            <span class="metric-value">3</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">ATLAS Indexes</span>
+            <span class="metric-value">1</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Matching</span>
+            <span class="metric-value success">1</span>
+          </div>
+          
+            <div class="metric">
+              <span class="metric-label">Missing on ATLAS</span>
+              <span class="metric-value failure">2</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div class="section">
+          <h2>⚠️ settings</h2>
+          
+          <div class="metric">
+            <span class="metric-label">LOCAL Indexes</span>
+            <span class="metric-value">2</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">ATLAS Indexes</span>
+            <span class="metric-value">1</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Matching</span>
+            <span class="metric-value success">1</span>
+          </div>
+          
+            <div class="metric">
+              <span class="metric-label">Missing on ATLAS</span>
+              <span class="metric-value failure">1</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div class="section">
+          <h2>⚠️ users</h2>
+          
+          <div class="metric">
+            <span class="metric-label">LOCAL Indexes</span>
+            <span class="metric-value">4</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">ATLAS Indexes</span>
+            <span class="metric-value">1</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Matching</span>
+            <span class="metric-value success">1</span>
+          </div>
+          
+            <div class="metric">
+              <span class="metric-label">Missing on ATLAS</span>
+              <span class="metric-value failure">3</span>
+            </div>
+          
+          
+          
+        </div>
+      
+        <div class="section">
+          <h2>⚠️ media</h2>
+          
+          <div class="metric">
+            <span class="metric-label">LOCAL Indexes</span>
+            <span class="metric-value">5</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">ATLAS Indexes</span>
+            <span class="metric-value">1</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Matching</span>
+            <span class="metric-value success">1</span>
+          </div>
+          
+            <div class="metric">
+              <span class="metric-label">Missing on ATLAS</span>
+              <span class="metric-value failure">4</span>
+            </div>
+          
+          
+          
+        </div>
+      
+
+    <div class="section">
+      <h2>📝 Verdict Final</h2>
+      <div class="metric">
+        <span class="metric-label">Status</span>
+        <span class="metric-value" style="color: #f59e0b">⚠️ MISMATCH</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Raison</span>
+        <span class="metric-value">Found 0 functional mismatches, 23 LOCAL-only indexes, 0 ATLAS-only indexes</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Modifications Appliquées</span>
+        <span class="metric-value success">AUCUNE (READ-ONLY)</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Audit généré le 21/08/2026 06:07:15</p>
+      <p>BIZZ'ART MONASTIR — Audit Forensique des Index</p>
+    </div>
+  </div>
+</body>
+</html>

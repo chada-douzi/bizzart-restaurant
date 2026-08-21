@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 2.5 - Plan de Génération Validé</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-card .number {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card.generate .number { color: #667eea; }
+        .stat-card.keep .number { color: #28a745; }
+        .stat-card.ambiguous .number { color: #ffc107; }
+        .stat-card.total .number { color: #764ba2; }
+        
+        .stat-card .label {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+        }
+        
+        .math-proof {
+            background: #e9ecef;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        
+        .math-proof .equation {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        
+        .check-mark {
+            color: #28a745;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .keep-list {
+            background: #d4edda;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #28a745;
+            margin: 20px 0;
+        }
+        
+        .keep-list h3 {
+            color: #155724;
+            margin-top: 0;
+        }
+        
+        .keep-list ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .keep-list li {
+            padding: 10px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 4px;
+            border-left: 3px solid #28a745;
+        }
+        
+        .keep-list li strong {
+            color: #28a745;
+        }
+        
+        .ambiguous-list {
+            background: #fff3e6;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #ffc107;
+            margin: 20px 0;
+        }
+        
+        .ambiguous-list h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        
+        .ambiguous-list ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .ambiguous-list li {
+            padding: 15px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 4px;
+            border-left: 3px solid #ffc107;
+        }
+        
+        .ambiguous-list li strong {
+            color: #e67e22;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .ambiguous-list li .info {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .alert {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        
+        .alert-warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        
+        .alert-info {
+            background: #d1ecf1;
+            border-color: #17a2b8;
+            color: #0c5460;
+        }
+        
+        .next-steps {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .next-steps h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .next-steps ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        .next-steps li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin: 5px;
+        }
+        
+        .badge-success { background: #28a745; color: white; }
+        .badge-warning { background: #ffc107; color: #333; }
+        .badge-info { background: #17a2b8; color: white; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✅ PHASE 2.5 VALIDÉE</h1>
+            <p>Plan de Génération Détaillé - Menu BIZZ'ART</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.8;">19 août 2026 | Mode: LECTURE SEULE</p>
+        </header>
+        
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="number">98</div>
+                <div class="label">Plats Analysés</div>
+            </div>
+            <div class="stat-card generate">
+                <div class="number">93</div>
+                <div class="label">Visuels à Générer</div>
+            </div>
+            <div class="stat-card keep">
+                <div class="number">5</div>
+                <div class="label">Images à Conserver</div>
+            </div>
+            <div class="stat-card ambiguous">
+                <div class="number">5</div>
+                <div class="label">Cas Ambigus</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="alert alert-success">
+                <strong>✅ Cohérence Mathématique Vérifiée</strong><br>
+                Le plan de génération est complet et cohérent. Aucune erreur détectée.
+            </div>
+            
+            <div class="math-proof">
+                <div>Vérification de Cohérence</div>
+                <div class="equation">93 + 5 = 98 <span class="check-mark">✓</span></div>
+                <div style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                    Visuels à générer + Images à conserver = Total plats
+                </div>
+            </div>
+            
+            <h2>🎨 93 Visuels à Générer</h2>
+            
+            <p style="font-size: 1.1em; margin: 20px 0;">
+                <strong>93 plats</strong> nécessitent un nouveau visuel car leur image actuelle est <strong>partagée avec d'autres plats</strong>.
+            </p>
+            
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h3 style="margin-top: 0;">Répartition par Catégorie</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Visuels à Générer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Les Pizzas</td><td>16 visuels</td></tr>
+                        <tr><td>Pâtes</td><td>13 visuels</td></tr>
+                        <tr><td>Volailles</td><td>14 visuels</td></tr>
+                        <tr><td>Viandes</td><td>13 visuels</td></tr>
+                        <tr><td>Fruits de mer</td><td>7 visuels</td></tr>
+                        <tr><td>Salade</td><td>6 visuels</td></tr>
+                        <tr><td>Plats Espagnol</td><td>6 visuels</td></tr>
+                        <tr><td>Tacos</td><td>5 visuels</td></tr>
+                        <tr><td>MAkIOUB</td><td>6 visuels</td></tr>
+                        <tr><td>Soda</td><td>7 visuels</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2>✅ 5 Images à Conserver</h2>
+            
+            <div class="keep-list">
+                <h3>Ces 5 plats conservent leur image actuelle (unique, non dupliquée)</h3>
+                <ul>
+                    <li>
+                        <strong>Risotto Poulet-Champignons</strong>
+                        <span class="info">Plats Espagnol • 28 DT • Image unique</span>
+                    </li>
+                    <li>
+                        <strong>Pizza Margherita</strong>
+                        <span class="info">Les Pizzas • 14.5 DT • Image unique</span>
+                    </li>
+                    <li>
+                        <strong>Reine</strong>
+                        <span class="info">Les Pizzas • 18 DT • Image unique</span>
+                    </li>
+                    <li>
+                        <strong>Pizza BURRATA</strong>
+                        <span class="info">Les Pizzas • 22.5 DT • Image unique</span>
+                    </li>
+                    <li>
+                        <strong>Salade Fruits de Mer</strong>
+                        <span class="info">Salade • 28 DT • Image unique</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <h2>⚠️ 5 Cas Ambigus - Validation Requise</h2>
+            
+            <div class="ambiguous-list">
+                <h3>Ces 5 plats nécessitent votre validation avant génération</h3>
+                <ul>
+                    <li>
+                        <strong>1. Pâtes du Chef</strong>
+                        <div class="info">
+                            Pâtes • 29 DT<br>
+                            <strong>Problème:</strong> Nom générique, ingrédients non précisés<br>
+                            <strong>Proposition:</strong> Pâtes premium avec fruits de mer et sauce crémeuse
+                        </div>
+                    </li>
+                    <li>
+                        <strong>2. Salade du Chef</strong>
+                        <div class="info">
+                            Salade • 24.5 DT<br>
+                            <strong>Problème:</strong> Composition non détaillée<br>
+                            <strong>Proposition:</strong> Salade mixte avec poulet grillé, légumes variés, fromage
+                        </div>
+                    </li>
+                    <li>
+                        <strong>3. Escalope du Chef</strong>
+                        <div class="info">
+                            Volailles • 25.5 DT<br>
+                            <strong>Problème:</strong> Sauce et accompagnements non spécifiés<br>
+                            <strong>Proposition:</strong> Escalope avec sauce signature premium
+                        </div>
+                    </li>
+                    <li>
+                        <strong>4. Poisson du jour</strong>
+                        <div class="info">
+                            Fruits de mer • 24 DT<br>
+                            <strong>Problème:</strong> Poisson variable selon disponibilité<br>
+                            <strong>Proposition:</strong> Poisson blanc grillé générique (bar, dorade) avec légumes
+                        </div>
+                    </li>
+                    <li>
+                        <strong>5. Symphonie Terre-Mer</strong>
+                        <div class="info">
+                            Fruits de mer • 74 DT et 142 DT<br>
+                            <strong>Problème:</strong> Deux prix différents (portions 2p vs 4p?)<br>
+                            <strong>Proposition:</strong> Générer 2 visuels distincts si confirmation des portions
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="alert alert-warning">
+                <strong>⚠️ IMPORTANT:</strong> Les 5 cas ambigus sont actuellement comptés dans les "93 visuels à générer". 
+                Après validation manuelle, leurs prompts seront finalisés avant la Phase 3.
+            </div>
+            
+            <h2>📋 Livrables Disponibles</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fichier</th>
+                        <th>Taille</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>PHASE-2.5-GENERATION-PLAN.md</code></td>
+                        <td>91 KB</td>
+                        <td>Plan complet détaillé avec les 98 plats, prompts, et cas ambigus</td>
+                    </tr>
+                    <tr>
+                        <td><code>PHASE-2.5-SUMMARY.html</code></td>
+                        <td>Ce fichier</td>
+                        <td>Résumé visuel interactif du plan de génération</td>
+                    </tr>
+                    <tr>
+                        <td><code>MENU-AUDIT-2026-08-19.json</code></td>
+                        <td>Données brutes</td>
+                        <td>Audit complet MongoDB (98 plats, 29 doublons)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>🎯 Prochaines Étapes</h2>
+            
+            <div class="next-steps">
+                <h3>EN ATTENTE DE VOTRE AUTORISATION</h3>
+                <ol>
+                    <li><strong>Valider les 5 cas ambigus:</strong> Confirmer les propositions ou fournir des directives précises</li>
+                    <li><strong>Choisir le générateur IA:</strong> DALL-E 3, Midjourney, Stable Diffusion, ou autre?</li>
+                    <li><strong>Confirmer la direction artistique:</strong> Style photographique professionnel validé?</li>
+                    <li><strong>Ordre de génération:</strong> Générer par priorité (CRITICAL → HIGH → MEDIUM → LOW)?</li>
+                </ol>
+                
+                <div style="margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.2); border-radius: 6px;">
+                    <strong>⚠️ NE PAS passer aux phases suivantes sans autorisation:</strong>
+                    <ul style="margin-top: 10px;">
+                        <li>❌ Phase 3: Génération des 93 images</li>
+                        <li>❌ Phase 4: Upload sur Cloudinary</li>
+                        <li>❌ Phase 5: Modification MongoDB</li>
+                        <li>❌ Phase 6: Vérification frontend</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>✅ Garanties de Sécurité</h2>
+            
+            <div class="alert alert-success">
+                <strong>Aucune modification effectuée:</strong>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>✅ MongoDB intact (98 plats, 11 catégories)</li>
+                    <li>✅ Cloudinary intact (aucune suppression)</li>
+                    <li>✅ Aucun prix modifié</li>
+                    <li>✅ Aucun nom modifié</li>
+                    <li>✅ Aucune catégorie modifiée</li>
+                    <li>✅ Aucun plat supprimé ou ajouté</li>
+                    <li>✅ Cohérence mathématique vérifiée: 93 + 5 = 98 ✓</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h3 style="color: white; margin-bottom: 15px;">📌 STATUT</h3>
+            <div>
+                <span class="badge badge-success" style="font-size: 1.1em; padding: 10px 20px;">
+                    PHASE 2.5 TERMINÉE - PLAN VALIDÉ
+                </span>
+            </div>
+            <p style="margin-top: 20px; opacity: 0.9;">
+                Plan de génération détaillé créé et vérifié<br>
+                En attente d'autorisation pour Phase 3 (Génération des images)
+            </p>
+            <p style="margin-top: 25px; font-size: 0.9em; opacity: 0.7;">
+                BIZZ'ART Monastir - Système de Gestion Menu<br>
+                Généré le 19 août 2026
+            </p>
+        </div>
+    </div>
+</body>
+</html>

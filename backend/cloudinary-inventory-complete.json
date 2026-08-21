@@ -1,0 +1,2686 @@
+{
+  "generatedAt": "2026-08-20T05:07:34.073Z",
+  "mode": "READ_ONLY",
+  "totalCloudinaryPhotos": 186,
+  "photos": [
+    {
+      "id": "photo_1",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "publicId": "bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60",
+      "folder": "bizzart/menu",
+      "filename": "D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d58",
+          "dishName": "Pizza Margherita",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_2",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "publicId": "bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew",
+      "folder": "bizzart/menu",
+      "filename": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d5b",
+          "dishName": "Pizza Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375da9",
+          "dishName": "Escalope sauce Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375db5",
+          "dishName": "Escalope Bizz'Art",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e06",
+          "dishName": "Symphonie Terre-Mer",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_3",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_13_djmfzt",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_13_djmfzt",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d5e",
+          "dishName": "Pizza 4 Fromages sauce tomate",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d82",
+          "dishName": "Pizza Saumon",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_4",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_7_usi3f8",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_7_usi3f8",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d61",
+          "dishName": "Pizza 4 Fromages sauce blanche",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e0f",
+          "dishName": "Poulet Pané",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_5",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg",
+      "publicId": "bizzart/menu/IMG_9701_qyr2m3",
+      "folder": "bizzart/menu",
+      "filename": "IMG_9701_qyr2m3",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d64",
+          "dishName": "Reine",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_6",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "publicId": "bizzart/menu/IMG_0237_nkagke",
+      "folder": "bizzart/menu",
+      "filename": "IMG_0237_nkagke",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d67",
+          "dishName": "Piquante",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d70",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d22",
+          "dishName": "Pâtes Bolognaise",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e12",
+          "dishName": "Cordon Bleu",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_7",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831387595_vrtvut",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831387595_vrtvut",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d6a",
+          "dishName": "Chicken",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dd6",
+          "dishName": "Foie à la Lyonnaise",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_8",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831383530_jofqku",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831383530_jofqku",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d6d",
+          "dishName": "Napolitaine",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e21",
+          "dishName": "Poulet Pané",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_9",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831381120_cigb5d",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831381120_cigb5d",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d73",
+          "dishName": "4 Saisons",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dca",
+          "dishName": "Steak Grillé",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e09",
+          "dishName": "Poulet grillé",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d1f",
+          "dishName": "Pâtes BIZZ'Art",
+          "relationship": "historical"
+        }
+      ],
+      "historicalValidation": "VALIDATED"
+    },
+    {
+      "id": "photo_10",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_9_bp8oao",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_9_bp8oao",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d76",
+          "dishName": "Pizza Bizz'art",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d34",
+          "dishName": "Ravioli Saumon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d3d",
+          "dishName": "Pâtes sauce pesto",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375deb",
+          "dishName": "Filet de boeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e00",
+          "dishName": "Symphonie Fruits de mer",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d58",
+          "dishName": "Pizza Margherita",
+          "relationship": "historical"
+        }
+      ],
+      "historicalValidation": "VALIDATED"
+    },
+    {
+      "id": "photo_11",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_11_ak1ici",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_11_ak1ici",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d79",
+          "dishName": "Pizza Anglaise",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d88",
+          "dishName": "Pizza Chevrettes",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d1f",
+          "dishName": "Pâtes BIZZ'Art",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dbb",
+          "dishName": "Involtini",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_12",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831389680_coillr",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831389680_coillr",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d7c",
+          "dishName": "Pizza BURRATA",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_13",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "publicId": "bizzart/menu/IMG_9699_g5ubkl",
+      "folder": "bizzart/menu",
+      "filename": "IMG_9699_g5ubkl",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d7f",
+          "dishName": "Pizza Fruit de mer",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375da6",
+          "dishName": "Escalope à la crème",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375de5",
+          "dishName": "Côte à L'os Grillée",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e30",
+          "dishName": "Eau Gazeuse",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e33",
+          "dishName": "Soda",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e39",
+          "dishName": "Citronnade",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_14",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_hgh4w0",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_hgh4w0",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d85",
+          "dishName": "Pizza Végétarienne",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e3c",
+          "dishName": "Délio",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_15",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "publicId": "bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts",
+      "folder": "bizzart/menu",
+      "filename": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d25",
+          "dishName": "Pâtes l'Arrabiata",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d2b",
+          "dishName": "Pâtes Maison",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d2e",
+          "dishName": "Pâtes à L'italienne",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dc1",
+          "dishName": "Suprême",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_16",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_2_evr2vc",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_2_evr2vc",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d28",
+          "dishName": "Pâtes du Chef",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_17",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_8_jeurew",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_8_jeurew",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d31",
+          "dishName": "Pâtes Fruits de Mer",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dcd",
+          "dishName": "Steak",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_18",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "publicId": "bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx",
+      "folder": "bizzart/menu",
+      "filename": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d37",
+          "dishName": "Ravioli Crevette",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d55",
+          "dishName": "Gratin Fruits de Mer",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375da0",
+          "dishName": "Escalope Ou Cuisse de Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e15",
+          "dishName": "Viande Hachée",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_19",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "publicId": "bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21",
+      "folder": "bizzart/menu",
+      "filename": "CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d3a",
+          "dishName": "Ravioli Viande",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dd9",
+          "dishName": "Grillade Mixte",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d49",
+          "dishName": "Paella Royale",
+          "relationship": "historical"
+        }
+      ]
+    },
+    {
+      "id": "photo_20",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_6_h7axod",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_6_h7axod",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d40",
+          "dishName": "Lasagne Bolognaise",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d97",
+          "dishName": "Salade de Crevettes Panées",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375de8",
+          "dishName": "Côte à L'os Bizz'Art",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_21",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "publicId": "bizzart/menu/IMG_9720_jytrma",
+      "folder": "bizzart/menu",
+      "filename": "IMG_9720_jytrma",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d43",
+          "dishName": "Lasagne Fruits De Mer",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375dac",
+          "dishName": "Escalope sauce Épinard",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dd3",
+          "dishName": "Foie Grillé",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dfd",
+          "dishName": "Seiche gratinée aux crevettes et au miel",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e0c",
+          "dishName": "Poulet Mexicain",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_22",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831464636_u2po6i",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831464636_u2po6i",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d46",
+          "dishName": "Paella 1 Personne",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dbe",
+          "dishName": "Escalope Orientale",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_23",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787152546/bizzart/menu/paella-royale.png",
+      "publicId": "bizzart/menu/paella-royale",
+      "folder": "bizzart/menu",
+      "filename": "paella-royale",
+      "sources": [
+        "MongoDB",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d49",
+          "dishName": "Paella Royale",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_24",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831504871_bopbcd",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831504871_bopbcd",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d4c",
+          "dishName": "Risotto Bizz'Art",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375db2",
+          "dishName": "Cordon Bleu",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_25",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831557428_uylzz1",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831557428_uylzz1",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d4f",
+          "dishName": "Risotto Poulet-Champignons",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_26",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "publicId": "bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf",
+      "folder": "bizzart/menu",
+      "filename": "FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d52",
+          "dishName": "Gratin Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dc7",
+          "dishName": "Poulet à l'italienne",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e03",
+          "dishName": "Symphonie Terre-Mer",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_27",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "publicId": "bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb",
+      "folder": "bizzart/menu",
+      "filename": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d8b",
+          "dishName": "Salade César",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d8e",
+          "dishName": "Salade Bizz'Art",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7a2876405dd5375d91",
+          "dishName": "Salade du Chef",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dd0",
+          "dishName": "Steak Farci",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375de2",
+          "dishName": "Côtelette d'agneau",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_28",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831392186_u0ikej",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831392186_u0ikej",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d94",
+          "dishName": "Salade Fruits de Mer",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_29",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_12_nffdek",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_12_nffdek",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d9a",
+          "dishName": "Salade Saumon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375df1",
+          "dishName": "Plateau Fruits de mer",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_30",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831623991_kranmd",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831623991_kranmd",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375d9d",
+          "dishName": "Salade Roquette",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dc4",
+          "dishName": "Suprême Maison",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375df7",
+          "dishName": "Poisson du jour",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e1b",
+          "dishName": "Poulet grillé",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e36",
+          "dishName": "Pétillante",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_31",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831543045_pyswfe",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831543045_pyswfe",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375da3",
+          "dishName": "Escalope Panée",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e42",
+          "dishName": "Sprite",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_32",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_4_clavnd",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_4_clavnd",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375daf",
+          "dishName": "Escalope sauce Gorgonzola",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375ddc",
+          "dishName": "Grillade Royale",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e3f",
+          "dishName": "Orangina",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_33",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831385645_vzx61b",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831385645_vzx61b",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7a2876405dd5375db8",
+          "dishName": "Escalope du Chef",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dee",
+          "dishName": "Filet de boeuf sauce au choix",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e1e",
+          "dishName": "Poulet Mexicain",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e24",
+          "dishName": "Cordon Bleu",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_34",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_3_ah6kjf",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_3_ah6kjf",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7b2876405dd5375ddf",
+          "dishName": "Panorama de Viande",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375dfa",
+          "dishName": "Fruits de Mer Sautés",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_35",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "publicId": "bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq",
+      "folder": "bizzart/menu",
+      "filename": "E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7b2876405dd5375df4",
+          "dishName": "Crevettes sautées ou grillées",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e2a",
+          "dishName": "Eau Minérale 1/2L",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_36",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831394707_fictxa",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831394707_fictxa",
+      "sources": [
+        "MongoDB",
+        "validation-export",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a845a7b2876405dd5375e18",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e27",
+          "dishName": "Spécial",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a845a7b2876405dd5375e2d",
+          "dishName": "Eau Minérale 1L",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_37",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "sources": [
+        "MongoDB",
+        "backend\\audit-mapping-photos.html"
+      ],
+      "dishes": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ]
+    },
+    {
+      "id": "photo_39",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/...",
+      "publicId": "...",
+      "filename": "...",
+      "sources": [
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_40",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/...",
+      "publicId": "...",
+      "filename": "...",
+      "sources": [
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_41",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/...",
+      "publicId": "...",
+      "filename": "...",
+      "sources": [
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_42",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/...",
+      "publicId": "...",
+      "filename": "...",
+      "sources": [
+        "backend\\AUDIT-FINAL-PRE-MIGRATION.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_43",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060761/bizzart/menu/r07qxo_-_R_Download_5_mx8xs2.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_5_mx8xs2",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_5_mx8xs2",
+      "sources": [
+        "backend\\audit-reports\\audit-report-2026-08-18T15-11-05-519Z.html"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_44",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060774/bizzart/menu/AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh.png",
+      "publicId": "bizzart/menu/AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh",
+      "folder": "bizzart/menu",
+      "filename": "AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh",
+      "sources": [
+        "backend\\audit-reports\\audit-report-2026-08-18T15-11-05-519Z.html"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_45",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060787/bizzart/menu/FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod.png",
+      "publicId": "bizzart/menu/FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod",
+      "folder": "bizzart/menu",
+      "filename": "FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod",
+      "sources": [
+        "backend\\audit-reports\\audit-report-2026-08-18T15-11-05-519Z.html"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_46",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060797/bizzart/menu/FB_IMG_1786831512797_uc66qt.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831512797_uc66qt",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831512797_uc66qt",
+      "sources": [
+        "backend\\audit-reports\\audit-report-2026-08-18T15-11-05-519Z.html"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_47",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060806/bizzart/menu/IMG_0285_q2e2rm.jpg",
+      "publicId": "bizzart/menu/IMG_0285_q2e2rm",
+      "folder": "bizzart/menu",
+      "filename": "IMG_0285_q2e2rm",
+      "sources": [
+        "backend\\audit-reports\\audit-report-2026-08-18T15-11-05-519Z.html"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_48",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_49",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_02",
+      "publicId": "bizzart/menu/IMG_02",
+      "folder": "bizzart/menu",
+      "filename": "IMG_02",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_50",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA87",
+      "publicId": "bizzart/menu/DDBA87",
+      "folder": "bizzart/menu",
+      "filename": "DDBA87",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_51",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_52",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_53",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_54",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9EC",
+      "publicId": "bizzart/menu/A7D9EC",
+      "folder": "bizzart/menu",
+      "filename": "A7D9EC",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_55",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC",
+      "publicId": "bizzart/menu/CE03FC",
+      "folder": "bizzart/menu",
+      "filename": "CE03FC",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_56",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_57",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_97",
+      "publicId": "bizzart/menu/IMG_97",
+      "folder": "bizzart/menu",
+      "filename": "IMG_97",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_58",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_59",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_60",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_61",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F85",
+      "publicId": "bizzart/menu/FD0F85",
+      "folder": "bizzart/menu",
+      "filename": "FD0F85",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_62",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC",
+      "publicId": "bizzart/menu/D2ACAC",
+      "folder": "bizzart/menu",
+      "filename": "D2ACAC",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_63",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E",
+      "publicId": "bizzart/menu/F04A3E",
+      "folder": "bizzart/menu",
+      "filename": "F04A3E",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_64",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_65",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_66",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_97",
+      "publicId": "bizzart/menu/IMG_97",
+      "folder": "bizzart/menu",
+      "filename": "IMG_97",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_67",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_68",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_69",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_70",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_96",
+      "publicId": "bizzart/menu/IMG_96",
+      "folder": "bizzart/menu",
+      "filename": "IMG_96",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_71",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_72",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B",
+      "publicId": "bizzart/menu/EB2F2B",
+      "folder": "bizzart/menu",
+      "filename": "EB2F2B",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_73",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_74",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_75",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_76",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_77",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_78",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_79",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo",
+      "publicId": "bizzart/menu/r07qxo",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_80",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B11",
+      "publicId": "bizzart/menu/E82B11",
+      "folder": "bizzart/menu",
+      "filename": "E82B11",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_81",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG",
+      "publicId": "bizzart/menu/FB_IMG",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_82",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753",
+      "publicId": "v1787060753",
+      "filename": "v1787060753",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_83",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804",
+      "publicId": "v1787060804",
+      "filename": "v1787060804",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_84",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780",
+      "publicId": "v1787060780",
+      "filename": "v1787060780",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_85",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765",
+      "publicId": "v1787060765",
+      "filename": "v1787060765",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_86",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767",
+      "publicId": "v1787060767",
+      "filename": "v1787060767",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_87",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771",
+      "publicId": "v1787060771",
+      "filename": "v1787060771",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_88",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776",
+      "publicId": "v1787060776",
+      "filename": "v1787060776",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_89",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762",
+      "publicId": "v1787060762",
+      "filename": "v1787060762",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_90",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811",
+      "publicId": "v1787060811",
+      "filename": "v1787060811",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_91",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795",
+      "publicId": "v1787060795",
+      "filename": "v1787060795",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_92",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796",
+      "publicId": "v1787060796",
+      "filename": "v1787060796",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_93",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803",
+      "publicId": "v1787060803",
+      "filename": "v1787060803",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_94",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785",
+      "publicId": "v1787060785",
+      "filename": "v1787060785",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_95",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756",
+      "publicId": "v1787060756",
+      "filename": "v1787060756",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_96",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763",
+      "publicId": "v1787060763",
+      "filename": "v1787060763",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_97",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791",
+      "publicId": "v1787060791",
+      "filename": "v1787060791",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_98",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789",
+      "publicId": "v1787060789",
+      "filename": "v1787060789",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_99",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788",
+      "publicId": "v1787060788",
+      "filename": "v1787060788",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_100",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807",
+      "publicId": "v1787060807",
+      "filename": "v1787060807",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_101",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768",
+      "publicId": "v1787060768",
+      "filename": "v1787060768",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_102",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783",
+      "publicId": "v1787060783",
+      "filename": "v1787060783",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_103",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755",
+      "publicId": "v1787060755",
+      "filename": "v1787060755",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_104",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800",
+      "publicId": "v1787060800",
+      "filename": "v1787060800",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_105",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798",
+      "publicId": "v1787060798",
+      "filename": "v1787060798",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_106",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759",
+      "publicId": "v1787060759",
+      "filename": "v1787060759",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_107",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790",
+      "publicId": "v1787060790",
+      "filename": "v1787060790",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_108",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758",
+      "publicId": "v1787060758",
+      "filename": "v1787060758",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_109",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782",
+      "publicId": "v1787060782",
+      "filename": "v1787060782",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_110",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793",
+      "publicId": "v1787060793",
+      "filename": "v1787060793",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_112",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753...",
+      "publicId": "v1787060753...",
+      "filename": "v1787060753...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_113",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804...",
+      "publicId": "v1787060804...",
+      "filename": "v1787060804...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_114",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780...",
+      "publicId": "v1787060780...",
+      "filename": "v1787060780...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_115",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765...",
+      "publicId": "v1787060765...",
+      "filename": "v1787060765...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_116",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767...",
+      "publicId": "v1787060767...",
+      "filename": "v1787060767...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_117",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771...",
+      "publicId": "v1787060771...",
+      "filename": "v1787060771...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_118",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776...",
+      "publicId": "v1787060776...",
+      "filename": "v1787060776...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_119",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762...",
+      "publicId": "v1787060762...",
+      "filename": "v1787060762...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_120",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811...",
+      "publicId": "v1787060811...",
+      "filename": "v1787060811...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_121",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795...",
+      "publicId": "v1787060795...",
+      "filename": "v1787060795...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_122",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796...",
+      "publicId": "v1787060796...",
+      "filename": "v1787060796...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_123",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803...",
+      "publicId": "v1787060803...",
+      "filename": "v1787060803...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_124",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785...",
+      "publicId": "v1787060785...",
+      "filename": "v1787060785...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_125",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756...",
+      "publicId": "v1787060756...",
+      "filename": "v1787060756...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_126",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763...",
+      "publicId": "v1787060763...",
+      "filename": "v1787060763...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_127",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791...",
+      "publicId": "v1787060791...",
+      "filename": "v1787060791...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_128",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789...",
+      "publicId": "v1787060789...",
+      "filename": "v1787060789...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_129",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788...",
+      "publicId": "v1787060788...",
+      "filename": "v1787060788...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_130",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807...",
+      "publicId": "v1787060807...",
+      "filename": "v1787060807...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_131",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768...",
+      "publicId": "v1787060768...",
+      "filename": "v1787060768...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_132",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783...",
+      "publicId": "v1787060783...",
+      "filename": "v1787060783...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_133",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755...",
+      "publicId": "v1787060755...",
+      "filename": "v1787060755...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_134",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800...",
+      "publicId": "v1787060800...",
+      "filename": "v1787060800...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_135",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798...",
+      "publicId": "v1787060798...",
+      "filename": "v1787060798...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_136",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759...",
+      "publicId": "v1787060759...",
+      "filename": "v1787060759...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_137",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790...",
+      "publicId": "v1787060790...",
+      "filename": "v1787060790...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_138",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758...",
+      "publicId": "v1787060758...",
+      "filename": "v1787060758...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_139",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782...",
+      "publicId": "v1787060782...",
+      "filename": "v1787060782...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_140",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793...",
+      "publicId": "v1787060793...",
+      "filename": "v1787060793...",
+      "sources": [
+        "backend\\audit-reports\\MENU-AUDIT-2026-08-19.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_141",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v[timestamp]/bizzart/menu/[filename]",
+      "publicId": "v[timestamp]/bizzart/menu/[filename]",
+      "folder": "v[timestamp]/bizzart/menu",
+      "filename": "[filename]",
+      "sources": [
+        "backend\\audit-reports\\RAPPORT-AUDIT-QUALITE-MAPPING-CONCLUSION.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_142",
+      "url": "https://res.cloudinary.com/{cloud_name}/image/upload/v{version}/{folder}/{filename}",
+      "publicId": "v{version}/{folder}/{filename}",
+      "folder": "v{version}/{folder}",
+      "filename": "{filename}",
+      "sources": [
+        "backend\\audit-reports\\RAPPORT-FINAL-AFFICHAGE-PHOTOS.md"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_145",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "publicId": "bizzart/menu/categories/les-pizzas",
+      "folder": "bizzart/menu/categories",
+      "filename": "les-pizzas",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_146",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "publicId": "bizzart/menu/categories/pates",
+      "folder": "bizzart/menu/categories",
+      "filename": "pates",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_147",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141379/bizzart/menu/categories/plats-espagnol.png",
+      "publicId": "bizzart/menu/categories/plats-espagnol",
+      "folder": "bizzart/menu/categories",
+      "filename": "plats-espagnol",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_148",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+      "publicId": "bizzart/menu/categories/salade",
+      "folder": "bizzart/menu/categories",
+      "filename": "salade",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_149",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "publicId": "bizzart/menu/categories/volailles",
+      "folder": "bizzart/menu/categories",
+      "filename": "volailles",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_150",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "publicId": "bizzart/menu/categories/viandes",
+      "folder": "bizzart/menu/categories",
+      "filename": "viandes",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_151",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141465/bizzart/menu/categories/fruits-de-mer.png",
+      "publicId": "bizzart/menu/categories/fruits-de-mer",
+      "folder": "bizzart/menu/categories",
+      "filename": "fruits-de-mer",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_152",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141468/bizzart/menu/categories/tacos.jpg",
+      "publicId": "bizzart/menu/categories/tacos",
+      "folder": "bizzart/menu/categories",
+      "filename": "tacos",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_153",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141470/bizzart/menu/categories/makioub.jpg",
+      "publicId": "bizzart/menu/categories/makioub",
+      "folder": "bizzart/menu/categories",
+      "filename": "makioub",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_154",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "publicId": "bizzart/menu/categories/soda",
+      "folder": "bizzart/menu/categories",
+      "filename": "soda",
+      "sources": [
+        "backend\\cloudinary-category-images-mapping.json"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_155",
+      "url": "https://res.cloudinary.com/{cloud_name}/{resource_type}/{type}/v{version}/{public_id}.{extension}",
+      "publicId": "v{version}/{public_id}.{extension}",
+      "folder": "v{version}",
+      "filename": "{public_id}.{extension}",
+      "sources": [
+        "backend\\src\\seed\\audit-exhaustif-sources-images.ts"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_162",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg,2,Yes,",
+      "publicId": "bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg,2,Yes,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831504871_bopbcd.jpg,2,Yes,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_163",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png,4,Yes,",
+      "publicId": "bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png,4,Yes,",
+      "folder": "bizzart/menu",
+      "filename": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png,4,Yes,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_164",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg,4,Yes,",
+      "publicId": "bizzart/menu/IMG_0237_nkagke.jpg,4,Yes,",
+      "folder": "bizzart/menu",
+      "filename": "IMG_0237_nkagke.jpg,4,Yes,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_165",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg,2,Yes,",
+      "publicId": "bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg,2,Yes,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831387595_vrtvut.jpg,2,Yes,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_166",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg,6,Yes,",
+      "publicId": "bizzart/menu/IMG_9699_g5ubkl.jpg,6,Yes,",
+      "folder": "bizzart/menu",
+      "filename": "IMG_9699_g5ubkl.jpg,6,Yes,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_167",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg,1,Yes,",
+      "publicId": "bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg,1,Yes,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831392186_u0ikej.jpg,1,Yes,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_168",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg,1,Yes,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg,1,Yes,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_2_evr2vc.jpg,1,Yes,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_169",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png,3,Yes,",
+      "publicId": "bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png,3,Yes,",
+      "folder": "bizzart/menu",
+      "filename": "CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png,3,Yes,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_170",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg,4,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg,4,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_11_ak1ici.jpg,4,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_171",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg,5,No,",
+      "publicId": "bizzart/menu/IMG_9720_jytrma.jpg,5,No,",
+      "folder": "bizzart/menu",
+      "filename": "IMG_9720_jytrma.jpg,5,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_172",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg,2,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831464636_u2po6i.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_173",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg,1,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg,1,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831557428_uylzz1.jpg,1,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_174",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png,3,No,",
+      "publicId": "bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png,3,No,",
+      "folder": "bizzart/menu",
+      "filename": "FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png,3,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_175",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png,1,No,",
+      "publicId": "bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png,1,No,",
+      "folder": "bizzart/menu",
+      "filename": "D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png,1,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_176",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png,4,No,",
+      "publicId": "bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png,4,No,",
+      "folder": "bizzart/menu",
+      "filename": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png,4,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_177",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg,2,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_13_djmfzt.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_178",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg,2,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_7_usi3f8.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_179",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg,1,No,",
+      "publicId": "bizzart/menu/IMG_9701_qyr2m3.jpg,1,No,",
+      "folder": "bizzart/menu",
+      "filename": "IMG_9701_qyr2m3.jpg,1,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_180",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg,2,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831383530_jofqku.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831383530_jofqku.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_181",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg,3,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg,3,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831381120_cigb5d.jpg,3,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_182",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg,1,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831389680_coillr.jpg,1,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831389680_coillr.jpg,1,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_183",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg,2,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_hgh4w0.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_184",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png,5,No,",
+      "publicId": "bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png,5,No,",
+      "folder": "bizzart/menu",
+      "filename": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png,5,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_185",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg,2,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_12_nffdek.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_186",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg,5,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831623991_kranmd.jpg,5,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831623991_kranmd.jpg,5,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_187",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg,2,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831543045_pyswfe.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_188",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg,3,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg,3,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_4_clavnd.jpg,3,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_189",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg,4,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg,4,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831385645_vzx61b.jpg,4,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_190",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg,2,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_3_ah6kjf.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_191",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png,2,No,",
+      "publicId": "bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_192",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg,3,No,",
+      "publicId": "bizzart/menu/FB_IMG_1786831394707_fictxa.jpg,3,No,",
+      "folder": "bizzart/menu",
+      "filename": "FB_IMG_1786831394707_fictxa.jpg,3,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_193",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg,2,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg,2,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_8_jeurew.jpg,2,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_194",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg,5,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg,5,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_9_bp8oao.jpg,5,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_195",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png,4,No,",
+      "publicId": "bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png,4,No,",
+      "folder": "bizzart/menu",
+      "filename": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png,4,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    },
+    {
+      "id": "photo_196",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg,3,No,",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg,3,No,",
+      "folder": "bizzart/menu",
+      "filename": "r07qxo_-_R_Download_6_h7axod.jpg,3,No,",
+      "sources": [
+        "backend\\validation-reports\\VALIDATION-PHOTOS-BIZZART-2026-08-19.csv"
+      ],
+      "dishes": []
+    }
+  ]
+}

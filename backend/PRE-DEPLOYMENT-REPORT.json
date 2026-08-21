@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-08-20T08:23:52.926Z",
+  "environment": "development",
+  "checks": [
+    {
+      "name": "MongoDB Connection",
+      "status": "PASS",
+      "details": "Connected successfully",
+      "critical": true
+    },
+    {
+      "name": "Environment Variables",
+      "status": "PASS",
+      "details": "All required variables present",
+      "critical": true
+    },
+    {
+      "name": "NODE_ENV",
+      "status": "WARNING",
+      "details": "Set to development",
+      "critical": false
+    },
+    {
+      "name": "Backend Build",
+      "status": "PASS",
+      "details": "dist/server.js exists",
+      "critical": true
+    },
+    {
+      "name": "Frontend Build",
+      "status": "WARNING",
+      "details": "Frontend build not found",
+      "critical": false
+    },
+    {
+      "name": "Menu Categories",
+      "status": "PASS",
+      "details": "11 categories found",
+      "critical": true
+    },
+    {
+      "name": "Menu Items Count",
+      "status": "PASS",
+      "details": "114 dishes found",
+      "critical": true
+    },
+    {
+      "name": "Menu Photos",
+      "status": "PASS",
+      "details": "98 items with real photos (≥98 validated)",
+      "critical": false
+    },
+    {
+      "name": "Missing Images",
+      "status": "PASS",
+      "details": "All items have images",
+      "critical": false
+    },
+    {
+      "name": "Cloudinary URLs",
+      "status": "PASS",
+      "details": "All items use Cloudinary",
+      "critical": false
+    },
+    {
+      "name": "Photos: Les Pizzas",
+      "status": "PASS",
+      "details": "17/17 with real photos",
+      "critical": false
+    },
+    {
+      "name": "Photos: Pâtes",
+      "status": "PASS",
+      "details": "13/13 with real photos",
+      "critical": false
+    },
+    {
+      "name": "Photos: Salade",
+      "status": "PASS",
+      "details": "7/7 with real photos",
+      "critical": false
+    },
+    {
+      "name": "Photos: Viandes",
+      "status": "PASS",
+      "details": "13/13 with real photos",
+      "critical": false
+    },
+    {
+      "name": "Photos: Volailles",
+      "status": "PASS",
+      "details": "14/14 with real photos",
+      "critical": false
+    },
+    {
+      "name": "Photos: Tacos",
+      "status": "PASS",
+      "details": "5/5 with real photos",
+      "critical": false
+    },
+    {
+      "name": "Restaurant Settings",
+      "status": "PASS",
+      "details": "Settings configured",
+      "critical": false
+    },
+    {
+      "name": "Opening Hours",
+      "status": "PASS",
+      "details": "7 days configured",
+      "critical": false
+    },
+    {
+      "name": "Contact Info",
+      "status": "PASS",
+      "details": "Contact information present",
+      "critical": false
+    },
+    {
+      "name": "Reservations Collection",
+      "status": "PASS",
+      "details": "4 reservations in database",
+      "critical": false
+    },
+    {
+      "name": "Reviews Collection",
+      "status": "PASS",
+      "details": "3 reviews in database",
+      "critical": false
+    },
+    {
+      "name": "Published Reviews",
+      "status": "PASS",
+      "details": "0 published reviews",
+      "critical": false
+    }
+  ],
+  "summary": {
+    "totalChecks": 22,
+    "passed": 20,
+    "failed": 0,
+    "warnings": 2,
+    "criticalIssues": 0
+  },
+  "verdict": "READY_FOR_DEPLOYMENT",
+  "blockedReasons": []
+}

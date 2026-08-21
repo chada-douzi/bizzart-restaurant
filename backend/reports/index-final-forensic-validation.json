@@ -1,0 +1,2123 @@
+{
+  "metadata": {
+    "title": "FINAL INDEX FORENSIC VALIDATION",
+    "timestamp": "2026-08-21T03:56:04.602Z",
+    "mode": "READ-ONLY FORENSIQUE ABSOLU"
+  },
+  "summary": {
+    "totalIndexes": 23,
+    "createSafe": 22,
+    "redundant": 0,
+    "notNeeded": 0,
+    "reviewRequired": 1,
+    "uniqueIndexesVerified": 4
+  },
+  "validations": [
+    {
+      "collection": "reservations",
+      "indexName": "date_1_status_1",
+      "keys": "date:1, status:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "admin.controller.ts",
+          "queryType": "countDocuments",
+          "filter": {},
+          "description": "Count today reservations"
+        },
+        {
+          "location": "reservation.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Admin list reservations with filters"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "date",
+          "status"
+        ],
+        "prefixes": [
+          [
+            "date"
+          ],
+          [
+            "date",
+            "status"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "date",
+          "level": "HIGH",
+          "estimatedUniqueValues": 4,
+          "notes": "4 valeurs uniques sur 6 documents (ratio: 66.67%)"
+        },
+        {
+          "field": "status",
+          "level": "MEDIUM",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 6 documents (ratio: 16.67%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 6,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 6,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 6,
+            "executionTimeMillisEstimate": 0,
+            "works": 7,
+            "advanced": 6,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 6
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 6,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "reservations",
+      "indexName": "customer.email_1",
+      "keys": "customer.email:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "reservation.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Search reservations by customer email"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "customer.email"
+        ],
+        "prefixes": [
+          [
+            "customer.email"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "customer.email"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "customer.email",
+          "level": "HIGH",
+          "estimatedUniqueValues": 3,
+          "notes": "3 valeurs uniques sur 6 documents (ratio: 50.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 6,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 6,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 6,
+            "executionTimeMillisEstimate": 0,
+            "works": 7,
+            "advanced": 6,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 6
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 6,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "reservations",
+      "indexName": "status_1_createdAt_-1",
+      "keys": "status:1, createdAt:-1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "admin.controller.ts",
+          "queryType": "countDocuments",
+          "filter": {},
+          "description": "Count by status (pending, confirmed)"
+        },
+        {
+          "location": "reservation.controller.ts",
+          "queryType": "sort",
+          "filter": {},
+          "description": "Sort reservations by creation date"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "status",
+          "createdAt"
+        ],
+        "prefixes": [
+          [
+            "status"
+          ],
+          [
+            "status",
+            "createdAt"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "status",
+          "level": "MEDIUM",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 6 documents (ratio: 16.67%)"
+        },
+        {
+          "field": "createdAt",
+          "level": "HIGH",
+          "estimatedUniqueValues": 6,
+          "notes": "6 valeurs uniques sur 6 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 6,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 6,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 6,
+            "executionTimeMillisEstimate": 0,
+            "works": 7,
+            "advanced": 6,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 6
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 6,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "reservations",
+      "indexName": "date_1_time_1",
+      "keys": "date:1, time:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "reservation.controller.ts",
+          "queryType": "countDocuments",
+          "filter": {},
+          "description": "Check daily reservation count"
+        },
+        {
+          "location": "reservation.controller.ts",
+          "queryType": "sort",
+          "filter": {},
+          "description": "Sort by date and time slot"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "date",
+          "time"
+        ],
+        "prefixes": [
+          [
+            "date"
+          ],
+          [
+            "date",
+            "time"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "date",
+          "level": "HIGH",
+          "estimatedUniqueValues": 4,
+          "notes": "4 valeurs uniques sur 6 documents (ratio: 66.67%)"
+        },
+        {
+          "field": "time",
+          "level": "HIGH",
+          "estimatedUniqueValues": 4,
+          "notes": "4 valeurs uniques sur 6 documents (ratio: 66.67%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 6,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 6,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 6,
+            "executionTimeMillisEstimate": 0,
+            "works": 7,
+            "advanced": 6,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 6
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 6,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "reservations",
+      "indexName": "reminderSent_1_date_1_status_1",
+      "keys": "reminderSent:1, date:1, status:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "N/A (cron job)",
+          "queryType": "find",
+          "filter": {},
+          "description": "Cron job: find reservations needing reminders"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "reminderSent",
+          "date",
+          "status"
+        ],
+        "prefixes": [
+          [
+            "reminderSent"
+          ],
+          [
+            "reminderSent",
+            "date"
+          ],
+          [
+            "reminderSent",
+            "date",
+            "status"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "reminderSent",
+          "level": "MEDIUM",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 6 documents (ratio: 16.67%)"
+        },
+        {
+          "field": "date",
+          "level": "HIGH",
+          "estimatedUniqueValues": 4,
+          "notes": "4 valeurs uniques sur 6 documents (ratio: 66.67%)"
+        },
+        {
+          "field": "status",
+          "level": "MEDIUM",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 6 documents (ratio: 16.67%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 6,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 6,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 6,
+            "executionTimeMillisEstimate": 0,
+            "works": 7,
+            "advanced": 6,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 6
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 6,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "menuitems",
+      "indexName": "slug_1",
+      "keys": "slug:1",
+      "unique": true,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "menu.controller.ts",
+          "queryType": "findOne",
+          "filter": {},
+          "description": "Check slug uniqueness"
+        },
+        {
+          "location": "menu.controller.ts",
+          "queryType": "findOne",
+          "filter": {},
+          "description": "Get public item by slug"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "slug"
+        ],
+        "prefixes": [
+          [
+            "slug"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "slug"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "slug",
+          "level": "HIGH",
+          "estimatedUniqueValues": 114,
+          "notes": "114 valeurs uniques sur 114 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 114,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 114,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 114,
+            "executionTimeMillisEstimate": 0,
+            "works": 115,
+            "advanced": 114,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 114
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 114,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "HIGH",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "menuitems",
+      "indexName": "category_1_isAvailable_1_order_1",
+      "keys": "category:1, isAvailable:1, order:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "menu.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Get items by category (public)"
+        },
+        {
+          "location": "menu.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "List items with filters + sort"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "category",
+          "isAvailable",
+          "order"
+        ],
+        "prefixes": [
+          [
+            "category"
+          ],
+          [
+            "category",
+            "isAvailable"
+          ],
+          [
+            "category",
+            "isAvailable",
+            "order"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "category",
+          "level": "LOW",
+          "estimatedUniqueValues": 11,
+          "notes": "11 valeurs uniques sur 114 documents (ratio: 9.65%)"
+        },
+        {
+          "field": "isAvailable",
+          "level": "LOW",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 114 documents (ratio: 0.88%)"
+        },
+        {
+          "field": "order",
+          "level": "MEDIUM",
+          "estimatedUniqueValues": 17,
+          "notes": "17 valeurs uniques sur 114 documents (ratio: 14.91%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 114,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 114,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 114,
+            "executionTimeMillisEstimate": 0,
+            "works": 115,
+            "advanced": 114,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 114
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 114,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "menuitems",
+      "indexName": "isFeatured_1_isAvailable_1",
+      "keys": "isFeatured:1, isAvailable:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "menu.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Get featured available items for homepage"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "isFeatured",
+          "isAvailable"
+        ],
+        "prefixes": [
+          [
+            "isFeatured"
+          ],
+          [
+            "isFeatured",
+            "isAvailable"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "isFeatured",
+          "level": "LOW",
+          "estimatedUniqueValues": 2,
+          "notes": "2 valeurs uniques sur 114 documents (ratio: 1.75%)"
+        },
+        {
+          "field": "isAvailable",
+          "level": "LOW",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 114 documents (ratio: 0.88%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 114,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 114,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 114,
+            "executionTimeMillisEstimate": 0,
+            "works": 115,
+            "advanced": 114,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 114
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 114,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "menuitems",
+      "indexName": "tags_1",
+      "keys": "tags:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "menu.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Filter items by tags"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "tags"
+        ],
+        "prefixes": [
+          [
+            "tags"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "tags"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "tags",
+          "level": "LOW",
+          "estimatedUniqueValues": 6,
+          "notes": "6 valeurs uniques sur 114 documents (ratio: 5.26%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 114,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 114,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 114,
+            "executionTimeMillisEstimate": 0,
+            "works": 115,
+            "advanced": 114,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 114
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 114,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "reviews",
+      "indexName": "isPublished_1_isApproved_1_order_1",
+      "keys": "isPublished:1, isApproved:1, order:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "review.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Get published approved reviews"
+        },
+        {
+          "location": "review.controller.ts",
+          "queryType": "sort",
+          "filter": {},
+          "description": "Sort reviews by display order"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "isPublished",
+          "isApproved",
+          "order"
+        ],
+        "prefixes": [
+          [
+            "isPublished"
+          ],
+          [
+            "isPublished",
+            "isApproved"
+          ],
+          [
+            "isPublished",
+            "isApproved",
+            "order"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "isPublished",
+          "level": "MEDIUM",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 3 documents (ratio: 33.33%)"
+        },
+        {
+          "field": "isApproved",
+          "level": "HIGH",
+          "estimatedUniqueValues": 2,
+          "notes": "2 valeurs uniques sur 3 documents (ratio: 66.67%)"
+        },
+        {
+          "field": "order",
+          "level": "MEDIUM",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 3 documents (ratio: 33.33%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 3,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 3,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 3,
+            "executionTimeMillisEstimate": 0,
+            "works": 4,
+            "advanced": 3,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 3
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 3,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "reviews",
+      "indexName": "source_1",
+      "keys": "source:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "review.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Filter reviews by source (Google, TripAdvisor)"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "source"
+        ],
+        "prefixes": [
+          [
+            "source"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "source"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "source",
+          "level": "MEDIUM",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 3 documents (ratio: 33.33%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 3,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 3,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 3,
+            "executionTimeMillisEstimate": 0,
+            "works": 4,
+            "advanced": 3,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 3
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 3,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "reviews",
+      "indexName": "rating_1",
+      "keys": "rating:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "review.controller.ts",
+          "queryType": "aggregate",
+          "filter": {},
+          "description": "Calculate average rating and distribution"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "rating"
+        ],
+        "prefixes": [
+          [
+            "rating"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "rating"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "rating",
+          "level": "HIGH",
+          "estimatedUniqueValues": 2,
+          "notes": "2 valeurs uniques sur 3 documents (ratio: 66.67%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 3,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 3,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 3,
+            "executionTimeMillisEstimate": 0,
+            "works": 4,
+            "advanced": 3,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 3
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 3,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "reviews",
+      "indexName": "reviewDate_-1",
+      "keys": "reviewDate:-1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "review.controller.ts",
+          "queryType": "sort",
+          "filter": {},
+          "description": "Sort reviews by most recent"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "reviewDate"
+        ],
+        "prefixes": [
+          [
+            "reviewDate"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "reviewDate"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "reviewDate",
+          "level": "HIGH",
+          "estimatedUniqueValues": 3,
+          "notes": "3 valeurs uniques sur 3 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 3,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 3,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 3,
+            "executionTimeMillisEstimate": 0,
+            "works": 4,
+            "advanced": 3,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 3
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 3,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "menucategories",
+      "indexName": "slug_1",
+      "keys": "slug:1",
+      "unique": true,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "menu.controller.ts",
+          "queryType": "findOne",
+          "filter": {},
+          "description": "Check slug uniqueness"
+        },
+        {
+          "location": "menu.controller.ts",
+          "queryType": "findOne",
+          "filter": {},
+          "description": "Get public category by slug"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "slug"
+        ],
+        "prefixes": [
+          [
+            "slug"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "slug"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "slug",
+          "level": "HIGH",
+          "estimatedUniqueValues": 11,
+          "notes": "11 valeurs uniques sur 11 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 11,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 11,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 11,
+            "executionTimeMillisEstimate": 0,
+            "works": 12,
+            "advanced": 11,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 11
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 11,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "HIGH",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "menucategories",
+      "indexName": "isActive_1_order_1",
+      "keys": "isActive:1, order:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "menu.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Get active categories"
+        },
+        {
+          "location": "menu.controller.ts",
+          "queryType": "sort",
+          "filter": {},
+          "description": "Sort categories by display order"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "isActive",
+          "order"
+        ],
+        "prefixes": [
+          [
+            "isActive"
+          ],
+          [
+            "isActive",
+            "order"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "isActive",
+          "level": "LOW",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 11 documents (ratio: 9.09%)"
+        },
+        {
+          "field": "order",
+          "level": "HIGH",
+          "estimatedUniqueValues": 11,
+          "notes": "11 valeurs uniques sur 11 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 11,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 11,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 11,
+            "executionTimeMillisEstimate": 0,
+            "works": 12,
+            "advanced": 11,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 11
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 11,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "settings",
+      "indexName": "updatedAt_-1",
+      "keys": "updatedAt:-1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "settings.controller.ts",
+          "queryType": "findOne",
+          "filter": {},
+          "description": "Get singleton settings (always findOne)"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "updatedAt"
+        ],
+        "prefixes": [
+          [
+            "updatedAt"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "updatedAt"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "updatedAt",
+          "level": "HIGH",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 1 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 1,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 1,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 1,
+            "executionTimeMillisEstimate": 0,
+            "works": 2,
+            "advanced": 1,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 1
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 1,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "REVIEW_REQUIRED",
+      "confidence": "LOW",
+      "reasoning": "Collection settings est singleton - vérifier si index nécessaire"
+    },
+    {
+      "collection": "users",
+      "indexName": "email_1",
+      "keys": "email:1",
+      "unique": true,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "auth.controller.ts",
+          "queryType": "findByEmail",
+          "filter": {},
+          "description": "Login authentication"
+        },
+        {
+          "location": "user.model.ts",
+          "queryType": "findOne",
+          "filter": {},
+          "description": "Static method findByEmail"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "email"
+        ],
+        "prefixes": [
+          [
+            "email"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "email"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "email",
+          "level": "HIGH",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 1 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 1,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 1,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 1,
+            "executionTimeMillisEstimate": 0,
+            "works": 2,
+            "advanced": 1,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 1
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 1,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "HIGH",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "users",
+      "indexName": "role_1",
+      "keys": "role:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "admin.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Filter users by role (admin, manager)"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "role"
+        ],
+        "prefixes": [
+          [
+            "role"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "role"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "role",
+          "level": "HIGH",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 1 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 1,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 1,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 1,
+            "executionTimeMillisEstimate": 0,
+            "works": 2,
+            "advanced": 1,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 1
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 1,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "users",
+      "indexName": "isActive_1",
+      "keys": "isActive:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "admin.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Filter active users"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "isActive"
+        ],
+        "prefixes": [
+          [
+            "isActive"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "isActive"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "isActive",
+          "level": "HIGH",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 1 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 1,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 1,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 1,
+            "executionTimeMillisEstimate": 0,
+            "works": 2,
+            "advanced": 1,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 1
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 1,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "media",
+      "indexName": "category_1_isVisible_1_order_1",
+      "keys": "category:1, isVisible:1, order:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "gallery.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Get visible media by category"
+        },
+        {
+          "location": "gallery.controller.ts",
+          "queryType": "sort",
+          "filter": {},
+          "description": "Sort media by display order"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "category",
+          "isVisible",
+          "order"
+        ],
+        "prefixes": [
+          [
+            "category"
+          ],
+          [
+            "category",
+            "isVisible"
+          ],
+          [
+            "category",
+            "isVisible",
+            "order"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "category",
+          "level": "LOW",
+          "estimatedUniqueValues": 3,
+          "notes": "3 valeurs uniques sur 56 documents (ratio: 5.36%)"
+        },
+        {
+          "field": "isVisible",
+          "level": "LOW",
+          "estimatedUniqueValues": 2,
+          "notes": "2 valeurs uniques sur 56 documents (ratio: 3.57%)"
+        },
+        {
+          "field": "order",
+          "level": "HIGH",
+          "estimatedUniqueValues": 40,
+          "notes": "40 valeurs uniques sur 56 documents (ratio: 71.43%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 56,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 56,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 56,
+            "executionTimeMillisEstimate": 0,
+            "works": 57,
+            "advanced": 56,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 56
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 56,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "media",
+      "indexName": "type_1_category_1",
+      "keys": "type:1, category:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "gallery.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Filter by media type (image/video) + category"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "type",
+          "category"
+        ],
+        "prefixes": [
+          [
+            "type"
+          ],
+          [
+            "type",
+            "category"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "type",
+          "level": "LOW",
+          "estimatedUniqueValues": 1,
+          "notes": "1 valeurs uniques sur 56 documents (ratio: 1.79%)"
+        },
+        {
+          "field": "category",
+          "level": "LOW",
+          "estimatedUniqueValues": 3,
+          "notes": "3 valeurs uniques sur 56 documents (ratio: 5.36%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 56,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 56,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 56,
+            "executionTimeMillisEstimate": 0,
+            "works": 57,
+            "advanced": 56,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 56
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 56,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "media",
+      "indexName": "isVisible_1_order_1",
+      "keys": "isVisible:1, order:1",
+      "unique": false,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 2,
+      "queryPatterns": [
+        {
+          "location": "gallery.controller.ts",
+          "queryType": "find",
+          "filter": {},
+          "description": "Admin: get all visible media"
+        },
+        {
+          "location": "gallery.controller.ts",
+          "queryType": "sort",
+          "filter": {},
+          "description": "Sort all media by order"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "isVisible",
+          "order"
+        ],
+        "prefixes": [
+          [
+            "isVisible"
+          ],
+          [
+            "isVisible",
+            "order"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Filtres non analysables - ordre actuel accepté comme optimal"
+      },
+      "cardinality": [
+        {
+          "field": "isVisible",
+          "level": "LOW",
+          "estimatedUniqueValues": 2,
+          "notes": "2 valeurs uniques sur 56 documents (ratio: 3.57%)"
+        },
+        {
+          "field": "order",
+          "level": "HIGH",
+          "estimatedUniqueValues": 40,
+          "notes": "40 valeurs uniques sur 56 documents (ratio: 71.43%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 56,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 56,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 56,
+            "executionTimeMillisEstimate": 0,
+            "works": 57,
+            "advanced": 56,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 56
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 56,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "LOW",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "2 requête(s) trouvée(s), aucune redondance détectée"
+    },
+    {
+      "collection": "media",
+      "indexName": "publicId_1",
+      "keys": "publicId:1",
+      "unique": true,
+      "declaredInSchema": true,
+      "atlasPresent": false,
+      "queriesFound": 1,
+      "queryPatterns": [
+        {
+          "location": "upload.service.ts",
+          "queryType": "findOne",
+          "filter": {},
+          "description": "Prevent duplicate uploads by Cloudinary public_id"
+        }
+      ],
+      "prefixOverlap": {
+        "indexKeys": [
+          "publicId"
+        ],
+        "prefixes": [
+          [
+            "publicId"
+          ]
+        ],
+        "overlapsWith": [],
+        "redundantWith": []
+      },
+      "redundantWith": [],
+      "esrAssessment": {
+        "equality": [
+          "publicId"
+        ],
+        "sort": [],
+        "range": [],
+        "orderCorrect": true,
+        "recommendation": "Index simple - ESR non applicable"
+      },
+      "cardinality": [
+        {
+          "field": "publicId",
+          "level": "HIGH",
+          "estimatedUniqueValues": 56,
+          "notes": "56 valeurs uniques sur 56 documents (ratio: 100.00%)"
+        }
+      ],
+      "explainAvailable": true,
+      "explainAssessment": {
+        "available": true,
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 56,
+          "executionTimeMillis": 0,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 56,
+          "executionStages": {
+            "isCached": false,
+            "stage": "COLLSCAN",
+            "nReturned": 56,
+            "executionTimeMillisEstimate": 0,
+            "works": 57,
+            "advanced": 56,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "direction": "forward",
+            "docsExamined": 56
+          }
+        },
+        "indexUsed": "COLLSCAN",
+        "docsExamined": 56,
+        "executionTimeMs": 0,
+        "assessment": "Collection scan - index manquant pourrait améliorer les performances"
+      },
+      "dataIntegrityImpact": "HIGH",
+      "performanceImpact": "MEDIUM",
+      "finalDecision": "CREATE_SAFE",
+      "confidence": "HIGH",
+      "reasoning": "1 requête(s) trouvée(s), aucune redondance détectée"
+    }
+  ],
+  "verdict": "HUMAN_REVIEW_REQUIRED",
+  "guardRail": {
+    "writeOperationsBlocked": true,
+    "dataModifications": 0,
+    "indexCreations": 0,
+    "indexDrops": 0
+  }
+}

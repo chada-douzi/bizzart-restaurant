@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapport d'Audit Complet - 2026-08-18T15:11:05.354Z</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+      background: #f5f5f5; 
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container { max-width: 1400px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 20px; }
+    h2 { color: #34495e; margin-top: 30px; margin-bottom: 15px; border-left: 4px solid #3498db; padding-left: 10px; }
+    h3 { color: #7f8c8d; margin-top: 20px; margin-bottom: 10px; }
+    .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+    .summary-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; }
+    .summary-card.green { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+    .summary-card.orange { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    .summary-card.blue { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+    .summary-card h3 { color: white; font-size: 0.9em; margin-bottom: 5px; }
+    .summary-card .value { font-size: 2em; font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ecf0f1; }
+    th { background: #3498db; color: white; font-weight: 600; }
+    tr:hover { background: #f8f9fa; }
+    .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600; }
+    .badge.high { background: #2ecc71; color: white; }
+    .badge.medium { background: #f39c12; color: white; }
+    .badge.low { background: #e74c3c; color: white; }
+    .badge.no-match { background: #95a5a6; color: white; }
+    .badge.cloudinary { background: #3498db; color: white; }
+    .badge.local { background: #9b59b6; color: white; }
+    .badge.critical { background: #c0392b; color: white; }
+    .badge.warning { background: #e67e22; color: white; }
+    .badge.info { background: #3498db; color: white; }
+    .anomaly { padding: 10px; margin: 5px 0; border-left: 4px solid #e74c3c; background: #ffeaea; border-radius: 4px; }
+    .recommendation { padding: 10px; margin: 5px 0; border-left: 4px solid #3498db; background: #e8f4f8; border-radius: 4px; }
+    .timestamp { color: #7f8c8d; font-size: 0.9em; }
+    img { max-width: 100px; max-height: 100px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Rapport d'Audit Complet - Médias & Plats</h1>
+    <p class="timestamp">Généré le : 18/08/2026 16:11:05</p>
+
+    <h2>📈 Résumé Global</h2>
+    <div class="summary">
+      <div class="summary-card blue">
+        <h3>Total Médias</h3>
+        <div class="value">56</div>
+        <small>40 Cloudinary + 16 Local</small>
+      </div>
+      <div class="summary-card green">
+        <h3>Total Plats</h3>
+        <div class="value">98</div>
+        <small>11 catégories</small>
+      </div>
+      <div class="summary-card orange">
+        <h3>Mappings HIGH</h3>
+        <div class="value">0</div>
+        <small>Haute confiance</small>
+      </div>
+      <div class="summary-card">
+        <h3>Anomalies</h3>
+        <div class="value">65</div>
+        <small>À résoudre</small>
+      </div>
+    </div>
+
+    <h2>🔗 Mappings Proposés (HIGH CONFIDENCE)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Plat</th>
+          <th>Catégorie</th>
+          <th>Image Proposée</th>
+          <th>Score</th>
+          <th>Raison</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+
+    <h2>⚠️ Mappings MEDIUM CONFIDENCE</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Plat</th>
+          <th>Catégorie</th>
+          <th>Image Proposée</th>
+          <th>Score</th>
+          <th>Raison</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+            <tr>
+              <td><strong>Pâtes BIZZ'Art</strong><br><small>Pâtes BIZZ'Art</small></td>
+              <td>Pâtes</td>
+              <td>Plat signature BIZZ'ART</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Fruits de Mer</strong><br><small>Pâtes Fruits de Mer</small></td>
+              <td>Pâtes</td>
+              <td>Paella Fruits de Mer</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Lasagne Fruits De Mer</strong><br><small>Lasagne Fruits De Mer</small></td>
+              <td>Pâtes</td>
+              <td>Paella Fruits de Mer</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Paella Royale</strong><br><small>Paella Royale</small></td>
+              <td>Plats Espagnol</td>
+              <td>Paella Royale</td>
+              <td><span class="badge medium">50</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Risotto Bizz'Art</strong><br><small>Risotto Bizz'Art</small></td>
+              <td>Plats Espagnol</td>
+              <td>Plat signature BIZZ'ART</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Gratin Fruits de Mer</strong><br><small>Gratin Fruits de Mer</small></td>
+              <td>Plats Espagnol</td>
+              <td>Paella Fruits de Mer</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Thon</strong><br><small>Pizza Thon</small></td>
+              <td>Les Pizzas</td>
+              <td>Pizza Thon</td>
+              <td><span class="badge medium">50</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Napolitaine</strong><br><small>Napolitaine</small></td>
+              <td>Les Pizzas</td>
+              <td>Pizza Napolitaine</td>
+              <td><span class="badge medium">50</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Bizz'art</strong><br><small>Pizza Bizz'art</small></td>
+              <td>Les Pizzas</td>
+              <td>Plat signature BIZZ'ART</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Bizz'Art</strong><br><small>Salade Bizz'Art</small></td>
+              <td>Salade</td>
+              <td>Plat signature BIZZ'ART</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Fruits de Mer</strong><br><small>Salade Fruits de Mer</small></td>
+              <td>Salade</td>
+              <td>Paella Fruits de Mer</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Bizz'Art</strong><br><small>Escalope Bizz'Art</small></td>
+              <td>Volailles</td>
+              <td>Plat signature BIZZ'ART</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak</strong><br><small>Steak</small></td>
+              <td>Viandes</td>
+              <td>Steak Gratiné</td>
+              <td><span class="badge medium">50</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côte à L'os Bizz'Art</strong><br><small>Côte à L'os Bizz'Art</small></td>
+              <td>Viandes</td>
+              <td>Plat signature BIZZ'ART</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Plateau Fruits de mer</strong><br><small>Plateau Fruits de mer</small></td>
+              <td>Fruits de mer</td>
+              <td>Paella Fruits de Mer</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Fruits de Mer Sautés</strong><br><small>Fruits de Mer Sautés</small></td>
+              <td>Fruits de mer</td>
+              <td>Paella Fruits de Mer</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Fruits de mer</strong><br><small>Symphonie Fruits de mer</small></td>
+              <td>Fruits de mer</td>
+              <td>Paella Fruits de Mer</td>
+              <td><span class="badge medium">40</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet grillé</strong><br><small>Poulet grillé</small></td>
+              <td>Tacos</td>
+              <td>Poulet Grillé aux Herbes</td>
+              <td><span class="badge medium">50</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Thon</strong><br><small>Thon</small></td>
+              <td>MAkIOUB</td>
+              <td>Pizza Thon</td>
+              <td><span class="badge medium">50</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet grillé</strong><br><small>Poulet grillé</small></td>
+              <td>MAkIOUB</td>
+              <td>Poulet Grillé aux Herbes</td>
+              <td><span class="badge medium">50</span></td>
+              <td>Correspondance partielle</td>
+            </tr>
+          
+      </tbody>
+    </table>
+
+    <h2>🚨 Anomalies Détectées</h2>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Plat signature BIZZ'ART" proposée pour 6 plats
+        <br><small>Éléments affectés : 6</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Paella Fruits de Mer" proposée pour 10 plats
+        <br><small>Éléments affectés : 10</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Crevettes & Poisson" proposée pour 5 plats
+        <br><small>Éléments affectés : 5</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Fruits de Mer en Sauce Crème" proposée pour 6 plats
+        <br><small>Éléments affectés : 6</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Paella Royale" proposée pour 2 plats
+        <br><small>Éléments affectés : 2</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Poulet Grillé aux Herbes" proposée pour 10 plats
+        <br><small>Éléments affectés : 10</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Pizza Napolitaine" proposée pour 10 plats
+        <br><small>Éléments affectés : 10</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Pizza Thon" proposée pour 2 plats
+        <br><small>Éléments affectés : 2</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge warning">WARNING</span>
+        <strong>multiple_usage</strong>: Image "Steak Gratiné" proposée pour 3 plats
+        <br><small>Éléments affectés : 3</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/plat-signature-gastro.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/pizza-oeuf-merguez.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/pizza-thon.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/pizza-champignons.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/grillades-mixtes.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/plateau-grillades.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/steak-gratiné.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/emince-champignons.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/paella-fruits-mer.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/paella-noire.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/crevettes-poisson.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/spaghetti-fruits-mer.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/tagliatelles-burrata.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/grillade-mixte-salle.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/poulet-grille-herbes.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge critical">CRITICAL</span>
+        <strong>missing_file</strong>: Fichier local introuvable : /images/gallery/fruits-mer-creme.jpg
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(11)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(12)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(13)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(2)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(3)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(4)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(5)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(6)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(7)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(8)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download(9)
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : r07qxo    R Download
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : A7D9ECFF 989F 45B7 8E9F 1AA5833C3B1D
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : AAA10429 9A48 4F34 88FC E951DB9960F8
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : CE03FC6E 28EB 438B A580 ACDE0EE43DB5
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : D2ACAC2E 1EDE 404C 8597 0006112AC6C2
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : DDBA871E ADDC 4602 AA42 E875DD1D7559
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : E82B1115 081E 4CAB 8E58 F86532F170CC
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : EB2F2B90 88F1 44EB 90BF BFDB31B8B15E
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : F04A3E91 B691 4A8E 8F76 665B275F1812
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FBB08DE2 5BC4 4226 87A1 AF9B4B9D163F
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831381120
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831383530
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831385645
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831387595
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831389680
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831392186
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831394707
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831464636
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831504871
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831512797
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831543045
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831557428
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FB IMG 1786831623991
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : FD0F8561 B4E5 413D 98F4 FA5778A54F7B
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : IMG 0237
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : IMG 0285
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : IMG 9699
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : IMG 9701
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+      <div class="anomaly">
+        <span class="badge info">INFO</span>
+        <strong>dimension_issue</strong>: Dimensions manquantes pour : IMG 9720
+        <br><small>Éléments affectés : 1</small>
+      </div>
+    
+
+    <h2>📦 Médias Inutilisés (45)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Titre</th>
+          <th>Catégorie</th>
+          <th>Origine</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+            <td>5</td>
+            <td>Grillades Mixtes</td>
+            <td>food</td>
+            <td><span class="badge local">local</span></td>
+            <td><small>/images/gallery/grillades-mixtes.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>6</td>
+            <td>Grand Plateau Grillades</td>
+            <td>food</td>
+            <td><span class="badge local">local</span></td>
+            <td><small>/images/gallery/plateau-grillades.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>8</td>
+            <td>Émincé Champignons</td>
+            <td>food</td>
+            <td><span class="badge local">local</span></td>
+            <td><small>/images/gallery/emince-champignons.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>12</td>
+            <td>Spaghetti Fruits de Mer</td>
+            <td>food</td>
+            <td><span class="badge local">local</span></td>
+            <td><small>/images/gallery/spaghetti-fruits-mer.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>13</td>
+            <td>Tagliatelles Burrata</td>
+            <td>food</td>
+            <td><span class="badge local">local</span></td>
+            <td><small>/images/gallery/tagliatelles-burrata.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>17</td>
+            <td>r07qxo    R Download(11)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>18</td>
+            <td>r07qxo    R Download(12)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>19</td>
+            <td>r07qxo    R Download(13)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>20</td>
+            <td>r07qxo    R Download(2)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>21</td>
+            <td>r07qxo    R Download(3)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>22</td>
+            <td>r07qxo    R Download(4)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>23</td>
+            <td>r07qxo    R Download(5)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060761/bizzart/menu/r07qxo_-_R_Download_5_mx8xs2.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>24</td>
+            <td>r07qxo    R Download(6)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>25</td>
+            <td>r07qxo    R Download(7)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>26</td>
+            <td>r07qxo    R Download(8)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>27</td>
+            <td>r07qxo    R Download(9)</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>28</td>
+            <td>r07qxo    R Download</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>29</td>
+            <td>A7D9ECFF 989F 45B7 8E9F 1AA5833C3B1D</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>30</td>
+            <td>AAA10429 9A48 4F34 88FC E951DB9960F8</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060774/bizzart/menu/AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>31</td>
+            <td>CE03FC6E 28EB 438B A580 ACDE0EE43DB5</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>32</td>
+            <td>D2ACAC2E 1EDE 404C 8597 0006112AC6C2</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>33</td>
+            <td>DDBA871E ADDC 4602 AA42 E875DD1D7559</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>34</td>
+            <td>E82B1115 081E 4CAB 8E58 F86532F170CC</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>35</td>
+            <td>EB2F2B90 88F1 44EB 90BF BFDB31B8B15E</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>36</td>
+            <td>F04A3E91 B691 4A8E 8F76 665B275F1812</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>37</td>
+            <td>FBB08DE2 5BC4 4226 87A1 AF9B4B9D163F</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060787/bizzart/menu/FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>38</td>
+            <td>FB IMG 1786831381120</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>39</td>
+            <td>FB IMG 1786831383530</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>40</td>
+            <td>FB IMG 1786831385645</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>41</td>
+            <td>FB IMG 1786831387595</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>42</td>
+            <td>FB IMG 1786831389680</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>43</td>
+            <td>FB IMG 1786831392186</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>44</td>
+            <td>FB IMG 1786831394707</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>45</td>
+            <td>FB IMG 1786831464636</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>46</td>
+            <td>FB IMG 1786831504871</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>47</td>
+            <td>FB IMG 1786831512797</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060797/bizzart/menu/FB_IMG_1786831512797_uc66qt.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>48</td>
+            <td>FB IMG 1786831543045</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>49</td>
+            <td>FB IMG 1786831557428</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>50</td>
+            <td>FB IMG 1786831623991</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>51</td>
+            <td>FD0F8561 B4E5 413D 98F4 FA5778A54F7B</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png</small></td>
+          </tr>
+        
+          <tr>
+            <td>52</td>
+            <td>IMG 0237</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>53</td>
+            <td>IMG 0285</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060806/bizzart/menu/IMG_0285_q2e2rm.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>54</td>
+            <td>IMG 9699</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>55</td>
+            <td>IMG 9701</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg</small></td>
+          </tr>
+        
+          <tr>
+            <td>56</td>
+            <td>IMG 9720</td>
+            <td>gallery</td>
+            <td><span class="badge cloudinary">cloudinary</span></td>
+            <td><small>https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg</small></td>
+          </tr>
+        
+      </tbody>
+    </table>
+
+    <h2>🖼️ Plats Sans Image (0)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Nom FR</th>
+          <th>Catégorie</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+
+    <h2>💡 Recommandations</h2>
+    
+      <div class="recommendation">⚠ 20 mappings MEDIUM CONFIDENCE nécessitent une révision manuelle</div>
+    
+      <div class="recommendation">⚠ 34 mappings LOW CONFIDENCE nécessitent une vérification approfondie</div>
+    
+      <div class="recommendation">❌ 2 plats n'ont aucune correspondance évidente</div>
+    
+      <div class="recommendation">📦 45 médias ne sont associés à aucun plat</div>
+    
+      <div class="recommendation">⬆️ 16 médias locaux peuvent être migrés vers Cloudinary</div>
+    
+      <div class="recommendation">🚨 16 anomalies critiques doivent être corrigées avant migration</div>
+    
+
+    <h2>✅ Confirmation de Sécurité</h2>
+    <div class="recommendation">
+      <strong>✓ Aucune donnée MongoDB modifiée</strong><br>
+      <strong>✓ Aucun média Cloudinary supprimé</strong><br>
+      <strong>✓ Aucune URL remplacée automatiquement</strong><br>
+      <strong>✓ Mode lecture seule respecté</strong>
+    </div>
+  </div>
+</body>
+</html>

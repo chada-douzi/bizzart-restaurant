@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Index Revalidation Forensic - BIZZ'ART Monastir</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+    .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+    .section { background: white; padding: 20px; margin: 20px 0; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+    th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background: #34495e; color: white; }
+    .yes { color: #27ae60; font-weight: bold; }
+    .no { color: #e74c3c; font-weight: bold; }
+    .excluded { background: #e74c3c; color: white; padding: 2px 6px; border-radius: 3px; }
+    .create-safe { background: #27ae60; color: white; padding: 2px 6px; border-radius: 3px; }
+    .review { background: #f39c12; color: white; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔍 REVALIDATION FORENSIQUE COMPLÈTE</h1>
+    <p>BIZZ'ART Monastir - 2026-08-21T05:26:19.907Z</p>
+    <p>Mode: READ-ONLY ABSOLU</p>
+  </div>
+
+  <div class="section">
+    <h2>✅ PHASE 1 — Vérification Modèle Settings</h2>
+    <p class="yes">✅ settingsSchema.index({ updatedAt: -1 }) NOT FOUND</p>
+    <p>L'index a été correctement supprimé du modèle.</p>
+  </div>
+
+  <div class="section">
+    <h2>📊 PHASE 3 — Settings Special Case</h2>
+    <table>
+      <tr><th>Model Declares</th><td>NONE</td></tr>
+      <tr><th>LOCAL Indexes</th><td>_id_, updatedAt_-1</td></tr>
+      <tr><th>ATLAS Indexes</th><td>_id_</td></tr>
+      <tr><th>Legacy LOCAL-only</th><td>updatedAt_-1</td></tr>
+    </table>
+    <p><strong>Status:</strong> updatedAt_-1 declared as EXCLUDED - not a candidate for creation</p>
+  </div>
+
+  <div class="section">
+    <h2>📋 PHASE 6 — Résumé</h2>
+    <table>
+      <tr><th>Total Candidates</th><td>11</td></tr>
+      <tr><th>CREATE_SAFE</th><td class="yes">11</td></tr>
+      <tr><th>REVIEW_REQUIRED</th><td>22</td></tr>
+      <tr><th>EXCLUDED</th><td class="no">1</td></tr>
+      <tr><th>settings.updatedAt_-1</th><td class="excluded">EXCLUDED</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📝 PHASE 4 — Index Candidates</h2>
+    <table>
+      <tr>
+        <th>Collection</th>
+        <th>Index</th>
+        <th>Keys</th>
+        <th>Unique</th>
+        <th>In Model</th>
+        <th>LOCAL</th>
+        <th>ATLAS</th>
+        <th>Legacy</th>
+        <th>Decision</th>
+      </tr>
+      
+        <tr>
+          <td>reservations</td>
+          <td>date_1_status_1</td>
+          <td><small>date:1, status:1</small></td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>reservations</td>
+          <td>customer.email_1</td>
+          <td><small>customer.email:1</small></td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>reservations</td>
+          <td>date_1_status_1</td>
+          <td><small>date:1, status:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>reservations</td>
+          <td>customer.email_1</td>
+          <td><small>customer.email:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>reservations</td>
+          <td>status_1_createdAt_-1</td>
+          <td><small>status:1, createdAt:-1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>reservations</td>
+          <td>date_1_time_1</td>
+          <td><small>date:1, time:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>reservations</td>
+          <td>reminderSent_1_date_1_status_1</td>
+          <td><small>reminderSent:1, date:1, status:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>menuitems</td>
+          <td>slug_1</td>
+          <td><small>slug:1</small></td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>menuitems</td>
+          <td>tags_1</td>
+          <td><small>tags:1</small></td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>menuitems</td>
+          <td>slug_1</td>
+          <td><small>slug:1</small></td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>menuitems</td>
+          <td>category_1_isAvailable_1_order_1</td>
+          <td><small>category:1, isAvailable:1, order:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>menuitems</td>
+          <td>isFeatured_1_isAvailable_1</td>
+          <td><small>isFeatured:1, isAvailable:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>menuitems</td>
+          <td>tags_1</td>
+          <td><small>tags:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>reviews</td>
+          <td>source_1</td>
+          <td><small>source:1</small></td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>reviews</td>
+          <td>rating_1</td>
+          <td><small>rating:1</small></td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>reviews</td>
+          <td>reviewDate_-1</td>
+          <td><small>reviewDate:-1</small></td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>reviews</td>
+          <td>isPublished_1_isApproved_1_order_1</td>
+          <td><small>isPublished:1, isApproved:1, order:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>reviews</td>
+          <td>source_1</td>
+          <td><small>source:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>reviews</td>
+          <td>rating_1</td>
+          <td><small>rating:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>reviews</td>
+          <td>reviewDate_-1</td>
+          <td><small>reviewDate:-1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>menucategories</td>
+          <td>slug_1</td>
+          <td><small>slug:1</small></td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>menucategories</td>
+          <td>slug_1</td>
+          <td><small>slug:1</small></td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>menucategories</td>
+          <td>isActive_1_order_1</td>
+          <td><small>isActive:1, order:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>settings</td>
+          <td>updatedAt_-1</td>
+          <td><small>updatedAt:-1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="excluded">EXCLUDED</span></td>
+        </tr>
+      
+        <tr>
+          <td>users</td>
+          <td>email_1</td>
+          <td><small>email:1</small></td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>users</td>
+          <td>role_1</td>
+          <td><small>role:1</small></td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>users</td>
+          <td>email_1</td>
+          <td><small>email:1</small></td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>users</td>
+          <td>role_1</td>
+          <td><small>role:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>users</td>
+          <td>isActive_1</td>
+          <td><small>isActive:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>media</td>
+          <td>publicId_1</td>
+          <td><small>publicId:1</small></td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><span class="create-safe">CREATE_SAFE</span></td>
+        </tr>
+      
+        <tr>
+          <td>media</td>
+          <td>category_1_isVisible_1_order_1</td>
+          <td><small>category:1, isVisible:1, order:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>media</td>
+          <td>type_1_category_1</td>
+          <td><small>type:1, category:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>media</td>
+          <td>isVisible_1_order_1</td>
+          <td><small>isVisible:1, order:1</small></td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+        <tr>
+          <td>media</td>
+          <td>publicId_1</td>
+          <td><small>publicId:1</small></td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td class="no">❌</td>
+          <td class="yes">✅</td>
+          <td><span class="review-required">REVIEW_REQUIRED</span></td>
+        </tr>
+      
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔒 PHASE 7 — Garanties READ-ONLY</h2>
+    <table>
+      <tr><th>Index Creations</th><td class="yes">0</td></tr>
+      <tr><th>Index Drops</th><td class="yes">0</td></tr>
+      <tr><th>Data Modifications</th><td class="yes">0</td></tr>
+      <tr><th>Atlas Modified</th><td class="no">NO</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>✅ PHASE 9 — Contrôle Final</h2>
+    <table>
+      <tr><th>Settings Model Verified</th><td class="yes">✅ YES</td></tr>
+      <tr><th>updatedAt_-1 Not In Candidates</th><td class="yes">✅ YES</td></tr>
+      <tr><th>Legacy Index Reported</th><td class="yes">✅ YES</td></tr>
+    </table>
+  </div>
+</body>
+</html>

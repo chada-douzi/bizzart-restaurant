@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+!.env.production.template
+
+# Build outputs
+dist/
+build/
+.angular/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Local databases / dumps
+dump/
+
+# Local media archives
+*.zip
+bizzart-media-extracted/
+menu-images/
+
+# Local Avast certificates
+backend/avast-root-ca.crt
+backend/avast-root-ca.pem

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Connectivity Diagnostic</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; line-height: 1.6; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #334155; }
+    .header h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #f1f5f9; }
+    .header .status { display: inline-block; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; margin-top: 1rem; background: #10b981; color: white; }
+    
+    .section { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid #334155; }
+    .section h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #f1f5f9; border-bottom: 2px solid #334155; padding-bottom: 0.5rem; }
+    .section h3 { font-size: 1.2rem; margin: 1rem 0 0.5rem 0; color: #cbd5e1; }
+    
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0; }
+    .comparison-card { background: #0f172a; padding: 1.5rem; border-radius: 8px; border-left: 4px solid; }
+    .comparison-card.success { border-left-color: #10b981; }
+    .comparison-card.failure { border-left-color: #ef4444; }
+    .comparison-card h3 { margin-bottom: 1rem; }
+    .comparison-card .result { font-size: 1.5rem; font-weight: 600; margin: 1rem 0; }
+    .comparison-card .result.success { color: #10b981; }
+    .comparison-card .result.failure { color: #ef4444; }
+    
+    .code { background: #0f172a; padding: 1rem; border-radius: 6px; font-family: 'Courier New', monospace; color: #60a5fa; margin: 0.5rem 0; border: 1px solid #334155; overflow-x: auto; }
+    .code.present { border-left: 4px solid #10b981; }
+    .code.missing { border-left: 4px solid #ef4444; }
+    
+    .info-row { display: flex; justify-content: space-between; padding: 0.75rem; margin: 0.5rem 0; background: #0f172a; border-radius: 6px; }
+    .info-row .label { color: #94a3b8; }
+    .info-row .value { font-weight: 600; color: #f1f5f9; }
+    .info-row .value.yes { color: #10b981; }
+    .info-row .value.no { color: #ef4444; }
+    
+    .root-cause { background: #1e293b; padding: 2rem; border-radius: 8px; margin: 2rem 0; border: 2px solid #10b981; }
+    .root-cause h2 { color: #10b981; margin-bottom: 1rem; }
+    .root-cause p { color: #94a3b8; margin: 0.5rem 0; }
+    .root-cause strong { color: #f1f5f9; }
+    
+    .evidence { background: #0f172a; padding: 1.5rem; border-radius: 8px; margin: 1rem 0; }
+    .evidence-item { margin: 1rem 0; padding: 1rem; background: #1e293b; border-radius: 6px; border-left: 4px solid; }
+    .evidence-item.present { border-left-color: #10b981; }
+    .evidence-item.missing { border-left-color: #ef4444; }
+    
+    .fix-proposal { background: #1e293b; padding: 2rem; border-radius: 8px; margin: 2rem 0; border: 2px solid #3b82f6; }
+    .fix-proposal h2 { color: #3b82f6; margin-bottom: 1rem; }
+    .fix-proposal .change { background: #0f172a; padding: 1rem; border-radius: 6px; margin: 1rem 0; border-left: 4px solid #3b82f6; }
+    
+    .guarantees { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border: 1px solid #334155; }
+    .guarantees h2 { color: #10b981; margin-bottom: 1rem; }
+    .guarantees ul { list-style: none; margin-left: 0; }
+    .guarantees li { padding: 0.5rem 0; color: #94a3b8; }
+    .guarantees li:before { content: "✅ "; color: #10b981; }
+    
+    .next-steps { background: #1e293b; padding: 1.5rem; border-radius: 8px; border: 1px solid #334155; }
+    .next-steps h2 { margin-bottom: 1rem; color: #f1f5f9; }
+    .next-steps ol { margin-left: 1.5rem; }
+    .next-steps li { color: #94a3b8; margin: 0.5rem 0; padding: 0.5rem; background: #0f172a; border-radius: 4px; }
+    
+    .footer { text-align: center; margin-top: 2rem; padding: 1rem; color: #64748b; }
+    
+    @media (max-width: 768px) {
+      .comparison { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔍 DIAGNOSTIC ATLAS CONNECTIVITY</h1>
+      <p>Why audit:indexes connects but audit:relevance fails</p>
+      <div class="status">ROOT CAUSE IDENTIFIED</div>
+    </div>
+
+    <div class="section">
+      <h2>📋 Executive Summary</h2>
+      <p style="color: #94a3b8; margin: 1rem 0;">
+        <strong style="color: #f1f5f9;">Problem:</strong> Two audit scripts using identical connection code produce different results when connecting to MongoDB Atlas.
+      </p>
+      <p style="color: #94a3b8; margin: 1rem 0;">
+        <strong style="color: #f1f5f9;">Root Cause:</strong> Missing DNS server configuration in <code>audit:relevance</code> prevents proper SRV record resolution for MongoDB Atlas.
+      </p>
+    </div>
+
+    <div class="comparison">
+      <div class="comparison-card success">
+        <h3>✅ audit:indexes</h3>
+        <div class="info-row">
+          <span class="label">File:</span>
+          <span class="value">index-forensic-audit.ts</span>
+        </div>
+        <div class="info-row">
+          <span class="label">DNS Import:</span>
+          <span class="value yes">✅ YES</span>
+        </div>
+        <div class="info-row">
+          <span class="label">DNS Config:</span>
+          <span class="value yes">✅ YES</span>
+        </div>
+        <div class="code present">
+import dns from 'dns';<br>
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+        </div>
+        <div class="result success">✅ ATLAS CONNECTED</div>
+      </div>
+
+      <div class="comparison-card failure">
+        <h3>❌ audit:relevance</h3>
+        <div class="info-row">
+          <span class="label">File:</span>
+          <span class="value">index-relevance-audit.ts</span>
+        </div>
+        <div class="info-row">
+          <span class="label">DNS Import:</span>
+          <span class="value no">❌ NO</span>
+        </div>
+        <div class="info-row">
+          <span class="label">DNS Config:</span>
+          <span class="value no">❌ NO</span>
+        </div>
+        <div class="code missing">
+// DNS configuration MISSING
+        </div>
+        <div class="result failure">❌ querySrv ECONNREFUSED</div>
+      </div>
+    </div>
+
+    <div class="root-cause">
+      <h2>🎯 Root Cause Analysis</h2>
+      
+      <h3>Technical Explanation</h3>
+      <p>
+        MongoDB Atlas uses <strong>SRV records</strong> (<code>_mongodb._tcp.cluster0.fhtq6yf.mongodb.net</code>) 
+        for cluster discovery when using <code>mongodb+srv://</code> URIs.
+      </p>
+      
+      <p style="margin-top: 1rem;">
+        Without explicit DNS server configuration, Node.js relies on the <strong>Windows system DNS</strong>, 
+        which may not reliably resolve SRV records, especially in certain network configurations.
+      </p>
+      
+      <p style="margin-top: 1rem;">
+        By setting DNS servers to <strong>8.8.8.8</strong> (Google) and <strong>1.1.1.1</strong> (Cloudflare), 
+        <code>audit:indexes</code> ensures proper SRV record resolution, while <code>audit:relevance</code> 
+        fails due to Windows DNS limitations.
+      </p>
+
+      <h3 style="margin-top: 1.5rem;">Why It Matters</h3>
+      <div class="info-row">
+        <span class="label">mongodb+srv:// URIs:</span>
+        <span class="value">Require DNS SRV record resolution</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Windows System DNS:</span>
+        <span class="value">May not reliably resolve SRV records</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Google DNS (8.8.8.8):</span>
+        <span class="value">Known to handle SRV records correctly</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Node.js Behavior:</span>
+        <span class="value">Uses system DNS unless explicitly configured</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🔬 Evidence</h2>
+      
+      <div class="evidence">
+        <h3>Working Script (audit:indexes)</h3>
+        <div class="evidence-item present">
+          <strong>File:</strong> index-forensic-audit.ts<br>
+          <strong>Line:</strong> 24<br>
+          <strong>Status:</strong> ✅ PRESENT<br>
+          <div class="code" style="margin-top: 0.5rem;">
+import dns from 'dns';<br>
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+          </div>
+        </div>
+      </div>
+
+      <div class="evidence">
+        <h3>Broken Script (audit:relevance)</h3>
+        <div class="evidence-item missing">
+          <strong>File:</strong> index-relevance-audit.ts<br>
+          <strong>Line:</strong> N/A<br>
+          <strong>Status:</strong> ❌ MISSING<br>
+          <div class="code" style="margin-top: 0.5rem;">
+// No DNS configuration found
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>✅ Verification</h2>
+      <p style="color: #94a3b8; margin-bottom: 1rem;">All other factors have been verified and are identical:</p>
+      
+      <div class="info-row">
+        <span class="label">Network SRV Resolution:</span>
+        <span class="value yes">✅ SUCCESS (manual test)</span>
+      </div>
+      <div class="info-row">
+        <span class="label">TCP Connectivity (3 nodes):</span>
+        <span class="value yes">✅ SUCCESS (all reachable)</span>
+      </div>
+      <div class="info-row">
+        <span class="label">IP Whitelist:</span>
+        <span class="value yes">✅ CONFIGURED (196.225.77.167)</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Credentials:</span>
+        <span class="value yes">✅ VALID (audit:indexes proves this)</span>
+      </div>
+      <div class="info-row">
+        <span class="label">MongoDB URI Format:</span>
+        <span class="value yes">✅ IDENTICAL (both use process.env.MONGODB_URI)</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Connection Method:</span>
+        <span class="value yes">✅ IDENTICAL (mongoose.createConnection)</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Connection Options:</span>
+        <span class="value yes">✅ IDENTICAL ({ readPreference: 'primaryPreferred' })</span>
+      </div>
+    </div>
+
+    <div class="fix-proposal">
+      <h2>🔧 Proposed Minimal Fix</h2>
+      
+      <p style="color: #94a3b8; margin-bottom: 1rem;">
+        Add DNS configuration to <strong>index-relevance-audit.ts</strong> to match the working script.
+      </p>
+
+      <div class="change">
+        <strong>Step 1: Add Import</strong><br>
+        <span style="color: #94a3b8;">After line 24 (after dotenv import)</span>
+        <div class="code" style="margin-top: 0.5rem;">
+import dns from 'dns';
+        </div>
+      </div>
+
+      <div class="change">
+        <strong>Step 2: Configure DNS Servers</strong><br>
+        <span style="color: #94a3b8;">After line 26 (after dotenv.config())</span>
+        <div class="code" style="margin-top: 0.5rem;">
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+        </div>
+      </div>
+
+      <h3 style="margin-top: 1.5rem;">Risk Assessment</h3>
+      <div class="info-row">
+        <span class="label">Data Modification:</span>
+        <span class="value yes">✅ NO</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Index Modification:</span>
+        <span class="value yes">✅ NO</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Connection Behavior:</span>
+        <span class="value">Improved DNS resolution only</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Reversible:</span>
+        <span class="value yes">✅ YES</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Impact:</span>
+        <span class="value yes">✅ POSITIVE - Enables Atlas connectivity</span>
+      </div>
+    </div>
+
+    <div class="guarantees">
+      <h2>🔒 Guarantees</h2>
+      <ul>
+        <li>No data modified</li>
+        <li>No indexes modified</li>
+        <li>No credentials changed</li>
+        <li>No Atlas configuration changed</li>
+        <li>READ-ONLY mode maintained</li>
+        <li>No behavioral changes to existing functionality</li>
+      </ul>
+    </div>
+
+    <div class="next-steps">
+      <h2>📝 Next Steps</h2>
+      <ol>
+        <li>Review this diagnostic report</li>
+        <li>Validate the proposed fix (add DNS configuration)</li>
+        <li>Apply minimal fix with explicit approval</li>
+        <li>Re-run <code>npm run audit:relevance</code> to confirm resolution</li>
+        <li>Verify 23 indexes are properly analyzed</li>
+      </ol>
+    </div>
+
+    <div class="footer">
+      <p>Diagnostic généré le 2026-08-21</p>
+      <p>BIZZ'ART MONASTIR — Atlas Connectivity Diagnostic</p>
+      <p style="margin-top: 1rem; color: #10b981;"><strong>VERDICT: ROOT_CAUSE_IDENTIFIED</strong></p>
+    </div>
+  </div>
+</body>
+</html>

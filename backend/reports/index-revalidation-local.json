@@ -1,0 +1,136 @@
+{
+  "collections": {
+    "reservations": {
+      "modelDeclared": [
+        "date_1_status_1",
+        "customer.email_1",
+        "status_1_date_1"
+      ],
+      "localIndexes": [
+        "date_1_status_1",
+        "customer.email_1",
+        "status_1_createdAt_-1",
+        "date_1_time_1",
+        "reminderSent_1_date_1_status_1"
+      ],
+      "declaredNotInLocal": [
+        "status_1_date_1"
+      ],
+      "localNotDeclared": [
+        "status_1_createdAt_-1",
+        "date_1_time_1",
+        "reminderSent_1_date_1_status_1"
+      ]
+    },
+    "menuitems": {
+      "modelDeclared": [
+        "category_1_order_1",
+        "slug_1",
+        "isAvailable_1",
+        "tags_1"
+      ],
+      "localIndexes": [
+        "slug_1",
+        "category_1_isAvailable_1_order_1",
+        "isFeatured_1_isAvailable_1",
+        "tags_1"
+      ],
+      "declaredNotInLocal": [
+        "category_1_order_1",
+        "isAvailable_1"
+      ],
+      "localNotDeclared": [
+        "category_1_isAvailable_1_order_1",
+        "isFeatured_1_isAvailable_1"
+      ]
+    },
+    "reviews": {
+      "modelDeclared": [
+        "menuItem_1",
+        "source_1",
+        "rating_1",
+        "reviewDate_-1",
+        "isApproved_1_isPublished_1"
+      ],
+      "localIndexes": [
+        "isPublished_1_isApproved_1_order_1",
+        "source_1",
+        "rating_1",
+        "reviewDate_-1"
+      ],
+      "declaredNotInLocal": [
+        "menuItem_1",
+        "isApproved_1_isPublished_1"
+      ],
+      "localNotDeclared": [
+        "isPublished_1_isApproved_1_order_1"
+      ]
+    },
+    "menucategories": {
+      "modelDeclared": [
+        "slug_1",
+        "order_1"
+      ],
+      "localIndexes": [
+        "slug_1",
+        "isActive_1_order_1"
+      ],
+      "declaredNotInLocal": [
+        "order_1"
+      ],
+      "localNotDeclared": [
+        "isActive_1_order_1"
+      ]
+    },
+    "settings": {
+      "modelDeclared": [],
+      "localIndexes": [
+        "updatedAt_-1"
+      ],
+      "declaredNotInLocal": [],
+      "localNotDeclared": [
+        "updatedAt_-1"
+      ]
+    },
+    "users": {
+      "modelDeclared": [
+        "email_1",
+        "role_1"
+      ],
+      "localIndexes": [
+        "email_1",
+        "role_1",
+        "isActive_1"
+      ],
+      "declaredNotInLocal": [],
+      "localNotDeclared": [
+        "isActive_1"
+      ]
+    },
+    "media": {
+      "modelDeclared": [
+        "publicId_1",
+        "uploadedBy_1_uploadedAt_-1"
+      ],
+      "localIndexes": [
+        "category_1_isVisible_1_order_1",
+        "type_1_category_1",
+        "isVisible_1_order_1",
+        "publicId_1"
+      ],
+      "declaredNotInLocal": [
+        "uploadedBy_1_uploadedAt_-1"
+      ],
+      "localNotDeclared": [
+        "category_1_isVisible_1_order_1",
+        "type_1_category_1",
+        "isVisible_1_order_1"
+      ]
+    }
+  },
+  "summary": {
+    "totalDeclaredInModel": 18,
+    "totalPresentLocal": 23,
+    "settingsUpdatedAtStatus": "LEGACY_LOCAL_ONLY"
+  }
+}

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 2 - Préparation Visuels Menu BIZZ'ART</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .stat-card .number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card .label {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+        }
+        
+        .priority-section {
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid;
+        }
+        
+        .priority-critical {
+            background: #ffe6e6;
+            border-color: #dc3545;
+        }
+        
+        .priority-high {
+            background: #fff3e6;
+            border-color: #fd7e14;
+        }
+        
+        .priority-medium {
+            background: #fff8e6;
+            border-color: #ffc107;
+        }
+        
+        .priority-low {
+            background: #e6f7ff;
+            border-color: #17a2b8;
+        }
+        
+        .priority-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .priority-critical .priority-title { color: #dc3545; }
+        .priority-high .priority-title { color: #fd7e14; }
+        .priority-medium .priority-title { color: #ffc107; }
+        .priority-low .priority-title { color: #17a2b8; }
+        
+        .duplicate-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        
+        .duplicate-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .dish-list {
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .recommendation {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .recommendation h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .recommendation ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .recommendation li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+        
+        .ambiguous-case {
+            background: #fff9e6;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .ambiguous-case h4 {
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        
+        .badge-critical { background: #dc3545; color: white; }
+        .badge-high { background: #fd7e14; color: white; }
+        .badge-medium { background: #ffc107; color: #333; }
+        .badge-low { background: #17a2b8; color: white; }
+        .badge-success { background: #28a745; color: white; }
+        .badge-warning { background: #ffc107; color: #333; }
+        
+        .alert {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid;
+        }
+        
+        .alert-warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        
+        .alert-info {
+            background: #d1ecf1;
+            border-color: #17a2b8;
+            color: #0c5460;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        .next-steps {
+            background: #e9ecef;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .next-steps ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .next-steps li {
+            counter-increment: item;
+            margin: 15px 0;
+            padding-left: 50px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .next-steps li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .stat-card, .duplicate-item {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 PHASE 2 TERMINÉE</h1>
+            <p>Préparation des Visuels Menu BIZZ'ART Monastir</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.8;">Date: 19 août 2026 | Mode: LECTURE SEULE</p>
+        </header>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">98</div>
+                <div class="label">Plats Analysés</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">29</div>
+                <div class="label">Images Dupliquées</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">87</div>
+                <div class="label">Visuels à Générer</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">0</div>
+                <div class="label">Images Manquantes</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="alert alert-success">
+                <strong>✅ Garantie:</strong> Aucune modification effectuée sur MongoDB ou Cloudinary. Tous les prix, noms et catégories sont intacts.
+            </div>
+            
+            <h2>🎯 Stratégie Recommandée</h2>
+            
+            <div class="recommendation">
+                <h3>Génération de 87 Visuels Distincts</h3>
+                <p><strong>Pourquoi 87 et non 29 ?</strong></p>
+                <p>Les "29 images dupliquées" sont actuellement partagées par 2 à 6 plats chacune. Pour offrir une expérience utilisateur professionnelle, chaque plat doit avoir son propre visuel unique.</p>
+                
+                <h4 style="color: white; margin-top: 20px;">✅ Avantages:</h4>
+                <ul>
+                    <li>Cohérence visuelle professionnelle sur tout le menu</li>
+                    <li>Chaque plat clairement identifiable et différencié</li>
+                    <li>Meilleure expérience utilisateur et confiance client</li>
+                    <li>Image de marque premium pour BIZZ'ART</li>
+                    <li>Pas de confusion entre plats différents</li>
+                </ul>
+                
+                <h4 style="color: white; margin-top: 20px;">⏱️ Coûts:</h4>
+                <ul>
+                    <li>Temps de génération: 2-3 heures</li>
+                    <li>Intégration et upload: 1-2 heures</li>
+                    <li>Coût génération IA (si service payant)</li>
+                </ul>
+            </div>
+            
+            <h2>⚡ Répartition par Priorité</h2>
+            
+            <div class="priority-section priority-critical">
+                <div class="priority-title">🚨 CRITICAL - 6 groupes (22 plats)</div>
+                <p style="margin-bottom: 15px;"><strong>Images partagées entre types de plats totalement incompatibles</strong></p>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #19 - 6 plats (LA PLUS CRITIQUE):</strong>
+                    <div class="dish-list">
+                        🍕 Pizza Fruit de mer + 🍗 Escalope à la crème + 🥩 Côte à L'os Grillée + 💧 Eau Gazeuse + 🥤 Soda + 🍋 Citronnade
+                        <div style="margin-top: 8px; color: #dc3545;">
+                            <strong>Problème:</strong> Même illustration pour une pizza, 2 viandes, et 3 boissons! Incohérence totale.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #5 - 5 plats:</strong>
+                    <div class="dish-list">
+                        🍝 Ravioli Saumon + 🍝 Pâtes sauce pesto + 🍕 Pizza Bizz'art + 🥩 Filet de boeuf + 🦐 Symphonie Fruits de mer
+                        <div style="margin-top: 8px; color: #dc3545;">
+                            <strong>Problème:</strong> Pâtes, pizza, viande et fruits de mer avec la même image.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #21 - 5 plats:</strong>
+                    <div class="dish-list">
+                        🥗 Salade César + 🥗 Salade Bizz'Art + 🥗 Salade du Chef + 🥩 Steak Farci + 🥩 Côtelette d'agneau
+                        <div style="margin-top: 8px; color: #dc3545;">
+                            <strong>Problème:</strong> 3 salades et 2 grillades de viande partagent la même image.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #23 - 5 plats:</strong>
+                    <div class="dish-list">
+                        🥗 Salade Roquette + 🍗 Suprême Maison + 🐟 Poisson du jour + 🍗 Poulet grillé + 🥤 Pétillante
+                        <div style="margin-top: 8px; color: #dc3545;">
+                            <strong>Problème:</strong> Salade, volaille, poisson et boisson ensemble.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #9 - 5 plats:</strong>
+                    <div class="dish-list">
+                        🍝 Lasagne Fruits De Mer + 🍗 Escalope sauce Épinard + 🥩 Foie Grillé + 🦑 Seiche gratinée + 🌮 Poulet Mexicain
+                        <div style="margin-top: 8px; color: #dc3545;">
+                            <strong>Problème:</strong> Pâtes, volaille, viande, fruits de mer et tacos.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #6 - 4 plats:</strong>
+                    <div class="dish-list">
+                        🍝 Ravioli Crevette + 🥘 Gratin Fruits de Mer + 🍗 Escalope Ou Cuisse de Poulet + 🌮 Viande Hachée
+                        <div style="margin-top: 8px; color: #dc3545;">
+                            <strong>Problème:</strong> Pâtes, plat espagnol, volaille et makloub.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="priority-section priority-high">
+                <div class="priority-title">⚠️ HIGH - 8 groupes (28 plats)</div>
+                <p style="margin-bottom: 15px;"><strong>Images partagées par 4+ plats du même domaine</strong></p>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #1:</strong>
+                    <div class="dish-list">Pâtes BIZZ'Art, Pizza Anglaise, Pizza Chevrettes, Involtini (Volaille)</div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #2:</strong>
+                    <div class="dish-list">Pâtes Bolognaise, Pizza Piquante, Pizza Pepperoni, Cordon Bleu (Tacos)</div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #3:</strong>
+                    <div class="dish-list">Pâtes l'Arrabiata, Pâtes Maison, Pâtes à L'italienne, Suprême (Volaille)</div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #13:</strong>
+                    <div class="dish-list">Pizza Thon, Escalope sauce Champignon, Escalope Bizz'Art, Symphonie Terre-Mer</div>
+                </div>
+                
+                <div class="duplicate-item">
+                    <strong>Doublon #26:</strong>
+                    <div class="dish-list">Escalope du Chef, Filet de boeuf sauce au choix, Poulet Mexicain, Cordon Bleu</div>
+                </div>
+                
+                <p style="margin-top: 15px; font-style: italic;">+ 3 autres groupes de 4 plats</p>
+            </div>
+            
+            <div class="priority-section priority-medium">
+                <div class="priority-title">📊 MEDIUM - 11 groupes (29 plats)</div>
+                <p><strong>Images partagées par 3 plats</strong></p>
+                <p style="margin-top: 10px;">Exemples: Ravioli Viande + Paella Royale + Grillade Mixte, Lasagne Bolognaise + Salade Crevettes Panées + Côte à l'os Bizz'Art, etc.</p>
+            </div>
+            
+            <div class="priority-section priority-low">
+                <div class="priority-title">ℹ️ LOW - 4 groupes (10 plats)</div>
+                <p><strong>Images partagées par seulement 2 plats similaires</strong></p>
+                <p style="margin-top: 10px;">Cas acceptables à évaluer: Pizza 4 Fromages + Pizza Saumon, Chicken + Foie Lyonnaise, etc.</p>
+            </div>
+            
+            <h2>⚠️ Cas Ambigus à Valider</h2>
+            
+            <div class="ambiguous-case">
+                <h4>1. Pâtes du Chef (29 DT)</h4>
+                <p><strong>Problème:</strong> Nom générique sans indication précise des ingrédients</p>
+                <p><strong>Proposition:</strong> Pâtes avec fruits de mer et sauce crémeuse (interprétation standard)</p>
+            </div>
+            
+            <div class="ambiguous-case">
+                <h4>2. Salade du Chef (24.5 DT)</h4>
+                <p><strong>Problème:</strong> Nom générique sans indication précise de la composition</p>
+                <p><strong>Proposition:</strong> Salade mixte avec poulet grillé, légumes variés, fromage</p>
+            </div>
+            
+            <div class="ambiguous-case">
+                <h4>3. Escalope du Chef (25.5 DT)</h4>
+                <p><strong>Problème:</strong> Nom générique sans indication de la sauce ou accompagnements spécifiques</p>
+                <p><strong>Proposition:</strong> Escalope avec sauce signature et accompagnements premium</p>
+            </div>
+            
+            <div class="ambiguous-case">
+                <h4>4. Poisson du jour (24 DT)</h4>
+                <p><strong>Problème:</strong> Poisson variable selon disponibilité</p>
+                <p><strong>Proposition:</strong> Poisson blanc grillé générique (bar, dorade) avec légumes</p>
+            </div>
+            
+            <div class="ambiguous-case">
+                <h4>5. Symphonie Terre-Mer</h4>
+                <p><strong>Problème:</strong> Deux plats avec le même nom mais prix différents (74 DT et 142 DT)</p>
+                <p><strong>Proposition:</strong> Générer 2 visuels distincts:</p>
+                <ul style="margin-left: 20px; margin-top: 8px;">
+                    <li>symphonie-terre-mer-2p.webp (portion moyenne, 74 DT)</li>
+                    <li>symphonie-terre-mer-4p.webp (grand plateau, 142 DT)</li>
+                </ul>
+            </div>
+            
+            <h2>🎨 Direction Artistique Unifiée</h2>
+            
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-left: 5px solid #667eea;">
+                <h3 style="margin-top: 0;">Style Photographique Global</h3>
+                <p style="line-height: 1.8;"><strong>Tous les visuels doivent respecter cette direction artistique:</strong></p>
+                <ul style="margin: 15px 0; line-height: 2;">
+                    <li>📸 Photographie culinaire professionnelle</li>
+                    <li>🎯 Rendu photoréaliste, haute qualité</li>
+                    <li>💡 Lumière naturelle douce, éclairage restaurant premium</li>
+                    <li>📐 Angle de vue 3/4 légèrement au-dessus</li>
+                    <li>🍽️ Assiette élégante, présentation gastronomique réaliste</li>
+                    <li>🌫️ Arrière-plan sobre et légèrement flou</li>
+                    <li>🎨 Profondeur de champ naturelle, textures réalistes</li>
+                    <li>🥗 Portions réalistes, couleurs naturelles</li>
+                    <li>📍 Composition centrée, image adaptée à une carte de restaurant moderne</li>
+                    <li>🚫 Aucun texte, logo, watermark, personne, emballage commercial, publicité, élément artificiel</li>
+                </ul>
+                
+                <h4 style="margin-top: 25px;">Nommage des Fichiers</h4>
+                <p><strong>Format:</strong> <code>categorie-nom-plat.webp</code></p>
+                <p style="margin-top: 10px;"><strong>Exemples:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><code>pizza-margherita.webp</code></li>
+                    <li><code>pates-bolognaise.webp</code></li>
+                    <li><code>escalope-sauce-champignon.webp</code></li>
+                    <li><code>salade-cesar.webp</code></li>
+                </ul>
+            </div>
+            
+            <h2>📋 Prochaines Étapes</h2>
+            
+            <div class="next-steps">
+                <h3 style="margin-top: 0; color: #667eea;">EN ATTENTE D'AUTORISATION UTILISATEUR</h3>
+                <ol>
+                    <li><strong>Validation de la stratégie:</strong> Confirmer la génération de 87 visuels distincts vs conserver les doublons actuels</li>
+                    <li><strong>Validation des cas ambigus:</strong> Confirmer les interprétations proposées pour les 5 plats à noms génériques</li>
+                    <li><strong>Choix du générateur d'images:</strong> DALL-E 3, Midjourney, Stable Diffusion, autre?</li>
+                    <li><strong>Validation du style photographique:</strong> Ajustements nécessaires à la direction artistique?</li>
+                    <li><strong>Planification:</strong> Ordre de génération (CRITICAL → HIGH → MEDIUM → LOW)?</li>
+                </ol>
+                
+                <div class="alert alert-warning" style="margin-top: 25px;">
+                    <strong>⚠️ IMPORTANT:</strong> Ne pas passer aux phases suivantes sans autorisation explicite:
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>❌ Phase 3: Génération des 87 images</li>
+                        <li>❌ Phase 4: Upload sur Cloudinary</li>
+                        <li>❌ Phase 5: Association dans MongoDB</li>
+                        <li>❌ Phase 6: Vérification frontend</li>
+                        <li>❌ Phase 7: Contrôle final avant/après</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>📊 Livrables Générés</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fichier</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>PHASE-2-RESUME-EXECUTIF.md</code></td>
+                        <td><span class="badge badge-success">Markdown</span></td>
+                        <td>Résumé complet de la Phase 2 avec statistiques et recommandations</td>
+                    </tr>
+                    <tr>
+                        <td><code>PHASE-2-PRESENTATION.html</code></td>
+                        <td><span class="badge badge-success">HTML</span></td>
+                        <td>Présentation visuelle interactive (ce fichier)</td>
+                    </tr>
+                    <tr>
+                        <td><code>MENU-AUDIT-2026-08-19.json</code></td>
+                        <td><span class="badge badge-success">JSON</span></td>
+                        <td>Données brutes de l'audit (98 plats, 29 doublons)</td>
+                    </tr>
+                    <tr>
+                        <td><code>MENU-AUDIT-2026-08-19.csv</code></td>
+                        <td><span class="badge badge-success">CSV</span></td>
+                        <td>Export Excel de tous les plats avec statut images</td>
+                    </tr>
+                    <tr>
+                        <td><code>MENU-AUDIT-2026-08-19.md</code></td>
+                        <td><span class="badge badge-success">Markdown</span></td>
+                        <td>Rapport détaillé Markdown avec analyse complète</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <h3 style="color: white;">📌 STATUT ACTUEL</h3>
+            <p style="font-size: 1.2em; margin-top: 15px;">
+                <span class="badge" style="background: #28a745; font-size: 1em; padding: 10px 20px;">PHASE 2 TERMINÉE</span>
+            </p>
+            <p style="margin-top: 15px; opacity: 0.9;">
+                Analyse complète effectuée en mode LECTURE SEULE<br>
+                Aucune modification effectuée sur MongoDB ou Cloudinary<br>
+                En attente d'autorisation utilisateur pour Phase 3
+            </p>
+            <p style="margin-top: 25px; font-size: 0.9em; opacity: 0.7;">
+                BIZZ'ART Monastir - Système de Gestion Menu<br>
+                Généré le 19 août 2026
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+[
+  {
+    "number": 1,
+    "category": "Les Pizzas",
+    "dish": "Pizza Thon",
+    "price": 16.5,
+    "filename": "les-pizzas-pizza-thon.webp",
+    "prompt": "Italian tuna pizza with tomato sauce, mozzarella cheese, tuna chunks, black olives, served on elegant plate. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Escalope sauce Champignon",
+      "Escalope Bizz'Art",
+      "Symphonie Terre-Mer"
+    ]
+  },
+  {
+    "number": 2,
+    "category": "Les Pizzas",
+    "dish": "Pizza 4 Fromages sauce tomate",
+    "price": 18,
+    "filename": "les-pizzas-pizza-4-fromages-sauce-tomate.webp",
+    "prompt": "Pizza 4 Fromages sauce tomate dish elegantly presented. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Pizza Saumon"
+    ]
+  },
+  {
+    "number": 3,
+    "category": "Volailles",
+    "dish": "Escalope Ou Cuisse de Poulet",
+    "price": 18,
+    "filename": "volailles-escalope-ou-cuisse-de-poulet.webp",
+    "prompt": "Escalope Ou Cuisse de Poulet dish elegantly presented. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Ravioli Crevette",
+      "Gratin Fruits de Mer",
+      "Viande Hachée"
+    ]
+  },
+  {
+    "number": 4,
+    "category": "Volailles",
+    "dish": "Escalope Panée",
+    "price": 19.5,
+    "filename": "volailles-escalope-panee.webp",
+    "prompt": "Escalope Panée dish elegantly presented. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Sprite"
+    ]
+  },
+  {
+    "number": 5,
+    "category": "Viandes",
+    "dish": "Steak Grillé",
+    "price": 26,
+    "filename": "viandes-steak-grille.webp",
+    "prompt": "Steak Grillé dish elegantly presented. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "4 Saisons",
+      "Poulet grillé"
+    ]
+  },
+  {
+    "number": 6,
+    "category": "Fruits de mer",
+    "dish": "Plateau Fruits de mer",
+    "price": 50,
+    "filename": "fruits-de-mer-plateau-fruits-de-mer.webp",
+    "prompt": "Elegant seafood platter with oysters, shrimp, mussels, crab, presented on ice bed on elegant serving plate. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Salade Saumon"
+    ]
+  },
+  {
+    "number": 7,
+    "category": "Salade",
+    "dish": "Salade César",
+    "price": 15.8,
+    "filename": "salade-salade-cesar.webp",
+    "prompt": "Salade César dish elegantly presented. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Salade Bizz'Art",
+      "Salade du Chef",
+      "Steak Farci",
+      "Côtelette d'agneau"
+    ]
+  },
+  {
+    "number": 8,
+    "category": "Tacos",
+    "dish": "Poulet grillé",
+    "price": 9.5,
+    "filename": "tacos-poulet-grille.webp",
+    "prompt": "Poulet grillé dish elegantly presented. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Salade Roquette",
+      "Suprême Maison",
+      "Poisson du jour",
+      "Pétillante"
+    ]
+  },
+  {
+    "number": 9,
+    "category": "Pâtes",
+    "dish": "Pâtes BIZZ'Art",
+    "price": 27.5,
+    "filename": "pates-pates-bizz-art.webp",
+    "prompt": "Pâtes BIZZ'Art dish elegantly presented. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Pizza Anglaise",
+      "Pizza Chevrettes",
+      "Involtini"
+    ]
+  },
+  {
+    "number": 10,
+    "category": "Plats Espagnol",
+    "dish": "Paella 1 Personne",
+    "price": 34,
+    "filename": "plats-espagnol-paella-1-personne.webp",
+    "prompt": "Paella 1 Personne dish elegantly presented. Professional culinary food photography, photorealistic rendering, premium quality, natural soft lighting, premium restaurant lighting, 3/4 angle view slightly from above, elegant presentation, subtle blurred background, natural depth of field, realistic food textures, realistic portions, natural colors, centered composition, modern restaurant menu style, no text, no logo, no watermark, no people, no commercial packaging, no advertising, no artificial elements",
+    "sharedWith": [
+      "Escalope Orientale"
+    ]
+  }
+]

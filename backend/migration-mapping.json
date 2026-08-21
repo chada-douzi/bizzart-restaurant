@@ -1,0 +1,90 @@
+[
+  {
+    "categoryId": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "slug": "les-pizzas",
+    "oldImage": "/images/gallery/pizza-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+    "sourceItem": "Pizza Margherita"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "slug": "pates",
+    "oldImage": "/images/gallery/pates-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+    "sourceItem": "Pâtes BIZZ'Art"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d0c",
+    "categoryName": "Plats Espagnol",
+    "slug": "plats-espagnol",
+    "oldImage": "/images/gallery/paella-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+    "sourceItem": "Paella 1 Personne"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d0e",
+    "categoryName": "Salade",
+    "slug": "salade",
+    "oldImage": "/images/gallery/salade-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+    "sourceItem": "Salade César"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "slug": "volailles",
+    "oldImage": "/images/gallery/poulet-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+    "sourceItem": "Escalope Ou Cuisse de Poulet"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "slug": "viandes",
+    "oldImage": "/images/gallery/viande-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+    "sourceItem": "Steak Grillé"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "slug": "fruits-de-mer",
+    "oldImage": "/images/gallery/fruits-mer-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+    "sourceItem": "Plateau Fruits de mer"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d16",
+    "categoryName": "Tacos",
+    "slug": "tacos",
+    "oldImage": "/images/gallery/tacos-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+    "sourceItem": "Poulet grillé"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d18",
+    "categoryName": "MAkIOUB",
+    "slug": "makioub",
+    "oldImage": "/images/gallery/makloub-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+    "sourceItem": "Thon"
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d1a",
+    "categoryName": "Supplement",
+    "slug": "supplement",
+    "oldImage": "/images/gallery/supplement-default.jpg",
+    "newImage": null,
+    "sourceItem": null
+  },
+  {
+    "categoryId": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "slug": "soda",
+    "oldImage": "/images/gallery/soda-default.jpg",
+    "newImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+    "sourceItem": "Eau Minérale 1/2L"
+  }
+]

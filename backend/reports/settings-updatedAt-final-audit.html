@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings updatedAt Index Audit - BIZZ'ART Monastir</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+    .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+    .section { background: white; padding: 20px; margin: 20px 0; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .decision { font-size: 1.5em; padding: 15px; text-align: center; border-radius: 5px; margin: 20px 0; }
+    .decision-do-not-create { background: #e74c3c; color: white; }
+    .decision-create-safe { background: #27ae60; color: white; }
+    .decision-review { background: #f39c12; color: white; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+    th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background: #34495e; color: white; }
+    .yes { color: #27ae60; font-weight: bold; }
+    .no { color: #e74c3c; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔍 AUDIT FORENSIQUE CIBLÉ</h1>
+    <h2>settings.updatedAt_-1</h2>
+    <p>BIZZ'ART Monastir - 2026-08-21T04:02:15.852Z</p>
+    <p>Mode: READ-ONLY ABSOLU</p>
+  </div>
+
+  <div class="decision decision-do-not_create">
+    DO_NOT_CREATE
+  </div>
+
+  <div class="section">
+    <h2>📊 ANALYSE</h2>
+    <table>
+      <tr><th>Collection</th><td>settings</td></tr>
+      <tr><th>Index Name</th><td>updatedAt_-1</td></tr>
+      <tr><th>Index Keys</th><td>{ updatedAt: -1 }</td></tr>
+      <tr><th>Is Singleton</th><td class="yes">✅ YES</td></tr>
+      <tr><th>Document Count</th><td>1</td></tr>
+      <tr><th>Existing Indexes</th><td>_id_, updatedAt_-1</td></tr>
+      <tr><th>Redundant With</th><td>None</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔎 REQUÊTES ANALYSÉES</h2>
+    <table>
+      <tr>
+        <th>Location</th>
+        <th>Filter on updatedAt</th>
+        <th>Sort on updatedAt</th>
+        <th>Query</th>
+      </tr>
+      
+        <tr>
+          <td>settings.controller.ts:120</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><code>Settings.findOne().lean()</code></td>
+        </tr>
+      
+        <tr>
+          <td>settings.controller.ts:142</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><code>Settings.findOne().populate("updatedBy", "firstName lastName email").lean()</code></td>
+        </tr>
+      
+        <tr>
+          <td>settings.controller.ts:188</td>
+          <td class="no">❌</td>
+          <td class="no">❌</td>
+          <td><code>Settings.findOneAndUpdate({}, { $set: updateFields }, ...)</code></td>
+        </tr>
+      
+    </table>
+  </div>
+
+  
+  <div class="section">
+    <h2>📈 EXPLAIN RESULT</h2>
+    <table>
+      <tr><th>Execution Time</th><td>2 ms</td></tr>
+      <tr><th>Docs Examined</th><td>1</td></tr>
+      <tr><th>Index Used</th><td>COLLSCAN</td></tr>
+    </table>
+  </div>
+  
+
+  <div class="section">
+    <h2>⚖️ DÉCISION FINALE</h2>
+    <table>
+      <tr><th>Decision</th><td><strong>DO_NOT_CREATE</strong></td></tr>
+      <tr><th>Confidence</th><td>HIGH</td></tr>
+      <tr><th>Reasoning</th><td>Collection singleton (≤1 document) et aucune requête ne filtre ou ne trie sur updatedAt. Index inutile.</td></tr>
+      <tr><th>Performance Impact</th><td>NONE - findOne() sur singleton est instantané sans index supplémentaire</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🔒 GARDE-FOU</h2>
+    <table>
+      <tr><th>Read-Only Mode</th><td class="yes">✅ YES</td></tr>
+      <tr><th>Index Created</th><td>0</td></tr>
+      <tr><th>Data Modified</th><td class="no">❌ NO</td></tr>
+    </table>
+  </div>
+</body>
+</html>

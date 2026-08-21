@@ -1,0 +1,887 @@
+{
+  "metadata": {
+    "auditTitle": "AUDIT FORENSIQUE DES INDEX LOCAL ↔ MONGODB ATLAS",
+    "timestamp": "2026-08-21T05:07:12.817Z",
+    "mode": "READ-ONLY ABSOLU"
+  },
+  "environment": {
+    "localUri": "mongodb://localhost:27017/bizzart",
+    "atlasUri": "mongodb+srv://admin:***@cluster0.fhtq6yf.mongodb.net/bizzart",
+    "database": "bizzart"
+  },
+  "phase1_environment": {
+    "status": "PASS",
+    "atlasUriValid": true,
+    "databaseMatch": true
+  },
+  "phase2_connections": {
+    "status": "PASS",
+    "localConnected": true,
+    "atlasConnected": true
+  },
+  "collections": {
+    "reservations": {
+      "collection": "reservations",
+      "localIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "date": 1,
+            "status": 1
+          },
+          "name": "date_1_status_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "customer.email": 1
+          },
+          "name": "customer.email_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "status": 1,
+            "createdAt": -1
+          },
+          "name": "status_1_createdAt_-1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "date": 1,
+            "time": 1
+          },
+          "name": "date_1_time_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "reminderSent": 1,
+            "date": 1,
+            "status": 1
+          },
+          "name": "reminderSent_1_date_1_status_1",
+          "background": true
+        }
+      ],
+      "atlasIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ],
+      "matching": [
+        {
+          "name": "_id_",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "atlasDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "status": "MATCH",
+          "category": "PERFECT_MATCH",
+          "differences": []
+        }
+      ],
+      "missingOnAtlas": [
+        {
+          "name": "date_1_status_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "date": 1,
+              "status": 1
+            },
+            "name": "date_1_status_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "customer.email_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "customer.email": 1
+            },
+            "name": "customer.email_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "status_1_createdAt_-1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "status": 1,
+              "createdAt": -1
+            },
+            "name": "status_1_createdAt_-1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "date_1_time_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "date": 1,
+              "time": 1
+            },
+            "name": "date_1_time_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "reminderSent_1_date_1_status_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "reminderSent": 1,
+              "date": 1,
+              "status": 1
+            },
+            "name": "reminderSent_1_date_1_status_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        }
+      ],
+      "extraOnAtlas": [],
+      "definitionMismatches": []
+    },
+    "menuitems": {
+      "collection": "menuitems",
+      "localIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "slug": 1
+          },
+          "name": "slug_1",
+          "background": true,
+          "unique": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "category": 1,
+            "isAvailable": 1,
+            "order": 1
+          },
+          "name": "category_1_isAvailable_1_order_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "isFeatured": 1,
+            "isAvailable": 1
+          },
+          "name": "isFeatured_1_isAvailable_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "tags": 1
+          },
+          "name": "tags_1",
+          "background": true
+        }
+      ],
+      "atlasIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ],
+      "matching": [
+        {
+          "name": "_id_",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "atlasDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "status": "MATCH",
+          "category": "PERFECT_MATCH",
+          "differences": []
+        }
+      ],
+      "missingOnAtlas": [
+        {
+          "name": "slug_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "slug": 1
+            },
+            "name": "slug_1",
+            "background": true,
+            "unique": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "category_1_isAvailable_1_order_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "category": 1,
+              "isAvailable": 1,
+              "order": 1
+            },
+            "name": "category_1_isAvailable_1_order_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "isFeatured_1_isAvailable_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "isFeatured": 1,
+              "isAvailable": 1
+            },
+            "name": "isFeatured_1_isAvailable_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "tags_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "tags": 1
+            },
+            "name": "tags_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        }
+      ],
+      "extraOnAtlas": [],
+      "definitionMismatches": []
+    },
+    "reviews": {
+      "collection": "reviews",
+      "localIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "isPublished": 1,
+            "isApproved": 1,
+            "order": 1
+          },
+          "name": "isPublished_1_isApproved_1_order_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "source": 1
+          },
+          "name": "source_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "rating": 1
+          },
+          "name": "rating_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "reviewDate": -1
+          },
+          "name": "reviewDate_-1",
+          "background": true
+        }
+      ],
+      "atlasIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ],
+      "matching": [
+        {
+          "name": "_id_",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "atlasDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "status": "MATCH",
+          "category": "PERFECT_MATCH",
+          "differences": []
+        }
+      ],
+      "missingOnAtlas": [
+        {
+          "name": "isPublished_1_isApproved_1_order_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "isPublished": 1,
+              "isApproved": 1,
+              "order": 1
+            },
+            "name": "isPublished_1_isApproved_1_order_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "source_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "source": 1
+            },
+            "name": "source_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "rating_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "rating": 1
+            },
+            "name": "rating_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "reviewDate_-1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "reviewDate": -1
+            },
+            "name": "reviewDate_-1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        }
+      ],
+      "extraOnAtlas": [],
+      "definitionMismatches": []
+    },
+    "menucategories": {
+      "collection": "menucategories",
+      "localIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "slug": 1
+          },
+          "name": "slug_1",
+          "background": true,
+          "unique": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "isActive": 1,
+            "order": 1
+          },
+          "name": "isActive_1_order_1",
+          "background": true
+        }
+      ],
+      "atlasIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ],
+      "matching": [
+        {
+          "name": "_id_",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "atlasDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "status": "MATCH",
+          "category": "PERFECT_MATCH",
+          "differences": []
+        }
+      ],
+      "missingOnAtlas": [
+        {
+          "name": "slug_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "slug": 1
+            },
+            "name": "slug_1",
+            "background": true,
+            "unique": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "isActive_1_order_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "isActive": 1,
+              "order": 1
+            },
+            "name": "isActive_1_order_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        }
+      ],
+      "extraOnAtlas": [],
+      "definitionMismatches": []
+    },
+    "settings": {
+      "collection": "settings",
+      "localIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "updatedAt": -1
+          },
+          "name": "updatedAt_-1",
+          "background": true
+        }
+      ],
+      "atlasIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ],
+      "matching": [
+        {
+          "name": "_id_",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "atlasDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "status": "MATCH",
+          "category": "PERFECT_MATCH",
+          "differences": []
+        }
+      ],
+      "missingOnAtlas": [
+        {
+          "name": "updatedAt_-1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "updatedAt": -1
+            },
+            "name": "updatedAt_-1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        }
+      ],
+      "extraOnAtlas": [],
+      "definitionMismatches": []
+    },
+    "users": {
+      "collection": "users",
+      "localIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "email": 1
+          },
+          "name": "email_1",
+          "background": true,
+          "unique": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "role": 1
+          },
+          "name": "role_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "isActive": 1
+          },
+          "name": "isActive_1",
+          "background": true
+        }
+      ],
+      "atlasIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ],
+      "matching": [
+        {
+          "name": "_id_",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "atlasDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "status": "MATCH",
+          "category": "PERFECT_MATCH",
+          "differences": []
+        }
+      ],
+      "missingOnAtlas": [
+        {
+          "name": "email_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "email": 1
+            },
+            "name": "email_1",
+            "background": true,
+            "unique": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "role_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "role": 1
+            },
+            "name": "role_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "isActive_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "isActive": 1
+            },
+            "name": "isActive_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        }
+      ],
+      "extraOnAtlas": [],
+      "definitionMismatches": []
+    },
+    "media": {
+      "collection": "media",
+      "localIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "category": 1,
+            "isVisible": 1,
+            "order": 1
+          },
+          "name": "category_1_isVisible_1_order_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "type": 1,
+            "category": 1
+          },
+          "name": "type_1_category_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "isVisible": 1,
+            "order": 1
+          },
+          "name": "isVisible_1_order_1",
+          "background": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "publicId": 1
+          },
+          "name": "publicId_1",
+          "background": true,
+          "unique": true
+        }
+      ],
+      "atlasIndexes": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        }
+      ],
+      "matching": [
+        {
+          "name": "_id_",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "atlasDefinition": {
+            "v": 2,
+            "key": {
+              "_id": 1
+            },
+            "name": "_id_"
+          },
+          "status": "MATCH",
+          "category": "PERFECT_MATCH",
+          "differences": []
+        }
+      ],
+      "missingOnAtlas": [
+        {
+          "name": "category_1_isVisible_1_order_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "category": 1,
+              "isVisible": 1,
+              "order": 1
+            },
+            "name": "category_1_isVisible_1_order_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "type_1_category_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "type": 1,
+              "category": 1
+            },
+            "name": "type_1_category_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "isVisible_1_order_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "isVisible": 1,
+              "order": 1
+            },
+            "name": "isVisible_1_order_1",
+            "background": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        },
+        {
+          "name": "publicId_1",
+          "localDefinition": {
+            "v": 2,
+            "key": {
+              "publicId": 1
+            },
+            "name": "publicId_1",
+            "background": true,
+            "unique": true
+          },
+          "status": "LOCAL_ONLY",
+          "category": "LOCAL_EXTRA"
+        }
+      ],
+      "extraOnAtlas": [],
+      "definitionMismatches": []
+    }
+  },
+  "summary": {
+    "collectionsChecked": 7,
+    "functionalMismatches": 0,
+    "localOnly": 23,
+    "atlasOnly": 0,
+    "cosmeticDifferences": 0,
+    "perfectMatches": 7
+  },
+  "verdict": {
+    "status": "MISMATCH",
+    "reason": "Found 0 functional mismatches, 23 LOCAL-only indexes, 0 ATLAS-only indexes",
+    "noChangesApplied": true
+  }
+}

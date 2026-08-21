@@ -1,0 +1,3009 @@
+{
+  "metadata": {
+    "generatedAt": "2026-08-20T07:51:27.907Z",
+    "mode": "READ_ONLY_FORENSIC_AUDIT",
+    "totalSupplements": 16
+  },
+  "summary": {
+    "A_EXISTING_IMAGE_CORRECT": 0,
+    "B_EXISTING_IMAGE_SHARED": 16,
+    "C_EXISTING_IMAGE_PRESENT_BUT_UNRELATED": 0,
+    "D_EXISTING_IMAGE_NOT_IN_INVENTORY": 0,
+    "E_EXISTING_IMAGE_INVALID": 0,
+    "F_SUPPLEMENT_WITHOUT_PHOTO_NEEDED": 0
+  },
+  "duplicates": [
+    {
+      "name": "gruyère",
+      "instances": [
+        {
+          "_id": "6a8599cf0676fa99edaa8491",
+          "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+          "price": 3.5,
+          "order": 2
+        },
+        {
+          "_id": "6a8599cf0676fa99edaa84ac",
+          "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+          "price": 3,
+          "order": 11
+        }
+      ]
+    },
+    {
+      "name": "emmental",
+      "instances": [
+        {
+          "_id": "6a8599cf0676fa99edaa8494",
+          "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+          "price": 3.5,
+          "order": 3
+        },
+        {
+          "_id": "6a8599cf0676fa99edaa84af",
+          "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+          "price": 3,
+          "order": 12
+        }
+      ]
+    },
+    {
+      "name": "edam",
+      "instances": [
+        {
+          "_id": "6a8599cf0676fa99edaa8497",
+          "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+          "price": 3.4,
+          "order": 4
+        },
+        {
+          "_id": "6a8599cf0676fa99edaa84b2",
+          "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+          "price": 3,
+          "order": 13
+        }
+      ]
+    },
+    {
+      "name": "champignon",
+      "instances": [
+        {
+          "_id": "6a8599cf0676fa99edaa849a",
+          "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+          "price": 3.5,
+          "order": 5
+        },
+        {
+          "_id": "6a8599cf0676fa99edaa84b5",
+          "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+          "price": 3,
+          "order": 14
+        }
+      ]
+    }
+  ],
+  "supplements": [
+    {
+      "dishId": "6a8599cf0676fa99edaa848e",
+      "dishName": "Frite",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa8491",
+      "dishName": "Gruyère",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa8494",
+      "dishName": "Emmental",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa8497",
+      "dishName": "Edam",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa849a",
+      "dishName": "Champignon",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa849d",
+      "dishName": "Thon",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84a0",
+      "dishName": "Jambon",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84a3",
+      "dishName": "Poulet",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84a6",
+      "dishName": "Chawarma",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84a9",
+      "dishName": "Pepperoni",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84ac",
+      "dishName": "Gruyère",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84af",
+      "dishName": "Emmental",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84b2",
+      "dishName": "Edam",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84b5",
+      "dishName": "Champignon",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84b8",
+      "dishName": "Oeuf",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84bb",
+      "dishName": "Slice",
+      "category": "Supplement",
+      "existingImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "publicId": "placeholder",
+      "filename": "placeholder",
+      "photoId": "photo_37",
+      "classification": "B_EXISTING_IMAGE_SHARED",
+      "currentRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "historicalRelations": [],
+      "allRelations": [
+        {
+          "dishId": "6a8599cf0676fa99edaa848e",
+          "dishName": "Frite",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8491",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8494",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa8497",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849a",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa849d",
+          "dishName": "Thon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a0",
+          "dishName": "Jambon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a3",
+          "dishName": "Poulet",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a6",
+          "dishName": "Chawarma",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84a9",
+          "dishName": "Pepperoni",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84ac",
+          "dishName": "Gruyère",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84af",
+          "dishName": "Emmental",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b2",
+          "dishName": "Edam",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b5",
+          "dishName": "Champignon",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84b8",
+          "dishName": "Oeuf",
+          "relationship": "current"
+        },
+        {
+          "dishId": "6a8599cf0676fa99edaa84bb",
+          "dishName": "Slice",
+          "relationship": "current"
+        }
+      ],
+      "evidence": [
+        "Photo partagée avec 16 plats/suppléments",
+        "Plats: Frite, Gruyère, Emmental, Edam, Champignon, Thon, Jambon, Poulet, Chawarma, Pepperoni, Gruyère, Emmental, Edam, Champignon, Oeuf, Slice"
+      ],
+      "recommendation": "Réutilisation légitime - photo correcte",
+      "inInventory": true,
+      "inventoryPhotoId": "photo_37"
+    }
+  ],
+  "checks": {
+    "all16SupplementsAnalyzed": true,
+    "noMongoDbModification": true,
+    "noCloudinaryModification": true,
+    "noUrlsInvented": true,
+    "noPhotosInvented": true,
+    "noMappingModified": true,
+    "allConclusionsBackedByData": true,
+    "duplicateSupplementIdsIdentified": true
+  }
+}

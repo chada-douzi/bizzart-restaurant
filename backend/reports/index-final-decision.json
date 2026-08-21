@@ -1,0 +1,450 @@
+{
+  "metadata": {
+    "title": "MATRICE DE DÉCISION FINALE DES 23 INDEX",
+    "timestamp": "2026-08-21T02:30:47.952Z",
+    "mode": "READ-ONLY / ANALYSE FORENSIQUE"
+  },
+  "summary": {
+    "total": 23,
+    "create": 16,
+    "doNotCreate": 0,
+    "reviewRequired": 7
+  },
+  "uniqueIndexes": {
+    "verified": 4,
+    "safe": 4
+  },
+  "decisions": [
+    {
+      "collection": "reservations",
+      "indexName": "date_1_status_1",
+      "keys": "date:1, status:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/reservation.model.ts",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "admin.controller.ts - Count today reservations",
+        "reservation.controller.ts - Admin list reservations with filters"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Compound index supports 2 query patterns with filtering and sorting.",
+      "riskIfAbsent": "MEDIUM - Performance impact on admin/list queries",
+      "creationRisk": "LOW - Standard compound index",
+      "decision": "CREATE",
+      "decisionReasoning": "Multiple queries benefit from this index. Performance critical for user experience."
+    },
+    {
+      "collection": "reservations",
+      "indexName": "customer.email_1",
+      "keys": "customer.email:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/reservation.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "reservation.controller.ts - Search reservations by customer email"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Used in 1 queries but may be covered by compound indexes",
+      "riskIfAbsent": "LOW-MEDIUM - Compound indexes may provide coverage",
+      "creationRisk": "LOW - But check for redundancy",
+      "decision": "REVIEW_REQUIRED",
+      "decisionReasoning": "Verify if compound indexes already cover this field"
+    },
+    {
+      "collection": "reservations",
+      "indexName": "status_1_createdAt_-1",
+      "keys": "status:1, createdAt:-1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/reservation.model.ts",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "admin.controller.ts - Count by status (pending, confirmed)",
+        "reservation.controller.ts - Sort reservations by creation date"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Compound index supports 2 query patterns with filtering and sorting.",
+      "riskIfAbsent": "MEDIUM - Performance impact on admin/list queries",
+      "creationRisk": "LOW - Standard compound index",
+      "decision": "CREATE",
+      "decisionReasoning": "Multiple queries benefit from this index. Performance critical for user experience."
+    },
+    {
+      "collection": "reservations",
+      "indexName": "date_1_time_1",
+      "keys": "date:1, time:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/reservation.model.ts",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "reservation.controller.ts - Check daily reservation count",
+        "reservation.controller.ts - Sort by date and time slot"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Compound index supports 2 query patterns with filtering and sorting.",
+      "riskIfAbsent": "MEDIUM - Performance impact on admin/list queries",
+      "creationRisk": "LOW - Standard compound index",
+      "decision": "CREATE",
+      "decisionReasoning": "Multiple queries benefit from this index. Performance critical for user experience."
+    },
+    {
+      "collection": "reservations",
+      "indexName": "reminderSent_1_date_1_status_1",
+      "keys": "reminderSent:1, date:1, status:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/reservation.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "N/A (cron job) - Cron job: find reservations needing reminders"
+      ],
+      "classification": "REQUIRED",
+      "functionalJustification": "Composite index covering 3 fields optimizes complex queries. Field order matches query patterns.",
+      "riskIfAbsent": "HIGH - Significant performance degradation on filtered/sorted queries",
+      "creationRisk": "LOW - Standard composite index, no constraints",
+      "decision": "CREATE",
+      "decisionReasoning": "Complex query optimization requires all 3 fields indexed in this order."
+    },
+    {
+      "collection": "menuitems",
+      "indexName": "slug_1",
+      "keys": "slug:1",
+      "isUnique": true,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/menu-item.model.ts (unique field)",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "menu.controller.ts - Check slug uniqueness",
+        "menu.controller.ts - Get public item by slug"
+      ],
+      "classification": "REQUIRED",
+      "functionalJustification": "UNIQUE constraint ensures data integrity for slug. Used in 2 queries for lookups and validation.",
+      "riskIfAbsent": "CRITICAL - Duplicate data possible, application errors, data corruption",
+      "creationRisk": "LOW - No duplicates found, safe to create",
+      "decision": "CREATE",
+      "decisionReasoning": "UNIQUE index essential for data integrity. No duplicates detected. Used in authentication/lookup queries."
+    },
+    {
+      "collection": "menuitems",
+      "indexName": "category_1_isAvailable_1_order_1",
+      "keys": "category:1, isAvailable:1, order:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/menu-item.model.ts",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "menu.controller.ts - Get items by category (public)",
+        "menu.controller.ts - List items with filters + sort"
+      ],
+      "classification": "REQUIRED",
+      "functionalJustification": "Composite index covering 3 fields optimizes complex queries. Field order matches query patterns.",
+      "riskIfAbsent": "HIGH - Significant performance degradation on filtered/sorted queries",
+      "creationRisk": "LOW - Standard composite index, no constraints",
+      "decision": "CREATE",
+      "decisionReasoning": "Complex query optimization requires all 3 fields indexed in this order."
+    },
+    {
+      "collection": "menuitems",
+      "indexName": "isFeatured_1_isAvailable_1",
+      "keys": "isFeatured:1, isAvailable:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/menu-item.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "menu.controller.ts - Get featured available items for homepage"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Index supports filter + sort operation efficiently",
+      "riskIfAbsent": "MEDIUM - Sort after filter requires full collection scan",
+      "creationRisk": "LOW",
+      "decision": "CREATE",
+      "decisionReasoning": "Compound index necessary for efficient sorted results"
+    },
+    {
+      "collection": "menuitems",
+      "indexName": "tags_1",
+      "keys": "tags:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/menu-item.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "menu.controller.ts - Filter items by tags"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Used in 1 queries but may be covered by compound indexes",
+      "riskIfAbsent": "LOW-MEDIUM - Compound indexes may provide coverage",
+      "creationRisk": "LOW - But check for redundancy",
+      "decision": "REVIEW_REQUIRED",
+      "decisionReasoning": "Verify if compound indexes already cover this field"
+    },
+    {
+      "collection": "reviews",
+      "indexName": "isPublished_1_isApproved_1_order_1",
+      "keys": "isPublished:1, isApproved:1, order:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/review.model.ts",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "review.controller.ts - Get published approved reviews",
+        "review.controller.ts - Sort reviews by display order"
+      ],
+      "classification": "REQUIRED",
+      "functionalJustification": "Composite index covering 3 fields optimizes complex queries. Field order matches query patterns.",
+      "riskIfAbsent": "HIGH - Significant performance degradation on filtered/sorted queries",
+      "creationRisk": "LOW - Standard composite index, no constraints",
+      "decision": "CREATE",
+      "decisionReasoning": "Complex query optimization requires all 3 fields indexed in this order."
+    },
+    {
+      "collection": "reviews",
+      "indexName": "source_1",
+      "keys": "source:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/review.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "review.controller.ts - Filter reviews by source (Google, TripAdvisor)"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Used in 1 queries but may be covered by compound indexes",
+      "riskIfAbsent": "LOW-MEDIUM - Compound indexes may provide coverage",
+      "creationRisk": "LOW - But check for redundancy",
+      "decision": "REVIEW_REQUIRED",
+      "decisionReasoning": "Verify if compound indexes already cover this field"
+    },
+    {
+      "collection": "reviews",
+      "indexName": "rating_1",
+      "keys": "rating:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/review.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "review.controller.ts - Calculate average rating and distribution"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Used in 1 queries but may be covered by compound indexes",
+      "riskIfAbsent": "LOW-MEDIUM - Compound indexes may provide coverage",
+      "creationRisk": "LOW - But check for redundancy",
+      "decision": "REVIEW_REQUIRED",
+      "decisionReasoning": "Verify if compound indexes already cover this field"
+    },
+    {
+      "collection": "reviews",
+      "indexName": "reviewDate_-1",
+      "keys": "reviewDate:-1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/review.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "review.controller.ts - Sort reviews by most recent"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Used in 1 queries but may be covered by compound indexes",
+      "riskIfAbsent": "LOW-MEDIUM - Compound indexes may provide coverage",
+      "creationRisk": "LOW - But check for redundancy",
+      "decision": "REVIEW_REQUIRED",
+      "decisionReasoning": "Verify if compound indexes already cover this field"
+    },
+    {
+      "collection": "menucategories",
+      "indexName": "slug_1",
+      "keys": "slug:1",
+      "isUnique": true,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/menu-category.model.ts (unique field)",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "menu.controller.ts - Check slug uniqueness",
+        "menu.controller.ts - Get public category by slug"
+      ],
+      "classification": "REQUIRED",
+      "functionalJustification": "UNIQUE constraint ensures data integrity for slug. Used in 2 queries for lookups and validation.",
+      "riskIfAbsent": "CRITICAL - Duplicate data possible, application errors, data corruption",
+      "creationRisk": "LOW - No duplicates found, safe to create",
+      "decision": "CREATE",
+      "decisionReasoning": "UNIQUE index essential for data integrity. No duplicates detected. Used in authentication/lookup queries."
+    },
+    {
+      "collection": "menucategories",
+      "indexName": "isActive_1_order_1",
+      "keys": "isActive:1, order:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/menu-category.model.ts",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "menu.controller.ts - Get active categories",
+        "menu.controller.ts - Sort categories by display order"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Compound index supports 2 query patterns with filtering and sorting.",
+      "riskIfAbsent": "MEDIUM - Performance impact on admin/list queries",
+      "creationRisk": "LOW - Standard compound index",
+      "decision": "CREATE",
+      "decisionReasoning": "Multiple queries benefit from this index. Performance critical for user experience."
+    },
+    {
+      "collection": "settings",
+      "indexName": "updatedAt_-1",
+      "keys": "updatedAt:-1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/settings.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "settings.controller.ts - Get singleton settings (always findOne)"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Used in 1 queries but may be covered by compound indexes",
+      "riskIfAbsent": "LOW-MEDIUM - Compound indexes may provide coverage",
+      "creationRisk": "LOW - But check for redundancy",
+      "decision": "REVIEW_REQUIRED",
+      "decisionReasoning": "Verify if compound indexes already cover this field"
+    },
+    {
+      "collection": "users",
+      "indexName": "email_1",
+      "keys": "email:1",
+      "isUnique": true,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/user.model.ts (unique field)",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "auth.controller.ts - Login authentication",
+        "user.model.ts - Static method findByEmail"
+      ],
+      "classification": "REQUIRED",
+      "functionalJustification": "UNIQUE constraint ensures data integrity for email. Used in 2 queries for lookups and validation.",
+      "riskIfAbsent": "CRITICAL - Duplicate data possible, application errors, data corruption",
+      "creationRisk": "LOW - No duplicates found, safe to create",
+      "decision": "CREATE",
+      "decisionReasoning": "UNIQUE index essential for data integrity. No duplicates detected. Used in authentication/lookup queries."
+    },
+    {
+      "collection": "users",
+      "indexName": "role_1",
+      "keys": "role:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/user.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "admin.controller.ts - Filter users by role (admin, manager)"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Used in 1 queries but may be covered by compound indexes",
+      "riskIfAbsent": "LOW-MEDIUM - Compound indexes may provide coverage",
+      "creationRisk": "LOW - But check for redundancy",
+      "decision": "REVIEW_REQUIRED",
+      "decisionReasoning": "Verify if compound indexes already cover this field"
+    },
+    {
+      "collection": "users",
+      "indexName": "isActive_1",
+      "keys": "isActive:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/user.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "admin.controller.ts - Filter active users"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Boolean filter used in public/admin queries",
+      "riskIfAbsent": "MEDIUM - List queries scan full collection",
+      "creationRisk": "LOW",
+      "decision": "CREATE",
+      "decisionReasoning": "Common filter pattern benefits from index"
+    },
+    {
+      "collection": "media",
+      "indexName": "category_1_isVisible_1_order_1",
+      "keys": "category:1, isVisible:1, order:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/media.model.ts",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "gallery.controller.ts - Get visible media by category",
+        "gallery.controller.ts - Sort media by display order"
+      ],
+      "classification": "REQUIRED",
+      "functionalJustification": "Composite index covering 3 fields optimizes complex queries. Field order matches query patterns.",
+      "riskIfAbsent": "HIGH - Significant performance degradation on filtered/sorted queries",
+      "creationRisk": "LOW - Standard composite index, no constraints",
+      "decision": "CREATE",
+      "decisionReasoning": "Complex query optimization requires all 3 fields indexed in this order."
+    },
+    {
+      "collection": "media",
+      "indexName": "type_1_category_1",
+      "keys": "type:1, category:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/media.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "gallery.controller.ts - Filter by media type (image/video) + category"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Index supports filter + sort operation efficiently",
+      "riskIfAbsent": "MEDIUM - Sort after filter requires full collection scan",
+      "creationRisk": "LOW",
+      "decision": "CREATE",
+      "decisionReasoning": "Compound index necessary for efficient sorted results"
+    },
+    {
+      "collection": "media",
+      "indexName": "isVisible_1_order_1",
+      "keys": "isVisible:1, order:1",
+      "isUnique": false,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/media.model.ts",
+      "queriesFound": 2,
+      "queryPatterns": [
+        "gallery.controller.ts - Admin: get all visible media",
+        "gallery.controller.ts - Sort all media by order"
+      ],
+      "classification": "RECOMMENDED",
+      "functionalJustification": "Compound index supports 2 query patterns with filtering and sorting.",
+      "riskIfAbsent": "MEDIUM - Performance impact on admin/list queries",
+      "creationRisk": "LOW - Standard compound index",
+      "decision": "CREATE",
+      "decisionReasoning": "Multiple queries benefit from this index. Performance critical for user experience."
+    },
+    {
+      "collection": "media",
+      "indexName": "publicId_1",
+      "keys": "publicId:1",
+      "isUnique": true,
+      "declaredInSchema": true,
+      "schemaLocation": "src/models/media.model.ts",
+      "queriesFound": 1,
+      "queryPatterns": [
+        "upload.service.ts - Prevent duplicate uploads by Cloudinary public_id"
+      ],
+      "classification": "REQUIRED",
+      "functionalJustification": "UNIQUE constraint ensures data integrity for publicId. Used in 1 queries for lookups and validation.",
+      "riskIfAbsent": "CRITICAL - Duplicate data possible, application errors, data corruption",
+      "creationRisk": "LOW - No duplicates found, safe to create",
+      "decision": "CREATE",
+      "decisionReasoning": "UNIQUE index essential for data integrity. No duplicates detected. Used in authentication/lookup queries."
+    }
+  ],
+  "guarantees": {
+    "noIndexCreated": true,
+    "noIndexDropped": true,
+    "noDataModified": true,
+    "readOnlyMode": true
+  }
+}

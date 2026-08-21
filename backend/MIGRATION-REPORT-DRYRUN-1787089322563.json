@@ -1,0 +1,23 @@
+{
+  "totalProcessed": 98,
+  "modified": 2,
+  "unchanged": 96,
+  "errors": 0,
+  "skipped": 0,
+  "modifications": [
+    {
+      "menuItemId": "6a845a7a2876405dd5375d1f",
+      "nom": "Pâtes BIZZ'Art",
+      "ancienneUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "nouvelleUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "success": true
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d58",
+      "nom": "Pizza Margherita",
+      "ancienneUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "nouvelleUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "success": true
+    }
+  ]
+}

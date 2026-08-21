@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-08-19T12:07:55.085Z",
+  "categoriesCount": 11,
+  "itemsCount": 114,
+  "categories": [
+    {
+      "_id": "6a845a7a2876405dd5375d08",
+      "name": {
+        "fr": "Les Pizzas",
+        "en": "Pizzas",
+        "ar": ""
+      },
+      "slug": "les-pizzas",
+      "description": {
+        "fr": "Pizzas artisanales cuites au four",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "order": 1,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.765Z",
+      "updatedAt": "2026-08-18T13:13:30.765Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d0a",
+      "name": {
+        "fr": "Pâtes",
+        "en": "Pasta",
+        "ar": ""
+      },
+      "slug": "pates",
+      "description": {
+        "fr": "Spaghetti, Tagliatelle, Penne",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "order": 2,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.773Z",
+      "updatedAt": "2026-08-18T13:13:30.773Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d0c",
+      "name": {
+        "fr": "Plats Espagnol",
+        "en": "Spanish Dishes",
+        "ar": ""
+      },
+      "slug": "plats-espagnol",
+      "description": {
+        "fr": "Paella, Risotto et Gratin",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.777Z",
+      "updatedAt": "2026-08-18T13:13:30.777Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d0e",
+      "name": {
+        "fr": "Salade",
+        "en": "Salads",
+        "ar": ""
+      },
+      "slug": "salade",
+      "description": {
+        "fr": "Salades fraîches et composées",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "order": 4,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.780Z",
+      "updatedAt": "2026-08-18T13:13:30.780Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d10",
+      "name": {
+        "fr": "Volailles",
+        "en": "Poultry",
+        "ar": ""
+      },
+      "slug": "volailles",
+      "description": {
+        "fr": "Escalopes et plats de poulet",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "order": 5,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.783Z",
+      "updatedAt": "2026-08-18T13:13:30.783Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d12",
+      "name": {
+        "fr": "Viandes",
+        "en": "Meat",
+        "ar": ""
+      },
+      "slug": "viandes",
+      "description": {
+        "fr": "Steaks et grillades",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "order": 6,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.786Z",
+      "updatedAt": "2026-08-18T13:13:30.786Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d14",
+      "name": {
+        "fr": "Fruits de mer",
+        "en": "Seafood",
+        "ar": ""
+      },
+      "slug": "fruits-de-mer",
+      "description": {
+        "fr": "Poissons et fruits de mer frais",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "order": 7,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.789Z",
+      "updatedAt": "2026-08-18T13:13:30.789Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d16",
+      "name": {
+        "fr": "Tacos",
+        "en": "Tacos",
+        "ar": ""
+      },
+      "slug": "tacos",
+      "description": {
+        "fr": "Tacos en deux tailles",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "order": 8,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.791Z",
+      "updatedAt": "2026-08-18T13:13:30.791Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d18",
+      "name": {
+        "fr": "MAkIOUB",
+        "en": "Makloub",
+        "ar": ""
+      },
+      "slug": "makioub",
+      "description": {
+        "fr": "Makloub tunisien",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "order": 9,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.794Z",
+      "updatedAt": "2026-08-18T13:13:30.794Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d1a",
+      "name": {
+        "fr": "Supplement",
+        "en": "Extras",
+        "ar": ""
+      },
+      "slug": "supplement",
+      "description": {
+        "fr": "Suppléments et sauces",
+        "en": "",
+        "ar": ""
+      },
+      "image": null,
+      "order": 10,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.796Z",
+      "updatedAt": "2026-08-18T13:13:30.796Z"
+    },
+    {
+      "_id": "6a845a7a2876405dd5375d1c",
+      "name": {
+        "fr": "Soda",
+        "en": "Beverages",
+        "ar": ""
+      },
+      "slug": "soda",
+      "description": {
+        "fr": "Boissons et sodas",
+        "en": "",
+        "ar": ""
+      },
+      "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "order": 11,
+      "isActive": true,
+      "createdAt": "2026-08-18T13:13:30.798Z",
+      "updatedAt": "2026-08-18T13:13:30.798Z"
+    }
+  ]
+}

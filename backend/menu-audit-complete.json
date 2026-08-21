@@ -1,0 +1,1766 @@
+[
+  {
+    "_id": "6a845a7a2876405dd5375d58",
+    "name": "Pizza Margherita",
+    "nameFull": {
+      "fr": "Pizza Margherita",
+      "en": "Pizza Margherita",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce tomate + Mozzarella",
+    "price": 14.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "pizza-margherita"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d5b",
+    "name": "Pizza Thon",
+    "nameFull": {
+      "fr": "Pizza Thon",
+      "en": "Pizza Thon",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Tomate + Mozzarella + Câpres + Olives + Tomates Fraîches",
+    "price": 16.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+    "available": true,
+    "featured": false,
+    "order": 2,
+    "slug": "pizza-thon"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d5e",
+    "name": "Pizza 4 Fromages sauce tomate",
+    "nameFull": {
+      "fr": "Pizza 4 Fromages sauce tomate",
+      "en": "Pizza 4 Fromages sauce tomate",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Mozzarella + Fromage Gruyère + Gouda + Emmental",
+    "price": 18,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "pizza-4-fromages-sauce-tomate"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d61",
+    "name": "Pizza 4 Fromages sauce blanche",
+    "nameFull": {
+      "fr": "Pizza 4 Fromages sauce blanche",
+      "en": "Pizza 4 Fromages sauce blanche",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Mozzarella + Gruyère + Gouda + Emmental",
+    "price": 18.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "pizza-4-fromages-sauce-blanche"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d64",
+    "name": "Reine",
+    "nameFull": {
+      "fr": "Reine",
+      "en": "Reine",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Tomate + Mozzarella + Champignons + Jambon",
+    "price": 18,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "reine"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d67",
+    "name": "Piquante",
+    "nameFull": {
+      "fr": "Piquante",
+      "en": "Piquante",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Piquante + Sauce tomate + Viande de boeuf + Tomate Fraîche +Poivrons + Mozzarella",
+    "price": 18,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+    "available": true,
+    "featured": false,
+    "order": 6,
+    "slug": "piquante"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d6a",
+    "name": "Chicken",
+    "nameFull": {
+      "fr": "Chicken",
+      "en": "Chicken",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Blanche + Poulet + Oignons + Champignons + Emmental + Mozzarella + Poivrons",
+    "price": 19,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+    "available": true,
+    "featured": false,
+    "order": 7,
+    "slug": "chicken"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d6d",
+    "name": "Napolitaine",
+    "nameFull": {
+      "fr": "Napolitaine",
+      "en": "Napolitaine",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Tomate + Mozzarella + Câpres + Olives +Anchois",
+    "price": 17,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+    "available": true,
+    "featured": false,
+    "order": 8,
+    "slug": "napolitaine"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d70",
+    "name": "Pepperoni",
+    "nameFull": {
+      "fr": "Pepperoni",
+      "en": "Pepperoni",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Tomate + Mozzarella + Poivron + Tomate Frâiche + Saucisse",
+    "price": 16.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+    "available": true,
+    "featured": false,
+    "order": 9,
+    "slug": "pepperoni"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d73",
+    "name": "4 Saisons",
+    "nameFull": {
+      "fr": "4 Saisons",
+      "en": "4 Saisons",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Tomate + Jambon + Champignon + Poivron + Tomate Fraîche + Olive",
+    "price": 17.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+    "available": true,
+    "featured": false,
+    "order": 10,
+    "slug": "4-saisons"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d76",
+    "name": "Pizza Bizz'art",
+    "nameFull": {
+      "fr": "Pizza Bizz'art",
+      "en": "Pizza Bizz'art",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Blanche + Champignon + Poulet + 4 Fromages + Jambon",
+    "price": 20.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+    "available": true,
+    "featured": true,
+    "order": 11,
+    "slug": "pizza-bizzart"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d79",
+    "name": "Pizza Anglaise",
+    "nameFull": {
+      "fr": "Pizza Anglaise",
+      "en": "Pizza Anglaise",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Blanche + Mozzarella + 4 Fromages + Roquefort + Jambon + Basilic",
+    "price": 19,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+    "available": true,
+    "featured": false,
+    "order": 12,
+    "slug": "pizza-anglaise"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d7c",
+    "name": "Pizza BURRATA",
+    "nameFull": {
+      "fr": "Pizza BURRATA",
+      "en": "Pizza BURRATA",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Tomate ou sauce blanche + Mozzarella + Gruyère + Parmesan +Tomates + Burrata",
+    "price": 22.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg",
+    "available": true,
+    "featured": true,
+    "order": 13,
+    "slug": "pizza-burrata"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d7f",
+    "name": "Pizza Fruit de mer",
+    "nameFull": {
+      "fr": "Pizza Fruit de mer",
+      "en": "Pizza Fruit de mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "",
+    "price": 28.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+    "available": true,
+    "featured": false,
+    "order": 14,
+    "slug": "pizza-fruit-de-mer"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d82",
+    "name": "Pizza Saumon",
+    "nameFull": {
+      "fr": "Pizza Saumon",
+      "en": "Pizza Saumon",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Sauce Blanche + 4 Fromages + Saumon + Basilic",
+    "price": 26,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+    "available": true,
+    "featured": false,
+    "order": 15,
+    "slug": "pizza-saumon"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d85",
+    "name": "Pizza Végétarienne",
+    "nameFull": {
+      "fr": "Pizza Végétarienne",
+      "en": "Pizza Végétarienne",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "Fromage + Courgette + Aubergine + champignon + oignon caramélisé + Sauce Aux Choix",
+    "price": 20,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+    "available": true,
+    "featured": false,
+    "order": 16,
+    "slug": "pizza-vegetarienne"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d88",
+    "name": "Pizza Chevrettes",
+    "nameFull": {
+      "fr": "Pizza Chevrettes",
+      "en": "Pizza Chevrettes",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d08",
+    "categoryName": "Les Pizzas",
+    "description": "4 Fromage + Chevrette",
+    "price": 20,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+    "available": true,
+    "featured": false,
+    "order": 17,
+    "slug": "pizza-chevrettes"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d1f",
+    "name": "Pâtes BIZZ'Art",
+    "nameFull": {
+      "fr": "Pâtes BIZZ'Art",
+      "en": "Pâtes BIZZ'Art",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "Sauce Blanche, Crevettes, Chevrettes, Moules, épinard, Cheddar, Parmesan",
+    "price": 27.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+    "available": true,
+    "featured": true,
+    "order": 1,
+    "slug": "pates-bizzart"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d22",
+    "name": "Pâtes Bolognaise",
+    "nameFull": {
+      "fr": "Pâtes Bolognaise",
+      "en": "Pâtes Bolognaise",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "Viande Hachée, Fromage Gruyère râpé",
+    "price": 21.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+    "available": true,
+    "featured": false,
+    "order": 2,
+    "slug": "pates-bolognaise"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d25",
+    "name": "Pâtes l'Arrabiata",
+    "nameFull": {
+      "fr": "Pâtes l'Arrabiata",
+      "en": "Pâtes l'Arrabiata",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "Thon, Câpres, Piment séché, Olive",
+    "price": 18.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "pates-larrabiata"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d28",
+    "name": "Pâtes du Chef",
+    "nameFull": {
+      "fr": "Pâtes du Chef",
+      "en": "Pâtes du Chef",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "Sauce Taro, Chevrettes, Crevettes, Moules, Piment, Champignons, Cheddar, Parmesan",
+    "price": 29,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "pates-du-chef"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d2b",
+    "name": "Pâtes Maison",
+    "nameFull": {
+      "fr": "Pâtes Maison",
+      "en": "Pâtes Maison",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "Sauce Blanche, épinard, Cheddar, Parmesan, Poulet",
+    "price": 26,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "pates-maison"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d2e",
+    "name": "Pâtes à L'italienne",
+    "nameFull": {
+      "fr": "Pâtes à L'italienne",
+      "en": "Pâtes à L'italienne",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "Sauce Blanche, Champignons, Cheddar, Parmesan, Burrata, Fruits Secs, Poulet",
+    "price": 32.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+    "available": true,
+    "featured": true,
+    "order": 6,
+    "slug": "pates-a-litalienne"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d31",
+    "name": "Pâtes Fruits de Mer",
+    "nameFull": {
+      "fr": "Pâtes Fruits de Mer",
+      "en": "Pâtes Fruits de Mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "",
+    "price": 32,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+    "available": true,
+    "featured": false,
+    "order": 7,
+    "slug": "pates-fruits-de-mer"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d34",
+    "name": "Ravioli Saumon",
+    "nameFull": {
+      "fr": "Ravioli Saumon",
+      "en": "Ravioli Saumon",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "",
+    "price": 32,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+    "available": true,
+    "featured": false,
+    "order": 8,
+    "slug": "ravioli-saumon"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d37",
+    "name": "Ravioli Crevette",
+    "nameFull": {
+      "fr": "Ravioli Crevette",
+      "en": "Ravioli Crevette",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "",
+    "price": 30,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+    "available": true,
+    "featured": false,
+    "order": 9,
+    "slug": "ravioli-crevette"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d3a",
+    "name": "Ravioli Viande",
+    "nameFull": {
+      "fr": "Ravioli Viande",
+      "en": "Ravioli Viande",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "",
+    "price": 26,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+    "available": true,
+    "featured": false,
+    "order": 10,
+    "slug": "ravioli-viande"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d3d",
+    "name": "Pâtes sauce pesto",
+    "nameFull": {
+      "fr": "Pâtes sauce pesto",
+      "en": "Pâtes sauce pesto",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "Pesto crevettes et parmesan",
+    "price": 29,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+    "available": true,
+    "featured": false,
+    "order": 11,
+    "slug": "pates-sauce-pesto"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d40",
+    "name": "Lasagne Bolognaise",
+    "nameFull": {
+      "fr": "Lasagne Bolognaise",
+      "en": "Lasagne Bolognaise",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "",
+    "price": 21.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+    "available": true,
+    "featured": false,
+    "order": 12,
+    "slug": "lasagne-bolognaise"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d43",
+    "name": "Lasagne Fruits De Mer",
+    "nameFull": {
+      "fr": "Lasagne Fruits De Mer",
+      "en": "Lasagne Fruits De Mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0a",
+    "categoryName": "Pâtes",
+    "description": "",
+    "price": 32,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+    "available": true,
+    "featured": false,
+    "order": 13,
+    "slug": "lasagne-fruits-de-mer"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d46",
+    "name": "Paella 1 Personne",
+    "nameFull": {
+      "fr": "Paella 1 Personne",
+      "en": "Paella 1 Personne",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0c",
+    "categoryName": "Plats Espagnol",
+    "description": "",
+    "price": 34,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "paella-1-personne"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d49",
+    "name": "Paella Royale",
+    "nameFull": {
+      "fr": "Paella Royale",
+      "en": "Paella Royale",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0c",
+    "categoryName": "Plats Espagnol",
+    "description": "",
+    "price": 63.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+    "available": true,
+    "featured": true,
+    "order": 2,
+    "slug": "paella-royale"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d4c",
+    "name": "Risotto Bizz'Art",
+    "nameFull": {
+      "fr": "Risotto Bizz'Art",
+      "en": "Risotto Bizz'Art",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0c",
+    "categoryName": "Plats Espagnol",
+    "description": "Sauce Blanche, Cheddar, Chevrettes, Crevettes, Moules, Parmesan",
+    "price": 32,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "risotto-bizzart"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d4f",
+    "name": "Risotto Poulet-Champignons",
+    "nameFull": {
+      "fr": "Risotto Poulet-Champignons",
+      "en": "Risotto Poulet-Champignons",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0c",
+    "categoryName": "Plats Espagnol",
+    "description": "",
+    "price": 28,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "risotto-poulet-champignons"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d52",
+    "name": "Gratin Poulet",
+    "nameFull": {
+      "fr": "Gratin Poulet",
+      "en": "Gratin Poulet",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0c",
+    "categoryName": "Plats Espagnol",
+    "description": "",
+    "price": 23,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "gratin-poulet"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d55",
+    "name": "Gratin Fruits de Mer",
+    "nameFull": {
+      "fr": "Gratin Fruits de Mer",
+      "en": "Gratin Fruits de Mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0c",
+    "categoryName": "Plats Espagnol",
+    "description": "",
+    "price": 29.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+    "available": true,
+    "featured": false,
+    "order": 6,
+    "slug": "gratin-fruits-de-mer"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d8b",
+    "name": "Salade César",
+    "nameFull": {
+      "fr": "Salade César",
+      "en": "Salade César",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0e",
+    "categoryName": "Salade",
+    "description": "Laitue, Tomates, Maïs, Jambon, Mozzarella, Poulet",
+    "price": 15.8,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "salade-cesar"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d8e",
+    "name": "Salade Bizz'Art",
+    "nameFull": {
+      "fr": "Salade Bizz'Art",
+      "en": "Salade Bizz'Art",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0e",
+    "categoryName": "Salade",
+    "description": "Laitue, Tomates, Maïs, Mozzarella, Parmesan, Fruits Secs, Poulet",
+    "price": 20.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+    "available": true,
+    "featured": true,
+    "order": 2,
+    "slug": "salade-bizzart"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d91",
+    "name": "Salade du Chef",
+    "nameFull": {
+      "fr": "Salade du Chef",
+      "en": "Salade du Chef",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0e",
+    "categoryName": "Salade",
+    "description": "Laitue, Tomates, Maïs, Mozzarella, Parmesan, Fruits secs, Burrata, Poulet",
+    "price": 24.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "salade-du-chef"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d94",
+    "name": "Salade Fruits de Mer",
+    "nameFull": {
+      "fr": "Salade Fruits de Mer",
+      "en": "Salade Fruits de Mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0e",
+    "categoryName": "Salade",
+    "description": "",
+    "price": 28,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "salade-fruits-de-mer"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d97",
+    "name": "Salade de Crevettes Panées",
+    "nameFull": {
+      "fr": "Salade de Crevettes Panées",
+      "en": "Salade de Crevettes Panées",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0e",
+    "categoryName": "Salade",
+    "description": "Laitue, Tomates, Maïs, Parmesan, Crevettes Panées",
+    "price": 22,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "salade-de-crevettes-panees"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d9a",
+    "name": "Salade Saumon",
+    "nameFull": {
+      "fr": "Salade Saumon",
+      "en": "Salade Saumon",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0e",
+    "categoryName": "Salade",
+    "description": "Laitue, Tomates, Roquette, Saumon, Mozarella",
+    "price": 24,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+    "available": true,
+    "featured": false,
+    "order": 6,
+    "slug": "salade-saumon"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375d9d",
+    "name": "Salade Roquette",
+    "nameFull": {
+      "fr": "Salade Roquette",
+      "en": "Salade Roquette",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d0e",
+    "categoryName": "Salade",
+    "description": "Fromage Pané, Parmésan et miel",
+    "price": 12.8,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 7,
+    "slug": "salade-roquette"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375da0",
+    "name": "Escalope Ou Cuisse de Poulet",
+    "nameFull": {
+      "fr": "Escalope Ou Cuisse de Poulet",
+      "en": "Escalope Ou Cuisse de Poulet",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 18,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "escalope-ou-cuisse-de-poulet"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375da3",
+    "name": "Escalope Panée",
+    "nameFull": {
+      "fr": "Escalope Panée",
+      "en": "Escalope Panée",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 19.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+    "available": true,
+    "featured": false,
+    "order": 2,
+    "slug": "escalope-panee"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375da6",
+    "name": "Escalope à la crème",
+    "nameFull": {
+      "fr": "Escalope à la crème",
+      "en": "Escalope à la crème",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 20.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "escalope-a-la-creme"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375da9",
+    "name": "Escalope sauce Champignon",
+    "nameFull": {
+      "fr": "Escalope sauce Champignon",
+      "en": "Escalope sauce Champignon",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 21.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "escalope-sauce-champignon"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375dac",
+    "name": "Escalope sauce Épinard",
+    "nameFull": {
+      "fr": "Escalope sauce Épinard",
+      "en": "Escalope sauce Épinard",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 21,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "escalope-sauce-epinard"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375daf",
+    "name": "Escalope sauce Gorgonzola",
+    "nameFull": {
+      "fr": "Escalope sauce Gorgonzola",
+      "en": "Escalope sauce Gorgonzola",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 22,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 6,
+    "slug": "escalope-sauce-gorgonzola"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375db2",
+    "name": "Cordon Bleu",
+    "nameFull": {
+      "fr": "Cordon Bleu",
+      "en": "Cordon Bleu",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 23,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 7,
+    "slug": "cordon-bleu"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375db5",
+    "name": "Escalope Bizz'Art",
+    "nameFull": {
+      "fr": "Escalope Bizz'Art",
+      "en": "Escalope Bizz'Art",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 23.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+    "available": true,
+    "featured": false,
+    "order": 8,
+    "slug": "escalope-bizzart"
+  },
+  {
+    "_id": "6a845a7a2876405dd5375db8",
+    "name": "Escalope du Chef",
+    "nameFull": {
+      "fr": "Escalope du Chef",
+      "en": "Escalope du Chef",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 25.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+    "available": true,
+    "featured": false,
+    "order": 9,
+    "slug": "escalope-du-chef"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dbb",
+    "name": "Involtini",
+    "nameFull": {
+      "fr": "Involtini",
+      "en": "Involtini",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 22,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+    "available": true,
+    "featured": false,
+    "order": 10,
+    "slug": "involtini"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dbe",
+    "name": "Escalope Orientale",
+    "nameFull": {
+      "fr": "Escalope Orientale",
+      "en": "Escalope Orientale",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 23,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+    "available": true,
+    "featured": false,
+    "order": 11,
+    "slug": "escalope-orientale"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dc1",
+    "name": "Suprême",
+    "nameFull": {
+      "fr": "Suprême",
+      "en": "Suprême",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "Bizz'Art, Épinard, Fromage, Champignons",
+    "price": 24,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+    "available": true,
+    "featured": false,
+    "order": 12,
+    "slug": "supreme"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dc4",
+    "name": "Suprême Maison",
+    "nameFull": {
+      "fr": "Suprême Maison",
+      "en": "Suprême Maison",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "Sauce Taro, Fruits Secs, Parmesan",
+    "price": 25,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 13,
+    "slug": "supreme-maison"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dc7",
+    "name": "Poulet à l'italienne",
+    "nameFull": {
+      "fr": "Poulet à l'italienne",
+      "en": "Poulet à l'italienne",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d10",
+    "categoryName": "Volailles",
+    "description": "",
+    "price": 28,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+    "available": true,
+    "featured": false,
+    "order": 14,
+    "slug": "poulet-a-litalienne"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dca",
+    "name": "Steak Grillé",
+    "nameFull": {
+      "fr": "Steak Grillé",
+      "en": "Steak Grillé",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 26,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "steak-grille"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dcd",
+    "name": "Steak",
+    "nameFull": {
+      "fr": "Steak",
+      "en": "Steak",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "Champignon, Bizz'Art, Fromage, Poivre",
+    "price": 30,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+    "available": true,
+    "featured": false,
+    "order": 2,
+    "slug": "steak"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dd0",
+    "name": "Steak Farci",
+    "nameFull": {
+      "fr": "Steak Farci",
+      "en": "Steak Farci",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 32.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "steak-farci"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dd3",
+    "name": "Foie Grillé",
+    "nameFull": {
+      "fr": "Foie Grillé",
+      "en": "Foie Grillé",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 25,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "foie-grille"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dd6",
+    "name": "Foie à la Lyonnaise",
+    "nameFull": {
+      "fr": "Foie à la Lyonnaise",
+      "en": "Foie à la Lyonnaise",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 28,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "foie-a-la-lyonnaise"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dd9",
+    "name": "Grillade Mixte",
+    "nameFull": {
+      "fr": "Grillade Mixte",
+      "en": "Grillade Mixte",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 32,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+    "available": true,
+    "featured": false,
+    "order": 6,
+    "slug": "grillade-mixte"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375ddc",
+    "name": "Grillade Royale",
+    "nameFull": {
+      "fr": "Grillade Royale",
+      "en": "Grillade Royale",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 43,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+    "available": true,
+    "featured": true,
+    "order": 7,
+    "slug": "grillade-royale"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375ddf",
+    "name": "Panorama de Viande",
+    "nameFull": {
+      "fr": "Panorama de Viande",
+      "en": "Panorama de Viande",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "Viande, Foie, Côtelette, côte à l'os, Merguez, Escalope grillée, Escalope panée",
+    "price": 65,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+    "available": true,
+    "featured": true,
+    "order": 8,
+    "slug": "panorama-de-viande"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375de2",
+    "name": "Côtelette d'agneau",
+    "nameFull": {
+      "fr": "Côtelette d'agneau",
+      "en": "Côtelette d'agneau",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 35,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+    "available": true,
+    "featured": false,
+    "order": 9,
+    "slug": "cotelette-dagneau"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375de5",
+    "name": "Côte à L'os Grillée",
+    "nameFull": {
+      "fr": "Côte à L'os Grillée",
+      "en": "Côte à L'os Grillée",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 33,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+    "available": true,
+    "featured": false,
+    "order": 10,
+    "slug": "cote-a-los-grillee"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375de8",
+    "name": "Côte à L'os Bizz'Art",
+    "nameFull": {
+      "fr": "Côte à L'os Bizz'Art",
+      "en": "Côte à L'os Bizz'Art",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "Fromage, Champignons, 4 poivre",
+    "price": 40,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+    "available": true,
+    "featured": false,
+    "order": 11,
+    "slug": "cote-a-los-bizzart"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375deb",
+    "name": "Filet de boeuf",
+    "nameFull": {
+      "fr": "Filet de boeuf",
+      "en": "Filet de boeuf",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 36,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+    "available": true,
+    "featured": false,
+    "order": 12,
+    "slug": "filet-de-boeuf"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dee",
+    "name": "Filet de boeuf sauce au choix",
+    "nameFull": {
+      "fr": "Filet de boeuf sauce au choix",
+      "en": "Filet de boeuf sauce au choix",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d12",
+    "categoryName": "Viandes",
+    "description": "",
+    "price": 42,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+    "available": true,
+    "featured": false,
+    "order": 13,
+    "slug": "filet-de-boeuf-sauce-au-choix"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375df1",
+    "name": "Plateau Fruits de mer",
+    "nameFull": {
+      "fr": "Plateau Fruits de mer",
+      "en": "Plateau Fruits de mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "description": "",
+    "price": 50,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "plateau-fruits-de-mer"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375df4",
+    "name": "Crevettes sautées ou grillées",
+    "nameFull": {
+      "fr": "Crevettes sautées ou grillées",
+      "en": "Crevettes sautées ou grillées",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "description": "",
+    "price": 28.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+    "available": true,
+    "featured": false,
+    "order": 2,
+    "slug": "crevettes-sautees-ou-grillees"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375df7",
+    "name": "Poisson du jour",
+    "nameFull": {
+      "fr": "Poisson du jour",
+      "en": "Poisson du jour",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "description": "Dorade ou Loup",
+    "price": 24,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "poisson-du-jour"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dfa",
+    "name": "Fruits de Mer Sautés",
+    "nameFull": {
+      "fr": "Fruits de Mer Sautés",
+      "en": "Fruits de Mer Sautés",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "description": "",
+    "price": 35,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "fruits-de-mer-sautes"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375dfd",
+    "name": "Seiche gratinée aux crevettes et au miel",
+    "nameFull": {
+      "fr": "Seiche gratinée aux crevettes et au miel",
+      "en": "Seiche gratinée aux crevettes et au miel",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "description": "",
+    "price": 32,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "seiche-gratinee-aux-crevettes-et-au-miel"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e00",
+    "name": "Symphonie Fruits de mer",
+    "nameFull": {
+      "fr": "Symphonie Fruits de mer",
+      "en": "Symphonie Fruits de mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "description": "2 personnes",
+    "price": 76,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+    "available": true,
+    "featured": false,
+    "order": 6,
+    "slug": "symphonie-fruits-de-mer"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e03",
+    "name": "Symphonie Terre-Mer",
+    "nameFull": {
+      "fr": "Symphonie Terre-Mer",
+      "en": "Symphonie Terre-Mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "description": "2 personnes",
+    "price": 74,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+    "available": true,
+    "featured": true,
+    "order": 7,
+    "slug": "symphonie-terre-mer"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e06",
+    "name": "Symphonie Terre-Mer",
+    "nameFull": {
+      "fr": "Symphonie Terre-Mer",
+      "en": "Symphonie Terre-Mer",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d14",
+    "categoryName": "Fruits de mer",
+    "description": "4 personnes - Mixte Fruits de mer à la crème : Seiche grillée, Calamar dorite, 2 Poissons de jour / Mixte de viande : Côte à l'os, Côtelette Foie, Escalope grillée, Escalope panée, Merguez, Steak",
+    "price": 142,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+    "available": true,
+    "featured": true,
+    "order": 8,
+    "slug": "symphonie-terre-mer-77"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e09",
+    "name": "Poulet grillé",
+    "nameFull": {
+      "fr": "Poulet grillé",
+      "en": "Poulet grillé",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d16",
+    "categoryName": "Tacos",
+    "description": "Taille L: 9.5 DT | Taille XL: 13 DT",
+    "price": 9.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "poulet-grille"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e0c",
+    "name": "Poulet Mexicain",
+    "nameFull": {
+      "fr": "Poulet Mexicain",
+      "en": "Poulet Mexicain",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d16",
+    "categoryName": "Tacos",
+    "description": "Taille L: 10 DT | Taille XL: 13.5 DT",
+    "price": 10,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+    "available": true,
+    "featured": false,
+    "order": 2,
+    "slug": "poulet-mexicain"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e0f",
+    "name": "Poulet Pané",
+    "nameFull": {
+      "fr": "Poulet Pané",
+      "en": "Poulet Pané",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d16",
+    "categoryName": "Tacos",
+    "description": "Taille L: 10 DT | Taille XL: 13.5 DT",
+    "price": 10,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "poulet-pane"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e12",
+    "name": "Cordon Bleu",
+    "nameFull": {
+      "fr": "Cordon Bleu",
+      "en": "Cordon Bleu",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d16",
+    "categoryName": "Tacos",
+    "description": "Taille L: 10.7 DT | Taille XL: 14.5 DT",
+    "price": 10.7,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "cordon-bleu-81"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e15",
+    "name": "Viande Hachée",
+    "nameFull": {
+      "fr": "Viande Hachée",
+      "en": "Viande Hachée",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d16",
+    "categoryName": "Tacos",
+    "description": "Taille L: 11 DT | Taille XL: 15 DT",
+    "price": 11,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "viande-hachee"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e18",
+    "name": "Thon",
+    "nameFull": {
+      "fr": "Thon",
+      "en": "Thon",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d18",
+    "categoryName": "MAkIOUB",
+    "description": "",
+    "price": 8.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "thon"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e1b",
+    "name": "Poulet grillé",
+    "nameFull": {
+      "fr": "Poulet grillé",
+      "en": "Poulet grillé",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d18",
+    "categoryName": "MAkIOUB",
+    "description": "",
+    "price": 9.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 2,
+    "slug": "poulet-grille-84"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e1e",
+    "name": "Poulet Mexicain",
+    "nameFull": {
+      "fr": "Poulet Mexicain",
+      "en": "Poulet Mexicain",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d18",
+    "categoryName": "MAkIOUB",
+    "description": "",
+    "price": 10,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "poulet-mexicain-85"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e21",
+    "name": "Poulet Pané",
+    "nameFull": {
+      "fr": "Poulet Pané",
+      "en": "Poulet Pané",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d18",
+    "categoryName": "MAkIOUB",
+    "description": "",
+    "price": 10,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "poulet-pane-86"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e24",
+    "name": "Cordon Bleu",
+    "nameFull": {
+      "fr": "Cordon Bleu",
+      "en": "Cordon Bleu",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d18",
+    "categoryName": "MAkIOUB",
+    "description": "",
+    "price": 10.7,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "cordon-bleu-87"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e27",
+    "name": "Spécial",
+    "nameFull": {
+      "fr": "Spécial",
+      "en": "Spécial",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d18",
+    "categoryName": "MAkIOUB",
+    "description": "escalope, chawerma, Fslice",
+    "price": 11,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+    "available": true,
+    "featured": false,
+    "order": 6,
+    "slug": "special"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e2a",
+    "name": "Eau Minérale 1/2L",
+    "nameFull": {
+      "fr": "Eau Minérale 1/2L",
+      "en": "Eau Minérale 1/2L",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "",
+    "price": 1.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+    "available": true,
+    "featured": false,
+    "order": 1,
+    "slug": "eau-minerale-12l"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e2d",
+    "name": "Eau Minérale 1L",
+    "nameFull": {
+      "fr": "Eau Minérale 1L",
+      "en": "Eau Minérale 1L",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "",
+    "price": 3,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+    "available": true,
+    "featured": false,
+    "order": 2,
+    "slug": "eau-minerale-1l"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e30",
+    "name": "Eau Gazeuse",
+    "nameFull": {
+      "fr": "Eau Gazeuse",
+      "en": "Eau Gazeuse",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "",
+    "price": 3,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+    "available": true,
+    "featured": false,
+    "order": 3,
+    "slug": "eau-gazeuse"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e33",
+    "name": "Soda",
+    "nameFull": {
+      "fr": "Soda",
+      "en": "Soda",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "Coca, Fanta, Boga...",
+    "price": 3,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+    "available": true,
+    "featured": false,
+    "order": 4,
+    "slug": "soda"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e36",
+    "name": "Pétillante",
+    "nameFull": {
+      "fr": "Pétillante",
+      "en": "Pétillante",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "",
+    "price": 3,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 5,
+    "slug": "petillante"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e39",
+    "name": "Citronnade",
+    "nameFull": {
+      "fr": "Citronnade",
+      "en": "Citronnade",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "",
+    "price": 3.5,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+    "available": true,
+    "featured": false,
+    "order": 6,
+    "slug": "citronnade"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e3c",
+    "name": "Délio",
+    "nameFull": {
+      "fr": "Délio",
+      "en": "Délio",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "",
+    "price": 2,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+    "available": true,
+    "featured": false,
+    "order": 7,
+    "slug": "delio"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e3f",
+    "name": "Orangina",
+    "nameFull": {
+      "fr": "Orangina",
+      "en": "Orangina",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "",
+    "price": 3,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+    "available": true,
+    "featured": false,
+    "order": 8,
+    "slug": "orangina"
+  },
+  {
+    "_id": "6a845a7b2876405dd5375e42",
+    "name": "Sprite",
+    "nameFull": {
+      "fr": "Sprite",
+      "en": "Sprite",
+      "ar": ""
+    },
+    "category": "6a845a7a2876405dd5375d1c",
+    "categoryName": "Soda",
+    "description": "",
+    "price": 3,
+    "image": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+    "available": true,
+    "featured": false,
+    "order": 9,
+    "slug": "sprite"
+  }
+]

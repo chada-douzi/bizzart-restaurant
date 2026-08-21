@@ -1,0 +1,2574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Visuel Automatique - BIZZ'ART</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 1400px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h1 { font-size: 28px; color: #333; margin-bottom: 10px; }
+    .header { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #e0e0e0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+    .stat-card { background: #f8f9fa; padding: 15px; border-radius: 6px; }
+    .stat-card h3 { font-size: 12px; color: #666; margin-bottom: 5px; text-transform: uppercase; }
+    .stat-card p { font-size: 24px; font-weight: bold; color: #2196F3; }
+    .stat-card.success p { color: #4CAF50; }
+    .stat-card.warning p { color: #FF9800; }
+    .stat-card.danger p { color: #f44336; }
+    .filters { margin: 20px 0; display: flex; gap: 10px; flex-wrap: wrap; }
+    .filter-input { padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+    .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .table thead { background: #f8f9fa; }
+    .table th { padding: 12px; text-align: left; font-size: 13px; font-weight: 600; color: #333; border-bottom: 2px solid #ddd; }
+    .table td { padding: 12px; border-bottom: 1px solid #e0e0e0; font-size: 14px; }
+    .table tr:hover { background: #f8f9fa; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+    .badge-success { background: #E8F5E9; color: #4CAF50; }
+    .badge-warning { background: #FFF3E0; color: #F57C00; }
+    .badge-danger { background: #FFEBEE; color: #f44336; }
+    .badge-info { background: #E3F2FD; color: #2196F3; }
+    .tabs { display: flex; gap: 10px; margin: 20px 0; border-bottom: 1px solid #ddd; }
+    .tab { padding: 10px 20px; cursor: pointer; background: none; border: none; font-size: 16px; color: #666; border-bottom: 3px solid transparent; }
+    .tab.active { color: #2196F3; border-bottom-color: #2196F3; font-weight: 600; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .alert { padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .alert-info { background: #E3F2FD; color: #1976D2; border-left: 4px solid #2196F3; }
+    .alert-warning { background: #FFF3E0; color: #E65100; border-left: 4px solid #FF9800; }
+    .alert-success { background: #E8F5E9; color: #2E7D32; border-left: 4px solid #4CAF50; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🤖 Audit Visuel Automatique - BIZZ'ART</h1>
+      <p style="color: #666; margin-top: 10px;">Analyse par Vision IA - 2026-08-19</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Plats analysés</h3>
+          <p>98</p>
+        </div>
+        <div class="stat-card">
+          <h3>Photos uniques</h3>
+          <p>35</p>
+        </div>
+        <div class="stat-card success">
+          <h3>Photos Bizz'Art</h3>
+          <p>1</p>
+        </div>
+        <div class="stat-card warning">
+          <h3>Photos stock</h3>
+          <p>1</p>
+        </div>
+        <div class="stat-card success">
+          <h3>Plats OK</h3>
+          <p>0</p>
+        </div>
+        <div class="stat-card danger">
+          <h3>Nouvelles photos</h3>
+          <p>92</p>
+        </div>
+      </div>
+      
+      <div class="alert alert-info">
+        <strong>Mode:</strong> Lecture seule stricte - Aucune modification de production
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('all')">📊 Tous les plats (98)</button>
+      <button class="tab" onclick="showTab('missing')">📸 Photos manquantes (92)</button>
+      <button class="tab" onclick="showTab('uncertain')">❓ Cas incertains (98)</button>
+      <button class="tab" onclick="showTab('duplicates')">🔁 Doublons (29)</button>
+    </div>
+
+    <div id="all-tab" class="tab-content active">
+      <div class="filters">
+        <input type="text" class="filter-input" placeholder="Rechercher un plat..." oninput="filterTable(this.value)">
+        <select class="filter-input" onchange="filterByClassification(this.value)">
+          <option value="">Toutes les classifications</option>
+          <option value="PHOTO_REELLE_BIZZART_CORRECTE">Photo correcte</option>
+          <option value="PHOTO_REELLE_BIZZART_MAUVAIS_PLAT">Mauvais plat</option>
+          <option value="PHOTO_STOCK_GENERIQUE">Photo stock</option>
+          <option value="PHOTO_INCERTAINE">Incertaine</option>
+          <option value="PHOTO_MANQUANTE">Manquante</option>
+        </select>
+      </div>
+      
+      <table class="table" id="allPlatsTable">
+        <thead>
+          <tr>
+            <th>Plat</th>
+            <th>Catégorie</th>
+            <th>Classification</th>
+            <th>Score</th>
+            <th>Raison</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><strong>Pâtes BIZZ'Art</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>10%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Bolognaise</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>50%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes l'Arrabiata</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes du Chef</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Maison</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes à L'italienne</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>10%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Saumon</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>10%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Crevette</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>10%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Viande</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes sauce pesto</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Lasagne Bolognaise</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Lasagne Fruits De Mer</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Paella 1 Personne</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Paella Royale</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Risotto Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Risotto Poulet-Champignons</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Gratin Poulet</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Gratin Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Margherita</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Thon</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza 4 Fromages sauce tomate</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza 4 Fromages sauce blanche</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Reine</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Piquante</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Chicken</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Napolitaine</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pepperoni</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>4 Saisons</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Bizz'art</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Anglaise</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza BURRATA</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Fruit de mer</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Saumon</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Végétarienne</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Chevrettes</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade César</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade du Chef</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade de Crevettes Panées</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Saumon</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Roquette</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Ou Cuisse de Poulet</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Panée</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope à la crème</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Champignon</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Épinard</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Gorgonzola</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope du Chef</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Involtini</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Orientale</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Suprême</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Suprême Maison</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet à l'italienne</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak Grillé</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak Farci</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Foie Grillé</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Foie à la Lyonnaise</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Grillade Mixte</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>52%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Grillade Royale</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Panorama de Viande</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côtelette d'agneau</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côte à L'os Grillée</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côte à L'os Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Filet de boeuf</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Filet de boeuf sauce au choix</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Plateau Fruits de mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Crevettes sautées ou grillées</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poisson du jour</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Fruits de Mer Sautés</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Seiche gratinée aux crevettes et au miel</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Fruits de mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Terre-Mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Terre-Mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet grillé</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Mexicain</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Pané</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Viande Hachée</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Thon</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet grillé</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Mexicain</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Pané</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Spécial</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Minérale 1/2L</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Minérale 1L</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Gazeuse</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Soda</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pétillante</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Citronnade</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Délio</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Orangina</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Sprite</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div id="missing-tab" class="tab-content">
+      <div class="alert alert-warning">
+        <strong>92 plats</strong> nécessitent une nouvelle photo.
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Plat</th>
+            <th>Catégorie</th>
+            <th>Classification</th>
+            <th>Raison</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><strong>Pâtes BIZZ'Art</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Bolognaise</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes l'Arrabiata</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes du Chef</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Maison</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes à L'italienne</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Saumon</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Crevette</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Viande</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes sauce pesto</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Lasagne Bolognaise</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Lasagne Fruits De Mer</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Paella 1 Personne</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Paella Royale</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Risotto Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Risotto Poulet-Champignons</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Gratin Poulet</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Gratin Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Margherita</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Thon</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza 4 Fromages sauce tomate</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza 4 Fromages sauce blanche</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Reine</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Piquante</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Chicken</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Napolitaine</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pepperoni</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>4 Saisons</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Bizz'art</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Anglaise</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza BURRATA</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Fruit de mer</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Saumon</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Végétarienne</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Chevrettes</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade César</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade du Chef</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade de Crevettes Panées</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Saumon</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Roquette</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Ou Cuisse de Poulet</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Panée</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope à la crème</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Champignon</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Épinard</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Gorgonzola</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope du Chef</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Involtini</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Orientale</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Suprême</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Suprême Maison</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet à l'italienne</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak Grillé</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak Farci</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Foie Grillé</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Foie à la Lyonnaise</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Grillade Mixte</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-info">PHOTO INCERTAINE</span></td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Grillade Royale</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Panorama de Viande</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côtelette d'agneau</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côte à L'os Grillée</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côte à L'os Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Filet de boeuf</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Filet de boeuf sauce au choix</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Plateau Fruits de mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Crevettes sautées ou grillées</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poisson du jour</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Fruits de Mer Sautés</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Seiche gratinée aux crevettes et au miel</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Fruits de mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Terre-Mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Terre-Mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet grillé</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Mexicain</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Pané</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Viande Hachée</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Thon</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet grillé</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Mexicain</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Pané</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Spécial</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Minérale 1/2L</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Minérale 1L</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Gazeuse</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Soda</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pétillante</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Citronnade</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Délio</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Orangina</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Sprite</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td><span class="badge badge-danger">PHOTO MANQUANTE</span></td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div id="uncertain-tab" class="tab-content">
+      <div class="alert alert-warning">
+        <strong>98 cas incertains</strong> nécessitent une révision manuelle.
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Plat</th>
+            <th>Catégorie</th>
+            <th>Score</th>
+            <th>Raison</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><strong>Pâtes BIZZ'Art</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>10%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Bolognaise</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>50%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes l'Arrabiata</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes du Chef</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Maison</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes à L'italienne</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>10%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Saumon</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>10%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Crevette</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>10%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Ravioli Viande</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pâtes sauce pesto</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Lasagne Bolognaise</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Lasagne Fruits De Mer</strong></td>
+              <td><span class="badge badge-info">Pâtes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Paella 1 Personne</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Paella Royale</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Risotto Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Risotto Poulet-Champignons</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Gratin Poulet</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Gratin Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Plats Espagnol</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Margherita</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Thon</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza 4 Fromages sauce tomate</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza 4 Fromages sauce blanche</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Reine</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Piquante</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Chicken</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Napolitaine</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pepperoni</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>4 Saisons</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Bizz'art</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Anglaise</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza BURRATA</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Fruit de mer</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Saumon</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Végétarienne</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pizza Chevrettes</strong></td>
+              <td><span class="badge badge-info">Les Pizzas</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade César</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade du Chef</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Fruits de Mer</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade de Crevettes Panées</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Saumon</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Salade Roquette</strong></td>
+              <td><span class="badge badge-info">Salade</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Ou Cuisse de Poulet</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Panée</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope à la crème</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Champignon</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Épinard</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope sauce Gorgonzola</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope du Chef</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Involtini</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Escalope Orientale</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Suprême</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Suprême Maison</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet à l'italienne</strong></td>
+              <td><span class="badge badge-info">Volailles</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak Grillé</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Steak Farci</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Foie Grillé</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Foie à la Lyonnaise</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Grillade Mixte</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>52%</td>
+              <td>Origine ou contenu incertain</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Grillade Royale</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Panorama de Viande</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côtelette d'agneau</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côte à L'os Grillée</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Côte à L'os Bizz'Art</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Filet de boeuf</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Filet de boeuf sauce au choix</strong></td>
+              <td><span class="badge badge-info">Viandes</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Plateau Fruits de mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Crevettes sautées ou grillées</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poisson du jour</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Fruits de Mer Sautés</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Seiche gratinée aux crevettes et au miel</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Fruits de mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Terre-Mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Symphonie Terre-Mer</strong></td>
+              <td><span class="badge badge-info">Fruits de mer</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet grillé</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Mexicain</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Pané</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Viande Hachée</strong></td>
+              <td><span class="badge badge-info">Tacos</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Thon</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet grillé</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Mexicain</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Poulet Pané</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Cordon Bleu</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Spécial</strong></td>
+              <td><span class="badge badge-info">MAkIOUB</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Minérale 1/2L</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Minérale 1L</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Eau Gazeuse</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Soda</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Pétillante</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Citronnade</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Délio</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Orangina</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+            <tr>
+              <td><strong>Sprite</strong></td>
+              <td><span class="badge badge-info">Soda</span></td>
+              <td>0%</td>
+              <td>Pas de correspondance trouvée</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div id="duplicates-tab" class="tab-content">
+      <div class="alert alert-info">
+        <strong>29 photos</strong> sont utilisées par plusieurs plats.
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Photo ID</th>
+            <th>Utilisée par</th>
+            <th>Détecté</th>
+            <th>Criticité</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><strong>photo_1</strong></td>
+              <td>4 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_2</strong></td>
+              <td>4 plats</td>
+              <td>Tagliatelles à la sauce crémeuse, poulet, burrata et fruits à coque</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_3</strong></td>
+              <td>4 plats</td>
+              <td>Assiette de grillades mixtes / Plateau de viandes grillées</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_5</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_6</strong></td>
+              <td>5 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_7</strong></td>
+              <td>4 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_8</strong></td>
+              <td>3 plats</td>
+              <td>Émincé de viande sauce forestière / poivre avec assortiment d'accompagnements</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_9</strong></td>
+              <td>3 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_10</strong></td>
+              <td>5 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_11</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_12</strong></td>
+              <td>2 plats</td>
+              <td>Tagliatelles à la crème de pistache et burrata</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_14</strong></td>
+              <td>3 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_16</strong></td>
+              <td>4 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_17</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_18</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_20</strong></td>
+              <td>2 plats</td>
+              <td>Spaghetti aux crevettes / Pâtes aux fruits de mer</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_21</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_22</strong></td>
+              <td>3 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_24</strong></td>
+              <td>6 plats</td>
+              <td>Penne au pesto et crevettes</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_25</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_26</strong></td>
+              <td>5 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_28</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_29</strong></td>
+              <td>5 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_30</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_31</strong></td>
+              <td>3 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_32</strong></td>
+              <td>4 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-danger">HIGH</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_33</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_34</strong></td>
+              <td>2 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>photo_35</strong></td>
+              <td>3 plats</td>
+              <td>Inconnu</td>
+              <td><span class="badge badge-warning">MEDIUM</span></td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabName) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tabName + '-tab').classList.add('active');
+    }
+
+    function filterTable(searchTerm) {
+      const rows = document.querySelectorAll('#allPlatsTable tbody tr');
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(searchTerm.toLowerCase()) ? '' : 'none';
+      });
+    }
+
+    function filterByClassification(classification) {
+      const rows = document.querySelectorAll('#allPlatsTable tbody tr');
+      rows.forEach(row => {
+        if (!classification) {
+          row.style.display = '';
+        } else {
+          const hasClass = row.textContent.includes(classification);
+          row.style.display = hasClass ? '' : 'none';
+        }
+      });
+    }
+
+    function getClassBadge(classification) {
+      if (classification === 'PHOTO_REELLE_BIZZART_CORRECTE') return 'badge-success';
+      if (classification === 'PHOTO_STOCK_GENERIQUE') return 'badge-warning';
+      if (classification === 'PHOTO_MANQUANTE') return 'badge-danger';
+      return 'badge-info';
+    }
+
+    function formatClassification(classification) {
+      return classification.replace(/_/g, ' ');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1609 @@
+{
+  "timestamp": "2026-08-18T17:29:55.197Z",
+  "summary": {
+    "totalPlats": 98,
+    "urlsAccessibles": 94,
+    "urlsInaccessibles": 4,
+    "photosUniques": 6,
+    "photosDupliquees": 29,
+    "platsNecessitantValidation": 98
+  },
+  "plats": [
+    {
+      "index": 1,
+      "id": "6a845a7a2876405dd5375d1f",
+      "nameFr": "Pâtes BIZZ'Art",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "imageFileName": "r07qxo_-_R_Download_11_ak1ici.jpg",
+      "slug": "pates-bizzart",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 2,
+      "id": "6a845a7b2876405dd5375e18",
+      "nameFr": "Thon",
+      "categoryName": "MAkIOUB",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "imageFileName": "FB_IMG_1786831394707_fictxa.jpg",
+      "slug": "thon",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 3,
+      "id": "6a845a7b2876405dd5375e2a",
+      "nameFr": "Eau Minérale 1/2L",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "imageFileName": "E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "slug": "eau-minerale-12l",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 4,
+      "id": "6a845a7a2876405dd5375d8b",
+      "nameFr": "Salade César",
+      "categoryName": "Salade",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageFileName": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "slug": "salade-cesar",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 5,
+      "id": "6a845a7b2876405dd5375dca",
+      "nameFr": "Steak Grillé",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "imageFileName": "FB_IMG_1786831381120_cigb5d.jpg",
+      "slug": "steak-grille",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 6,
+      "id": "6a845a7a2876405dd5375d46",
+      "nameFr": "Paella 1 Personne",
+      "categoryName": "Plats Espagnol",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "imageFileName": "FB_IMG_1786831464636_u2po6i.jpg",
+      "slug": "paella-1-personne",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 7,
+      "id": "6a845a7a2876405dd5375d58",
+      "nameFr": "Pizza Margherita",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "imageFileName": "D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "slug": "pizza-margherita",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 1,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 8,
+      "id": "6a845a7a2876405dd5375da0",
+      "nameFr": "Escalope Ou Cuisse de Poulet",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "imageFileName": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "slug": "escalope-ou-cuisse-de-poulet",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 9,
+      "id": "6a845a7b2876405dd5375df1",
+      "nameFr": "Plateau Fruits de mer",
+      "categoryName": "Fruits de mer",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "imageFileName": "r07qxo_-_R_Download_12_nffdek.jpg",
+      "slug": "plateau-fruits-de-mer",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 10,
+      "id": "6a845a7b2876405dd5375e09",
+      "nameFr": "Poulet grillé",
+      "categoryName": "Tacos",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "imageFileName": "FB_IMG_1786831381120_cigb5d.jpg",
+      "slug": "poulet-grille",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 11,
+      "id": "6a845a7a2876405dd5375d22",
+      "nameFr": "Pâtes Bolognaise",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "imageFileName": "IMG_0237_nkagke.jpg",
+      "slug": "pates-bolognaise",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 12,
+      "id": "6a845a7a2876405dd5375d5b",
+      "nameFr": "Pizza Thon",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "imageFileName": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "slug": "pizza-thon",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 13,
+      "id": "6a845a7b2876405dd5375e1b",
+      "nameFr": "Poulet grillé",
+      "categoryName": "MAkIOUB",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageFileName": "FB_IMG_1786831623991_kranmd.jpg",
+      "slug": "poulet-grille-84",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 14,
+      "id": "6a845a7b2876405dd5375e0c",
+      "nameFr": "Poulet Mexicain",
+      "categoryName": "Tacos",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageFileName": "IMG_9720_jytrma.jpg",
+      "slug": "poulet-mexicain",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 15,
+      "id": "6a845a7b2876405dd5375dcd",
+      "nameFr": "Steak",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "imageFileName": "r07qxo_-_R_Download_8_jeurew.jpg",
+      "slug": "steak",
+      "urlAccessible": false,
+      "httpStatus": 0,
+      "usageCount": 2,
+      "status": "🔴 URL INACCESSIBLE"
+    },
+    {
+      "index": 16,
+      "id": "6a845a7a2876405dd5375da3",
+      "nameFr": "Escalope Panée",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "imageFileName": "FB_IMG_1786831543045_pyswfe.jpg",
+      "slug": "escalope-panee",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 17,
+      "id": "6a845a7b2876405dd5375df4",
+      "nameFr": "Crevettes sautées ou grillées",
+      "categoryName": "Fruits de mer",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "imageFileName": "E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "slug": "crevettes-sautees-ou-grillees",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 18,
+      "id": "6a845a7a2876405dd5375d8e",
+      "nameFr": "Salade Bizz'Art",
+      "categoryName": "Salade",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageFileName": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "slug": "salade-bizzart",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 19,
+      "id": "6a845a7b2876405dd5375e2d",
+      "nameFr": "Eau Minérale 1L",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "imageFileName": "FB_IMG_1786831394707_fictxa.jpg",
+      "slug": "eau-minerale-1l",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 20,
+      "id": "6a845a7a2876405dd5375d49",
+      "nameFr": "Paella Royale",
+      "categoryName": "Plats Espagnol",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "imageFileName": "CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "slug": "paella-royale",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 21,
+      "id": "6a845a7a2876405dd5375d25",
+      "nameFr": "Pâtes l'Arrabiata",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "imageFileName": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "slug": "pates-larrabiata",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 22,
+      "id": "6a845a7b2876405dd5375dd0",
+      "nameFr": "Steak Farci",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageFileName": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "slug": "steak-farci",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 23,
+      "id": "6a845a7b2876405dd5375e30",
+      "nameFr": "Eau Gazeuse",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageFileName": "IMG_9699_g5ubkl.jpg",
+      "slug": "eau-gazeuse",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 6,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 24,
+      "id": "6a845a7a2876405dd5375d5e",
+      "nameFr": "Pizza 4 Fromages sauce tomate",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "imageFileName": "r07qxo_-_R_Download_13_djmfzt.jpg",
+      "slug": "pizza-4-fromages-sauce-tomate",
+      "urlAccessible": false,
+      "httpStatus": 0,
+      "usageCount": 2,
+      "status": "🔴 URL INACCESSIBLE"
+    },
+    {
+      "index": 25,
+      "id": "6a845a7a2876405dd5375da6",
+      "nameFr": "Escalope à la crème",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageFileName": "IMG_9699_g5ubkl.jpg",
+      "slug": "escalope-a-la-creme",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 6,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 26,
+      "id": "6a845a7b2876405dd5375e0f",
+      "nameFr": "Poulet Pané",
+      "categoryName": "Tacos",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "imageFileName": "r07qxo_-_R_Download_7_usi3f8.jpg",
+      "slug": "poulet-pane",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 27,
+      "id": "6a845a7b2876405dd5375e1e",
+      "nameFr": "Poulet Mexicain",
+      "categoryName": "MAkIOUB",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "imageFileName": "FB_IMG_1786831385645_vzx61b.jpg",
+      "slug": "poulet-mexicain-85",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 28,
+      "id": "6a845a7b2876405dd5375df7",
+      "nameFr": "Poisson du jour",
+      "categoryName": "Fruits de mer",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageFileName": "FB_IMG_1786831623991_kranmd.jpg",
+      "slug": "poisson-du-jour",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 29,
+      "id": "6a845a7a2876405dd5375d4c",
+      "nameFr": "Risotto Bizz'Art",
+      "categoryName": "Plats Espagnol",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "imageFileName": "FB_IMG_1786831504871_bopbcd.jpg",
+      "slug": "risotto-bizzart",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 30,
+      "id": "6a845a7a2876405dd5375d91",
+      "nameFr": "Salade du Chef",
+      "categoryName": "Salade",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageFileName": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "slug": "salade-du-chef",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 31,
+      "id": "6a845a7a2876405dd5375d28",
+      "nameFr": "Pâtes du Chef",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg",
+      "imageFileName": "r07qxo_-_R_Download_2_evr2vc.jpg",
+      "slug": "pates-du-chef",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 1,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 32,
+      "id": "6a845a7b2876405dd5375e33",
+      "nameFr": "Soda",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageFileName": "IMG_9699_g5ubkl.jpg",
+      "slug": "soda",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 6,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 33,
+      "id": "6a845a7b2876405dd5375e12",
+      "nameFr": "Cordon Bleu",
+      "categoryName": "Tacos",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "imageFileName": "IMG_0237_nkagke.jpg",
+      "slug": "cordon-bleu-81",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 34,
+      "id": "6a845a7a2876405dd5375d61",
+      "nameFr": "Pizza 4 Fromages sauce blanche",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "imageFileName": "r07qxo_-_R_Download_7_usi3f8.jpg",
+      "slug": "pizza-4-fromages-sauce-blanche",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 35,
+      "id": "6a845a7a2876405dd5375d4f",
+      "nameFr": "Risotto Poulet-Champignons",
+      "categoryName": "Plats Espagnol",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg",
+      "imageFileName": "FB_IMG_1786831557428_uylzz1.jpg",
+      "slug": "risotto-poulet-champignons",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 1,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 36,
+      "id": "6a845a7a2876405dd5375da9",
+      "nameFr": "Escalope sauce Champignon",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "imageFileName": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "slug": "escalope-sauce-champignon",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 37,
+      "id": "6a845a7b2876405dd5375dd3",
+      "nameFr": "Foie Grillé",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageFileName": "IMG_9720_jytrma.jpg",
+      "slug": "foie-grille",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 38,
+      "id": "6a845a7b2876405dd5375dfa",
+      "nameFr": "Fruits de Mer Sautés",
+      "categoryName": "Fruits de mer",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "imageFileName": "r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "slug": "fruits-de-mer-sautes",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 39,
+      "id": "6a845a7b2876405dd5375e21",
+      "nameFr": "Poulet Pané",
+      "categoryName": "MAkIOUB",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "imageFileName": "FB_IMG_1786831383530_jofqku.jpg",
+      "slug": "poulet-pane-86",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 40,
+      "id": "6a845a7a2876405dd5375d94",
+      "nameFr": "Salade Fruits de Mer",
+      "categoryName": "Salade",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg",
+      "imageFileName": "FB_IMG_1786831392186_u0ikej.jpg",
+      "slug": "salade-fruits-de-mer",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 1,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 41,
+      "id": "6a845a7a2876405dd5375d2b",
+      "nameFr": "Pâtes Maison",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "imageFileName": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "slug": "pates-maison",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 42,
+      "id": "6a845a7b2876405dd5375dfd",
+      "nameFr": "Seiche gratinée aux crevettes et au miel",
+      "categoryName": "Fruits de mer",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageFileName": "IMG_9720_jytrma.jpg",
+      "slug": "seiche-gratinee-aux-crevettes-et-au-miel",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 43,
+      "id": "6a845a7b2876405dd5375e15",
+      "nameFr": "Viande Hachée",
+      "categoryName": "Tacos",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "imageFileName": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "slug": "viande-hachee",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 44,
+      "id": "6a845a7b2876405dd5375e24",
+      "nameFr": "Cordon Bleu",
+      "categoryName": "MAkIOUB",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "imageFileName": "FB_IMG_1786831385645_vzx61b.jpg",
+      "slug": "cordon-bleu-87",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 45,
+      "id": "6a845a7b2876405dd5375e36",
+      "nameFr": "Pétillante",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageFileName": "FB_IMG_1786831623991_kranmd.jpg",
+      "slug": "petillante",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 46,
+      "id": "6a845a7a2876405dd5375d52",
+      "nameFr": "Gratin Poulet",
+      "categoryName": "Plats Espagnol",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "imageFileName": "FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "slug": "gratin-poulet",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 47,
+      "id": "6a845a7a2876405dd5375d64",
+      "nameFr": "Reine",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg",
+      "imageFileName": "IMG_9701_qyr2m3.jpg",
+      "slug": "reine",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 1,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 48,
+      "id": "6a845a7a2876405dd5375d97",
+      "nameFr": "Salade de Crevettes Panées",
+      "categoryName": "Salade",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "imageFileName": "r07qxo_-_R_Download_6_h7axod.jpg",
+      "slug": "salade-de-crevettes-panees",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 49,
+      "id": "6a845a7a2876405dd5375dac",
+      "nameFr": "Escalope sauce Épinard",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageFileName": "IMG_9720_jytrma.jpg",
+      "slug": "escalope-sauce-epinard",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 50,
+      "id": "6a845a7b2876405dd5375dd6",
+      "nameFr": "Foie à la Lyonnaise",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "imageFileName": "FB_IMG_1786831387595_vrtvut.jpg",
+      "slug": "foie-a-la-lyonnaise",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 51,
+      "id": "6a845a7a2876405dd5375d2e",
+      "nameFr": "Pâtes à L'italienne",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "imageFileName": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "slug": "pates-a-litalienne",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 52,
+      "id": "6a845a7b2876405dd5375dd9",
+      "nameFr": "Grillade Mixte",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "imageFileName": "CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "slug": "grillade-mixte",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 53,
+      "id": "6a845a7a2876405dd5375daf",
+      "nameFr": "Escalope sauce Gorgonzola",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "imageFileName": "r07qxo_-_R_Download_4_clavnd.jpg",
+      "slug": "escalope-sauce-gorgonzola",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 54,
+      "id": "6a845a7a2876405dd5375d9a",
+      "nameFr": "Salade Saumon",
+      "categoryName": "Salade",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "imageFileName": "r07qxo_-_R_Download_12_nffdek.jpg",
+      "slug": "salade-saumon",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 55,
+      "id": "6a845a7b2876405dd5375e39",
+      "nameFr": "Citronnade",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageFileName": "IMG_9699_g5ubkl.jpg",
+      "slug": "citronnade",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 6,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 56,
+      "id": "6a845a7a2876405dd5375d55",
+      "nameFr": "Gratin Fruits de Mer",
+      "categoryName": "Plats Espagnol",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "imageFileName": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "slug": "gratin-fruits-de-mer",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 57,
+      "id": "6a845a7b2876405dd5375e00",
+      "nameFr": "Symphonie Fruits de mer",
+      "categoryName": "Fruits de mer",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageFileName": "r07qxo_-_R_Download_9_bp8oao.jpg",
+      "slug": "symphonie-fruits-de-mer",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 58,
+      "id": "6a845a7b2876405dd5375e27",
+      "nameFr": "Spécial",
+      "categoryName": "MAkIOUB",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "imageFileName": "FB_IMG_1786831394707_fictxa.jpg",
+      "slug": "special",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 59,
+      "id": "6a845a7a2876405dd5375d67",
+      "nameFr": "Piquante",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "imageFileName": "IMG_0237_nkagke.jpg",
+      "slug": "piquante",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 60,
+      "id": "6a845a7a2876405dd5375d31",
+      "nameFr": "Pâtes Fruits de Mer",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "imageFileName": "r07qxo_-_R_Download_8_jeurew.jpg",
+      "slug": "pates-fruits-de-mer",
+      "urlAccessible": false,
+      "httpStatus": 0,
+      "usageCount": 2,
+      "status": "🔴 URL INACCESSIBLE"
+    },
+    {
+      "index": 61,
+      "id": "6a845a7b2876405dd5375e03",
+      "nameFr": "Symphonie Terre-Mer",
+      "categoryName": "Fruits de mer",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "imageFileName": "FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "slug": "symphonie-terre-mer",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 62,
+      "id": "6a845a7b2876405dd5375e3c",
+      "nameFr": "Délio",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "imageFileName": "r07qxo_-_R_Download_hgh4w0.jpg",
+      "slug": "delio",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 63,
+      "id": "6a845a7a2876405dd5375d9d",
+      "nameFr": "Salade Roquette",
+      "categoryName": "Salade",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageFileName": "FB_IMG_1786831623991_kranmd.jpg",
+      "slug": "salade-roquette",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 64,
+      "id": "6a845a7a2876405dd5375db2",
+      "nameFr": "Cordon Bleu",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "imageFileName": "FB_IMG_1786831504871_bopbcd.jpg",
+      "slug": "cordon-bleu",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 65,
+      "id": "6a845a7b2876405dd5375ddc",
+      "nameFr": "Grillade Royale",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "imageFileName": "r07qxo_-_R_Download_4_clavnd.jpg",
+      "slug": "grillade-royale",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 66,
+      "id": "6a845a7a2876405dd5375d6a",
+      "nameFr": "Chicken",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "imageFileName": "FB_IMG_1786831387595_vrtvut.jpg",
+      "slug": "chicken",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 67,
+      "id": "6a845a7a2876405dd5375d34",
+      "nameFr": "Ravioli Saumon",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageFileName": "r07qxo_-_R_Download_9_bp8oao.jpg",
+      "slug": "ravioli-saumon",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 68,
+      "id": "6a845a7b2876405dd5375e3f",
+      "nameFr": "Orangina",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "imageFileName": "r07qxo_-_R_Download_4_clavnd.jpg",
+      "slug": "orangina",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 69,
+      "id": "6a845a7b2876405dd5375ddf",
+      "nameFr": "Panorama de Viande",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "imageFileName": "r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "slug": "panorama-de-viande",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 70,
+      "id": "6a845a7a2876405dd5375db5",
+      "nameFr": "Escalope Bizz'Art",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "imageFileName": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "slug": "escalope-bizzart",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 71,
+      "id": "6a845a7a2876405dd5375d6d",
+      "nameFr": "Napolitaine",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "imageFileName": "FB_IMG_1786831383530_jofqku.jpg",
+      "slug": "napolitaine",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 72,
+      "id": "6a845a7b2876405dd5375e06",
+      "nameFr": "Symphonie Terre-Mer",
+      "categoryName": "Fruits de mer",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "imageFileName": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "slug": "symphonie-terre-mer-77",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 73,
+      "id": "6a845a7a2876405dd5375d37",
+      "nameFr": "Ravioli Crevette",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "imageFileName": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "slug": "ravioli-crevette",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 74,
+      "id": "6a845a7b2876405dd5375de2",
+      "nameFr": "Côtelette d'agneau",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageFileName": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "slug": "cotelette-dagneau",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 75,
+      "id": "6a845a7b2876405dd5375e42",
+      "nameFr": "Sprite",
+      "categoryName": "Soda",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "imageFileName": "FB_IMG_1786831543045_pyswfe.jpg",
+      "slug": "sprite",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 76,
+      "id": "6a845a7a2876405dd5375d70",
+      "nameFr": "Pepperoni",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "imageFileName": "IMG_0237_nkagke.jpg",
+      "slug": "pepperoni",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 77,
+      "id": "6a845a7a2876405dd5375db8",
+      "nameFr": "Escalope du Chef",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "imageFileName": "FB_IMG_1786831385645_vzx61b.jpg",
+      "slug": "escalope-du-chef",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 78,
+      "id": "6a845a7b2876405dd5375dbb",
+      "nameFr": "Involtini",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "imageFileName": "r07qxo_-_R_Download_11_ak1ici.jpg",
+      "slug": "involtini",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 79,
+      "id": "6a845a7b2876405dd5375de5",
+      "nameFr": "Côte à L'os Grillée",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageFileName": "IMG_9699_g5ubkl.jpg",
+      "slug": "cote-a-los-grillee",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 6,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 80,
+      "id": "6a845a7a2876405dd5375d73",
+      "nameFr": "4 Saisons",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "imageFileName": "FB_IMG_1786831381120_cigb5d.jpg",
+      "slug": "4-saisons",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 81,
+      "id": "6a845a7a2876405dd5375d3a",
+      "nameFr": "Ravioli Viande",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "imageFileName": "CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "slug": "ravioli-viande",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 82,
+      "id": "6a845a7a2876405dd5375d76",
+      "nameFr": "Pizza Bizz'art",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageFileName": "r07qxo_-_R_Download_9_bp8oao.jpg",
+      "slug": "pizza-bizzart",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 83,
+      "id": "6a845a7b2876405dd5375de8",
+      "nameFr": "Côte à L'os Bizz'Art",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "imageFileName": "r07qxo_-_R_Download_6_h7axod.jpg",
+      "slug": "cote-a-los-bizzart",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 84,
+      "id": "6a845a7b2876405dd5375dbe",
+      "nameFr": "Escalope Orientale",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "imageFileName": "FB_IMG_1786831464636_u2po6i.jpg",
+      "slug": "escalope-orientale",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 85,
+      "id": "6a845a7a2876405dd5375d3d",
+      "nameFr": "Pâtes sauce pesto",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageFileName": "r07qxo_-_R_Download_9_bp8oao.jpg",
+      "slug": "pates-sauce-pesto",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 86,
+      "id": "6a845a7a2876405dd5375d79",
+      "nameFr": "Pizza Anglaise",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "imageFileName": "r07qxo_-_R_Download_11_ak1ici.jpg",
+      "slug": "pizza-anglaise",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 87,
+      "id": "6a845a7b2876405dd5375deb",
+      "nameFr": "Filet de boeuf",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageFileName": "r07qxo_-_R_Download_9_bp8oao.jpg",
+      "slug": "filet-de-boeuf",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 88,
+      "id": "6a845a7a2876405dd5375d40",
+      "nameFr": "Lasagne Bolognaise",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "imageFileName": "r07qxo_-_R_Download_6_h7axod.jpg",
+      "slug": "lasagne-bolognaise",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 89,
+      "id": "6a845a7b2876405dd5375dc1",
+      "nameFr": "Suprême",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "imageFileName": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "slug": "supreme",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 90,
+      "id": "6a845a7a2876405dd5375d7c",
+      "nameFr": "Pizza BURRATA",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg",
+      "imageFileName": "FB_IMG_1786831389680_coillr.jpg",
+      "slug": "pizza-burrata",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 1,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 91,
+      "id": "6a845a7b2876405dd5375dee",
+      "nameFr": "Filet de boeuf sauce au choix",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "imageFileName": "FB_IMG_1786831385645_vzx61b.jpg",
+      "slug": "filet-de-boeuf-sauce-au-choix",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 92,
+      "id": "6a845a7a2876405dd5375d43",
+      "nameFr": "Lasagne Fruits De Mer",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageFileName": "IMG_9720_jytrma.jpg",
+      "slug": "lasagne-fruits-de-mer",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 93,
+      "id": "6a845a7b2876405dd5375dc4",
+      "nameFr": "Suprême Maison",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageFileName": "FB_IMG_1786831623991_kranmd.jpg",
+      "slug": "supreme-maison",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 5,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 94,
+      "id": "6a845a7a2876405dd5375d7f",
+      "nameFr": "Pizza Fruit de mer",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageFileName": "IMG_9699_g5ubkl.jpg",
+      "slug": "pizza-fruit-de-mer",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 6,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 95,
+      "id": "6a845a7b2876405dd5375dc7",
+      "nameFr": "Poulet à l'italienne",
+      "categoryName": "Volailles",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "imageFileName": "FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "slug": "poulet-a-litalienne",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 3,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 96,
+      "id": "6a845a7a2876405dd5375d82",
+      "nameFr": "Pizza Saumon",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "imageFileName": "r07qxo_-_R_Download_13_djmfzt.jpg",
+      "slug": "pizza-saumon",
+      "urlAccessible": false,
+      "httpStatus": 0,
+      "usageCount": 2,
+      "status": "🔴 URL INACCESSIBLE"
+    },
+    {
+      "index": 97,
+      "id": "6a845a7a2876405dd5375d85",
+      "nameFr": "Pizza Végétarienne",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "imageFileName": "r07qxo_-_R_Download_hgh4w0.jpg",
+      "slug": "pizza-vegetarienne",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 2,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    },
+    {
+      "index": 98,
+      "id": "6a845a7a2876405dd5375d88",
+      "nameFr": "Pizza Chevrettes",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "imageFileName": "r07qxo_-_R_Download_11_ak1ici.jpg",
+      "slug": "pizza-chevrettes",
+      "urlAccessible": true,
+      "httpStatus": 200,
+      "usageCount": 4,
+      "status": "⏳ À VÉRIFIER VISUELLEMENT"
+    }
+  ],
+  "duplicates": [
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "count": 6,
+      "plats": [
+        "Eau Gazeuse",
+        "Escalope à la crème",
+        "Soda",
+        "Citronnade",
+        "Côte à L'os Grillée",
+        "Pizza Fruit de mer"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "count": 5,
+      "plats": [
+        "Salade César",
+        "Salade Bizz'Art",
+        "Steak Farci",
+        "Salade du Chef",
+        "Côtelette d'agneau"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "count": 5,
+      "plats": [
+        "Poulet grillé",
+        "Poisson du jour",
+        "Pétillante",
+        "Salade Roquette",
+        "Suprême Maison"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "count": 5,
+      "plats": [
+        "Poulet Mexicain",
+        "Foie Grillé",
+        "Seiche gratinée aux crevettes et au miel",
+        "Escalope sauce Épinard",
+        "Lasagne Fruits De Mer"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "count": 5,
+      "plats": [
+        "Symphonie Fruits de mer",
+        "Ravioli Saumon",
+        "Pizza Bizz'art",
+        "Pâtes sauce pesto",
+        "Filet de boeuf"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "count": 4,
+      "plats": [
+        "Pâtes BIZZ'Art",
+        "Involtini",
+        "Pizza Anglaise",
+        "Pizza Chevrettes"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "count": 4,
+      "plats": [
+        "Escalope Ou Cuisse de Poulet",
+        "Viande Hachée",
+        "Gratin Fruits de Mer",
+        "Ravioli Crevette"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "count": 4,
+      "plats": [
+        "Pâtes Bolognaise",
+        "Cordon Bleu",
+        "Piquante",
+        "Pepperoni"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "count": 4,
+      "plats": [
+        "Pizza Thon",
+        "Escalope sauce Champignon",
+        "Escalope Bizz'Art",
+        "Symphonie Terre-Mer"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "count": 4,
+      "plats": [
+        "Pâtes l'Arrabiata",
+        "Pâtes Maison",
+        "Pâtes à L'italienne",
+        "Suprême"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "count": 4,
+      "plats": [
+        "Poulet Mexicain",
+        "Cordon Bleu",
+        "Escalope du Chef",
+        "Filet de boeuf sauce au choix"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "count": 3,
+      "plats": [
+        "Thon",
+        "Eau Minérale 1L",
+        "Spécial"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "count": 3,
+      "plats": [
+        "Steak Grillé",
+        "Poulet grillé",
+        "4 Saisons"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "count": 3,
+      "plats": [
+        "Paella Royale",
+        "Grillade Mixte",
+        "Ravioli Viande"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "count": 3,
+      "plats": [
+        "Gratin Poulet",
+        "Symphonie Terre-Mer",
+        "Poulet à l'italienne"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "count": 3,
+      "plats": [
+        "Salade de Crevettes Panées",
+        "Côte à L'os Bizz'Art",
+        "Lasagne Bolognaise"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "count": 3,
+      "plats": [
+        "Escalope sauce Gorgonzola",
+        "Grillade Royale",
+        "Orangina"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "count": 2,
+      "plats": [
+        "Eau Minérale 1/2L",
+        "Crevettes sautées ou grillées"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "count": 2,
+      "plats": [
+        "Paella 1 Personne",
+        "Escalope Orientale"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "count": 2,
+      "plats": [
+        "Plateau Fruits de mer",
+        "Salade Saumon"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "count": 2,
+      "plats": [
+        "Steak",
+        "Pâtes Fruits de Mer"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "count": 2,
+      "plats": [
+        "Escalope Panée",
+        "Sprite"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "count": 2,
+      "plats": [
+        "Pizza 4 Fromages sauce tomate",
+        "Pizza Saumon"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "count": 2,
+      "plats": [
+        "Poulet Pané",
+        "Pizza 4 Fromages sauce blanche"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "count": 2,
+      "plats": [
+        "Risotto Bizz'Art",
+        "Cordon Bleu"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "count": 2,
+      "plats": [
+        "Fruits de Mer Sautés",
+        "Panorama de Viande"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "count": 2,
+      "plats": [
+        "Poulet Pané",
+        "Napolitaine"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "count": 2,
+      "plats": [
+        "Foie à la Lyonnaise",
+        "Chicken"
+      ]
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "count": 2,
+      "plats": [
+        "Délio",
+        "Pizza Végétarienne"
+      ]
+    }
+  ],
+  "inaccessibles": [
+    {
+      "index": 15,
+      "id": "6a845a7b2876405dd5375dcd",
+      "nameFr": "Steak",
+      "categoryName": "Viandes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "imageFileName": "r07qxo_-_R_Download_8_jeurew.jpg",
+      "slug": "steak",
+      "urlAccessible": false,
+      "httpStatus": 0,
+      "usageCount": 2,
+      "status": "🔴 URL INACCESSIBLE"
+    },
+    {
+      "index": 24,
+      "id": "6a845a7a2876405dd5375d5e",
+      "nameFr": "Pizza 4 Fromages sauce tomate",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "imageFileName": "r07qxo_-_R_Download_13_djmfzt.jpg",
+      "slug": "pizza-4-fromages-sauce-tomate",
+      "urlAccessible": false,
+      "httpStatus": 0,
+      "usageCount": 2,
+      "status": "🔴 URL INACCESSIBLE"
+    },
+    {
+      "index": 60,
+      "id": "6a845a7a2876405dd5375d31",
+      "nameFr": "Pâtes Fruits de Mer",
+      "categoryName": "Pâtes",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "imageFileName": "r07qxo_-_R_Download_8_jeurew.jpg",
+      "slug": "pates-fruits-de-mer",
+      "urlAccessible": false,
+      "httpStatus": 0,
+      "usageCount": 2,
+      "status": "🔴 URL INACCESSIBLE"
+    },
+    {
+      "index": 96,
+      "id": "6a845a7a2876405dd5375d82",
+      "nameFr": "Pizza Saumon",
+      "categoryName": "Les Pizzas",
+      "imageUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "imageFileName": "r07qxo_-_R_Download_13_djmfzt.jpg",
+      "slug": "pizza-saumon",
+      "urlAccessible": false,
+      "httpStatus": 0,
+      "usageCount": 2,
+      "status": "🔴 URL INACCESSIBLE"
+    }
+  ]
+}

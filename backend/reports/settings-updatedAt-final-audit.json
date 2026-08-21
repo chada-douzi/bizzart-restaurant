@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "AUDIT FORENSIQUE CIBLÉ — settings.updatedAt_-1",
+    "timestamp": "2026-08-21T04:02:15.852Z",
+    "mode": "READ-ONLY ABSOLU"
+  },
+  "analysis": {
+    "collectionName": "settings",
+    "indexName": "updatedAt_-1",
+    "indexKeys": "{ updatedAt: -1 }",
+    "isSingleton": true,
+    "documentCount": 1,
+    "existingIndexes": [
+      "_id_",
+      "updatedAt_-1"
+    ],
+    "queriesFound": [
+      {
+        "location": "settings.controller.ts:120",
+        "hasFilterOnUpdatedAt": false,
+        "hasSortOnUpdatedAt": false,
+        "query": "Settings.findOne().lean()"
+      },
+      {
+        "location": "settings.controller.ts:142",
+        "hasFilterOnUpdatedAt": false,
+        "hasSortOnUpdatedAt": false,
+        "query": "Settings.findOne().populate(\"updatedBy\", \"firstName lastName email\").lean()"
+      },
+      {
+        "location": "settings.controller.ts:188",
+        "hasFilterOnUpdatedAt": false,
+        "hasSortOnUpdatedAt": false,
+        "query": "Settings.findOneAndUpdate({}, { $set: updateFields }, ...)"
+      }
+    ],
+    "explainResult": {
+      "executionTimeMillis": 2,
+      "totalDocsExamined": 1,
+      "indexUsed": "COLLSCAN"
+    },
+    "redundantWith": []
+  },
+  "decision": {
+    "final": "DO_NOT_CREATE",
+    "confidence": "HIGH",
+    "reasoning": "Collection singleton (≤1 document) et aucune requête ne filtre ou ne trie sur updatedAt. Index inutile.",
+    "performanceImpact": "NONE - findOne() sur singleton est instantané sans index supplémentaire"
+  },
+  "guardRail": {
+    "readOnlyMode": true,
+    "indexCreated": 0,
+    "dataModified": false
+  }
+}

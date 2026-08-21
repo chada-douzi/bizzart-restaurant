@@ -1,0 +1,1220 @@
+{
+  "metadata": {
+    "date": "2026-08-19T09:00:22.382Z",
+    "totalCategories": 11,
+    "totalItems": 98,
+    "imagesValid": 98,
+    "imagesMissing": 0,
+    "imagesPlaceholder": 0,
+    "imagesDuplicated": 29
+  },
+  "categories": [
+    {
+      "name": "Les Pizzas",
+      "slug": "les-pizzas",
+      "itemCount": 17
+    },
+    {
+      "name": "Pâtes",
+      "slug": "pates",
+      "itemCount": 13
+    },
+    {
+      "name": "Plats Espagnol",
+      "slug": "plats-espagnol",
+      "itemCount": 6
+    },
+    {
+      "name": "Salade",
+      "slug": "salade",
+      "itemCount": 7
+    },
+    {
+      "name": "Volailles",
+      "slug": "volailles",
+      "itemCount": 14
+    },
+    {
+      "name": "Viandes",
+      "slug": "viandes",
+      "itemCount": 13
+    },
+    {
+      "name": "Fruits de mer",
+      "slug": "fruits-de-mer",
+      "itemCount": 8
+    },
+    {
+      "name": "Tacos",
+      "slug": "tacos",
+      "itemCount": 5
+    },
+    {
+      "name": "MAkIOUB",
+      "slug": "makioub",
+      "itemCount": 6
+    },
+    {
+      "name": "Supplement",
+      "slug": "supplement",
+      "itemCount": 0
+    },
+    {
+      "name": "Soda",
+      "slug": "soda",
+      "itemCount": 9
+    }
+  ],
+  "duplicates": [
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753",
+      "dishes": [
+        "Pâtes BIZZ'Art",
+        "Pizza Anglaise",
+        "Pizza Chevrettes",
+        "Involtini"
+      ],
+      "count": 4
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804",
+      "dishes": [
+        "Pâtes Bolognaise",
+        "Piquante",
+        "Pepperoni",
+        "Cordon Bleu"
+      ],
+      "count": 4
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780",
+      "dishes": [
+        "Pâtes l'Arrabiata",
+        "Pâtes Maison",
+        "Pâtes à L'italienne",
+        "Suprême"
+      ],
+      "count": 4
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765",
+      "dishes": [
+        "Pâtes Fruits de Mer",
+        "Steak"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767",
+      "dishes": [
+        "Ravioli Saumon",
+        "Pâtes sauce pesto",
+        "Pizza Bizz'art",
+        "Filet de boeuf",
+        "Symphonie Fruits de mer"
+      ],
+      "count": 5
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771",
+      "dishes": [
+        "Ravioli Crevette",
+        "Gratin Fruits de Mer",
+        "Escalope Ou Cuisse de Poulet",
+        "Viande Hachée"
+      ],
+      "count": 4
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776",
+      "dishes": [
+        "Ravioli Viande",
+        "Paella Royale",
+        "Grillade Mixte"
+      ],
+      "count": 3
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762",
+      "dishes": [
+        "Lasagne Bolognaise",
+        "Salade de Crevettes Panées",
+        "Côte à L'os Bizz'Art"
+      ],
+      "count": 3
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811",
+      "dishes": [
+        "Lasagne Fruits De Mer",
+        "Escalope sauce Épinard",
+        "Foie Grillé",
+        "Seiche gratinée aux crevettes et au miel",
+        "Poulet Mexicain"
+      ],
+      "count": 5
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795",
+      "dishes": [
+        "Paella 1 Personne",
+        "Escalope Orientale"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796",
+      "dishes": [
+        "Risotto Bizz'Art",
+        "Cordon Bleu"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803",
+      "dishes": [
+        "Gratin Poulet",
+        "Poulet à l'italienne",
+        "Symphonie Terre-Mer"
+      ],
+      "count": 3
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785",
+      "dishes": [
+        "Pizza Thon",
+        "Escalope sauce Champignon",
+        "Escalope Bizz'Art",
+        "Symphonie Terre-Mer"
+      ],
+      "count": 4
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756",
+      "dishes": [
+        "Pizza 4 Fromages sauce tomate",
+        "Pizza Saumon"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763",
+      "dishes": [
+        "Pizza 4 Fromages sauce blanche",
+        "Poulet Pané"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791",
+      "dishes": [
+        "Chicken",
+        "Foie à la Lyonnaise"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789",
+      "dishes": [
+        "Napolitaine",
+        "Poulet Pané"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788",
+      "dishes": [
+        "4 Saisons",
+        "Steak Grillé",
+        "Poulet grillé"
+      ],
+      "count": 3
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807",
+      "dishes": [
+        "Pizza Fruit de mer",
+        "Escalope à la crème",
+        "Côte à L'os Grillée",
+        "Eau Gazeuse",
+        "Soda",
+        "Citronnade"
+      ],
+      "count": 6
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768",
+      "dishes": [
+        "Pizza Végétarienne",
+        "Délio"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783",
+      "dishes": [
+        "Salade César",
+        "Salade Bizz'Art",
+        "Salade du Chef",
+        "Steak Farci",
+        "Côtelette d'agneau"
+      ],
+      "count": 5
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755",
+      "dishes": [
+        "Salade Saumon",
+        "Plateau Fruits de mer"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800",
+      "dishes": [
+        "Salade Roquette",
+        "Suprême Maison",
+        "Poisson du jour",
+        "Poulet grillé",
+        "Pétillante"
+      ],
+      "count": 5
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798",
+      "dishes": [
+        "Escalope Panée",
+        "Sprite"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759",
+      "dishes": [
+        "Escalope sauce Gorgonzola",
+        "Grillade Royale",
+        "Orangina"
+      ],
+      "count": 3
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790",
+      "dishes": [
+        "Escalope du Chef",
+        "Filet de boeuf sauce au choix",
+        "Poulet Mexicain",
+        "Cordon Bleu"
+      ],
+      "count": 4
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758",
+      "dishes": [
+        "Panorama de Viande",
+        "Fruits de Mer Sautés"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782",
+      "dishes": [
+        "Crevettes sautées ou grillées",
+        "Eau Minérale 1/2L"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793",
+      "dishes": [
+        "Thon",
+        "Spécial",
+        "Eau Minérale 1L"
+      ],
+      "count": 3
+    }
+  ],
+  "audit": [
+    {
+      "category": "Pâtes",
+      "dish": "Pâtes BIZZ'Art",
+      "price": 27.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Pâtes Bolognaise",
+      "price": 21.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_02",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Pâtes l'Arrabiata",
+      "price": 18.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA87",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Pâtes du Chef",
+      "price": 29,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Pâtes Maison",
+      "price": 26,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA87",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Pâtes à L'italienne",
+      "price": 32.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA87",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Pâtes Fruits de Mer",
+      "price": 32,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Ravioli Saumon",
+      "price": 32,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Ravioli Crevette",
+      "price": 30,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9EC",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Ravioli Viande",
+      "price": 26,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Pâtes sauce pesto",
+      "price": 29,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Lasagne Bolognaise",
+      "price": 21.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Pâtes",
+      "dish": "Lasagne Fruits De Mer",
+      "price": 32,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_97",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Plats Espagnol",
+      "dish": "Paella 1 Personne",
+      "price": 34,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Plats Espagnol",
+      "dish": "Paella Royale",
+      "price": 63.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Plats Espagnol",
+      "dish": "Risotto Bizz'Art",
+      "price": 32,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Plats Espagnol",
+      "dish": "Risotto Poulet-Champignons",
+      "price": 28,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Plats Espagnol",
+      "dish": "Gratin Poulet",
+      "price": 23,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F85",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Plats Espagnol",
+      "dish": "Gratin Fruits de Mer",
+      "price": 29.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9EC",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza Margherita",
+      "price": 14.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza Thon",
+      "price": 16.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza 4 Fromages sauce tomate",
+      "price": 18,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza 4 Fromages sauce blanche",
+      "price": 18.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Reine",
+      "price": 18,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_97",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Piquante",
+      "price": 18,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_02",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Chicken",
+      "price": 19,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Napolitaine",
+      "price": 17,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pepperoni",
+      "price": 16.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_02",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "4 Saisons",
+      "price": 17.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza Bizz'art",
+      "price": 20.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza Anglaise",
+      "price": 19,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza BURRATA",
+      "price": 22.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza Fruit de mer",
+      "price": 28.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_96",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza Saumon",
+      "price": 26,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza Végétarienne",
+      "price": 20,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Les Pizzas",
+      "dish": "Pizza Chevrettes",
+      "price": 20,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Salade",
+      "dish": "Salade César",
+      "price": 15.8,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Salade",
+      "dish": "Salade Bizz'Art",
+      "price": 20.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Salade",
+      "dish": "Salade du Chef",
+      "price": 24.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Salade",
+      "dish": "Salade Fruits de Mer",
+      "price": 28,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Salade",
+      "dish": "Salade de Crevettes Panées",
+      "price": 22,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Salade",
+      "dish": "Salade Saumon",
+      "price": 24,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Salade",
+      "dish": "Salade Roquette",
+      "price": 12.8,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope Ou Cuisse de Poulet",
+      "price": 18,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9EC",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope Panée",
+      "price": 19.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope à la crème",
+      "price": 20.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_96",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope sauce Champignon",
+      "price": 21.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope sauce Épinard",
+      "price": 21,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_97",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope sauce Gorgonzola",
+      "price": 22,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Cordon Bleu",
+      "price": 23,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope Bizz'Art",
+      "price": 23.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope du Chef",
+      "price": 25.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Involtini",
+      "price": 22,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Escalope Orientale",
+      "price": 23,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Suprême",
+      "price": 24,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA87",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Suprême Maison",
+      "price": 25,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Volailles",
+      "dish": "Poulet à l'italienne",
+      "price": 28,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F85",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Steak Grillé",
+      "price": 26,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Steak",
+      "price": 30,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Steak Farci",
+      "price": 32.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Foie Grillé",
+      "price": 25,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_97",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Foie à la Lyonnaise",
+      "price": 28,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Grillade Mixte",
+      "price": 32,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Grillade Royale",
+      "price": 43,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Panorama de Viande",
+      "price": 65,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Côtelette d'agneau",
+      "price": 35,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Côte à L'os Grillée",
+      "price": 33,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_96",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Côte à L'os Bizz'Art",
+      "price": 40,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Filet de boeuf",
+      "price": 36,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Viandes",
+      "dish": "Filet de boeuf sauce au choix",
+      "price": 42,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Fruits de mer",
+      "dish": "Plateau Fruits de mer",
+      "price": 50,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Fruits de mer",
+      "dish": "Crevettes sautées ou grillées",
+      "price": 28.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B11",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Fruits de mer",
+      "dish": "Poisson du jour",
+      "price": 24,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Fruits de mer",
+      "dish": "Fruits de Mer Sautés",
+      "price": 35,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Fruits de mer",
+      "dish": "Seiche gratinée aux crevettes et au miel",
+      "price": 32,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_97",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Fruits de mer",
+      "dish": "Symphonie Fruits de mer",
+      "price": 76,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Fruits de mer",
+      "dish": "Symphonie Terre-Mer",
+      "price": 74,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F85",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Fruits de mer",
+      "dish": "Symphonie Terre-Mer",
+      "price": 142,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Tacos",
+      "dish": "Poulet grillé",
+      "price": 9.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Tacos",
+      "dish": "Poulet Mexicain",
+      "price": 10,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_97",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Tacos",
+      "dish": "Poulet Pané",
+      "price": 10,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Tacos",
+      "dish": "Cordon Bleu",
+      "price": 10.7,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_02",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Tacos",
+      "dish": "Viande Hachée",
+      "price": 11,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9EC",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "MAkIOUB",
+      "dish": "Thon",
+      "price": 8.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "MAkIOUB",
+      "dish": "Poulet grillé",
+      "price": 9.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "MAkIOUB",
+      "dish": "Poulet Mexicain",
+      "price": 10,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "MAkIOUB",
+      "dish": "Poulet Pané",
+      "price": 10,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "MAkIOUB",
+      "dish": "Cordon Bleu",
+      "price": 10.7,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "MAkIOUB",
+      "dish": "Spécial",
+      "price": 11,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Eau Minérale 1/2L",
+      "price": 1.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B11",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Eau Minérale 1L",
+      "price": 3,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Eau Gazeuse",
+      "price": 3,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_96",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Soda",
+      "price": 3,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_96",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Pétillante",
+      "price": 3,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Citronnade",
+      "price": 3.5,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_96",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Délio",
+      "price": 2,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Orangina",
+      "price": 3,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    },
+    {
+      "category": "Soda",
+      "dish": "Sprite",
+      "price": 3,
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG",
+      "imageStatus": "OK",
+      "action": "KEEP",
+      "notes": "Image Cloudinary existante"
+    }
+  ]
+}

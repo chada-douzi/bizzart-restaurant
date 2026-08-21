@@ -1,0 +1,4248 @@
+{
+  "timestamp": "2026-08-18T15:11:05.354Z",
+  "summary": {
+    "totalMedia": 56,
+    "cloudinaryMedia": 40,
+    "localMedia": 16,
+    "totalMenuItems": 98,
+    "totalCategories": 11,
+    "mappingsHighConfidence": 0,
+    "mappingsMediumConfidence": 20,
+    "mappingsLowConfidence": 34,
+    "mappingsNoMatch": 2,
+    "totalAnomalies": 65,
+    "unusedMedia": 45,
+    "itemsWithoutImage": 0
+  },
+  "mediaInventory": [
+    {
+      "index": 1,
+      "id": "6a844c9e3fe2b113270dd411",
+      "title": "Plat signature BIZZ'ART",
+      "category": "food",
+      "url": "/images/gallery/plat-signature-gastro.jpg",
+      "publicId": "local/gallery/plat-signature-gastro",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 450,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 1,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\plat-signature-gastro.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 2,
+      "id": "6a844c9e3fe2b113270dd414",
+      "title": "Pizza Napolitaine",
+      "category": "food",
+      "url": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "publicId": "local/gallery/pizza-oeuf-merguez",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 800,
+        "height": 1000
+      },
+      "isVisible": true,
+      "displayOrder": 2,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\pizza-oeuf-merguez.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 3,
+      "id": "6a844c9e3fe2b113270dd417",
+      "title": "Pizza Thon",
+      "category": "food",
+      "url": "/images/gallery/pizza-thon.jpg",
+      "publicId": "local/gallery/pizza-thon",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 4,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\pizza-thon.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 4,
+      "id": "6a844c9e3fe2b113270dd41d",
+      "title": "Pizza Champignons",
+      "category": "food",
+      "url": "/images/gallery/pizza-champignons.jpg",
+      "publicId": "local/gallery/pizza-champignons",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 600,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 5,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\pizza-champignons.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 5,
+      "id": "6a844c9e3fe2b113270dd420",
+      "title": "Grillades Mixtes",
+      "category": "food",
+      "url": "/images/gallery/grillades-mixtes.jpg",
+      "publicId": "local/gallery/grillades-mixtes",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "isVisible": true,
+      "displayOrder": 3,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\grillades-mixtes.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 6,
+      "id": "6a844c9e3fe2b113270dd423",
+      "title": "Grand Plateau Grillades",
+      "category": "food",
+      "url": "/images/gallery/plateau-grillades.jpg",
+      "publicId": "local/gallery/plateau-grillades",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 800,
+        "height": 1000
+      },
+      "isVisible": true,
+      "displayOrder": 6,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\plateau-grillades.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 7,
+      "id": "6a844c9e3fe2b113270dd426",
+      "title": "Steak Gratiné",
+      "category": "food",
+      "url": "/images/gallery/steak-gratiné.jpg",
+      "publicId": "local/gallery/steak-gratiné",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 600,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 7,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\steak-gratiné.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 8,
+      "id": "6a844c9e3fe2b113270dd429",
+      "title": "Émincé Champignons",
+      "category": "food",
+      "url": "/images/gallery/emince-champignons.jpg",
+      "publicId": "local/gallery/emince-champignons",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 600,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 13,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\emince-champignons.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 9,
+      "id": "6a844c9e3fe2b113270dd42c",
+      "title": "Paella Fruits de Mer",
+      "category": "food",
+      "url": "/images/gallery/paella-fruits-mer.jpg",
+      "publicId": "local/gallery/paella-fruits-mer",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 600,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 8,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\paella-fruits-mer.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 10,
+      "id": "6a844c9e3fe2b113270dd42f",
+      "title": "Paella Royale",
+      "category": "food",
+      "url": "/images/gallery/paella-noire.jpg",
+      "publicId": "local/gallery/paella-noire",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 600,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 9,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\paella-noire.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 11,
+      "id": "6a844c9e3fe2b113270dd432",
+      "title": "Crevettes & Poisson",
+      "category": "food",
+      "url": "/images/gallery/crevettes-poisson.jpg",
+      "publicId": "local/gallery/crevettes-poisson",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 600,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 10,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\crevettes-poisson.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 12,
+      "id": "6a844c9e3fe2b113270dd435",
+      "title": "Spaghetti Fruits de Mer",
+      "category": "food",
+      "url": "/images/gallery/spaghetti-fruits-mer.jpg",
+      "publicId": "local/gallery/spaghetti-fruits-mer",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 450,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 11,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\spaghetti-fruits-mer.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 13,
+      "id": "6a844c9e3fe2b113270dd438",
+      "title": "Tagliatelles Burrata",
+      "category": "food",
+      "url": "/images/gallery/tagliatelles-burrata.jpg",
+      "publicId": "local/gallery/tagliatelles-burrata",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 450,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 12,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\tagliatelles-burrata.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 14,
+      "id": "6a844c9e3fe2b113270dd43b",
+      "title": "Grillade en Salle",
+      "category": "restaurant",
+      "url": "/images/gallery/grillade-mixte-salle.jpg",
+      "publicId": "local/gallery/grillade-mixte-salle",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 14,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\grillade-mixte-salle.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 15,
+      "id": "6a844c9e3fe2b113270dd43e",
+      "title": "Poulet Grillé aux Herbes",
+      "category": "food",
+      "url": "/images/gallery/poulet-grille-herbes.jpg",
+      "publicId": "local/gallery/poulet-grille-herbes",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 640,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 15,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\poulet-grille-herbes.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 16,
+      "id": "6a844c9e3fe2b113270dd441",
+      "title": "Fruits de Mer en Sauce Crème",
+      "category": "food",
+      "url": "/images/gallery/fruits-mer-creme.jpg",
+      "publicId": "local/gallery/fruits-mer-creme",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 450,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 16,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\fruits-mer-creme.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 17,
+      "id": "6a846374cc857419ae49cc66",
+      "title": "r07qxo    R Download(11)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_11_ak1ici",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 0,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_11_ak1ici.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 18,
+      "id": "6a846374cc857419ae49cc6b",
+      "title": "r07qxo    R Download(12)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_12_nffdek",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 1,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_12_nffdek.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 19,
+      "id": "6a846374cc857419ae49cc6d",
+      "title": "r07qxo    R Download(13)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_13_djmfzt",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 2,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_13_djmfzt.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 20,
+      "id": "6a846374cc857419ae49cc6f",
+      "title": "r07qxo    R Download(2)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_2_evr2vc",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 3,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_2_evr2vc.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 21,
+      "id": "6a846374cc857419ae49cc71",
+      "title": "r07qxo    R Download(3)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_3_ah6kjf",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 4,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 22,
+      "id": "6a846374cc857419ae49cc73",
+      "title": "r07qxo    R Download(4)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_4_clavnd",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 5,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_4_clavnd.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 23,
+      "id": "6a846374cc857419ae49cc75",
+      "title": "r07qxo    R Download(5)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060761/bizzart/menu/r07qxo_-_R_Download_5_mx8xs2.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_5_mx8xs2",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 6,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_5_mx8xs2.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 24,
+      "id": "6a846374cc857419ae49cc77",
+      "title": "r07qxo    R Download(6)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_6_h7axod",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 7,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_6_h7axod.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 25,
+      "id": "6a846374cc857419ae49cc79",
+      "title": "r07qxo    R Download(7)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_7_usi3f8",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 8,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_7_usi3f8.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 26,
+      "id": "6a846374cc857419ae49cc7b",
+      "title": "r07qxo    R Download(8)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_8_jeurew",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 9,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_8_jeurew.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 27,
+      "id": "6a846374cc857419ae49cc7d",
+      "title": "r07qxo    R Download(9)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_9_bp8oao",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 10,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_9_bp8oao.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 28,
+      "id": "6a846374cc857419ae49cc7f",
+      "title": "r07qxo    R Download",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_hgh4w0",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 11,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_hgh4w0.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 29,
+      "id": "6a846374cc857419ae49cc81",
+      "title": "A7D9ECFF 989F 45B7 8E9F 1AA5833C3B1D",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "publicId": "bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 12,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 30,
+      "id": "6a846374cc857419ae49cc83",
+      "title": "AAA10429 9A48 4F34 88FC E951DB9960F8",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060774/bizzart/menu/AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh.png",
+      "publicId": "bizzart/menu/AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 13,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 31,
+      "id": "6a846374cc857419ae49cc85",
+      "title": "CE03FC6E 28EB 438B A580 ACDE0EE43DB5",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "publicId": "bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 14,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 32,
+      "id": "6a846374cc857419ae49cc87",
+      "title": "D2ACAC2E 1EDE 404C 8597 0006112AC6C2",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "publicId": "bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 15,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 33,
+      "id": "6a846374cc857419ae49cc89",
+      "title": "DDBA871E ADDC 4602 AA42 E875DD1D7559",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "publicId": "bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 16,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 34,
+      "id": "6a846374cc857419ae49cc8b",
+      "title": "E82B1115 081E 4CAB 8E58 F86532F170CC",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "publicId": "bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 17,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 35,
+      "id": "6a846374cc857419ae49cc8d",
+      "title": "EB2F2B90 88F1 44EB 90BF BFDB31B8B15E",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "publicId": "bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 18,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 36,
+      "id": "6a846374cc857419ae49cc8f",
+      "title": "F04A3E91 B691 4A8E 8F76 665B275F1812",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "publicId": "bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 19,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 37,
+      "id": "6a846374cc857419ae49cc91",
+      "title": "FBB08DE2 5BC4 4226 87A1 AF9B4B9D163F",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060787/bizzart/menu/FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod.png",
+      "publicId": "bizzart/menu/FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 20,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 38,
+      "id": "6a846374cc857419ae49cc93",
+      "title": "FB IMG 1786831381120",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831381120_cigb5d",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 21,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831381120_cigb5d.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 39,
+      "id": "6a846374cc857419ae49cc95",
+      "title": "FB IMG 1786831383530",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831383530_jofqku",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 22,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831383530_jofqku.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 40,
+      "id": "6a846374cc857419ae49cc97",
+      "title": "FB IMG 1786831385645",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831385645_vzx61b",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 23,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831385645_vzx61b.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 41,
+      "id": "6a846374cc857419ae49cc99",
+      "title": "FB IMG 1786831387595",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831387595_vrtvut",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 24,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831387595_vrtvut.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 42,
+      "id": "6a846374cc857419ae49cc9b",
+      "title": "FB IMG 1786831389680",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831389680_coillr",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 25,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831389680_coillr.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 43,
+      "id": "6a846374cc857419ae49cc9d",
+      "title": "FB IMG 1786831392186",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831392186_u0ikej",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 26,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831392186_u0ikej.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 44,
+      "id": "6a846374cc857419ae49cc9f",
+      "title": "FB IMG 1786831394707",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831394707_fictxa",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 27,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831394707_fictxa.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 45,
+      "id": "6a846374cc857419ae49cca1",
+      "title": "FB IMG 1786831464636",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831464636_u2po6i",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 28,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831464636_u2po6i.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 46,
+      "id": "6a846374cc857419ae49cca3",
+      "title": "FB IMG 1786831504871",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831504871_bopbcd",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 29,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831504871_bopbcd.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 47,
+      "id": "6a846374cc857419ae49cca5",
+      "title": "FB IMG 1786831512797",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060797/bizzart/menu/FB_IMG_1786831512797_uc66qt.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831512797_uc66qt",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 30,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831512797_uc66qt.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 48,
+      "id": "6a846374cc857419ae49cca7",
+      "title": "FB IMG 1786831543045",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831543045_pyswfe",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 31,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831543045_pyswfe.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 49,
+      "id": "6a846374cc857419ae49cca9",
+      "title": "FB IMG 1786831557428",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831557428_uylzz1",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 32,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831557428_uylzz1.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 50,
+      "id": "6a846374cc857419ae49ccab",
+      "title": "FB IMG 1786831623991",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831623991_kranmd",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 33,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831623991_kranmd.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 51,
+      "id": "6a846374cc857419ae49ccad",
+      "title": "FD0F8561 B4E5 413D 98F4 FA5778A54F7B",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "publicId": "bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 34,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 52,
+      "id": "6a846374cc857419ae49ccaf",
+      "title": "IMG 0237",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "publicId": "bizzart/menu/IMG_0237_nkagke",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 35,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_0237_nkagke.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 53,
+      "id": "6a846374cc857419ae49ccb1",
+      "title": "IMG 0285",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060806/bizzart/menu/IMG_0285_q2e2rm.jpg",
+      "publicId": "bizzart/menu/IMG_0285_q2e2rm",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 36,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_0285_q2e2rm.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 54,
+      "id": "6a846374cc857419ae49ccb3",
+      "title": "IMG 9699",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "publicId": "bizzart/menu/IMG_9699_g5ubkl",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 37,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_9699_g5ubkl.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 55,
+      "id": "6a846374cc857419ae49ccb5",
+      "title": "IMG 9701",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg",
+      "publicId": "bizzart/menu/IMG_9701_qyr2m3",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 38,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_9701_qyr2m3.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 56,
+      "id": "6a846374cc857419ae49ccb7",
+      "title": "IMG 9720",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "publicId": "bizzart/menu/IMG_9720_jytrma",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 39,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_9720_jytrma.jpg",
+      "fileExists": false
+    }
+  ],
+  "menuItemsInventory": [
+    {
+      "id": "6a845a7a2876405dd5375d1f",
+      "name": "Pâtes BIZZ'Art",
+      "nameFr": "Pâtes BIZZ'Art",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_11_ak1ici"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d22",
+      "name": "Pâtes Bolognaise",
+      "nameFr": "Pâtes Bolognaise",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_0237_nkagke"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d25",
+      "name": "Pâtes l'Arrabiata",
+      "nameFr": "Pâtes l'Arrabiata",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d28",
+      "name": "Pâtes du Chef",
+      "nameFr": "Pâtes du Chef",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_2_evr2vc"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d2b",
+      "name": "Pâtes Maison",
+      "nameFr": "Pâtes Maison",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d2e",
+      "name": "Pâtes à L'italienne",
+      "nameFr": "Pâtes à L'italienne",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d31",
+      "name": "Pâtes Fruits de Mer",
+      "nameFr": "Pâtes Fruits de Mer",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_8_jeurew"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d34",
+      "name": "Ravioli Saumon",
+      "nameFr": "Ravioli Saumon",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_9_bp8oao"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d37",
+      "name": "Ravioli Crevette",
+      "nameFr": "Ravioli Crevette",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d3a",
+      "name": "Ravioli Viande",
+      "nameFr": "Ravioli Viande",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d3d",
+      "name": "Pâtes sauce pesto",
+      "nameFr": "Pâtes sauce pesto",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_9_bp8oao"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d40",
+      "name": "Lasagne Bolognaise",
+      "nameFr": "Lasagne Bolognaise",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_6_h7axod"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d43",
+      "name": "Lasagne Fruits De Mer",
+      "nameFr": "Lasagne Fruits De Mer",
+      "category": "6a845a7a2876405dd5375d0a",
+      "categoryName": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9720_jytrma"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d46",
+      "name": "Paella 1 Personne",
+      "nameFr": "Paella 1 Personne",
+      "category": "6a845a7a2876405dd5375d0c",
+      "categoryName": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831464636_u2po6i"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d49",
+      "name": "Paella Royale",
+      "nameFr": "Paella Royale",
+      "category": "6a845a7a2876405dd5375d0c",
+      "categoryName": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d4c",
+      "name": "Risotto Bizz'Art",
+      "nameFr": "Risotto Bizz'Art",
+      "category": "6a845a7a2876405dd5375d0c",
+      "categoryName": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831504871_bopbcd"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d4f",
+      "name": "Risotto Poulet-Champignons",
+      "nameFr": "Risotto Poulet-Champignons",
+      "category": "6a845a7a2876405dd5375d0c",
+      "categoryName": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831557428_uylzz1"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d52",
+      "name": "Gratin Poulet",
+      "nameFr": "Gratin Poulet",
+      "category": "6a845a7a2876405dd5375d0c",
+      "categoryName": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d55",
+      "name": "Gratin Fruits de Mer",
+      "nameFr": "Gratin Fruits de Mer",
+      "category": "6a845a7a2876405dd5375d0c",
+      "categoryName": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d58",
+      "name": "Pizza Margherita",
+      "nameFr": "Pizza Margherita",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d5b",
+      "name": "Pizza Thon",
+      "nameFr": "Pizza Thon",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d5e",
+      "name": "Pizza 4 Fromages sauce tomate",
+      "nameFr": "Pizza 4 Fromages sauce tomate",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_13_djmfzt"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d61",
+      "name": "Pizza 4 Fromages sauce blanche",
+      "nameFr": "Pizza 4 Fromages sauce blanche",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_7_usi3f8"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d64",
+      "name": "Reine",
+      "nameFr": "Reine",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9701_qyr2m3"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d67",
+      "name": "Piquante",
+      "nameFr": "Piquante",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_0237_nkagke"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d6a",
+      "name": "Chicken",
+      "nameFr": "Chicken",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831387595_vrtvut"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d6d",
+      "name": "Napolitaine",
+      "nameFr": "Napolitaine",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831383530_jofqku"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d70",
+      "name": "Pepperoni",
+      "nameFr": "Pepperoni",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_0237_nkagke"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d73",
+      "name": "4 Saisons",
+      "nameFr": "4 Saisons",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831381120_cigb5d"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d76",
+      "name": "Pizza Bizz'art",
+      "nameFr": "Pizza Bizz'art",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_9_bp8oao"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d79",
+      "name": "Pizza Anglaise",
+      "nameFr": "Pizza Anglaise",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_11_ak1ici"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d7c",
+      "name": "Pizza BURRATA",
+      "nameFr": "Pizza BURRATA",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831389680_coillr"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d7f",
+      "name": "Pizza Fruit de mer",
+      "nameFr": "Pizza Fruit de mer",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9699_g5ubkl"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d82",
+      "name": "Pizza Saumon",
+      "nameFr": "Pizza Saumon",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_13_djmfzt"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d85",
+      "name": "Pizza Végétarienne",
+      "nameFr": "Pizza Végétarienne",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_hgh4w0"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d88",
+      "name": "Pizza Chevrettes",
+      "nameFr": "Pizza Chevrettes",
+      "category": "6a845a7a2876405dd5375d08",
+      "categoryName": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_11_ak1ici"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d8b",
+      "name": "Salade César",
+      "nameFr": "Salade César",
+      "category": "6a845a7a2876405dd5375d0e",
+      "categoryName": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d8e",
+      "name": "Salade Bizz'Art",
+      "nameFr": "Salade Bizz'Art",
+      "category": "6a845a7a2876405dd5375d0e",
+      "categoryName": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d91",
+      "name": "Salade du Chef",
+      "nameFr": "Salade du Chef",
+      "category": "6a845a7a2876405dd5375d0e",
+      "categoryName": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d94",
+      "name": "Salade Fruits de Mer",
+      "nameFr": "Salade Fruits de Mer",
+      "category": "6a845a7a2876405dd5375d0e",
+      "categoryName": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831392186_u0ikej"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d97",
+      "name": "Salade de Crevettes Panées",
+      "nameFr": "Salade de Crevettes Panées",
+      "category": "6a845a7a2876405dd5375d0e",
+      "categoryName": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_6_h7axod"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d9a",
+      "name": "Salade Saumon",
+      "nameFr": "Salade Saumon",
+      "category": "6a845a7a2876405dd5375d0e",
+      "categoryName": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_12_nffdek"
+    },
+    {
+      "id": "6a845a7a2876405dd5375d9d",
+      "name": "Salade Roquette",
+      "nameFr": "Salade Roquette",
+      "category": "6a845a7a2876405dd5375d0e",
+      "categoryName": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831623991_kranmd"
+    },
+    {
+      "id": "6a845a7a2876405dd5375da0",
+      "name": "Escalope Ou Cuisse de Poulet",
+      "nameFr": "Escalope Ou Cuisse de Poulet",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx"
+    },
+    {
+      "id": "6a845a7a2876405dd5375da3",
+      "name": "Escalope Panée",
+      "nameFr": "Escalope Panée",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831543045_pyswfe"
+    },
+    {
+      "id": "6a845a7a2876405dd5375da6",
+      "name": "Escalope à la crème",
+      "nameFr": "Escalope à la crème",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9699_g5ubkl"
+    },
+    {
+      "id": "6a845a7a2876405dd5375da9",
+      "name": "Escalope sauce Champignon",
+      "nameFr": "Escalope sauce Champignon",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew"
+    },
+    {
+      "id": "6a845a7a2876405dd5375dac",
+      "name": "Escalope sauce Épinard",
+      "nameFr": "Escalope sauce Épinard",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9720_jytrma"
+    },
+    {
+      "id": "6a845a7a2876405dd5375daf",
+      "name": "Escalope sauce Gorgonzola",
+      "nameFr": "Escalope sauce Gorgonzola",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_4_clavnd"
+    },
+    {
+      "id": "6a845a7a2876405dd5375db2",
+      "name": "Cordon Bleu",
+      "nameFr": "Cordon Bleu",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831504871_bopbcd"
+    },
+    {
+      "id": "6a845a7a2876405dd5375db5",
+      "name": "Escalope Bizz'Art",
+      "nameFr": "Escalope Bizz'Art",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew"
+    },
+    {
+      "id": "6a845a7a2876405dd5375db8",
+      "name": "Escalope du Chef",
+      "nameFr": "Escalope du Chef",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831385645_vzx61b"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dbb",
+      "name": "Involtini",
+      "nameFr": "Involtini",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_11_ak1ici"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dbe",
+      "name": "Escalope Orientale",
+      "nameFr": "Escalope Orientale",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831464636_u2po6i"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dc1",
+      "name": "Suprême",
+      "nameFr": "Suprême",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dc4",
+      "name": "Suprême Maison",
+      "nameFr": "Suprême Maison",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831623991_kranmd"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dc7",
+      "name": "Poulet à l'italienne",
+      "nameFr": "Poulet à l'italienne",
+      "category": "6a845a7a2876405dd5375d10",
+      "categoryName": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dca",
+      "name": "Steak Grillé",
+      "nameFr": "Steak Grillé",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831381120_cigb5d"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dcd",
+      "name": "Steak",
+      "nameFr": "Steak",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_8_jeurew"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dd0",
+      "name": "Steak Farci",
+      "nameFr": "Steak Farci",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dd3",
+      "name": "Foie Grillé",
+      "nameFr": "Foie Grillé",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9720_jytrma"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dd6",
+      "name": "Foie à la Lyonnaise",
+      "nameFr": "Foie à la Lyonnaise",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831387595_vrtvut"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dd9",
+      "name": "Grillade Mixte",
+      "nameFr": "Grillade Mixte",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21"
+    },
+    {
+      "id": "6a845a7b2876405dd5375ddc",
+      "name": "Grillade Royale",
+      "nameFr": "Grillade Royale",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_4_clavnd"
+    },
+    {
+      "id": "6a845a7b2876405dd5375ddf",
+      "name": "Panorama de Viande",
+      "nameFr": "Panorama de Viande",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_3_ah6kjf"
+    },
+    {
+      "id": "6a845a7b2876405dd5375de2",
+      "name": "Côtelette d'agneau",
+      "nameFr": "Côtelette d'agneau",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb"
+    },
+    {
+      "id": "6a845a7b2876405dd5375de5",
+      "name": "Côte à L'os Grillée",
+      "nameFr": "Côte à L'os Grillée",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9699_g5ubkl"
+    },
+    {
+      "id": "6a845a7b2876405dd5375de8",
+      "name": "Côte à L'os Bizz'Art",
+      "nameFr": "Côte à L'os Bizz'Art",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_6_h7axod"
+    },
+    {
+      "id": "6a845a7b2876405dd5375deb",
+      "name": "Filet de boeuf",
+      "nameFr": "Filet de boeuf",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_9_bp8oao"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dee",
+      "name": "Filet de boeuf sauce au choix",
+      "nameFr": "Filet de boeuf sauce au choix",
+      "category": "6a845a7a2876405dd5375d12",
+      "categoryName": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831385645_vzx61b"
+    },
+    {
+      "id": "6a845a7b2876405dd5375df1",
+      "name": "Plateau Fruits de mer",
+      "nameFr": "Plateau Fruits de mer",
+      "category": "6a845a7a2876405dd5375d14",
+      "categoryName": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_12_nffdek"
+    },
+    {
+      "id": "6a845a7b2876405dd5375df4",
+      "name": "Crevettes sautées ou grillées",
+      "nameFr": "Crevettes sautées ou grillées",
+      "category": "6a845a7a2876405dd5375d14",
+      "categoryName": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq"
+    },
+    {
+      "id": "6a845a7b2876405dd5375df7",
+      "name": "Poisson du jour",
+      "nameFr": "Poisson du jour",
+      "category": "6a845a7a2876405dd5375d14",
+      "categoryName": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831623991_kranmd"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dfa",
+      "name": "Fruits de Mer Sautés",
+      "nameFr": "Fruits de Mer Sautés",
+      "category": "6a845a7a2876405dd5375d14",
+      "categoryName": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_3_ah6kjf"
+    },
+    {
+      "id": "6a845a7b2876405dd5375dfd",
+      "name": "Seiche gratinée aux crevettes et au miel",
+      "nameFr": "Seiche gratinée aux crevettes et au miel",
+      "category": "6a845a7a2876405dd5375d14",
+      "categoryName": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9720_jytrma"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e00",
+      "name": "Symphonie Fruits de mer",
+      "nameFr": "Symphonie Fruits de mer",
+      "category": "6a845a7a2876405dd5375d14",
+      "categoryName": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_9_bp8oao"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e03",
+      "name": "Symphonie Terre-Mer",
+      "nameFr": "Symphonie Terre-Mer",
+      "category": "6a845a7a2876405dd5375d14",
+      "categoryName": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e06",
+      "name": "Symphonie Terre-Mer",
+      "nameFr": "Symphonie Terre-Mer",
+      "category": "6a845a7a2876405dd5375d14",
+      "categoryName": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e09",
+      "name": "Poulet grillé",
+      "nameFr": "Poulet grillé",
+      "category": "6a845a7a2876405dd5375d16",
+      "categoryName": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831381120_cigb5d"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e0c",
+      "name": "Poulet Mexicain",
+      "nameFr": "Poulet Mexicain",
+      "category": "6a845a7a2876405dd5375d16",
+      "categoryName": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9720_jytrma"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e0f",
+      "name": "Poulet Pané",
+      "nameFr": "Poulet Pané",
+      "category": "6a845a7a2876405dd5375d16",
+      "categoryName": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_7_usi3f8"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e12",
+      "name": "Cordon Bleu",
+      "nameFr": "Cordon Bleu",
+      "category": "6a845a7a2876405dd5375d16",
+      "categoryName": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_0237_nkagke"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e15",
+      "name": "Viande Hachée",
+      "nameFr": "Viande Hachée",
+      "category": "6a845a7a2876405dd5375d16",
+      "categoryName": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e18",
+      "name": "Thon",
+      "nameFr": "Thon",
+      "category": "6a845a7a2876405dd5375d18",
+      "categoryName": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831394707_fictxa"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e1b",
+      "name": "Poulet grillé",
+      "nameFr": "Poulet grillé",
+      "category": "6a845a7a2876405dd5375d18",
+      "categoryName": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831623991_kranmd"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e1e",
+      "name": "Poulet Mexicain",
+      "nameFr": "Poulet Mexicain",
+      "category": "6a845a7a2876405dd5375d18",
+      "categoryName": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831385645_vzx61b"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e21",
+      "name": "Poulet Pané",
+      "nameFr": "Poulet Pané",
+      "category": "6a845a7a2876405dd5375d18",
+      "categoryName": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831383530_jofqku"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e24",
+      "name": "Cordon Bleu",
+      "nameFr": "Cordon Bleu",
+      "category": "6a845a7a2876405dd5375d18",
+      "categoryName": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831385645_vzx61b"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e27",
+      "name": "Spécial",
+      "nameFr": "Spécial",
+      "category": "6a845a7a2876405dd5375d18",
+      "categoryName": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831394707_fictxa"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e2a",
+      "name": "Eau Minérale 1/2L",
+      "nameFr": "Eau Minérale 1/2L",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e2d",
+      "name": "Eau Minérale 1L",
+      "nameFr": "Eau Minérale 1L",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831394707_fictxa"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e30",
+      "name": "Eau Gazeuse",
+      "nameFr": "Eau Gazeuse",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9699_g5ubkl"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e33",
+      "name": "Soda",
+      "nameFr": "Soda",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9699_g5ubkl"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e36",
+      "name": "Pétillante",
+      "nameFr": "Pétillante",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831623991_kranmd"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e39",
+      "name": "Citronnade",
+      "nameFr": "Citronnade",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "IMG_9699_g5ubkl"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e3c",
+      "name": "Délio",
+      "nameFr": "Délio",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_hgh4w0"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e3f",
+      "name": "Orangina",
+      "nameFr": "Orangina",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "r07qxo_-_R_Download_4_clavnd"
+    },
+    {
+      "id": "6a845a7b2876405dd5375e42",
+      "name": "Sprite",
+      "nameFr": "Sprite",
+      "category": "6a845a7a2876405dd5375d1c",
+      "categoryName": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "imageOrigin": "cloudinary",
+      "imagePublicId": "FB_IMG_1786831543045_pyswfe"
+    }
+  ],
+  "mappingProposals": [
+    {
+      "menuItemId": "6a845a7a2876405dd5375d1f",
+      "menuItemName": "Pâtes BIZZ'Art",
+      "menuItemNameFr": "Pâtes BIZZ'Art",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd411",
+      "proposedMediaTitle": "Plat signature BIZZ'ART",
+      "proposedMediaUrl": "/images/gallery/plat-signature-gastro.jpg",
+      "proposedMediaPublicId": "local/gallery/plat-signature-gastro",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d31",
+      "menuItemName": "Pâtes Fruits de Mer",
+      "menuItemNameFr": "Pâtes Fruits de Mer",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d37",
+      "menuItemName": "Ravioli Crevette",
+      "menuItemNameFr": "Ravioli Crevette",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd432",
+      "proposedMediaTitle": "Crevettes & Poisson",
+      "proposedMediaUrl": "/images/gallery/crevettes-poisson.jpg",
+      "proposedMediaPublicId": "local/gallery/crevettes-poisson",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 20
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d3d",
+      "menuItemName": "Pâtes sauce pesto",
+      "menuItemNameFr": "Pâtes sauce pesto",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd441",
+      "proposedMediaTitle": "Fruits de Mer en Sauce Crème",
+      "proposedMediaUrl": "/images/gallery/fruits-mer-creme.jpg",
+      "proposedMediaPublicId": "local/gallery/fruits-mer-creme",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d43",
+      "menuItemName": "Lasagne Fruits De Mer",
+      "menuItemNameFr": "Lasagne Fruits De Mer",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d46",
+      "menuItemName": "Paella 1 Personne",
+      "menuItemNameFr": "Paella 1 Personne",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d49",
+      "menuItemName": "Paella Royale",
+      "menuItemNameFr": "Paella Royale",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42f",
+      "proposedMediaTitle": "Paella Royale",
+      "proposedMediaUrl": "/images/gallery/paella-noire.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-noire",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 50
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d4c",
+      "menuItemName": "Risotto Bizz'Art",
+      "menuItemNameFr": "Risotto Bizz'Art",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd411",
+      "proposedMediaTitle": "Plat signature BIZZ'ART",
+      "proposedMediaUrl": "/images/gallery/plat-signature-gastro.jpg",
+      "proposedMediaPublicId": "local/gallery/plat-signature-gastro",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d4f",
+      "menuItemName": "Risotto Poulet-Champignons",
+      "menuItemNameFr": "Risotto Poulet-Champignons",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd41d",
+      "proposedMediaTitle": "Pizza Champignons",
+      "proposedMediaUrl": "/images/gallery/pizza-champignons.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-champignons",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d52",
+      "menuItemName": "Gratin Poulet",
+      "menuItemNameFr": "Gratin Poulet",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d55",
+      "menuItemName": "Gratin Fruits de Mer",
+      "menuItemNameFr": "Gratin Fruits de Mer",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d58",
+      "menuItemName": "Pizza Margherita",
+      "menuItemNameFr": "Pizza Margherita",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d5b",
+      "menuItemName": "Pizza Thon",
+      "menuItemNameFr": "Pizza Thon",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd417",
+      "proposedMediaTitle": "Pizza Thon",
+      "proposedMediaUrl": "/images/gallery/pizza-thon.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-thon",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 50
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d5e",
+      "menuItemName": "Pizza 4 Fromages sauce tomate",
+      "menuItemNameFr": "Pizza 4 Fromages sauce tomate",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 27.5
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d61",
+      "menuItemName": "Pizza 4 Fromages sauce blanche",
+      "menuItemNameFr": "Pizza 4 Fromages sauce blanche",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 27.5
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d6d",
+      "menuItemName": "Napolitaine",
+      "menuItemNameFr": "Napolitaine",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 50
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d76",
+      "menuItemName": "Pizza Bizz'art",
+      "menuItemNameFr": "Pizza Bizz'art",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd411",
+      "proposedMediaTitle": "Plat signature BIZZ'ART",
+      "proposedMediaUrl": "/images/gallery/plat-signature-gastro.jpg",
+      "proposedMediaPublicId": "local/gallery/plat-signature-gastro",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d79",
+      "menuItemName": "Pizza Anglaise",
+      "menuItemNameFr": "Pizza Anglaise",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d7c",
+      "menuItemName": "Pizza BURRATA",
+      "menuItemNameFr": "Pizza BURRATA",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d7f",
+      "menuItemName": "Pizza Fruit de mer",
+      "menuItemNameFr": "Pizza Fruit de mer",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d82",
+      "menuItemName": "Pizza Saumon",
+      "menuItemNameFr": "Pizza Saumon",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d85",
+      "menuItemName": "Pizza Végétarienne",
+      "menuItemNameFr": "Pizza Végétarienne",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d88",
+      "menuItemName": "Pizza Chevrettes",
+      "menuItemNameFr": "Pizza Chevrettes",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd414",
+      "proposedMediaTitle": "Pizza Napolitaine",
+      "proposedMediaUrl": "/images/gallery/pizza-oeuf-merguez.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-oeuf-merguez",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d8e",
+      "menuItemName": "Salade Bizz'Art",
+      "menuItemNameFr": "Salade Bizz'Art",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd411",
+      "proposedMediaTitle": "Plat signature BIZZ'ART",
+      "proposedMediaUrl": "/images/gallery/plat-signature-gastro.jpg",
+      "proposedMediaPublicId": "local/gallery/plat-signature-gastro",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d94",
+      "menuItemName": "Salade Fruits de Mer",
+      "menuItemNameFr": "Salade Fruits de Mer",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375d97",
+      "menuItemName": "Salade de Crevettes Panées",
+      "menuItemNameFr": "Salade de Crevettes Panées",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd432",
+      "proposedMediaTitle": "Crevettes & Poisson",
+      "proposedMediaUrl": "/images/gallery/crevettes-poisson.jpg",
+      "proposedMediaPublicId": "local/gallery/crevettes-poisson",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375da0",
+      "menuItemName": "Escalope Ou Cuisse de Poulet",
+      "menuItemNameFr": "Escalope Ou Cuisse de Poulet",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375da6",
+      "menuItemName": "Escalope à la crème",
+      "menuItemNameFr": "Escalope à la crème",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd441",
+      "proposedMediaTitle": "Fruits de Mer en Sauce Crème",
+      "proposedMediaUrl": "/images/gallery/fruits-mer-creme.jpg",
+      "proposedMediaPublicId": "local/gallery/fruits-mer-creme",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375da9",
+      "menuItemName": "Escalope sauce Champignon",
+      "menuItemNameFr": "Escalope sauce Champignon",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd441",
+      "proposedMediaTitle": "Fruits de Mer en Sauce Crème",
+      "proposedMediaUrl": "/images/gallery/fruits-mer-creme.jpg",
+      "proposedMediaPublicId": "local/gallery/fruits-mer-creme",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375dac",
+      "menuItemName": "Escalope sauce Épinard",
+      "menuItemNameFr": "Escalope sauce Épinard",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd441",
+      "proposedMediaTitle": "Fruits de Mer en Sauce Crème",
+      "proposedMediaUrl": "/images/gallery/fruits-mer-creme.jpg",
+      "proposedMediaPublicId": "local/gallery/fruits-mer-creme",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375daf",
+      "menuItemName": "Escalope sauce Gorgonzola",
+      "menuItemNameFr": "Escalope sauce Gorgonzola",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd441",
+      "proposedMediaTitle": "Fruits de Mer en Sauce Crème",
+      "proposedMediaUrl": "/images/gallery/fruits-mer-creme.jpg",
+      "proposedMediaPublicId": "local/gallery/fruits-mer-creme",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7a2876405dd5375db5",
+      "menuItemName": "Escalope Bizz'Art",
+      "menuItemNameFr": "Escalope Bizz'Art",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd411",
+      "proposedMediaTitle": "Plat signature BIZZ'ART",
+      "proposedMediaUrl": "/images/gallery/plat-signature-gastro.jpg",
+      "proposedMediaPublicId": "local/gallery/plat-signature-gastro",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dc7",
+      "menuItemName": "Poulet à l'italienne",
+      "menuItemNameFr": "Poulet à l'italienne",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dca",
+      "menuItemName": "Steak Grillé",
+      "menuItemNameFr": "Steak Grillé",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd426",
+      "proposedMediaTitle": "Steak Gratiné",
+      "proposedMediaUrl": "/images/gallery/steak-gratiné.jpg",
+      "proposedMediaPublicId": "local/gallery/steak-gratiné",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dcd",
+      "menuItemName": "Steak",
+      "menuItemNameFr": "Steak",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd426",
+      "proposedMediaTitle": "Steak Gratiné",
+      "proposedMediaUrl": "/images/gallery/steak-gratiné.jpg",
+      "proposedMediaPublicId": "local/gallery/steak-gratiné",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 50
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dd0",
+      "menuItemName": "Steak Farci",
+      "menuItemNameFr": "Steak Farci",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd426",
+      "proposedMediaTitle": "Steak Gratiné",
+      "proposedMediaUrl": "/images/gallery/steak-gratiné.jpg",
+      "proposedMediaPublicId": "local/gallery/steak-gratiné",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dd3",
+      "menuItemName": "Foie Grillé",
+      "menuItemNameFr": "Foie Grillé",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dd9",
+      "menuItemName": "Grillade Mixte",
+      "menuItemNameFr": "Grillade Mixte",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43b",
+      "proposedMediaTitle": "Grillade en Salle",
+      "proposedMediaUrl": "/images/gallery/grillade-mixte-salle.jpg",
+      "proposedMediaPublicId": "local/gallery/grillade-mixte-salle",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375ddc",
+      "menuItemName": "Grillade Royale",
+      "menuItemNameFr": "Grillade Royale",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42f",
+      "proposedMediaTitle": "Paella Royale",
+      "proposedMediaUrl": "/images/gallery/paella-noire.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-noire",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375de8",
+      "menuItemName": "Côte à L'os Bizz'Art",
+      "menuItemNameFr": "Côte à L'os Bizz'Art",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd411",
+      "proposedMediaTitle": "Plat signature BIZZ'ART",
+      "proposedMediaUrl": "/images/gallery/plat-signature-gastro.jpg",
+      "proposedMediaPublicId": "local/gallery/plat-signature-gastro",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dee",
+      "menuItemName": "Filet de boeuf sauce au choix",
+      "menuItemNameFr": "Filet de boeuf sauce au choix",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd441",
+      "proposedMediaTitle": "Fruits de Mer en Sauce Crème",
+      "proposedMediaUrl": "/images/gallery/fruits-mer-creme.jpg",
+      "proposedMediaPublicId": "local/gallery/fruits-mer-creme",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 27.5
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375df1",
+      "menuItemName": "Plateau Fruits de mer",
+      "menuItemNameFr": "Plateau Fruits de mer",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375df4",
+      "menuItemName": "Crevettes sautées ou grillées",
+      "menuItemNameFr": "Crevettes sautées ou grillées",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd432",
+      "proposedMediaTitle": "Crevettes & Poisson",
+      "proposedMediaUrl": "/images/gallery/crevettes-poisson.jpg",
+      "proposedMediaPublicId": "local/gallery/crevettes-poisson",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 30
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375df7",
+      "menuItemName": "Poisson du jour",
+      "menuItemNameFr": "Poisson du jour",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd432",
+      "proposedMediaTitle": "Crevettes & Poisson",
+      "proposedMediaUrl": "/images/gallery/crevettes-poisson.jpg",
+      "proposedMediaPublicId": "local/gallery/crevettes-poisson",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dfa",
+      "menuItemName": "Fruits de Mer Sautés",
+      "menuItemNameFr": "Fruits de Mer Sautés",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375dfd",
+      "menuItemName": "Seiche gratinée aux crevettes et au miel",
+      "menuItemNameFr": "Seiche gratinée aux crevettes et au miel",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd432",
+      "proposedMediaTitle": "Crevettes & Poisson",
+      "proposedMediaUrl": "/images/gallery/crevettes-poisson.jpg",
+      "proposedMediaPublicId": "local/gallery/crevettes-poisson",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 26
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e00",
+      "menuItemName": "Symphonie Fruits de mer",
+      "menuItemNameFr": "Symphonie Fruits de mer",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 40
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e03",
+      "menuItemName": "Symphonie Terre-Mer",
+      "menuItemNameFr": "Symphonie Terre-Mer",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "NO_MATCH",
+      "reason": "Aucune correspondance évidente",
+      "matchScore": 10
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e06",
+      "menuItemName": "Symphonie Terre-Mer",
+      "menuItemNameFr": "Symphonie Terre-Mer",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "proposedMediaId": "6a844c9e3fe2b113270dd42c",
+      "proposedMediaTitle": "Paella Fruits de Mer",
+      "proposedMediaUrl": "/images/gallery/paella-fruits-mer.jpg",
+      "proposedMediaPublicId": "local/gallery/paella-fruits-mer",
+      "confidence": "NO_MATCH",
+      "reason": "Aucune correspondance évidente",
+      "matchScore": 10
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e09",
+      "menuItemName": "Poulet grillé",
+      "menuItemNameFr": "Poulet grillé",
+      "category": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 50
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e0c",
+      "menuItemName": "Poulet Mexicain",
+      "menuItemNameFr": "Poulet Mexicain",
+      "category": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e0f",
+      "menuItemName": "Poulet Pané",
+      "menuItemNameFr": "Poulet Pané",
+      "category": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e18",
+      "menuItemName": "Thon",
+      "menuItemNameFr": "Thon",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd417",
+      "proposedMediaTitle": "Pizza Thon",
+      "proposedMediaUrl": "/images/gallery/pizza-thon.jpg",
+      "proposedMediaPublicId": "local/gallery/pizza-thon",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 50
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e1b",
+      "menuItemName": "Poulet grillé",
+      "menuItemNameFr": "Poulet grillé",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "MEDIUM",
+      "reason": "Correspondance partielle",
+      "matchScore": 50
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e1e",
+      "menuItemName": "Poulet Mexicain",
+      "menuItemNameFr": "Poulet Mexicain",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    },
+    {
+      "menuItemId": "6a845a7b2876405dd5375e21",
+      "menuItemName": "Poulet Pané",
+      "menuItemNameFr": "Poulet Pané",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "proposedMediaId": "6a844c9e3fe2b113270dd43e",
+      "proposedMediaTitle": "Poulet Grillé aux Herbes",
+      "proposedMediaUrl": "/images/gallery/poulet-grille-herbes.jpg",
+      "proposedMediaPublicId": "local/gallery/poulet-grille-herbes",
+      "confidence": "LOW",
+      "reason": "Correspondance faible",
+      "matchScore": 35
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Plat signature BIZZ'ART\" proposée pour 6 plats",
+      "affectedItems": [
+        "6a845a7a2876405dd5375d1f",
+        "6a845a7a2876405dd5375d4c",
+        "6a845a7a2876405dd5375d76",
+        "6a845a7a2876405dd5375d8e",
+        "6a845a7a2876405dd5375db5",
+        "6a845a7b2876405dd5375de8"
+      ]
+    },
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Paella Fruits de Mer\" proposée pour 10 plats",
+      "affectedItems": [
+        "6a845a7a2876405dd5375d31",
+        "6a845a7a2876405dd5375d43",
+        "6a845a7a2876405dd5375d46",
+        "6a845a7a2876405dd5375d55",
+        "6a845a7a2876405dd5375d94",
+        "6a845a7b2876405dd5375df1",
+        "6a845a7b2876405dd5375dfa",
+        "6a845a7b2876405dd5375e00",
+        "6a845a7b2876405dd5375e03",
+        "6a845a7b2876405dd5375e06"
+      ]
+    },
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Crevettes & Poisson\" proposée pour 5 plats",
+      "affectedItems": [
+        "6a845a7a2876405dd5375d37",
+        "6a845a7a2876405dd5375d97",
+        "6a845a7b2876405dd5375df4",
+        "6a845a7b2876405dd5375df7",
+        "6a845a7b2876405dd5375dfd"
+      ]
+    },
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Fruits de Mer en Sauce Crème\" proposée pour 6 plats",
+      "affectedItems": [
+        "6a845a7a2876405dd5375d3d",
+        "6a845a7a2876405dd5375da6",
+        "6a845a7a2876405dd5375da9",
+        "6a845a7a2876405dd5375dac",
+        "6a845a7a2876405dd5375daf",
+        "6a845a7b2876405dd5375dee"
+      ]
+    },
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Paella Royale\" proposée pour 2 plats",
+      "affectedItems": [
+        "6a845a7a2876405dd5375d49",
+        "6a845a7b2876405dd5375ddc"
+      ]
+    },
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Poulet Grillé aux Herbes\" proposée pour 10 plats",
+      "affectedItems": [
+        "6a845a7a2876405dd5375d52",
+        "6a845a7a2876405dd5375da0",
+        "6a845a7b2876405dd5375dc7",
+        "6a845a7b2876405dd5375dd3",
+        "6a845a7b2876405dd5375e09",
+        "6a845a7b2876405dd5375e0c",
+        "6a845a7b2876405dd5375e0f",
+        "6a845a7b2876405dd5375e1b",
+        "6a845a7b2876405dd5375e1e",
+        "6a845a7b2876405dd5375e21"
+      ]
+    },
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Pizza Napolitaine\" proposée pour 10 plats",
+      "affectedItems": [
+        "6a845a7a2876405dd5375d58",
+        "6a845a7a2876405dd5375d5e",
+        "6a845a7a2876405dd5375d61",
+        "6a845a7a2876405dd5375d6d",
+        "6a845a7a2876405dd5375d79",
+        "6a845a7a2876405dd5375d7c",
+        "6a845a7a2876405dd5375d7f",
+        "6a845a7a2876405dd5375d82",
+        "6a845a7a2876405dd5375d85",
+        "6a845a7a2876405dd5375d88"
+      ]
+    },
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Pizza Thon\" proposée pour 2 plats",
+      "affectedItems": [
+        "6a845a7a2876405dd5375d5b",
+        "6a845a7b2876405dd5375e18"
+      ]
+    },
+    {
+      "type": "multiple_usage",
+      "severity": "warning",
+      "entity": "media",
+      "description": "Image \"Steak Gratiné\" proposée pour 3 plats",
+      "affectedItems": [
+        "6a845a7b2876405dd5375dca",
+        "6a845a7b2876405dd5375dcd",
+        "6a845a7b2876405dd5375dd0"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/plat-signature-gastro.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd411"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/pizza-oeuf-merguez.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd414"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/pizza-thon.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd417"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/pizza-champignons.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd41d"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/grillades-mixtes.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd420"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/plateau-grillades.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd423"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/steak-gratiné.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd426"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/emince-champignons.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd429"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/paella-fruits-mer.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd42c"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/paella-noire.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd42f"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/crevettes-poisson.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd432"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/spaghetti-fruits-mer.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd435"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/tagliatelles-burrata.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd438"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/grillade-mixte-salle.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd43b"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/poulet-grille-herbes.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd43e"
+      ]
+    },
+    {
+      "type": "missing_file",
+      "severity": "critical",
+      "entity": "media",
+      "description": "Fichier local introuvable : /images/gallery/fruits-mer-creme.jpg",
+      "affectedItems": [
+        "6a844c9e3fe2b113270dd441"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(11)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc66"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(12)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc6b"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(13)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc6d"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(2)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc6f"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(3)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc71"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(4)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc73"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(5)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc75"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(6)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc77"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(7)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc79"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(8)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc7b"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download(9)",
+      "affectedItems": [
+        "6a846374cc857419ae49cc7d"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : r07qxo    R Download",
+      "affectedItems": [
+        "6a846374cc857419ae49cc7f"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : A7D9ECFF 989F 45B7 8E9F 1AA5833C3B1D",
+      "affectedItems": [
+        "6a846374cc857419ae49cc81"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : AAA10429 9A48 4F34 88FC E951DB9960F8",
+      "affectedItems": [
+        "6a846374cc857419ae49cc83"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : CE03FC6E 28EB 438B A580 ACDE0EE43DB5",
+      "affectedItems": [
+        "6a846374cc857419ae49cc85"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : D2ACAC2E 1EDE 404C 8597 0006112AC6C2",
+      "affectedItems": [
+        "6a846374cc857419ae49cc87"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : DDBA871E ADDC 4602 AA42 E875DD1D7559",
+      "affectedItems": [
+        "6a846374cc857419ae49cc89"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : E82B1115 081E 4CAB 8E58 F86532F170CC",
+      "affectedItems": [
+        "6a846374cc857419ae49cc8b"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : EB2F2B90 88F1 44EB 90BF BFDB31B8B15E",
+      "affectedItems": [
+        "6a846374cc857419ae49cc8d"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : F04A3E91 B691 4A8E 8F76 665B275F1812",
+      "affectedItems": [
+        "6a846374cc857419ae49cc8f"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FBB08DE2 5BC4 4226 87A1 AF9B4B9D163F",
+      "affectedItems": [
+        "6a846374cc857419ae49cc91"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831381120",
+      "affectedItems": [
+        "6a846374cc857419ae49cc93"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831383530",
+      "affectedItems": [
+        "6a846374cc857419ae49cc95"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831385645",
+      "affectedItems": [
+        "6a846374cc857419ae49cc97"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831387595",
+      "affectedItems": [
+        "6a846374cc857419ae49cc99"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831389680",
+      "affectedItems": [
+        "6a846374cc857419ae49cc9b"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831392186",
+      "affectedItems": [
+        "6a846374cc857419ae49cc9d"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831394707",
+      "affectedItems": [
+        "6a846374cc857419ae49cc9f"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831464636",
+      "affectedItems": [
+        "6a846374cc857419ae49cca1"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831504871",
+      "affectedItems": [
+        "6a846374cc857419ae49cca3"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831512797",
+      "affectedItems": [
+        "6a846374cc857419ae49cca5"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831543045",
+      "affectedItems": [
+        "6a846374cc857419ae49cca7"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831557428",
+      "affectedItems": [
+        "6a846374cc857419ae49cca9"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FB IMG 1786831623991",
+      "affectedItems": [
+        "6a846374cc857419ae49ccab"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : FD0F8561 B4E5 413D 98F4 FA5778A54F7B",
+      "affectedItems": [
+        "6a846374cc857419ae49ccad"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : IMG 0237",
+      "affectedItems": [
+        "6a846374cc857419ae49ccaf"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : IMG 0285",
+      "affectedItems": [
+        "6a846374cc857419ae49ccb1"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : IMG 9699",
+      "affectedItems": [
+        "6a846374cc857419ae49ccb3"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : IMG 9701",
+      "affectedItems": [
+        "6a846374cc857419ae49ccb5"
+      ]
+    },
+    {
+      "type": "dimension_issue",
+      "severity": "info",
+      "entity": "media",
+      "description": "Dimensions manquantes pour : IMG 9720",
+      "affectedItems": [
+        "6a846374cc857419ae49ccb7"
+      ]
+    }
+  ],
+  "unusedMedia": [
+    {
+      "index": 5,
+      "id": "6a844c9e3fe2b113270dd420",
+      "title": "Grillades Mixtes",
+      "category": "food",
+      "url": "/images/gallery/grillades-mixtes.jpg",
+      "publicId": "local/gallery/grillades-mixtes",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 800,
+        "height": 600
+      },
+      "isVisible": true,
+      "displayOrder": 3,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\grillades-mixtes.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 6,
+      "id": "6a844c9e3fe2b113270dd423",
+      "title": "Grand Plateau Grillades",
+      "category": "food",
+      "url": "/images/gallery/plateau-grillades.jpg",
+      "publicId": "local/gallery/plateau-grillades",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 800,
+        "height": 1000
+      },
+      "isVisible": true,
+      "displayOrder": 6,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\plateau-grillades.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 8,
+      "id": "6a844c9e3fe2b113270dd429",
+      "title": "Émincé Champignons",
+      "category": "food",
+      "url": "/images/gallery/emince-champignons.jpg",
+      "publicId": "local/gallery/emince-champignons",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 600,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 13,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\emince-champignons.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 12,
+      "id": "6a844c9e3fe2b113270dd435",
+      "title": "Spaghetti Fruits de Mer",
+      "category": "food",
+      "url": "/images/gallery/spaghetti-fruits-mer.jpg",
+      "publicId": "local/gallery/spaghetti-fruits-mer",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 450,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 11,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\spaghetti-fruits-mer.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 13,
+      "id": "6a844c9e3fe2b113270dd438",
+      "title": "Tagliatelles Burrata",
+      "category": "food",
+      "url": "/images/gallery/tagliatelles-burrata.jpg",
+      "publicId": "local/gallery/tagliatelles-burrata",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": 450,
+        "height": 800
+      },
+      "isVisible": true,
+      "displayOrder": 12,
+      "origin": "local",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\frontend\\public\\images\\gallery\\tagliatelles-burrata.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 17,
+      "id": "6a846374cc857419ae49cc66",
+      "title": "r07qxo    R Download(11)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_11_ak1ici",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 0,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_11_ak1ici.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 18,
+      "id": "6a846374cc857419ae49cc6b",
+      "title": "r07qxo    R Download(12)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_12_nffdek",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 1,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_12_nffdek.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 19,
+      "id": "6a846374cc857419ae49cc6d",
+      "title": "r07qxo    R Download(13)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_13_djmfzt",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 2,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_13_djmfzt.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 20,
+      "id": "6a846374cc857419ae49cc6f",
+      "title": "r07qxo    R Download(2)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_2_evr2vc",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 3,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_2_evr2vc.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 21,
+      "id": "6a846374cc857419ae49cc71",
+      "title": "r07qxo    R Download(3)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_3_ah6kjf",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 4,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 22,
+      "id": "6a846374cc857419ae49cc73",
+      "title": "r07qxo    R Download(4)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_4_clavnd",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 5,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_4_clavnd.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 23,
+      "id": "6a846374cc857419ae49cc75",
+      "title": "r07qxo    R Download(5)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060761/bizzart/menu/r07qxo_-_R_Download_5_mx8xs2.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_5_mx8xs2",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 6,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_5_mx8xs2.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 24,
+      "id": "6a846374cc857419ae49cc77",
+      "title": "r07qxo    R Download(6)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_6_h7axod",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 7,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_6_h7axod.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 25,
+      "id": "6a846374cc857419ae49cc79",
+      "title": "r07qxo    R Download(7)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_7_usi3f8",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 8,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_7_usi3f8.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 26,
+      "id": "6a846374cc857419ae49cc7b",
+      "title": "r07qxo    R Download(8)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_8_jeurew",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 9,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_8_jeurew.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 27,
+      "id": "6a846374cc857419ae49cc7d",
+      "title": "r07qxo    R Download(9)",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_9_bp8oao",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 10,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_9_bp8oao.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 28,
+      "id": "6a846374cc857419ae49cc7f",
+      "title": "r07qxo    R Download",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "publicId": "bizzart/menu/r07qxo_-_R_Download_hgh4w0",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 11,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\r07qxo_-_R_Download_hgh4w0.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 29,
+      "id": "6a846374cc857419ae49cc81",
+      "title": "A7D9ECFF 989F 45B7 8E9F 1AA5833C3B1D",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "publicId": "bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 12,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 30,
+      "id": "6a846374cc857419ae49cc83",
+      "title": "AAA10429 9A48 4F34 88FC E951DB9960F8",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060774/bizzart/menu/AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh.png",
+      "publicId": "bizzart/menu/AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 13,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\AAA10429-9A48-4F34-88FC-E951DB9960F8_mxzyoh.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 31,
+      "id": "6a846374cc857419ae49cc85",
+      "title": "CE03FC6E 28EB 438B A580 ACDE0EE43DB5",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "publicId": "bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 14,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 32,
+      "id": "6a846374cc857419ae49cc87",
+      "title": "D2ACAC2E 1EDE 404C 8597 0006112AC6C2",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "publicId": "bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 15,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 33,
+      "id": "6a846374cc857419ae49cc89",
+      "title": "DDBA871E ADDC 4602 AA42 E875DD1D7559",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "publicId": "bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 16,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 34,
+      "id": "6a846374cc857419ae49cc8b",
+      "title": "E82B1115 081E 4CAB 8E58 F86532F170CC",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "publicId": "bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 17,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 35,
+      "id": "6a846374cc857419ae49cc8d",
+      "title": "EB2F2B90 88F1 44EB 90BF BFDB31B8B15E",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "publicId": "bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 18,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 36,
+      "id": "6a846374cc857419ae49cc8f",
+      "title": "F04A3E91 B691 4A8E 8F76 665B275F1812",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "publicId": "bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 19,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 37,
+      "id": "6a846374cc857419ae49cc91",
+      "title": "FBB08DE2 5BC4 4226 87A1 AF9B4B9D163F",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060787/bizzart/menu/FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod.png",
+      "publicId": "bizzart/menu/FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 20,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FBB08DE2-5BC4-4226-87A1-AF9B4B9D163F_u5jcod.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 38,
+      "id": "6a846374cc857419ae49cc93",
+      "title": "FB IMG 1786831381120",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831381120_cigb5d",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 21,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831381120_cigb5d.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 39,
+      "id": "6a846374cc857419ae49cc95",
+      "title": "FB IMG 1786831383530",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831383530_jofqku",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 22,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831383530_jofqku.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 40,
+      "id": "6a846374cc857419ae49cc97",
+      "title": "FB IMG 1786831385645",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831385645_vzx61b",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 23,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831385645_vzx61b.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 41,
+      "id": "6a846374cc857419ae49cc99",
+      "title": "FB IMG 1786831387595",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831387595_vrtvut",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 24,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831387595_vrtvut.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 42,
+      "id": "6a846374cc857419ae49cc9b",
+      "title": "FB IMG 1786831389680",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831389680_coillr",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 25,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831389680_coillr.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 43,
+      "id": "6a846374cc857419ae49cc9d",
+      "title": "FB IMG 1786831392186",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831392186_u0ikej",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 26,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831392186_u0ikej.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 44,
+      "id": "6a846374cc857419ae49cc9f",
+      "title": "FB IMG 1786831394707",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831394707_fictxa",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 27,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831394707_fictxa.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 45,
+      "id": "6a846374cc857419ae49cca1",
+      "title": "FB IMG 1786831464636",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831464636_u2po6i",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 28,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831464636_u2po6i.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 46,
+      "id": "6a846374cc857419ae49cca3",
+      "title": "FB IMG 1786831504871",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831504871_bopbcd",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 29,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831504871_bopbcd.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 47,
+      "id": "6a846374cc857419ae49cca5",
+      "title": "FB IMG 1786831512797",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060797/bizzart/menu/FB_IMG_1786831512797_uc66qt.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831512797_uc66qt",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 30,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831512797_uc66qt.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 48,
+      "id": "6a846374cc857419ae49cca7",
+      "title": "FB IMG 1786831543045",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831543045_pyswfe",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 31,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831543045_pyswfe.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 49,
+      "id": "6a846374cc857419ae49cca9",
+      "title": "FB IMG 1786831557428",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831557428_uylzz1",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 32,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831557428_uylzz1.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 50,
+      "id": "6a846374cc857419ae49ccab",
+      "title": "FB IMG 1786831623991",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "publicId": "bizzart/menu/FB_IMG_1786831623991_kranmd",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 33,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FB_IMG_1786831623991_kranmd.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 51,
+      "id": "6a846374cc857419ae49ccad",
+      "title": "FD0F8561 B4E5 413D 98F4 FA5778A54F7B",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "publicId": "bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf",
+      "extension": ".png",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 34,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 52,
+      "id": "6a846374cc857419ae49ccaf",
+      "title": "IMG 0237",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "publicId": "bizzart/menu/IMG_0237_nkagke",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 35,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_0237_nkagke.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 53,
+      "id": "6a846374cc857419ae49ccb1",
+      "title": "IMG 0285",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060806/bizzart/menu/IMG_0285_q2e2rm.jpg",
+      "publicId": "bizzart/menu/IMG_0285_q2e2rm",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 36,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_0285_q2e2rm.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 54,
+      "id": "6a846374cc857419ae49ccb3",
+      "title": "IMG 9699",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "publicId": "bizzart/menu/IMG_9699_g5ubkl",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 37,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_9699_g5ubkl.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 55,
+      "id": "6a846374cc857419ae49ccb5",
+      "title": "IMG 9701",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg",
+      "publicId": "bizzart/menu/IMG_9701_qyr2m3",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 38,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_9701_qyr2m3.jpg",
+      "fileExists": false
+    },
+    {
+      "index": 56,
+      "id": "6a846374cc857419ae49ccb7",
+      "title": "IMG 9720",
+      "category": "gallery",
+      "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "publicId": "bizzart/menu/IMG_9720_jytrma",
+      "extension": ".jpg",
+      "dimensions": {
+        "width": null,
+        "height": null
+      },
+      "isVisible": true,
+      "displayOrder": 39,
+      "origin": "cloudinary",
+      "localFilePath": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\backend\\menu-images\\cloudinary-existing\\IMG_9720_jytrma.jpg",
+      "fileExists": false
+    }
+  ],
+  "itemsWithoutImage": [],
+  "recommendations": [
+    "⚠ 20 mappings MEDIUM CONFIDENCE nécessitent une révision manuelle",
+    "⚠ 34 mappings LOW CONFIDENCE nécessitent une vérification approfondie",
+    "❌ 2 plats n'ont aucune correspondance évidente",
+    "📦 45 médias ne sont associés à aucun plat",
+    "⬆️ 16 médias locaux peuvent être migrés vers Cloudinary",
+    "🚨 16 anomalies critiques doivent être corrigées avant migration"
+  ]
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "categoryName": "Les Pizzas",
+    "categorySlug": "les-pizzas",
+    "filename": "1000046318.png",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+    "publicId": "bizzart/menu/categories/les-pizzas",
+    "format": "png",
+    "sizeKB": 1485,
+    "width": 750,
+    "height": 1000
+  },
+  {
+    "categoryName": "Pâtes",
+    "categorySlug": "pates",
+    "filename": "1000046167.png",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+    "publicId": "bizzart/menu/categories/pates",
+    "format": "png",
+    "sizeKB": 1292,
+    "width": 750,
+    "height": 1000
+  },
+  {
+    "categoryName": "Plats Espagnol",
+    "categorySlug": "plats-espagnol",
+    "filename": "1000046319.png",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141379/bizzart/menu/categories/plats-espagnol.png",
+    "publicId": "bizzart/menu/categories/plats-espagnol",
+    "format": "png",
+    "sizeKB": 387,
+    "width": 750,
+    "height": 1000
+  },
+  {
+    "categoryName": "Salade",
+    "categorySlug": "salade",
+    "filename": "1000046174.png",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+    "publicId": "bizzart/menu/categories/salade",
+    "format": "png",
+    "sizeKB": 1330,
+    "width": 750,
+    "height": 1000
+  },
+  {
+    "categoryName": "Volailles",
+    "categorySlug": "volailles",
+    "filename": "1000046316.png",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+    "publicId": "bizzart/menu/categories/volailles",
+    "format": "png",
+    "sizeKB": 1592,
+    "width": 750,
+    "height": 1000
+  },
+  {
+    "categoryName": "Viandes",
+    "categorySlug": "viandes",
+    "filename": "1000046311.jpg",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+    "publicId": "bizzart/menu/categories/viandes",
+    "format": "jpg",
+    "sizeKB": 130,
+    "width": 800,
+    "height": 1000
+  },
+  {
+    "categoryName": "Fruits de mer",
+    "categorySlug": "fruits-de-mer",
+    "filename": "1000046297.png",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141465/bizzart/menu/categories/fruits-de-mer.png",
+    "publicId": "bizzart/menu/categories/fruits-de-mer",
+    "format": "png",
+    "sizeKB": 1467,
+    "width": 750,
+    "height": 1000
+  },
+  {
+    "categoryName": "Tacos",
+    "categorySlug": "tacos",
+    "filename": "1000046681.jpg",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141468/bizzart/menu/categories/tacos.jpg",
+    "publicId": "bizzart/menu/categories/tacos",
+    "format": "jpg",
+    "sizeKB": 44,
+    "width": 500,
+    "height": 318
+  },
+  {
+    "categoryName": "MAkIOUB",
+    "categorySlug": "makioub",
+    "filename": "1000046685.jpg",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141470/bizzart/menu/categories/makioub.jpg",
+    "publicId": "bizzart/menu/categories/makioub",
+    "format": "jpg",
+    "sizeKB": 45,
+    "width": 533,
+    "height": 574
+  },
+  {
+    "categoryName": "Soda",
+    "categorySlug": "soda",
+    "filename": "1000046684.jpg",
+    "cloudinaryUrl": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+    "publicId": "bizzart/menu/categories/soda",
+    "format": "jpg",
+    "sizeKB": 35,
+    "width": 1020,
+    "height": 680
+  }
+]

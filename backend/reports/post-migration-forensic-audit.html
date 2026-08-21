@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Post-Migration Forensique</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #334155; }
+    .header h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #f1f5f9; }
+    .header p { color: #94a3b8; }
+    .status-badge { display: inline-block; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; margin-top: 1rem; background: #10b981; color: white; }
+    .section { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid #334155; }
+    .section h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #f1f5f9; border-bottom: 2px solid #334155; padding-bottom: 0.5rem; }
+    .metric { display: flex; justify-content: space-between; padding: 0.75rem; margin: 0.5rem 0; background: #0f172a; border-radius: 6px; }
+    .metric-label { color: #94a3b8; }
+    .metric-value { font-weight: 600; color: #f1f5f9; }
+    .success { color: #10b981; }
+    .failure { color: #ef4444; }
+    .warning { color: #f59e0b; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #334155; }
+    th { background: #0f172a; color: #94a3b8; font-weight: 600; }
+    tr:hover { background: #0f172a; }
+    .hash { font-family: 'Courier New', monospace; font-size: 0.85rem; color: #60a5fa; }
+    .footer { text-align: center; margin-top: 2rem; padding: 1rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>✅ AUDIT POST-MIGRATION FORENSIQUE LOCAL ↔ MONGODB ATLAS</h1>
+      <p>Timestamp: 2026-08-21T01:11:10.217Z</p>
+      <p>Mode: READ-ONLY ABSOLU / FORENSIC VERIFICATION</p>
+      <div class="status-badge">PASS</div>
+    </div>
+
+    <div class="section">
+      <h2>📊 Résumé Exécutif</h2>
+      <div class="metric">
+        <span class="metric-label">Collections Auditées</span>
+        <span class="metric-value">7</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Documents LOCAL</span>
+        <span class="metric-value">192</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Documents ATLAS</span>
+        <span class="metric-value">192</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Comptes Correspondent</span>
+        <span class="metric-value success">
+          ✅ OUI
+        </span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Hashes Correspondent</span>
+        <span class="metric-value success">
+          ✅ OUI
+        </span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">IDs Correspondent</span>
+        <span class="metric-value success">
+          ✅ OUI
+        </span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Stabilité</span>
+        <span class="metric-value success">
+          ✅ STABLE
+        </span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Opérations d'Écriture</span>
+        <span class="metric-value success">
+          ✅ AUCUNE
+        </span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🔐 Hashes des Collections</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Collection</th>
+            <th>LOCAL Count</th>
+            <th>ATLAS Count</th>
+            <th>Hash LOCAL</th>
+            <th>Hash ATLAS</th>
+            <th>Match</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td>reservations</td>
+              <td>6</td>
+              <td>6</td>
+              <td class="hash">ee736357bbbb900b...</td>
+              <td class="hash">ee736357bbbb900b...</td>
+              <td class="success">✅</td>
+            </tr>
+          
+            <tr>
+              <td>menuitems</td>
+              <td>114</td>
+              <td>114</td>
+              <td class="hash">278c96130f5fc34b...</td>
+              <td class="hash">278c96130f5fc34b...</td>
+              <td class="success">✅</td>
+            </tr>
+          
+            <tr>
+              <td>reviews</td>
+              <td>3</td>
+              <td>3</td>
+              <td class="hash">82e81eff8fdb5188...</td>
+              <td class="hash">82e81eff8fdb5188...</td>
+              <td class="success">✅</td>
+            </tr>
+          
+            <tr>
+              <td>menucategories</td>
+              <td>11</td>
+              <td>11</td>
+              <td class="hash">efddfbea438c3723...</td>
+              <td class="hash">efddfbea438c3723...</td>
+              <td class="success">✅</td>
+            </tr>
+          
+            <tr>
+              <td>settings</td>
+              <td>1</td>
+              <td>1</td>
+              <td class="hash">e10808d43975dc40...</td>
+              <td class="hash">e10808d43975dc40...</td>
+              <td class="success">✅</td>
+            </tr>
+          
+            <tr>
+              <td>users</td>
+              <td>1</td>
+              <td>1</td>
+              <td class="hash">e10808d43975dc40...</td>
+              <td class="hash">e10808d43975dc40...</td>
+              <td class="success">✅</td>
+            </tr>
+          
+            <tr>
+              <td>media</td>
+              <td>56</td>
+              <td>56</td>
+              <td class="hash">f192bda9293a502a...</td>
+              <td class="hash">f192bda9293a502a...</td>
+              <td class="success">✅</td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>📝 Verdict Final</h2>
+      <div class="metric">
+        <span class="metric-label">Status</span>
+        <span class="metric-value" style="color: #10b981">✅ PASS</span>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Raison</span>
+        <span class="metric-value">All forensic checks passed</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Audit généré le 21/08/2026 02:11:19</p>
+      <p>BIZZ'ART MONASTIR — Audit Post-Migration Forensique</p>
+    </div>
+  </div>
+</body>
+</html>

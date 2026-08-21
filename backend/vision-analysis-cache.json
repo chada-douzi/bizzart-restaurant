@@ -1,0 +1,649 @@
+{
+  "photo_1": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_2": {
+    "visualDescription": "Assiette creuse bleue contenant des pâtes longues (type tagliatelles) enrobées d'une sauce crémeuse jaune-verdâtre, accompagnées de morceaux de viande blanche, surmontées au centre d'une boule entière de burrata coiffée d'une feuille de basilic frais. L'ensemble est parsemé d'amandes effilées, de cerneaux de noix, d'éclats de pistache et de copeaux de fromage.",
+    "detectedDish": "Tagliatelles à la sauce crémeuse, poulet, burrata et fruits à coque",
+    "detectedType": "Pâtes",
+    "visibleIngredients": [
+      "Pâtes tagliatelles",
+      "Burrata",
+      "Feuilles de basilic frais",
+      "Amandes effilées",
+      "Cerneaux de noix",
+      "Éclats ou poudre de pistache",
+      "Fromage râpé en copeaux",
+      "Morceaux de volaille",
+      "Sauce crémeuse jaune"
+    ],
+    "visibleAccompaniments": [],
+    "presentation": "Dressage volumineux et généreux dans un bol creux en céramique émaillée bleue, photographié sur un plan de travail en inox de cuisine professionnelle.",
+    "origin": "INCERTAINE",
+    "confidence": 0.95,
+    "evidence": [
+      "Tagliatelles et sauce jaune bien identifiables",
+      "Boule de burrata entière bien définie au sommet",
+      "Fruits secs (noix, amandes, pistaches) nettement visibles",
+      "Arrière-plan montrant des bacs gastronormes et un environnement de cuisine"
+    ],
+    "uncertainties": [
+      "Assaisonnement exact de la sauce crémeuse (curry, safran ou pistache)",
+      "Nature exacte des morceaux de viande (volaille très probable)"
+    ],
+    "reasoning": "La composition du plat est clairement lisible : une base de pâtes fraîches tagliatelles liée à une sauce onctueuse avec des morceaux de volaille, surplombée d'une burrata crémeuse, de basilic et d'un mélange de fruits à coque croquants. La photo est prise sur le vif dans un cadre de restauration."
+  },
+  "photo_3": {
+    "visualDescription": "Deux grandes assiettes rectangulaires blanches contenant un assortiment de viandes grillées (grillades mixtes) disposées sur un lit de salade verte, garnies de tomates cerises coupées en deux, de rondelles d'oignon blanc, de quartiers de citron vert et parsemées d'herbes fraîches hachées, posées sur une table en bois.",
+    "detectedDish": "Assiette de grillades mixtes / Plateau de viandes grillées",
+    "detectedType": "Viande",
+    "visibleIngredients": [
+      "Viande de bœuf grillée",
+      "Côtelettes ou morceaux d'agneau grillés",
+      "Saucisses / Merguez",
+      "Filets de volaille / poulet grillé",
+      "Salade verte",
+      "Tomates cerises",
+      "Oignon blanc",
+      "Citron vert",
+      "Persil frais"
+    ],
+    "visibleAccompaniments": [
+      "Salade verte de garniture",
+      "Quartiers de citron vert",
+      "Tomates cerises"
+    ],
+    "presentation": "Présentation soignée et généreuse sur de grands plats de service blancs rectangulaires avec éclairage de studio chaleureux, vue en plongée latérale sur table en bois avec plante décorative en arrière-plan.",
+    "origin": "STOCK_GENERIQUE",
+    "confidence": 0.95,
+    "evidence": [
+      "Éclairage studio professionnel et composition typique de photographie culinaire de stock",
+      "Présentation standardisée de grillades mixtes sur lit de salade avec garniture classique (oignons, citrons, tomates cerises)",
+      "Disposition symétrique et stylisée des deux plats"
+    ],
+    "uncertainties": [
+      "Nature exacte de certaines découpes de viande rouge (bœuf ou agneau)",
+      "Type précis de saucisses (merguez ou saucisse de bœuf épicée)"
+    ],
+    "reasoning": "La photo montre clairement deux plats de grillades variées comprenant plusieurs types de viandes (volaille, pièces de viande rouge, saucisses) dressées sur salade. La mise en scène et la qualité d'éclairage correspondent à une image de banque d'images culinaire professionnelle."
+  },
+  "photo_4": {
+    "visualDescription": "Assiette grise contenant une pièce de viande grillée nappée de fromage fondu et surmontée d'une grande crevette/gambas grillée entière. Le plat est dressé sur un lit bicolore de sauce crémeuse verte (type herbes ou pesto) et de sauce blanche/fromagère, garni d'une tuile dentelle rouge ajourée et de quelques micro-pousses.",
+    "detectedDish": "Plat Terre et Mer (Surf and Turf) au fromage fondu et gambas",
+    "detectedType": "Viande",
+    "visibleIngredients": [
+      "Crevette entière / gambas grillée",
+      "Pièce de viande grillée",
+      "Fromage fondu",
+      "Sauce verte crémeuse",
+      "Sauce blanche crémeuse",
+      "Tuile dentelle rouge",
+      "Micro-pousses"
+    ],
+    "visibleAccompaniments": [
+      "Sauce verte crémeuse",
+      "Sauce blanche crémeuse"
+    ],
+    "presentation": "Présentation soignée de type bistronomique avec superposition des éléments, sauces nappées en fond d'assiette, tuile rouge apportant relief et couleur, photographié en gros plan sur table en bois avec décor floral en arrière-plan.",
+    "origin": "INCERTAINE",
+    "confidence": 0.85,
+    "evidence": [
+      "Gambas/crevette entière bien visible au sommet du dressage",
+      "Traces de grillade sur la viande et la crevette",
+      "Fromage gratiné/fondu recouvrant la base carnée",
+      "Tuile corail/dentelle rouge caractéristique d'une finition restaurant"
+    ],
+    "uncertainties": [
+      "Type précis de la pièce de viande sous le fromage (bœuf, veau ou haché)",
+      "Composition exacte de la sauce verte (pesto, crème d'herbes ou légumes)",
+      "Présence éventuelle d'une base féculente masquée par la sauce et le fromage"
+    ],
+    "reasoning": "Le plat combine une pièce de viande et un crustacé dans un assemblage de style 'Terre et Mer' généreusement nappé de sauces et de fromage. Conformément aux règles, l'origine exacte ne peut être déduite uniquement à partir du visuel, d'où le choix 'INCERTAINE'."
+  },
+  "photo_5": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_6": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_7": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.7-flash\nPlease retry in 14.123116739s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.7-flash\",\"location\":\"global\"},\"quotaValue\":\"5\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"14s\"}]"
+  },
+  "photo_8": {
+    "visualDescription": "Grande assiette sombre contenant des émincés ou morceaux de viande généreusement nappés d'une sauce crémeuse brune aux herbes et champignons, garnis de tomates cerises et de feuilles de basilic. En arrière-plan sur le plateau se trouvent quatre accompagnements distincts : des frites dorées dans un gobelet noir, du riz blanc assaisonné dans un bol noir, une salade de dés de concombre dans un bol noir, et une part de gratin doré au fromage.",
+    "detectedDish": "Émincé de viande sauce forestière / poivre avec assortiment d'accompagnements",
+    "detectedType": "Viande",
+    "visibleIngredients": [
+      "Viande (lanières ou morceaux)",
+      "Sauce crémeuse brune",
+      "Tomates cerises",
+      "Feuilles de basilic",
+      "Herbes aromatiques hachées"
+    ],
+    "visibleAccompaniments": [
+      "Frites",
+      "Riz blanc assaisonné",
+      "Salade de concombre en dés",
+      "Gratin au fromage"
+    ],
+    "presentation": "Dressage généreux et soigné sur assiette ronde bleu foncé/noire, avec accompagnements servis dans des petits contenants noirs et un gratin directement sur l'assiette. Prise de vue rapprochée en plongée modérée avec éclairage chaud sur table en bois.",
+    "origin": "INCERTAINE",
+    "confidence": 0.9,
+    "evidence": [
+      "Morceaux de viande nettement visibles sous le nappage de sauce",
+      "Quatre accompagnements distincts clairement identifiables (frites, riz, salade de concombre, gratin)",
+      "Garniture fraîche de basilic et tomate cerise sur la viande et le riz"
+    ],
+    "uncertainties": [
+      "Type précis de viande (bœuf, veau ou autre)",
+      "Composition exacte de la sauce brune (champignons, poivre ou crème)",
+      "Composition précise du gratin (pommes de terre ou légumes)"
+    ],
+    "reasoning": "L'image montre clairement une pièce maîtresse de viande en sauce avec des accompagnements variés typiques d'un service de brasserie ou restaurant. La sauce et les morceaux de viande sont centraux, justifiant la catégorie 'Viande'. L'origine exacte ne pouvant pas être déterminée de manière certaine à partir du seul visuel, elle est classée comme INCERTAINE."
+  },
+  "photo_9": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_10": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_11": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_12": {
+    "visualDescription": "Assiette creuse noire garnie de pâtes longues et plates (tagliatelles ou fettuccine) enrobées d'une sauce crémeuse vert clair (type crème de pistache ou pesto crémeux). Au centre trône une burrata entière fraîche surmontée d'un brin de roquette. Le plat est parsemé d'amandes effilées, de pistaches concassées, de cerneaux de noix et de fromage râpé.",
+    "detectedDish": "Tagliatelles à la crème de pistache et burrata",
+    "detectedType": "Pâtes",
+    "visibleIngredients": [
+      "pâtes longues (tagliatelles ou fettuccine)",
+      "sauce crémeuse verte (crème de pistache ou pesto crémeux)",
+      "burrata",
+      "amandes effilées",
+      "noix",
+      "pistaches concassées",
+      "fromage râpé",
+      "roquette"
+    ],
+    "visibleAccompaniments": [
+      "petit bol de salade (en arrière-plan)"
+    ],
+    "presentation": "Photographie en plan rapproché et angle plongeant, dressée dans une assiette creuse noire sur un plan de travail en acier inoxydable. Présentation soignée et généreuse, avec le logo 'Best Food B!ZZ'ART' apposé en bas de l'image.",
+    "origin": "VRAIE_PHOTO_BIZZART",
+    "confidence": 0.95,
+    "evidence": [
+      "Le logo officiel 'Best Food B!ZZ'ART' est directement intégré au bas de l'image",
+      "Pâtes et ingrédients typiques de la carte d'un restaurant italien moderne",
+      "Environnement de prise de vue sur plan de travail professionnel en inox"
+    ],
+    "uncertainties": [
+      "Composition exacte de la sauce verte (crème de pistache pure, pesto alla genovese ou mélange crème/pesto)",
+      "Variété exacte de pâtes (tagliatelles ou fettuccine)"
+    ],
+    "reasoning": "La photographie montre clairement un plat de pâtes en sauce crémeuse verte avec une boule de burrata entière et un mélange de fruits secs (amandes, pistaches, noix) ainsi que du fromage râpé. La présence explicite du logo de l'enseigne 'B!ZZ'ART' confirme l'origine de l'image pour ce restaurant."
+  },
+  "photo_13": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_14": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_15": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_16": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_17": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_18": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_19": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  },
+  "photo_20": {
+    "visualDescription": "Page de menu de restaurant présentant une liste de plats (rubriques 'Pates' et 'Plats Espagnol') à gauche, et sur la droite, une photographie en gros plan d'un plat de spaghetti enrobés d'une sauce rouge avec de grosses crevettes entières et des herbes vertes, servi dans une assiette ou poêle noire.",
+    "detectedDish": "Spaghetti aux crevettes / Pâtes aux fruits de mer",
+    "detectedType": "Pâtes",
+    "visibleIngredients": [
+      "spaghetti",
+      "crevettes",
+      "sauce tomate",
+      "persil ou herbes fraîches"
+    ],
+    "visibleAccompaniments": [],
+    "presentation": "Cadrage vertical serré sur une assiette sombre texturée, mise en scène soignée avec sauce brillante et herbes parsemées pour illustrer le menu.",
+    "origin": "INCERTAINE",
+    "confidence": 0.95,
+    "evidence": [
+      "Pâtes longues (spaghetti) bien visibles avec sauce rouge",
+      "Présence de crevettes entières cuites et colorées",
+      "Texte du menu mentionnant 'Pates' et 'Pâtes Fruits de Mer' / 'Ravioli Crevette'"
+    ],
+    "uncertainties": [
+      "Variété exacte de pâtes longues (spaghetti ou linguine)",
+      "Provenance de la photo (photo d'illustration de stock pour la mise en page du menu ou photo des plats réels de l'établissement)"
+    ],
+    "reasoning": "L'image est un visuel de carte/menu de restaurant combinant une liste de prix et de plats à gauche avec une photo culinaire illustrative à droite montrant clairement des pâtes longues aux crevettes en sauce."
+  },
+  "photo_21": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.7-flash\nPlease retry in 9.249803897s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"5\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"9s\"}]"
+  },
+  "photo_22": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.7-flash\nPlease retry in 7.984090574s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"5\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"7s\"}]"
+  },
+  "photo_23": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.7-flash\nPlease retry in 6.622517335s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.7-flash\",\"location\":\"global\"},\"quotaValue\":\"5\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"6s\"}]"
+  },
+  "photo_24": {
+    "visualDescription": "Assiette creuse blanche contenant des pâtes de type penne enrobées d'une sauce crémeuse verte au pesto, surmontées de plusieurs grosses crevettes entières cuites, de pignons de pin, de fromage râpé, de deux demi-tomates cerises, de feuilles de basilic frais et de jeunes pousses.",
+    "detectedDish": "Penne au pesto et crevettes",
+    "detectedType": "Pâtes",
+    "visibleIngredients": [
+      "Pâtes penne",
+      "Crevettes",
+      "Sauce pesto crémeuse",
+      "Pignons de pin",
+      "Fromage râpé",
+      "Basilic frais",
+      "Tomates cerises",
+      "Jeunes pousses"
+    ],
+    "visibleAccompaniments": [],
+    "presentation": "Dressage soigné en dôme dans une assiette creuse blanche à large rebord, avec les crevettes disposées sur le dessus et une garniture centrale de basilic et tomates cerises. Éclaboussures décoratives de pesto et copeaux de fromage sur le pourtour.",
+    "origin": "INCERTAINE",
+    "confidence": 0.95,
+    "evidence": [
+      "Présence distincte de pâtes tubulaires biseautées (penne)",
+      "Grosses crevettes roses/orangées cuites clairement visibles",
+      "Sauce verte texturée caractéristique du pesto avec pignons de pin entiers",
+      "Feuilles de basilic frais et demi-tomates cerises en finition sur le dessus"
+    ],
+    "uncertainties": [
+      "Type exact de fromage râpé (Parmesan, Grana Padano ou Pecorino)",
+      "Nature exacte de la sauce (pesto traditionnel émulsionné ou crème au pesto)"
+    ],
+    "reasoning": "Tous les éléments visuels convergent vers un plat de pâtes italiennes (penne) préparé avec une sauce au pesto et des crevettes. La photo semble prise sur le vif dans un cadre de restauration (d'autres assiettes sont visibles en arrière-plan), mais l'origine spécifique du restaurant ne peut être formellement attestée sur le seul aspect visuel."
+  },
+  "photo_25": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 52.310089688s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"52s\"}]"
+  },
+  "photo_26": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 48.795470444s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"48s\"}]"
+  },
+  "photo_27": {
+    "visualDescription": "Page de menu présentant à gauche des listes de prix ('Supplement' et 'Soda') et à droite un grand verre rempli d'une boisson fraîche de couleur jaune/dorée avec de la glace pilée, une tranche de citron fixée sur le rebord, des feuilles de menthe et une paille rayée verte et blanche.",
+    "detectedDish": "Citronnade / Boisson fraîche au citron et menthe",
+    "detectedType": "Boisson",
+    "visibleIngredients": [
+      "tranche de citron",
+      "feuilles de menthe",
+      "glaçons",
+      "boisson liquide jaune/ambrée"
+    ],
+    "visibleAccompaniments": [
+      "paille rayée"
+    ],
+    "presentation": "Mise en page graphique de carte de menu avec une photo publicitaire stylisée en bordure droite, montrant condensation, fraîcheur et garnitures soignées.",
+    "origin": "INCERTAINE",
+    "confidence": 0.95,
+    "evidence": [
+      "Présence d'un grand verre transparent contenant un liquide frais, des glaçons, du citron et de la menthe",
+      "Page de menu mentionnant explicitement la catégorie 'Soda' et la 'Citronnade'"
+    ],
+    "uncertainties": [
+      "Nature exacte du liquide (citronnade, thé glacé ou soda aromatisé)",
+      "Origine de la photo (probablement une image d'illustration ou stock intégrée dans la maquette du menu)"
+    ],
+    "reasoning": "L'image montre un élément de carte/menu de restaurant accompagné d'une illustration photographique d'une boisson rafraîchissante aux agrumes et à la menthe."
+  },
+  "photo_28": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 41.463852879s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"41s\"}]"
+  },
+  "photo_29": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 40.017649274s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"40s\"}]"
+  },
+  "photo_30": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 38.701009741s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"38s\"}]"
+  },
+  "photo_31": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 37.038270834s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"37s\"}]"
+  },
+  "photo_32": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 35.708396288s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.7-flash\",\"location\":\"global\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"35s\"}]"
+  },
+  "photo_33": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 34.096247493s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"34s\"}]"
+  },
+  "photo_34": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 27.666881189s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.7-flash\",\"location\":\"global\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"27s\"}]"
+  },
+  "photo_35": {
+    "visualDescription": "Analyse échouée",
+    "detectedDish": "Inconnu",
+    "detectedType": "Impossible à identifier",
+    "visibleIngredients": [],
+    "visibleAccompaniments": [],
+    "presentation": "N/A",
+    "origin": "INCERTAINE",
+    "confidence": 0,
+    "evidence": [],
+    "uncertainties": [
+      "Erreur technique lors de l'analyse"
+    ],
+    "reasoning": "Erreur technique: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 26.428926572s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.7-flash\"},\"quotaValue\":\"20\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"26s\"}]"
+  }
+}

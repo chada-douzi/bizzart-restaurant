@@ -1,0 +1,271 @@
+import { Component, OnInit, signal, computed } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { MenuService } from '../../core/services/menu.service';
+import { MenuCategory, MenuItem } from '../../core/models/menu.model';
+import { SeoService } from '../../core/services/seo.service';
+import { SettingsService } from '../../core/services/settings.service';
+import { CategoryWithItems } from '../../core/services/menu.service';
+
+@Component({
+  selector: 'app-menu',
+  standalone: true,
+  imports: [CommonModule, RouterLink],
+  template: `
+    <div class="min-h-screen bg-white">
+
+      <!-- Hero banner -->
+      <div class="bg-dark-950 py-20 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary-900/20 to-transparent"></div>
+        <div class="relative z-10">
+          <p class="text-primary-400 font-sans text-sm tracking-widest uppercase mb-3">{{ restaurantName() }}</p>
+          <h1 class="text-4xl md:text-6xl font-display font-bold text-white mb-4">Notre Carte</h1>
+          <p class="text-dark-300 text-lg max-w-xl mx-auto">
+            {{ menuSubtitle() }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Category navigation (sticky) -->
+      @if (!isLoading() && categories().length > 0) {
+        <div class="sticky top-16 z-10 bg-white border-b border-dark-100 shadow-sm">
+          <div class="container mx-auto px-4 overflow-x-auto">
+            <div class="flex gap-1 py-2 min-w-max">
+              @for (cat of categories(); track cat._id) {
+                <button
+                  (click)="scrollToCategory(cat.slug)"
+                  class="px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap"
+                  [class.bg-primary-600]="activeCategory() === cat.slug"
+                  [class.text-white]="activeCategory() === cat.slug"
+                  [class.bg-dark-50]="activeCategory() !== cat.slug"
+                  [class.text-dark-700]="activeCategory() !== cat.slug"
+                  [class.hover:bg-dark-100]="activeCategory() !== cat.slug"
+                >
+                  {{ cat.name.fr }}
+                </button>
+              }
+            </div>
+          </div>
+        </div>
+      }
+
+      <!-- Content -->
+      <div class="container mx-auto px-4 lg:px-8 py-12">
+
+        <!-- Loading -->
+        @if (isLoading()) {
+          <div class="flex justify-center py-20">
+            <svg class="animate-spin w-10 h-10 text-primary-400" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+            </svg>
+          </div>
+        }
+
+        <!-- Error -->
+        @if (loadError()) {
+          <div class="max-w-md mx-auto text-center py-20">
+            <p class="text-dark-500 mb-4">{{ loadError() }}</p>
+            <button (click)="load()" class="px-6 py-2 bg-primary-600 text-white rounded-lg text-sm hover:bg-primary-700 transition-colors">
+              Réessayer
+            </button>
+          </div>
+        }
+
+        <!-- Empty menu -->
+        @if (!isLoading() && !loadError() && categories().length === 0) {
+          <div class="text-center py-20">
+            <p class="text-dark-500 text-lg mb-2">La carte arrive très prochainement.</p>
+            <p class="text-dark-400 text-sm">En attendant, n'hésitez pas à nous contacter pour en savoir plus.</p>
+            <a routerLink="/reservation" class="inline-block mt-6 px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+              Réserver une table
+            </a>
+          </div>
+        }
+
+        <!-- Categories and items -->
+        @if (!isLoading() && !loadError()) {
+          <div class="space-y-20">
+            @for (cat of categories(); track cat._id) {
+              <section [id]="cat.slug">
+                <!-- Category header -->
+                <div class="flex items-end justify-between mb-8 pb-4 border-b border-primary-100">
+                  <div>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold text-dark-900">{{ cat.name.fr }}</h2>
+                    @if (cat.description?.fr) {
+                      <p class="text-dark-500 mt-1">{{ cat.description!.fr }}</p>
+                    }
+                  </div>
+                  <span class="text-primary-500 text-sm hidden sm:block">
+                    {{ itemsByCategory(cat._id).length }} plat{{ itemsByCategory(cat._id).length > 1 ? 's' : '' }}
+                  </span>
+                </div>
+
+                <!-- Items grid -->
+                @if (itemsByCategory(cat._id).length === 0) {
+                  <p class="text-dark-400 text-sm">Aucun plat disponible dans cette catégorie.</p>
+                } @else {
+                  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    @for (item of itemsByCategory(cat._id); track item._id) {
+                      <article class="group bg-white border border-dark-100 rounded-2xl overflow-hidden hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                        <!-- Image -->
+                        <div class="relative h-48 overflow-hidden bg-dark-100">
+                          @if (item.image) {
+                            <img
+                              [src]="item.image"
+                              [alt]="item.name.fr"
+                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              loading="lazy"
+                              (error)="onImgError($event)"
+                            />
+                          } @else {
+                            <div class="w-full h-full flex items-center justify-center text-dark-300">
+                              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                              </svg>
+                            </div>
+                          }
+                          @if (item.isFeatured) {
+                            <span class="absolute top-2 left-2 bg-primary-600 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                              ★ Signature
+                            </span>
+                          }
+                        </div>
+
+                        <!-- Info -->
+                        <div class="p-4">
+                          <div class="flex justify-between items-start gap-2 mb-2">
+                            <h3 class="font-display font-semibold text-dark-900 text-lg leading-tight">{{ item.name.fr }}</h3>
+                            <span class="text-primary-600 font-bold text-lg whitespace-nowrap">
+                              {{ item.price | number:'1.0-2' }} DT
+                            </span>
+                          </div>
+
+                          @if (item.description?.fr) {
+                            <p class="text-dark-500 text-sm leading-relaxed line-clamp-2 mb-3">
+                              {{ item.description!.fr }}
+                            </p>
+                          }
+
+                          @if (item.allergens && item.allergens.length > 0) {
+                            <p class="text-dark-400 text-xs">
+                              Allergènes : {{ item.allergens.join(', ') }}
+                            </p>
+                          }
+
+                          @if (item.tags && item.tags.length > 0) {
+                            <div class="flex flex-wrap gap-1 mt-2">
+                              @for (tag of item.tags; track tag) {
+                                <span class="text-xs bg-dark-50 text-dark-500 px-2 py-0.5 rounded-full">{{ tag }}</span>
+                              }
+                            </div>
+                          }
+                        </div>
+                      </article>
+                    }
+                  </div>
+                }
+              </section>
+            }
+          </div>
+        }
+
+        <!-- CTA -->
+        @if (!isLoading() && categories().length > 0) {
+          <div class="text-center mt-20 py-12 border-t border-dark-100">
+            <p class="text-dark-600 mb-4">Une question sur notre carte ? Envie de réserver ?</p>
+            <a routerLink="/reservation"
+              class="inline-block px-8 py-3 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-colors shadow-lg">
+              Réserver une Table
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  `,
+})
+export class MenuComponent implements OnInit {
+  categories = signal<MenuCategory[]>([]);
+  allItems = signal<MenuItem[]>([]);
+  activeCategory = signal('');
+  isLoading = signal(true);
+  loadError = signal('');
+
+  // Dynamic values from SettingsService (loaded by APP_INITIALIZER before render)
+  readonly restaurantName = computed(() =>
+    this.settingsService.publicSettings()?.restaurantName ?? "BIZZ'ART Monastir"
+  );
+
+  readonly menuSubtitle = computed(() => {
+    const desc = this.settingsService.publicSettings()?.description?.fr;
+    return (desc && desc.trim() !== '')
+      ? desc
+      : 'Cuisine méditerranéenne authentique, revisitée avec passion';
+  });
+
+  constructor(
+    private menuService: MenuService,
+    private seoService: SeoService,
+    private settingsService: SettingsService,
+  ) {}
+
+  ngOnInit(): void {
+    const s = this.settingsService.publicSettings();
+    const title    = s?.seo?.metaTitle?.fr     || "Notre Carte — BIZZ'ART Monastir";
+    const desc     = s?.seo?.metaDescription?.fr
+      || "Découvrez la carte de BIZZ'ART Monastir : entrées, plats, desserts et boissons de notre restaurant méditerranéen.";
+    const keywords = s?.seo?.keywords?.join(', ') || 'menu restaurant, carte, plats, BIZZ\'ART Monastir';
+    this.seoService.updateSeo({ title, description: desc, keywords });
+    this.load();
+  }
+
+  load(): void {
+    this.isLoading.set(true);
+    this.loadError.set('');
+
+    // Load all active categories
+    this.menuService.getCategories().subscribe({
+      next: (catRes) => {
+        if (!catRes.success || !catRes.data?.length) {
+          this.isLoading.set(false);
+          return;
+        }
+        const cats = catRes.data;
+        this.categories.set(cats);
+        if (cats.length > 0) this.activeCategory.set(cats[0].slug);
+
+        // Load all available items — limit 100 (API max) to handle large menus without pagination
+        this.menuService.getItems({ limit: 100 }).subscribe({
+          next: (itemRes) => {
+            if (itemRes.success && itemRes.data) {
+              this.allItems.set(itemRes.data.items);
+            }
+            this.isLoading.set(false);
+          },
+          error: () => { this.loadError.set('Impossible de charger les plats.'); this.isLoading.set(false); },
+        });
+      },
+      error: () => { this.loadError.set('Impossible de charger le menu.'); this.isLoading.set(false); },
+    });
+  }
+
+  itemsByCategory(categoryId: string): MenuItem[] {
+    return this.allItems().filter(item => {
+      const catId = typeof item.category === 'string' ? item.category : (item.category as MenuCategory)._id;
+      return catId === categoryId;
+    }).sort((a, b) => a.order - b.order);
+  }
+
+  scrollToCategory(slug: string): void {
+    this.activeCategory.set(slug);
+    const el = document.getElementById(slug);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  onImgError(event: Event): void {
+    (event.target as HTMLImageElement).style.display = 'none';
+  }
+}

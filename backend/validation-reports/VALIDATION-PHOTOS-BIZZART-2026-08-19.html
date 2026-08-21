@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Photos BIZZ'ART</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 1400px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h1 { font-size: 28px; color: #333; margin-bottom: 10px; }
+    .header { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #e0e0e0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+    .stat-card { background: #f8f9fa; padding: 15px; border-radius: 6px; }
+    .stat-card h3 { font-size: 12px; color: #666; margin-bottom: 5px; text-transform: uppercase; }
+    .stat-card p { font-size: 24px; font-weight: bold; }
+    .stat-card.confirmed p { color: #4CAF50; }
+    .stat-card.stock p { color: #f44336; }
+    .stat-card.review p { color: #FF9800; }
+    .stat-card.unanalyzed p { color: #9E9E9E; }
+    .tabs { display: flex; gap: 10px; margin: 20px 0; border-bottom: 1px solid #ddd; }
+    .tab { padding: 10px 20px; cursor: pointer; background: none; border: none; font-size: 16px; color: #666; border-bottom: 3px solid transparent; }
+    .tab.active { color: #2196F3; border-bottom-color: #2196F3; font-weight: 600; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .photo-card { background: #f8f9fa; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #ddd; }
+    .photo-card.confirmed { border-left-color: #4CAF50; }
+    .photo-card.stock { border-left-color: #f44336; }
+    .photo-card.review { border-left-color: #FF9800; }
+    .photo-card.unanalyzed { border-left-color: #9E9E9E; }
+    .photo-card h3 { margin-bottom: 10px; }
+    .photo-card img { max-width: 300px; height: auto; border-radius: 4px; margin: 10px 0; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; margin: 5px 5px 5px 0; }
+    .badge-confirmed { background: #E8F5E9; color: #4CAF50; }
+    .badge-stock { background: #FFEBEE; color: #f44336; }
+    .badge-review { background: #FFF3E0; color: #F57C00; }
+    .badge-unanalyzed { background: #F5F5F5; color: #666; }
+    .badge-high { background: #FFEBEE; color: #f44336; }
+    .badge-medium { background: #FFF3E0; color: #F57C00; }
+    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0; }
+    .info-item { font-size: 14px; }
+    .info-item strong { color: #555; }
+    .alert { padding: 15px; border-radius: 6px; margin: 20px 0; }
+    .alert-warning { background: #FFF3E0; color: #E65100; border-left: 4px solid #FF9800; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📋 Validation Photos BIZZ'ART</h1>
+      <p style="color: #666; margin-top: 10px;">Restaurant BIZZ'ART Monastir - 2026-08-19</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card confirmed">
+          <h3>Groupe A - Confirmées</h3>
+          <p>1</p>
+        </div>
+        <div class="stat-card stock">
+          <h3>Groupe B - Stock</h3>
+          <p>1</p>
+        </div>
+        <div class="stat-card review">
+          <h3>Groupe C - Révision</h3>
+          <p>6</p>
+        </div>
+        <div class="stat-card unanalyzed">
+          <h3>Groupe D - Non analysées</h3>
+          <p>27</p>
+        </div>
+      </div>
+      
+      <div class="alert alert-warning">
+        <strong>⚠️ VALIDATION MANUELLE REQUISE</strong><br>
+        Ne pas modifier MongoDB/Cloudinary avant validation complète. Scores LOW ne constituent pas une validation automatique.
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('confirmed')">✅ Confirmées (1)</button>
+      <button class="tab" onclick="showTab('stock')">🚫 Stock (1)</button>
+      <button class="tab" onclick="showTab('review')">❓ Révision (6)</button>
+      <button class="tab" onclick="showTab('unanalyzed')">⏸️ Non analysées (27)</button>
+    </div>
+
+    <div id="confirmed-tab" class="tab-content active">
+      
+        <div class="photo-card confirmed">
+          <h3>photo_12</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg" alt="photo_12" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Confiance:</strong> 95%</div>
+            <div class="info-item"><strong>Plat détecté:</strong> Tagliatelles à la crème de pistache et burrata</div>
+            <div class="info-item"><strong>Meilleur match:</strong> Lasagne Fruits De Mer</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Photo authentique BIZZ'ART confirmée (confiance: 95%). Logo visible dans l'image.</p>
+        </div>
+      
+    </div>
+
+    <div id="stock-tab" class="tab-content">
+      
+        <div class="photo-card stock">
+          <h3>photo_3</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png" alt="photo_3" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 4 plat(s)</div>
+            <div class="info-item"><strong>Confiance:</strong> 95%</div>
+            <div class="info-item"><strong>Plat détecté:</strong> Assiette de grillades mixtes / Plateau de viandes grillées</div>
+            <div class="info-item"><strong>Action:</strong> Supprimer ou remplacer</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Photo stock/générique détectée (confiance: 95%). À supprimer du mapping ou remplacer par photo réelle.</p>
+        </div>
+      
+    </div>
+
+    <div id="review-tab" class="tab-content">
+      
+        <div class="photo-card review">
+          <h3>photo_2</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg" alt="photo_2" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 4 plat(s)</div>
+            <div class="info-item"><strong>Confiance:</strong> 95%</div>
+            <div class="info-item"><strong>Plat détecté:</strong> Tagliatelles à la sauce crémeuse, poulet, burrata et fruits à coque</div>
+            <div class="info-item"><strong>Type:</strong> Pâtes</div>
+            <div class="info-item"><strong>Origine:</strong> INCERTAINE</div>
+            <div class="info-item"><strong>Meilleur match:</strong> Pâtes à L'italienne (LOW)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Origine incertaine (confiance: 95%). Plat détecté: "Tagliatelles à la sauce crémeuse, poulet, burrata et fruits à coque". Validation manuelle nécessaire.</p>
+        </div>
+      
+        <div class="photo-card review">
+          <h3>photo_20</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg" alt="photo_20" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Confiance:</strong> 95%</div>
+            <div class="info-item"><strong>Plat détecté:</strong> Spaghetti aux crevettes / Pâtes aux fruits de mer</div>
+            <div class="info-item"><strong>Type:</strong> Pâtes</div>
+            <div class="info-item"><strong>Origine:</strong> INCERTAINE</div>
+            <div class="info-item"><strong>Meilleur match:</strong> Pâtes Fruits de Mer (LOW)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Origine incertaine (confiance: 95%). Plat détecté: "Spaghetti aux crevettes / Pâtes aux fruits de mer". Validation manuelle nécessaire.</p>
+        </div>
+      
+        <div class="photo-card review">
+          <h3>photo_24</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg" alt="photo_24" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 6 plat(s)</div>
+            <div class="info-item"><strong>Confiance:</strong> 95%</div>
+            <div class="info-item"><strong>Plat détecté:</strong> Penne au pesto et crevettes</div>
+            <div class="info-item"><strong>Type:</strong> Pâtes</div>
+            <div class="info-item"><strong>Origine:</strong> INCERTAINE</div>
+            <div class="info-item"><strong>Meilleur match:</strong> Pâtes sauce pesto (LOW)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Origine incertaine (confiance: 95%). Plat détecté: "Penne au pesto et crevettes". Validation manuelle nécessaire.</p>
+        </div>
+      
+        <div class="photo-card review">
+          <h3>photo_27</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg" alt="photo_27" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 1 plat(s)</div>
+            <div class="info-item"><strong>Confiance:</strong> 95%</div>
+            <div class="info-item"><strong>Plat détecté:</strong> Citronnade / Boisson fraîche au citron et menthe</div>
+            <div class="info-item"><strong>Type:</strong> Boisson</div>
+            <div class="info-item"><strong>Origine:</strong> INCERTAINE</div>
+            <div class="info-item"><strong>Meilleur match:</strong> Filet de boeuf sauce au choix (LOW)</div>
+          </div>
+          
+          <p style="margin-top: 10px; color: #666;">Origine incertaine (confiance: 95%). Plat détecté: "Citronnade / Boisson fraîche au citron et menthe". Validation manuelle nécessaire.</p>
+        </div>
+      
+        <div class="photo-card review">
+          <h3>photo_4</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg" alt="photo_4" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 1 plat(s)</div>
+            <div class="info-item"><strong>Confiance:</strong> 85%</div>
+            <div class="info-item"><strong>Plat détecté:</strong> Plat Terre et Mer (Surf and Turf) au fromage fondu et gambas</div>
+            <div class="info-item"><strong>Type:</strong> Viande</div>
+            <div class="info-item"><strong>Origine:</strong> INCERTAINE</div>
+            <div class="info-item"><strong>Meilleur match:</strong> Côtelette d'agneau (LOW)</div>
+          </div>
+          
+          <p style="margin-top: 10px; color: #666;">Origine incertaine (confiance: 85%). Plat détecté: "Plat Terre et Mer (Surf and Turf) au fromage fondu et gambas". Validation manuelle nécessaire.</p>
+        </div>
+      
+        <div class="photo-card review">
+          <h3>photo_8</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png" alt="photo_8" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 3 plat(s)</div>
+            <div class="info-item"><strong>Confiance:</strong> 90%</div>
+            <div class="info-item"><strong>Plat détecté:</strong> Émincé de viande sauce forestière / poivre avec assortiment d'accompagnements</div>
+            <div class="info-item"><strong>Type:</strong> Viande</div>
+            <div class="info-item"><strong>Origine:</strong> INCERTAINE</div>
+            <div class="info-item"><strong>Meilleur match:</strong> Filet de boeuf sauce au choix (LOW)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Origine incertaine (confiance: 90%). Plat détecté: "Émincé de viande sauce forestière / poivre avec assortiment d'accompagnements". Validation manuelle nécessaire.</p>
+        </div>
+      
+    </div>
+
+    <div id="unanalyzed-tab" class="tab-content">
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_1</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg" alt="photo_1" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 4 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_10</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg" alt="photo_10" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 5 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_11</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg" alt="photo_11" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_13</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg" alt="photo_13" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 1 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_14</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png" alt="photo_14" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 3 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_15</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png" alt="photo_15" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 1 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_16</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png" alt="photo_16" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 4 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_17</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg" alt="photo_17" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_18</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg" alt="photo_18" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_19</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg" alt="photo_19" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 1 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_21</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg" alt="photo_21" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_22</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg" alt="photo_22" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 3 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_23</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg" alt="photo_23" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 1 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_25</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg" alt="photo_25" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_26</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png" alt="photo_26" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 5 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_28</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg" alt="photo_28" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_29</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg" alt="photo_29" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 5 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_30</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg" alt="photo_30" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_31</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg" alt="photo_31" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 3 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_32</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg" alt="photo_32" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 4 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_33</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg" alt="photo_33" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_34</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png" alt="photo_34" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_35</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg" alt="photo_35" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 3 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_5</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg" alt="photo_5" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 2 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_6</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg" alt="photo_6" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 5 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_7</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png" alt="photo_7" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 4 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-high">Doublon HIGH</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+        <div class="photo-card unanalyzed">
+          <h3>photo_9</h3>
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg" alt="photo_9" onerror="this.style.display='none'">
+          <div class="info-grid">
+            <div class="info-item"><strong>Utilisée par:</strong> 3 plat(s)</div>
+            <div class="info-item"><strong>Status:</strong> Non analysée (quota)</div>
+          </div>
+          <span class="badge badge-medium">Doublon MEDIUM</span>
+          <p style="margin-top: 10px; color: #666;">Vision IA non disponible (quota dépassé). Validation manuelle requise.</p>
+        </div>
+      
+    </div>
+
+    <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #999; text-align: center;">
+      Généré le 2026-08-19T01:28:00.341Z - Mode lecture seule stricte
+    </p>
+  </div>
+
+  <script>
+    function showTab(tabName) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tabName + '-tab').classList.add('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit de Pertinence des Index</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; line-height: 1.6; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #334155; }
+    .header h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #f1f5f9; }
+    .header p { color: #94a3b8; }
+    
+    .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .summary-card { background: #1e293b; padding: 1.5rem; border-radius: 8px; border: 1px solid #334155; text-align: center; }
+    .summary-card h3 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .summary-card p { color: #94a3b8; font-size: 0.9rem; }
+    
+    .recommendations { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid #334155; }
+    .recommendations h2 { margin-bottom: 1rem; color: #f1f5f9; }
+    .rec-section { margin-bottom: 1rem; }
+    .rec-section h3 { color: #cbd5e1; margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .rec-section ul { margin-left: 1.5rem; }
+    .rec-section li { color: #94a3b8; margin: 0.25rem 0; }
+    
+    .analysis-card { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid; border-right: 1px solid #334155; border-top: 1px solid #334155; border-bottom: 1px solid #334155; }
+    .analysis-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 2px solid #334155; }
+    .analysis-header h3 { color: #f1f5f9; font-size: 1.3rem; }
+    .badge { padding: 0.4rem 0.8rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; color: white; }
+    .unique-badge { background: #8b5cf6; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; color: white; }
+    
+    .analysis-body { }
+    .info-row { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #334155; }
+    .info-row .label { color: #94a3b8; font-weight: 500; }
+    .info-row .value { color: #f1f5f9; font-weight: 600; }
+    
+    .queries-list { background: #0f172a; padding: 1rem; border-radius: 6px; margin: 1rem 0; }
+    .queries-list strong { color: #cbd5e1; display: block; margin-bottom: 0.5rem; }
+    .queries-list ul { margin-left: 1.5rem; }
+    .queries-list li { color: #94a3b8; margin: 0.5rem 0; }
+    .queries-list code { background: #1e293b; padding: 0.2rem 0.4rem; border-radius: 3px; color: #60a5fa; }
+    
+    .reasoning, .risks, .recommendation { margin: 1rem 0; padding: 1rem; background: #0f172a; border-radius: 6px; }
+    .reasoning strong, .risks strong, .recommendation strong { color: #cbd5e1; display: block; margin-bottom: 0.5rem; }
+    .reasoning p, .recommendation p { color: #94a3b8; }
+    .risks ul { margin-left: 1.5rem; }
+    .risks li { color: #94a3b8; margin: 0.25rem 0; }
+    
+    .guarantees { background: #1e293b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border: 1px solid #334155; }
+    .guarantees h2 { margin-bottom: 1rem; color: #10b981; }
+    .guarantees p { color: #94a3b8; margin: 0.5rem 0; }
+    
+    .footer { text-align: center; margin-top: 2rem; padding: 1rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔍 AUDIT DE PERTINENCE DES 23 INDEX MONGODB</h1>
+      <p>Timestamp: 2026-08-21T02:27:27.040Z</p>
+      <p>Mode: FORENSIQUE / READ-ONLY ABSOLU</p>
+    </div>
+
+    <div class="summary">
+      <div class="summary-card">
+        <h3>23</h3>
+        <p>Total Indexes</p>
+      </div>
+      <div class="summary-card">
+        <h3 style="color: #10b981">8</h3>
+        <p>Required</p>
+      </div>
+      <div class="summary-card">
+        <h3 style="color: #3b82f6">15</h3>
+        <p>Recommended</p>
+      </div>
+      <div class="summary-card">
+        <h3 style="color: #f59e0b">0</h3>
+        <p>Optional</p>
+      </div>
+      <div class="summary-card">
+        <h3 style="color: #6b7280">0</h3>
+        <p>Obsolete</p>
+      </div>
+      <div class="summary-card">
+        <h3 style="color: #ef4444">0</h3>
+        <p>Unknown</p>
+      </div>
+    </div>
+
+    <div class="recommendations">
+      <h2>📋 Recommendations Summary</h2>
+      
+      <div class="rec-section">
+        <h3 style="color: #10b981">✅ To Recreate on Atlas (23)</h3>
+        <ul>
+          <li>reservations.date_1_status_1</li><li>reservations.customer.email_1</li><li>reservations.status_1_createdAt_-1</li><li>reservations.date_1_time_1</li><li>reservations.reminderSent_1_date_1_status_1</li><li>menuitems.slug_1</li><li>menuitems.category_1_isAvailable_1_order_1</li><li>menuitems.isFeatured_1_isAvailable_1</li><li>menuitems.tags_1</li><li>reviews.isPublished_1_isApproved_1_order_1</li><li>reviews.source_1</li><li>reviews.rating_1</li><li>reviews.reviewDate_-1</li><li>menucategories.slug_1</li><li>menucategories.isActive_1_order_1</li><li>settings.updatedAt_-1</li><li>users.email_1</li><li>users.role_1</li><li>users.isActive_1</li><li>media.category_1_isVisible_1_order_1</li><li>media.type_1_category_1</li><li>media.isVisible_1_order_1</li><li>media.publicId_1</li>
+        </ul>
+      </div>
+      
+      <div class="rec-section">
+        <h3 style="color: #ef4444">❌ Do Not Recreate (0)</h3>
+        <ul>
+          
+        </ul>
+      </div>
+      
+      <div class="rec-section">
+        <h3 style="color: #f59e0b">⚠️  To Monitor (0)</h3>
+        <ul>
+          
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="margin: 2rem 0 1rem 0; color: #f1f5f9;">Detailed Analyses</h2>
+    
+    
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>reservations.date_1_status_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">date, status</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>admin.controller.ts</code> - Count today reservations</li>
+                  
+                    <li><code>reservation.controller.ts</code> - Admin list reservations with filters</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 2 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>reservations.customer.email_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">customer.email</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>reservation.controller.ts</code> - Search reservations by customer email</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>reservations.status_1_createdAt_-1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">status, createdAt</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>admin.controller.ts</code> - Count by status (pending, confirmed)</li>
+                  
+                    <li><code>reservation.controller.ts</code> - Sort reservations by creation date</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 2 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>reservations.date_1_time_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">date, time</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>reservation.controller.ts</code> - Check daily reservation count</li>
+                  
+                    <li><code>reservation.controller.ts</code> - Sort by date and time slot</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 2 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #10b981">
+          <div class="analysis-header">
+            <h3>reservations.reminderSent_1_date_1_status_1</h3>
+            <span class="badge" style="background: #10b981">REQUIRED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">reminderSent, date, status</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>N/A (cron job)</code> - Cron job: find reservations needing reminders</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Composite index (3 fields) used in 1 query patterns</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Essential for application functionality</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #10b981">
+          <div class="analysis-header">
+            <h3>menuitems.slug_1</h3>
+            <span class="badge" style="background: #10b981">REQUIRED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">slug</span>
+            </div>
+            
+            
+              <div class="info-row">
+                <span class="label">Type:</span>
+                <span class="value unique-badge">UNIQUE</span>
+              </div>
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>menu.controller.ts</code> - Check slug uniqueness</li>
+                  
+                    <li><code>menu.controller.ts</code> - Get public item by slug</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+              <div class="info-row">
+                <span class="label">Duplicate Check:</span>
+                <span class="value">✅ Safe</span>
+              </div>
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Unique index declared in current schema and actively used in 2 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Essential for application functionality</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #10b981">
+          <div class="analysis-header">
+            <h3>menuitems.category_1_isAvailable_1_order_1</h3>
+            <span class="badge" style="background: #10b981">REQUIRED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">category, isAvailable, order</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>menu.controller.ts</code> - Get items by category (public)</li>
+                  
+                    <li><code>menu.controller.ts</code> - List items with filters + sort</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Composite index (3 fields) used in 2 query patterns</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Essential for application functionality</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>menuitems.isFeatured_1_isAvailable_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">isFeatured, isAvailable</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>menu.controller.ts</code> - Get featured available items for homepage</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>menuitems.tags_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">tags</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>menu.controller.ts</code> - Filter items by tags</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #10b981">
+          <div class="analysis-header">
+            <h3>reviews.isPublished_1_isApproved_1_order_1</h3>
+            <span class="badge" style="background: #10b981">REQUIRED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">isPublished, isApproved, order</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>review.controller.ts</code> - Get published approved reviews</li>
+                  
+                    <li><code>review.controller.ts</code> - Sort reviews by display order</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Composite index (3 fields) used in 2 query patterns</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Essential for application functionality</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>reviews.source_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">source</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>review.controller.ts</code> - Filter reviews by source (Google, TripAdvisor)</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>reviews.rating_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">rating</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>review.controller.ts</code> - Calculate average rating and distribution</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>reviews.reviewDate_-1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">reviewDate</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>review.controller.ts</code> - Sort reviews by most recent</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #10b981">
+          <div class="analysis-header">
+            <h3>menucategories.slug_1</h3>
+            <span class="badge" style="background: #10b981">REQUIRED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">slug</span>
+            </div>
+            
+            
+              <div class="info-row">
+                <span class="label">Type:</span>
+                <span class="value unique-badge">UNIQUE</span>
+              </div>
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>menu.controller.ts</code> - Check slug uniqueness</li>
+                  
+                    <li><code>menu.controller.ts</code> - Get public category by slug</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+              <div class="info-row">
+                <span class="label">Duplicate Check:</span>
+                <span class="value">✅ Safe</span>
+              </div>
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Unique index declared in current schema and actively used in 2 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Essential for application functionality</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>menucategories.isActive_1_order_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">isActive, order</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>menu.controller.ts</code> - Get active categories</li>
+                  
+                    <li><code>menu.controller.ts</code> - Sort categories by display order</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 2 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>settings.updatedAt_-1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">updatedAt</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>settings.controller.ts</code> - Get singleton settings (always findOne)</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #10b981">
+          <div class="analysis-header">
+            <h3>users.email_1</h3>
+            <span class="badge" style="background: #10b981">REQUIRED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">email</span>
+            </div>
+            
+            
+              <div class="info-row">
+                <span class="label">Type:</span>
+                <span class="value unique-badge">UNIQUE</span>
+              </div>
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>auth.controller.ts</code> - Login authentication</li>
+                  
+                    <li><code>user.model.ts</code> - Static method findByEmail</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+              <div class="info-row">
+                <span class="label">Duplicate Check:</span>
+                <span class="value">✅ Safe</span>
+              </div>
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Unique index declared in current schema and actively used in 2 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Essential for application functionality</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>users.role_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">role</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>admin.controller.ts</code> - Filter users by role (admin, manager)</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>users.isActive_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">isActive</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>admin.controller.ts</code> - Filter active users</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #10b981">
+          <div class="analysis-header">
+            <h3>media.category_1_isVisible_1_order_1</h3>
+            <span class="badge" style="background: #10b981">REQUIRED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">category, isVisible, order</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>gallery.controller.ts</code> - Get visible media by category</li>
+                  
+                    <li><code>gallery.controller.ts</code> - Sort media by display order</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Composite index (3 fields) used in 2 query patterns</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Essential for application functionality</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>media.type_1_category_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">type, category</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>gallery.controller.ts</code> - Filter by media type (image/video) + category</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #3b82f6">
+          <div class="analysis-header">
+            <h3>media.isVisible_1_order_1</h3>
+            <span class="badge" style="background: #3b82f6">RECOMMENDED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">isVisible, order</span>
+            </div>
+            
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">2</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>gallery.controller.ts</code> - Admin: get all visible media</li>
+                  
+                    <li><code>gallery.controller.ts</code> - Sort all media by order</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Declared in current schema and used in 2 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Improves performance for active queries</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="analysis-card" style="border-left-color: #10b981">
+          <div class="analysis-header">
+            <h3>media.publicId_1</h3>
+            <span class="badge" style="background: #10b981">REQUIRED</span>
+          </div>
+          
+          <div class="analysis-body">
+            <div class="info-row">
+              <span class="label">Fields:</span>
+              <span class="value">publicId</span>
+            </div>
+            
+            
+              <div class="info-row">
+                <span class="label">Type:</span>
+                <span class="value unique-badge">UNIQUE</span>
+              </div>
+            
+            
+            <div class="info-row">
+              <span class="label">Declared in Schema:</span>
+              <span class="value">✅ Yes</span>
+            </div>
+            
+            <div class="info-row">
+              <span class="label">Queries Found:</span>
+              <span class="value">1</span>
+            </div>
+            
+            
+              <div class="queries-list">
+                <strong>Query Patterns:</strong>
+                <ul>
+                  
+                    <li><code>upload.service.ts</code> - Prevent duplicate uploads by Cloudinary public_id</li>
+                  
+                </ul>
+              </div>
+            
+            
+            
+              <div class="info-row">
+                <span class="label">Duplicate Check:</span>
+                <span class="value">✅ Safe</span>
+              </div>
+            
+            
+            <div class="reasoning">
+              <strong>Reasoning:</strong>
+              <p>Unique index declared in current schema and actively used in 1 queries</p>
+            </div>
+            
+            
+            
+            <div class="recommendation">
+              <strong>Recommendation:</strong>
+              <p>✅ RECREATE ON ATLAS: Essential for application functionality</p>
+            </div>
+          </div>
+        </div>
+      
+
+    <div class="guarantees">
+      <h2>✅ Guarantees</h2>
+      <p><strong>Modifications Applied:</strong> 0</p>
+      <p><strong>Data Modified:</strong> ✅ NO</p>
+      <p><strong>Indexes Modified:</strong> ✅ NO</p>
+      <p><strong>Verdict:</strong> READY_FOR_REVIEW</p>
+    </div>
+
+    <div class="footer">
+      <p>Audit généré le 21/08/2026 03:27:29</p>
+      <p>BIZZ'ART MONASTIR — Audit de Pertinence des Index</p>
+    </div>
+  </div>
+</body>
+</html>

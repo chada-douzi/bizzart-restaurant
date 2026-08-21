@@ -1,0 +1,1147 @@
+{
+  "generatedAt": "2026-08-20T05:21:48.965Z",
+  "version": "2.0",
+  "mode": "READ_ONLY",
+  "validations": [
+    {
+      "dishId": "6a845a7a2876405dd5375d58",
+      "dishName": "Pizza Margherita",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d5b",
+      "dishName": "Pizza Thon",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\pizza-thon-grosplan.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d5e",
+      "dishName": "Pizza 4 Fromages sauce tomate",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "proposedImage": "https://res.cloudinary.com/demo/pizza-4-fromages.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d61",
+      "dishName": "Pizza 4 Fromages sauce blanche",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d64",
+      "dishName": "Reine",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d67",
+      "dishName": "Piquante",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d6a",
+      "dishName": "Chicken",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\poulet-grille-herbes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d6d",
+      "dishName": "Napolitaine",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d70",
+      "dishName": "Pepperoni",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d73",
+      "dishName": "4 Saisons",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d76",
+      "dishName": "Pizza Bizz'art",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d79",
+      "dishName": "Pizza Anglaise",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d7c",
+      "dishName": "Pizza BURRATA",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d7f",
+      "dishName": "Pizza Fruit de mer",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\pizza-oeuf-merguez.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d82",
+      "dishName": "Pizza Saumon",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\pizza-thon-grosplan.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d85",
+      "dishName": "Pizza Végétarienne",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d88",
+      "dishName": "Pizza Chevrettes",
+      "category": "Les Pizzas",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141340/bizzart/menu/categories/les-pizzas.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d1f",
+      "dishName": "Pâtes BIZZ'Art",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d22",
+      "dishName": "Pâtes Bolognaise",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d25",
+      "dishName": "Pâtes l'Arrabiata",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d28",
+      "dishName": "Pâtes du Chef",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d2b",
+      "dishName": "Pâtes Maison",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d2e",
+      "dishName": "Pâtes à L'italienne",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d31",
+      "dishName": "Pâtes Fruits de Mer",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d34",
+      "dishName": "Ravioli Saumon",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d37",
+      "dishName": "Ravioli Crevette",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d3a",
+      "dishName": "Ravioli Viande",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d3d",
+      "dishName": "Pâtes sauce pesto",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d40",
+      "dishName": "Lasagne Bolognaise",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141356/bizzart/menu/categories/pates.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d43",
+      "dishName": "Lasagne Fruits De Mer",
+      "category": "Pâtes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141465/bizzart/menu/categories/fruits-de-mer.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d46",
+      "dishName": "Paella 1 Personne",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787152546/bizzart/menu/paella-royale.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d49",
+      "dishName": "Paella Royale",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787152546/bizzart/menu/paella-royale.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787152546/bizzart/menu/paella-royale.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d4c",
+      "dishName": "Risotto Bizz'Art",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141379/bizzart/menu/categories/plats-espagnol.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d4f",
+      "dishName": "Risotto Poulet-Champignons",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\poulet-grille-herbes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d52",
+      "dishName": "Gratin Poulet",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141379/bizzart/menu/categories/plats-espagnol.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d55",
+      "dishName": "Gratin Fruits de Mer",
+      "category": "Plats Espagnol",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141465/bizzart/menu/categories/fruits-de-mer.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d8b",
+      "dishName": "Salade César",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d8e",
+      "dishName": "Salade Bizz'Art",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d91",
+      "dishName": "Salade du Chef",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d94",
+      "dishName": "Salade Fruits de Mer",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d97",
+      "dishName": "Salade de Crevettes Panées",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d9a",
+      "dishName": "Salade Saumon",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375d9d",
+      "dishName": "Salade Roquette",
+      "category": "Salade",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141399/bizzart/menu/categories/salade.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375da0",
+      "dishName": "Escalope Ou Cuisse de Poulet",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375da3",
+      "dishName": "Escalope Panée",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375da6",
+      "dishName": "Escalope à la crème",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375da9",
+      "dishName": "Escalope sauce Champignon",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375dac",
+      "dishName": "Escalope sauce Épinard",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375daf",
+      "dishName": "Escalope sauce Gorgonzola",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375db2",
+      "dishName": "Cordon Bleu",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375db5",
+      "dishName": "Escalope Bizz'Art",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7a2876405dd5375db8",
+      "dishName": "Escalope du Chef",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dbb",
+      "dishName": "Involtini",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dbe",
+      "dishName": "Escalope Orientale",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dc1",
+      "dishName": "Suprême",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dc4",
+      "dishName": "Suprême Maison",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dc7",
+      "dishName": "Poulet à l'italienne",
+      "category": "Volailles",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141436/bizzart/menu/categories/volailles.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dca",
+      "dishName": "Steak Grillé",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dcd",
+      "dishName": "Steak",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dd0",
+      "dishName": "Steak Farci",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dd3",
+      "dishName": "Foie Grillé",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dd6",
+      "dishName": "Foie à la Lyonnaise",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dd9",
+      "dishName": "Grillade Mixte",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\grillade-mixte-salle.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375ddc",
+      "dishName": "Grillade Royale",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375ddf",
+      "dishName": "Panorama de Viande",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375de2",
+      "dishName": "Côtelette d'agneau",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375de5",
+      "dishName": "Côte à L'os Grillée",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375de8",
+      "dishName": "Côte à L'os Bizz'Art",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375deb",
+      "dishName": "Filet de boeuf",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dee",
+      "dishName": "Filet de boeuf sauce au choix",
+      "category": "Viandes",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375df1",
+      "dishName": "Plateau Fruits de mer",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141465/bizzart/menu/categories/fruits-de-mer.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375df4",
+      "dishName": "Crevettes sautées ou grillées",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141465/bizzart/menu/categories/fruits-de-mer.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375df7",
+      "dishName": "Poisson du jour",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\pizza-thon-grosplan.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dfa",
+      "dishName": "Fruits de Mer Sautés",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141465/bizzart/menu/categories/fruits-de-mer.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375dfd",
+      "dishName": "Seiche gratinée aux crevettes et au miel",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141465/bizzart/menu/categories/fruits-de-mer.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e00",
+      "dishName": "Symphonie Fruits de mer",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\hero\\symphonie-terre-mer.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e03",
+      "dishName": "Symphonie Terre-Mer",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\hero\\symphonie-terre-mer.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e06",
+      "dishName": "Symphonie Terre-Mer",
+      "category": "Fruits de mer",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\fruits-mer-creme.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e09",
+      "dishName": "Poulet grillé",
+      "category": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\poulet-grille-herbes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e0c",
+      "dishName": "Poulet Mexicain",
+      "category": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141468/bizzart/menu/categories/tacos.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e0f",
+      "dishName": "Poulet Pané",
+      "category": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141468/bizzart/menu/categories/tacos.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e12",
+      "dishName": "Cordon Bleu",
+      "category": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141468/bizzart/menu/categories/tacos.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e15",
+      "dishName": "Viande Hachée",
+      "category": "Tacos",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e18",
+      "dishName": "Thon",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\pizza-thon-grosplan.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e1b",
+      "dishName": "Poulet grillé",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\poulet-grille-herbes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e1e",
+      "dishName": "Poulet Mexicain",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141470/bizzart/menu/categories/makioub.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e21",
+      "dishName": "Poulet Pané",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141470/bizzart/menu/categories/makioub.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e24",
+      "dishName": "Cordon Bleu",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141470/bizzart/menu/categories/makioub.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e27",
+      "dishName": "Spécial",
+      "category": "MAkIOUB",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141470/bizzart/menu/categories/makioub.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa848e",
+      "dishName": "Frite",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa8491",
+      "dishName": "Gruyère",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa8494",
+      "dishName": "Emmental",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa8497",
+      "dishName": "Edam",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa849a",
+      "dishName": "Champignon",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\emince-champignons.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa849d",
+      "dishName": "Thon",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\pizza-thon-grosplan.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84a0",
+      "dishName": "Jambon",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84a3",
+      "dishName": "Poulet",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\poulet-grille-herbes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84a6",
+      "dishName": "Chawarma",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84a9",
+      "dishName": "Pepperoni",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84ac",
+      "dishName": "Gruyère",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84af",
+      "dishName": "Emmental",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84b2",
+      "dishName": "Edam",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84b5",
+      "dishName": "Champignon",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "C:\\Users\\boukh\\OneDrive\\Bureau\\restaurant\\bizzart-restaurant\\frontend\\public\\images\\gallery\\emince-champignons.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84b8",
+      "dishName": "Oeuf",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141440/bizzart/menu/categories/viandes.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a8599cf0676fa99edaa84bb",
+      "dishName": "Slice",
+      "category": "Supplement",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1/placeholder.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e2a",
+      "dishName": "Eau Minérale 1/2L",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e2d",
+      "dishName": "Eau Minérale 1L",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e30",
+      "dishName": "Eau Gazeuse",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e33",
+      "dishName": "Soda",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e36",
+      "dishName": "Pétillante",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e39",
+      "dishName": "Citronnade",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e3c",
+      "dishName": "Délio",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e3f",
+      "dishName": "Orangina",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    },
+    {
+      "dishId": "6a845a7b2876405dd5375e42",
+      "dishName": "Sprite",
+      "category": "Soda",
+      "currentImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+      "proposedImage": "https://res.cloudinary.com/gmpztbom/image/upload/v1787141472/bizzart/menu/categories/soda.jpg",
+      "status": "PENDING",
+      "validatedAt": null,
+      "notes": ""
+    }
+  ]
+}

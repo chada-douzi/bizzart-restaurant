@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Manuelle Photos BIZZ'ART</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f5f5f5; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .header h1 { font-size: 28px; margin-bottom: 10px; }
+    .progress-bar { background: rgba(255,255,255,0.3); height: 30px; border-radius: 15px; overflow: hidden; margin: 15px 0; }
+    .progress-fill { background: #4CAF50; height: 100%; transition: width 0.3s ease; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+    .controls { background: white; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .search-input { padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; flex: 1; min-width: 200px; }
+    .filter-btn { padding: 10px 20px; border: 1px solid #ddd; border-radius: 4px; background: white; cursor: pointer; font-size: 14px; transition: all 0.2s; }
+    .filter-btn:hover { background: #f5f5f5; }
+    .filter-btn.active { background: #2196F3; color: white; border-color: #2196F3; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+    .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; }
+    .photo-card { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.2s; }
+    .photo-card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .photo-card.validated { border: 3px solid #4CAF50; }
+    .photo-img { width: 100%; height: 250px; object-fit: cover; cursor: pointer; background: #f5f5f5; }
+    .photo-info { padding: 15px; }
+    .photo-id { font-weight: bold; font-size: 18px; margin-bottom: 10px; color: #333; }
+    .info-row { display: flex; justify-content: space-between; margin: 5px 0; font-size: 13px; }
+    .info-label { color: #666; }
+    .info-value { font-weight: 500; color: #333; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin: 2px; }
+    .badge-a { background: #E8F5E9; color: #4CAF50; }
+    .badge-b { background: #FFEBEE; color: #f44336; }
+    .badge-c { background: #FFF3E0; color: #F57C00; }
+    .badge-d { background: #F5F5F5; color: #666; }
+    .badge-high { background: #FFEBEE; color: #f44336; }
+    .badge-medium { background: #FFF3E0; color: #F57C00; }
+    .validation-btns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 15px; }
+    .val-btn { padding: 8px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; transition: all 0.2s; }
+    .val-btn:hover { transform: scale(1.05); }
+    .val-btn.confirmed { background: #4CAF50; color: white; }
+    .val-btn.stock { background: #f44336; color: white; }
+    .val-btn.wrong { background: #FF9800; color: white; }
+    .val-btn.duplicate { background: #9C27B0; color: white; }
+    .val-btn.review { background: #2196F3; color: white; }
+    .val-btn.none { background: #9E9E9E; color: white; }
+    .notes-input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px; font-size: 12px; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; }
+    .modal.show { display: flex; }
+    .modal-img { max-width: 90%; max-height: 90%; object-fit: contain; }
+    .modal-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+    .export-btn { padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; }
+    .export-btn:hover { background: #45a049; }
+    .alert { background: #FFF3E0; color: #E65100; padding: 15px; border-left: 4px solid #FF9800; margin: 20px 0; border-radius: 4px; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 15px 0; }
+    .stat-card { background: rgba(255,255,255,0.2); padding: 10px; border-radius: 4px; text-align: center; }
+    .stat-value { font-size: 24px; font-weight: bold; }
+    .stat-label { font-size: 12px; opacity: 0.9; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🖼️ Validation Manuelle Photos BIZZ'ART</h1>
+    <p>Validez manuellement chaque photo avant toute modification de production</p>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressBar">0 / 35 (0%)</div>
+    </div>
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-value" id="statConfirmed">0</div>
+        <div class="stat-label">Confirmées</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statStock">0</div>
+        <div class="stat-label">Stock</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statWrong">0</div>
+        <div class="stat-label">Mauvais plat</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statDuplicate">0</div>
+        <div class="stat-label">Doublons</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statReview">0</div>
+        <div class="stat-label">À revoir</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input type="text" class="search-input" id="searchInput" placeholder="Rechercher par nom de plat, photo ID..." oninput="filterPhotos()">
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Toutes (35)</button>
+    <button class="filter-btn" data-filter="A" onclick="setFilter('A')">Groupe A</button>
+    <button class="filter-btn" data-filter="B" onclick="setFilter('B')">Groupe B</button>
+    <button class="filter-btn" data-filter="C" onclick="setFilter('C')">Groupe C</button>
+    <button class="filter-btn" data-filter="D" onclick="setFilter('D')">Groupe D</button>
+    <button class="filter-btn" data-filter="duplicates" onclick="setFilter('duplicates')">Doublons</button>
+    <button class="filter-btn" data-filter="validated" onclick="setFilter('validated')">Validées</button>
+    <button class="export-btn" onclick="exportCSV()">📊 Exporter CSV</button>
+  </div>
+
+  <div class="container">
+    <div class="alert">
+      <strong>⚠️ VALIDATION MANUELLE — AUCUNE MODIFICATION DE PRODUCTION</strong><br>
+      Les décisions sont enregistrées localement dans <code>manual-validation.json</code>. Aucune modification MongoDB ou Cloudinary n'est effectuée.
+    </div>
+
+    <div class="photo-grid" id="photoGrid">
+      
+        <div class="photo-card" data-photo-id="photo_1" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg" class="photo-img" alt="photo_1" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_1</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_11_ak1ici....</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">4 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_1', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_1', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_1', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_1', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_1', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_1', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_1" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_1', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_2" data-group="C" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg" class="photo-img" alt="photo_2" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_2</div>
+            <span class="badge badge-c">Groupe C</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">IMG_0237_nkagke.jpg...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">4 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Tagliatelles à la sauce crémeu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">95%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes à L'italienne</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.57 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_2', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_2', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_2', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_2', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_2', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_2', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_2" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_2', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_3" data-group="B" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png" class="photo-img" alt="photo_3" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_3</div>
+            <span class="badge badge-b">Groupe B</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">DDBA871E-ADDC-4602-AA42-E875DD...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">4 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Assiette de grillades mixtes /</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">STOCK_GENERIQUE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">95%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Filet de boeuf sauce au c</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.66 (MEDIUM)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_3', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_3', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_3', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_3', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_3', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_3', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_3" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_3', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_4" data-group="C" data-duplicate="false">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg" class="photo-img" alt="photo_4" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_4</div>
+            <span class="badge badge-c">Groupe C</span>
+            
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_2_evr2vc.j...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">1 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Plat Terre et Mer (Surf and Tu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">85%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Côtelette d'agneau</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.56 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_4', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_4', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_4', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_4', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_4', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_4', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_4" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_4', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_5" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg" class="photo-img" alt="photo_5" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_5</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_8_jeurew.j...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_5', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_5', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_5', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_5', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_5', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_5', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_5" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_5', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_6" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg" class="photo-img" alt="photo_6" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_6</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_9_bp8oao.j...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">5 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_6', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_6', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_6', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_6', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_6', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_6', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_6" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_6', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_7" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png" class="photo-img" alt="photo_7" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_7</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">A7D9ECFF-989F-45B7-8E9F-1AA583...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">4 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_7', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_7', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_7', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_7', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_7', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_7', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_7" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_7', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_8" data-group="C" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png" class="photo-img" alt="photo_8" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_8</div>
+            <span class="badge badge-c">Groupe C</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">CE03FC6E-28EB-438B-A580-ACDE0E...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">3 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Émincé de viande sauce foresti</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">90%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Filet de boeuf sauce au c</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.58 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_8', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_8', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_8', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_8', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_8', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_8', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_8" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_8', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_9" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg" class="photo-img" alt="photo_9" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_9</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_6_h7axod.j...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">3 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_9', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_9', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_9', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_9', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_9', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_9', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_9" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_9', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_10" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg" class="photo-img" alt="photo_10" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_10</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">IMG_9720_jytrma.jpg...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">5 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_10', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_10', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_10', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_10', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_10', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_10', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_10" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_10', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_11" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg" class="photo-img" alt="photo_11" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_11</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831464636_u2po6i.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_11', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_11', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_11', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_11', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_11', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_11', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_11" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_11', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_12" data-group="A" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg" class="photo-img" alt="photo_12" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_12</div>
+            <span class="badge badge-a">Groupe A</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831504871_bopbcd.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Tagliatelles à la crème de pis</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">VRAIE_PHOTO_BIZZART</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">95%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Lasagne Fruits De Mer</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.57 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_12', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_12', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_12', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_12', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_12', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_12', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_12" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_12', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_13" data-group="D" data-duplicate="false">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg" class="photo-img" alt="photo_13" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_13</div>
+            <span class="badge badge-d">Groupe D</span>
+            
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831557428_uylzz1.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">1 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_13', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_13', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_13', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_13', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_13', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_13', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_13" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_13', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_14" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png" class="photo-img" alt="photo_14" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_14</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FD0F8561-B4E5-413D-98F4-FA5778...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">3 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_14', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_14', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_14', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_14', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_14', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_14', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_14" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_14', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_15" data-group="D" data-duplicate="false">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png" class="photo-img" alt="photo_15" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_15</div>
+            <span class="badge badge-d">Groupe D</span>
+            
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">D2ACAC2E-1EDE-404C-8597-000611...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">1 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_15', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_15', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_15', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_15', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_15', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_15', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_15" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_15', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_16" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png" class="photo-img" alt="photo_16" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_16</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">F04A3E91-B691-4A8E-8F76-665B27...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">4 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_16', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_16', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_16', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_16', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_16', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_16', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_16" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_16', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_17" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg" class="photo-img" alt="photo_17" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_17</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_13_djmfzt....</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_17', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_17', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_17', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_17', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_17', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_17', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_17" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_17', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_18" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg" class="photo-img" alt="photo_18" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_18</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_7_usi3f8.j...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_18', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_18', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_18', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_18', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_18', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_18', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_18" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_18', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_19" data-group="D" data-duplicate="false">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg" class="photo-img" alt="photo_19" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_19</div>
+            <span class="badge badge-d">Groupe D</span>
+            
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">IMG_9701_qyr2m3.jpg...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">1 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_19', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_19', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_19', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_19', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_19', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_19', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_19" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_19', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_20" data-group="C" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg" class="photo-img" alt="photo_20" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_20</div>
+            <span class="badge badge-c">Groupe C</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831387595_vrtvut.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Spaghetti aux crevettes / Pâte</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">95%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes Fruits de Mer</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.63 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_20', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_20', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_20', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_20', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_20', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_20', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_20" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_20', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_21" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg" class="photo-img" alt="photo_21" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_21</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831383530_jofqku.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_21', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_21', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_21', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_21', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_21', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_21', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_21" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_21', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_22" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg" class="photo-img" alt="photo_22" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_22</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831381120_cigb5d.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">3 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_22', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_22', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_22', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_22', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_22', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_22', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_22" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_22', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_23" data-group="D" data-duplicate="false">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg" class="photo-img" alt="photo_23" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_23</div>
+            <span class="badge badge-d">Groupe D</span>
+            
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831389680_coillr.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">1 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_23', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_23', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_23', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_23', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_23', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_23', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_23" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_23', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_24" data-group="C" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg" class="photo-img" alt="photo_24" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_24</div>
+            <span class="badge badge-c">Groupe C</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">IMG_9699_g5ubkl.jpg...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">6 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Penne au pesto et crevettes</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">95%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes sauce pesto</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.64 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_24', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_24', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_24', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_24', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_24', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_24', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_24" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_24', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_25" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg" class="photo-img" alt="photo_25" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_25</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_hgh4w0.jpg...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_25', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_25', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_25', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_25', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_25', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_25', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_25" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_25', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_26" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png" class="photo-img" alt="photo_26" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_26</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">EB2F2B90-88F1-44EB-90BF-BFDB31...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">5 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_26', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_26', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_26', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_26', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_26', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_26', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_26" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_26', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_27" data-group="C" data-duplicate="false">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg" class="photo-img" alt="photo_27" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_27</div>
+            <span class="badge badge-c">Groupe C</span>
+            
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831392186_u0ikej.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">1 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Citronnade / Boisson fraîche a</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">95%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Filet de boeuf sauce au c</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.21 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_27', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_27', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_27', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_27', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_27', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_27', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_27" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_27', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_28" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg" class="photo-img" alt="photo_28" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_28</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_12_nffdek....</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_28', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_28', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_28', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_28', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_28', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_28', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_28" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_28', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_29" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg" class="photo-img" alt="photo_29" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_29</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831623991_kranmd.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">5 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_29', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_29', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_29', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_29', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_29', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_29', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_29" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_29', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_30" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg" class="photo-img" alt="photo_30" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_30</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831543045_pyswfe.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_30', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_30', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_30', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_30', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_30', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_30', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_30" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_30', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_31" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg" class="photo-img" alt="photo_31" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_31</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_4_clavnd.j...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">3 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_31', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_31', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_31', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_31', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_31', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_31', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_31" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_31', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_32" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg" class="photo-img" alt="photo_32" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_32</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-high">HIGH</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831385645_vzx61b.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">4 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_32', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_32', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_32', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_32', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_32', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_32', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_32" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_32', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_33" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg" class="photo-img" alt="photo_33" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_33</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">r07qxo_-_R_Download_3_ah6kjf.j...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_33', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_33', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_33', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_33', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_33', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_33', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_33" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_33', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_34" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png" class="photo-img" alt="photo_34" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_34</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">E82B1115-081E-4CAB-8E58-F86532...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">2 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_34', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_34', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_34', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_34', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_34', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_34', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_34" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_34', this.value)">
+          </div>
+        </div>
+      
+        <div class="photo-card" data-photo-id="photo_35" data-group="D" data-duplicate="true">
+          <img src="https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg" class="photo-img" alt="photo_35" onclick="openModal('https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg')" onerror="this.style.display='none'">
+          <div class="photo-info">
+            <div class="photo-id">photo_35</div>
+            <span class="badge badge-d">Groupe D</span>
+            <span class="badge badge-medium">MEDIUM</span>
+            
+            <div class="info-row">
+              <span class="info-label">Fichier:</span>
+              <span class="info-value">FB_IMG_1786831394707_fictxa.jp...</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Utilisée par:</span>
+              <span class="info-value">3 plat(s)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Plat détecté:</span>
+              <span class="info-value">Inconnu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Origine:</span>
+              <span class="info-value">INCERTAINE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Confiance:</span>
+              <span class="info-value">0%</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Meilleur match:</span>
+              <span class="info-value">Pâtes BIZZ'Art</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Score match:</span>
+              <span class="info-value">0.10 (LOW)</span>
+            </div>
+            
+            <div class="validation-btns">
+              <button class="val-btn confirmed" onclick="validate('photo_35', 'CONFIRMED_BIZZART')">✅ Confirmée</button>
+              <button class="val-btn stock" onclick="validate('photo_35', 'STOCK')">🚫 Stock</button>
+              <button class="val-btn wrong" onclick="validate('photo_35', 'WRONG_DISH')">⚠️ Mauvais</button>
+              <button class="val-btn duplicate" onclick="validate('photo_35', 'DUPLICATE')">🔁 Doublon</button>
+              <button class="val-btn review" onclick="validate('photo_35', 'MANUAL_REVIEW')">❓ À revoir</button>
+              <button class="val-btn none" onclick="validate('photo_35', 'NO_DECISION')">⏸️ Aucune</button>
+            </div>
+            <input type="text" class="notes-input" id="notes-photo_35" placeholder="Notes (optionnel)..." onchange="saveNotes('photo_35', this.value)">
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="modal" id="imageModal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-img" id="modalImage">
+  </div>
+
+  <script>
+    const photoDataJSON = [{"photoId":"photo_1","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg","filename":"r07qxo_-_R_Download_11_ak1ici.jpg","usedBy":["6a845a7a2876405dd5375d1f","6a845a7a2876405dd5375d79","6a845a7a2876405dd5375d88","6a845a7b2876405dd5375dbb"],"usedByCount":4,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":4}},{"photoId":"photo_2","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg","filename":"IMG_0237_nkagke.jpg","usedBy":["6a845a7a2876405dd5375d22","6a845a7a2876405dd5375d67","6a845a7a2876405dd5375d70","6a845a7b2876405dd5375e12"],"usedByCount":4,"visionAnalyzed":true,"detectedDish":"Tagliatelles à la sauce crémeuse, poulet, burrata et fruits à coque","detectedType":"Pâtes","origin":"INCERTAINE","confidence":0.95,"bestMatch":"Pâtes à L'italienne","bestMatchScore":0.5717676767676768,"matchLevel":"LOW","validationGroup":"C","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":4}},{"photoId":"photo_3","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png","filename":"DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png","usedBy":["6a845a7a2876405dd5375d25","6a845a7a2876405dd5375d2b","6a845a7a2876405dd5375d2e","6a845a7b2876405dd5375dc1"],"usedByCount":4,"visionAnalyzed":true,"detectedDish":"Assiette de grillades mixtes / Plateau de viandes grillées","detectedType":"Viande","origin":"STOCK_GENERIQUE","confidence":0.95,"bestMatch":"Filet de boeuf sauce au choix","bestMatchScore":0.6616666666666666,"matchLevel":"MEDIUM","validationGroup":"B","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":4}},{"photoId":"photo_4","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060757/bizzart/menu/r07qxo_-_R_Download_2_evr2vc.jpg","filename":"r07qxo_-_R_Download_2_evr2vc.jpg","usedBy":["6a845a7a2876405dd5375d28"],"usedByCount":1,"visionAnalyzed":true,"detectedDish":"Plat Terre et Mer (Surf and Turf) au fromage fondu et gambas","detectedType":"Viande","origin":"INCERTAINE","confidence":0.85,"bestMatch":"Côtelette d'agneau","bestMatchScore":0.56,"matchLevel":"LOW","validationGroup":"C","isDuplicate":false,"duplicateInfo":null},{"photoId":"photo_5","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg","filename":"r07qxo_-_R_Download_8_jeurew.jpg","usedBy":["6a845a7a2876405dd5375d31","6a845a7b2876405dd5375dcd"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_6","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg","filename":"r07qxo_-_R_Download_9_bp8oao.jpg","usedBy":["6a845a7a2876405dd5375d34","6a845a7a2876405dd5375d3d","6a845a7a2876405dd5375d76","6a845a7b2876405dd5375deb","6a845a7b2876405dd5375e00"],"usedByCount":5,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":5}},{"photoId":"photo_7","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png","filename":"A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png","usedBy":["6a845a7a2876405dd5375d37","6a845a7a2876405dd5375d55","6a845a7a2876405dd5375da0","6a845a7b2876405dd5375e15"],"usedByCount":4,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":4}},{"photoId":"photo_8","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png","filename":"CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png","usedBy":["6a845a7a2876405dd5375d3a","6a845a7a2876405dd5375d49","6a845a7b2876405dd5375dd9"],"usedByCount":3,"visionAnalyzed":true,"detectedDish":"Émincé de viande sauce forestière / poivre avec assortiment d'accompagnements","detectedType":"Viande","origin":"INCERTAINE","confidence":0.9,"bestMatch":"Filet de boeuf sauce au choix","bestMatchScore":0.58,"matchLevel":"LOW","validationGroup":"C","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":3}},{"photoId":"photo_9","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg","filename":"r07qxo_-_R_Download_6_h7axod.jpg","usedBy":["6a845a7a2876405dd5375d40","6a845a7a2876405dd5375d97","6a845a7b2876405dd5375de8"],"usedByCount":3,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":3}},{"photoId":"photo_10","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg","filename":"IMG_9720_jytrma.jpg","usedBy":["6a845a7a2876405dd5375d43","6a845a7a2876405dd5375dac","6a845a7b2876405dd5375dd3","6a845a7b2876405dd5375dfd","6a845a7b2876405dd5375e0c"],"usedByCount":5,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":5}},{"photoId":"photo_11","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg","filename":"FB_IMG_1786831464636_u2po6i.jpg","usedBy":["6a845a7a2876405dd5375d46","6a845a7b2876405dd5375dbe"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_12","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg","filename":"FB_IMG_1786831504871_bopbcd.jpg","usedBy":["6a845a7a2876405dd5375d4c","6a845a7a2876405dd5375db2"],"usedByCount":2,"visionAnalyzed":true,"detectedDish":"Tagliatelles à la crème de pistache et burrata","detectedType":"Pâtes","origin":"VRAIE_PHOTO_BIZZART","confidence":0.95,"bestMatch":"Lasagne Fruits De Mer","bestMatchScore":0.5700000000000001,"matchLevel":"LOW","validationGroup":"A","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_13","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060799/bizzart/menu/FB_IMG_1786831557428_uylzz1.jpg","filename":"FB_IMG_1786831557428_uylzz1.jpg","usedBy":["6a845a7a2876405dd5375d4f"],"usedByCount":1,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":false,"duplicateInfo":null},{"photoId":"photo_14","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png","filename":"FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png","usedBy":["6a845a7a2876405dd5375d52","6a845a7b2876405dd5375dc7","6a845a7b2876405dd5375e03"],"usedByCount":3,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":3}},{"photoId":"photo_15","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060778/bizzart/menu/D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png","filename":"D2ACAC2E-1EDE-404C-8597-0006112AC6C2_beeo60.png","usedBy":["6a845a7a2876405dd5375d58"],"usedByCount":1,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":false,"duplicateInfo":null},{"photoId":"photo_16","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png","filename":"F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png","usedBy":["6a845a7a2876405dd5375d5b","6a845a7a2876405dd5375da9","6a845a7a2876405dd5375db5","6a845a7b2876405dd5375e06"],"usedByCount":4,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":4}},{"photoId":"photo_17","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg","filename":"r07qxo_-_R_Download_13_djmfzt.jpg","usedBy":["6a845a7a2876405dd5375d5e","6a845a7a2876405dd5375d82"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_18","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg","filename":"r07qxo_-_R_Download_7_usi3f8.jpg","usedBy":["6a845a7a2876405dd5375d61","6a845a7b2876405dd5375e0f"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_19","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060810/bizzart/menu/IMG_9701_qyr2m3.jpg","filename":"IMG_9701_qyr2m3.jpg","usedBy":["6a845a7a2876405dd5375d64"],"usedByCount":1,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":false,"duplicateInfo":null},{"photoId":"photo_20","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg","filename":"FB_IMG_1786831387595_vrtvut.jpg","usedBy":["6a845a7a2876405dd5375d6a","6a845a7b2876405dd5375dd6"],"usedByCount":2,"visionAnalyzed":true,"detectedDish":"Spaghetti aux crevettes / Pâtes aux fruits de mer","detectedType":"Pâtes","origin":"INCERTAINE","confidence":0.95,"bestMatch":"Pâtes Fruits de Mer","bestMatchScore":0.6283333333333333,"matchLevel":"LOW","validationGroup":"C","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_21","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg","filename":"FB_IMG_1786831383530_jofqku.jpg","usedBy":["6a845a7a2876405dd5375d6d","6a845a7b2876405dd5375e21"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_22","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg","filename":"FB_IMG_1786831381120_cigb5d.jpg","usedBy":["6a845a7a2876405dd5375d73","6a845a7b2876405dd5375dca","6a845a7b2876405dd5375e09"],"usedByCount":3,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":3}},{"photoId":"photo_23","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831389680_coillr.jpg","filename":"FB_IMG_1786831389680_coillr.jpg","usedBy":["6a845a7a2876405dd5375d7c"],"usedByCount":1,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":false,"duplicateInfo":null},{"photoId":"photo_24","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg","filename":"IMG_9699_g5ubkl.jpg","usedBy":["6a845a7a2876405dd5375d7f","6a845a7a2876405dd5375da6","6a845a7b2876405dd5375de5","6a845a7b2876405dd5375e30","6a845a7b2876405dd5375e33","6a845a7b2876405dd5375e39"],"usedByCount":6,"visionAnalyzed":true,"detectedDish":"Penne au pesto et crevettes","detectedType":"Pâtes","origin":"INCERTAINE","confidence":0.95,"bestMatch":"Pâtes sauce pesto","bestMatchScore":0.64,"matchLevel":"LOW","validationGroup":"C","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":6}},{"photoId":"photo_25","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg","filename":"r07qxo_-_R_Download_hgh4w0.jpg","usedBy":["6a845a7a2876405dd5375d85","6a845a7b2876405dd5375e3c"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_26","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png","filename":"EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png","usedBy":["6a845a7a2876405dd5375d8b","6a845a7a2876405dd5375d8e","6a845a7a2876405dd5375d91","6a845a7b2876405dd5375dd0","6a845a7b2876405dd5375de2"],"usedByCount":5,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":5}},{"photoId":"photo_27","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060792/bizzart/menu/FB_IMG_1786831392186_u0ikej.jpg","filename":"FB_IMG_1786831392186_u0ikej.jpg","usedBy":["6a845a7a2876405dd5375d94"],"usedByCount":1,"visionAnalyzed":true,"detectedDish":"Citronnade / Boisson fraîche au citron et menthe","detectedType":"Boisson","origin":"INCERTAINE","confidence":0.95,"bestMatch":"Filet de boeuf sauce au choix","bestMatchScore":0.2075,"matchLevel":"LOW","validationGroup":"C","isDuplicate":false,"duplicateInfo":null},{"photoId":"photo_28","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg","filename":"r07qxo_-_R_Download_12_nffdek.jpg","usedBy":["6a845a7a2876405dd5375d9a","6a845a7b2876405dd5375df1"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_29","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg","filename":"FB_IMG_1786831623991_kranmd.jpg","usedBy":["6a845a7a2876405dd5375d9d","6a845a7b2876405dd5375dc4","6a845a7b2876405dd5375df7","6a845a7b2876405dd5375e1b","6a845a7b2876405dd5375e36"],"usedByCount":5,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":5}},{"photoId":"photo_30","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg","filename":"FB_IMG_1786831543045_pyswfe.jpg","usedBy":["6a845a7a2876405dd5375da3","6a845a7b2876405dd5375e42"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_31","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg","filename":"r07qxo_-_R_Download_4_clavnd.jpg","usedBy":["6a845a7a2876405dd5375daf","6a845a7b2876405dd5375ddc","6a845a7b2876405dd5375e3f"],"usedByCount":3,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":3}},{"photoId":"photo_32","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg","filename":"FB_IMG_1786831385645_vzx61b.jpg","usedBy":["6a845a7a2876405dd5375db8","6a845a7b2876405dd5375dee","6a845a7b2876405dd5375e1e","6a845a7b2876405dd5375e24"],"usedByCount":4,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"HIGH","usageCount":4}},{"photoId":"photo_33","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg","filename":"r07qxo_-_R_Download_3_ah6kjf.jpg","usedBy":["6a845a7b2876405dd5375ddf","6a845a7b2876405dd5375dfa"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_34","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png","filename":"E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png","usedBy":["6a845a7b2876405dd5375df4","6a845a7b2876405dd5375e2a"],"usedByCount":2,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":2}},{"photoId":"photo_35","url":"https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg","filename":"FB_IMG_1786831394707_fictxa.jpg","usedBy":["6a845a7b2876405dd5375e18","6a845a7b2876405dd5375e27","6a845a7b2876405dd5375e2d"],"usedByCount":3,"visionAnalyzed":false,"detectedDish":"Inconnu","detectedType":"Impossible à identifier","origin":"INCERTAINE","confidence":0,"bestMatch":"Pâtes BIZZ'Art","bestMatchScore":0.1,"matchLevel":"LOW","validationGroup":"D","isDuplicate":true,"duplicateInfo":{"criticality":"MEDIUM","usageCount":3}}];
+    let validations = {};
+    let currentFilter = 'all';
+
+    // Charger les validations existantes
+    fetch('./manual-validation.json')
+      .then(r => r.json())
+      .then(data => {
+        validations = {};
+        data.forEach(v => {
+          validations[v.photoId] = v;
+          if (v.status !== 'NO_DECISION') {
+            document.querySelector(`[data-photo-id="${v.photoId}"]`).classList.add('validated');
+          }
+          if (v.notes) {
+            document.getElementById(`notes-${v.photoId}`).value = v.notes;
+          }
+        });
+        updateProgress();
+      })
+      .catch(() => {
+        // Initialiser si le fichier n'existe pas encore
+        photoDataJSON.forEach(p => {
+          validations[p.photoId] = {
+            photoId: p.photoId,
+            url: p.url,
+            status: 'NO_DECISION',
+            validatedAt: '',
+            notes: ''
+          };
+        });
+      });
+
+    function validate(photoId, status) {
+      validations[photoId] = {
+        ...validations[photoId],
+        status: status,
+        validatedAt: new Date().toISOString()
+      };
+      
+      document.querySelector(`[data-photo-id="${photoId}"]`).classList.add('validated');
+      saveValidations();
+      updateProgress();
+      
+      alert(`✅ Décision enregistrée localement pour ${photoId}: ${status}`);
+    }
+
+    function saveNotes(photoId, notes) {
+      validations[photoId] = {
+        ...validations[photoId],
+        notes: notes
+      };
+      saveValidations();
+    }
+
+    function saveValidations() {
+      const blob = new Blob([JSON.stringify(Object.values(validations), null, 2)], {type: 'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'manual-validation.json';
+      a.click();
+    }
+
+    function updateProgress() {
+      const validated = Object.values(validations).filter(v => v.status !== 'NO_DECISION').length;
+      const total = Object.keys(validations).length;
+      const percent = Math.round((validated / total) * 100);
+      
+      document.getElementById('progressBar').textContent = `${validated} / ${total} (${percent}%)`;
+      document.getElementById('progressBar').style.width = percent + '%';
+      
+      // Stats
+      const stats = {
+        CONFIRMED_BIZZART: 0,
+        STOCK: 0,
+        WRONG_DISH: 0,
+        DUPLICATE: 0,
+        MANUAL_REVIEW: 0
+      };
+      Object.values(validations).forEach(v => {
+        if (stats[v.status] !== undefined) stats[v.status]++;
+      });
+      
+      document.getElementById('statConfirmed').textContent = stats.CONFIRMED_BIZZART;
+      document.getElementById('statStock').textContent = stats.STOCK;
+      document.getElementById('statWrong').textContent = stats.WRONG_DISH;
+      document.getElementById('statDuplicate').textContent = stats.DUPLICATE;
+      document.getElementById('statReview').textContent = stats.MANUAL_REVIEW;
+    }
+
+    function setFilter(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === filter);
+      });
+      filterPhotos();
+    }
+
+    function filterPhotos() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.photo-card');
+      
+      cards.forEach(card => {
+        const photoId = card.dataset.photoId;
+        const group = card.dataset.group;
+        const isDuplicate = card.dataset.duplicate === 'true';
+        const isValidated = card.classList.contains('validated');
+        const text = card.textContent.toLowerCase();
+        
+        let show = true;
+        
+        // Filtre de groupe
+        if (currentFilter === 'A' || currentFilter === 'B' || currentFilter === 'C' || currentFilter === 'D') {
+          show = group === currentFilter;
+        } else if (currentFilter === 'duplicates') {
+          show = isDuplicate;
+        } else if (currentFilter === 'validated') {
+          show = isValidated;
+        }
+        
+        // Recherche
+        if (search && !text.includes(search)) {
+          show = false;
+        }
+        
+        card.style.display = show ? 'block' : 'none';
+      });
+    }
+
+    function openModal(url) {
+      document.getElementById('modalImage').src = url;
+      document.getElementById('imageModal').classList.add('show');
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('show');
+    }
+
+    function exportCSV() {
+      let csv = 'PhotoID,Status,ValidatedAt,Notes\n';
+      Object.values(validations).forEach(v => {
+        csv += `"${v.photoId}","${v.status}","${v.validatedAt}","${v.notes}"\n`;
+      });
+      
+      const blob = new Blob([csv], {type: 'text/csv'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'validation-export-' + new Date().toISOString().split('T')[0] + '.csv';
+      a.click();
+    }
+
+    // Initialiser
+    updateProgress();
+  </script>
+</body>
+</html>

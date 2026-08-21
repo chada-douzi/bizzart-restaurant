@@ -1,0 +1,894 @@
+{
+  "metadata": {
+    "auditTitle": "AUDIT DE PERTINENCE DES 23 INDEX MONGODB",
+    "timestamp": "2026-08-21T02:27:27.040Z",
+    "mode": "FORENSIQUE / READ-ONLY ABSOLU"
+  },
+  "summary": {
+    "totalIndexes": 23,
+    "required": 8,
+    "recommended": 15,
+    "optional": 0,
+    "obsolete": 0,
+    "unknown": 0
+  },
+  "analyses": [
+    {
+      "index": {
+        "name": "date_1_status_1",
+        "collection": "reservations",
+        "key": {
+          "date": 1,
+          "status": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "date",
+        "status"
+      ],
+      "queriesFound": [
+        {
+          "location": "admin.controller.ts",
+          "lineNumber": 35,
+          "queryType": "countDocuments",
+          "fields": [
+            "date"
+          ],
+          "description": "Count today reservations"
+        },
+        {
+          "location": "reservation.controller.ts",
+          "lineNumber": 261,
+          "queryType": "find",
+          "fields": [
+            "date",
+            "status"
+          ],
+          "description": "Admin list reservations with filters"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 2 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/reservation.model.ts"
+    },
+    {
+      "index": {
+        "name": "customer.email_1",
+        "collection": "reservations",
+        "key": {
+          "customer.email": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "customer.email"
+      ],
+      "queriesFound": [
+        {
+          "location": "reservation.controller.ts",
+          "lineNumber": 261,
+          "queryType": "find",
+          "fields": [
+            "customer.email"
+          ],
+          "description": "Search reservations by customer email"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/reservation.model.ts"
+    },
+    {
+      "index": {
+        "name": "status_1_createdAt_-1",
+        "collection": "reservations",
+        "key": {
+          "status": 1,
+          "createdAt": -1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "status",
+        "createdAt"
+      ],
+      "queriesFound": [
+        {
+          "location": "admin.controller.ts",
+          "lineNumber": 36,
+          "queryType": "countDocuments",
+          "fields": [
+            "status"
+          ],
+          "description": "Count by status (pending, confirmed)"
+        },
+        {
+          "location": "reservation.controller.ts",
+          "lineNumber": 263,
+          "queryType": "sort",
+          "fields": [
+            "createdAt"
+          ],
+          "description": "Sort reservations by creation date"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 2 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/reservation.model.ts"
+    },
+    {
+      "index": {
+        "name": "date_1_time_1",
+        "collection": "reservations",
+        "key": {
+          "date": 1,
+          "time": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "date",
+        "time"
+      ],
+      "queriesFound": [
+        {
+          "location": "reservation.controller.ts",
+          "lineNumber": 114,
+          "queryType": "countDocuments",
+          "fields": [
+            "date"
+          ],
+          "description": "Check daily reservation count"
+        },
+        {
+          "location": "reservation.controller.ts",
+          "lineNumber": 263,
+          "queryType": "sort",
+          "fields": [
+            "date",
+            "time"
+          ],
+          "description": "Sort by date and time slot"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 2 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/reservation.model.ts"
+    },
+    {
+      "index": {
+        "name": "reminderSent_1_date_1_status_1",
+        "collection": "reservations",
+        "key": {
+          "reminderSent": 1,
+          "date": 1,
+          "status": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "reminderSent",
+        "date",
+        "status"
+      ],
+      "queriesFound": [
+        {
+          "location": "N/A (cron job)",
+          "lineNumber": 0,
+          "queryType": "find",
+          "fields": [
+            "reminderSent",
+            "date",
+            "status"
+          ],
+          "description": "Cron job: find reservations needing reminders"
+        }
+      ],
+      "classification": "REQUIRED",
+      "reasoning": "Composite index (3 fields) used in 1 query patterns",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Essential for application functionality",
+      "schemaLocation": "src/models/reservation.model.ts"
+    },
+    {
+      "index": {
+        "name": "slug_1",
+        "collection": "menuitems",
+        "key": {
+          "slug": 1
+        },
+        "unique": true
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "slug"
+      ],
+      "queriesFound": [
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 62,
+          "queryType": "findOne",
+          "fields": [
+            "slug"
+          ],
+          "description": "Check slug uniqueness"
+        },
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 199,
+          "queryType": "findOne",
+          "fields": [
+            "slug"
+          ],
+          "description": "Get public item by slug"
+        }
+      ],
+      "classification": "REQUIRED",
+      "reasoning": "Unique index declared in current schema and actively used in 2 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Essential for application functionality",
+      "schemaLocation": "src/models/menu-item.model.ts (unique field)",
+      "schemaOptions": {
+        "unique": true
+      },
+      "duplicateCheck": {
+        "checked": true,
+        "localDuplicates": 0,
+        "atlasDuplicates": 0,
+        "safe": true
+      }
+    },
+    {
+      "index": {
+        "name": "category_1_isAvailable_1_order_1",
+        "collection": "menuitems",
+        "key": {
+          "category": 1,
+          "isAvailable": 1,
+          "order": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "category",
+        "isAvailable",
+        "order"
+      ],
+      "queriesFound": [
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 105,
+          "queryType": "find",
+          "fields": [
+            "category",
+            "isAvailable"
+          ],
+          "description": "Get items by category (public)"
+        },
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 170,
+          "queryType": "find",
+          "fields": [
+            "category",
+            "isAvailable",
+            "order"
+          ],
+          "description": "List items with filters + sort"
+        }
+      ],
+      "classification": "REQUIRED",
+      "reasoning": "Composite index (3 fields) used in 2 query patterns",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Essential for application functionality",
+      "schemaLocation": "src/models/menu-item.model.ts"
+    },
+    {
+      "index": {
+        "name": "isFeatured_1_isAvailable_1",
+        "collection": "menuitems",
+        "key": {
+          "isFeatured": 1,
+          "isAvailable": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "isFeatured",
+        "isAvailable"
+      ],
+      "queriesFound": [
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 170,
+          "queryType": "find",
+          "fields": [
+            "isFeatured",
+            "isAvailable"
+          ],
+          "description": "Get featured available items for homepage"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/menu-item.model.ts"
+    },
+    {
+      "index": {
+        "name": "tags_1",
+        "collection": "menuitems",
+        "key": {
+          "tags": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "tags"
+      ],
+      "queriesFound": [
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 170,
+          "queryType": "find",
+          "fields": [
+            "tags"
+          ],
+          "description": "Filter items by tags"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/menu-item.model.ts"
+    },
+    {
+      "index": {
+        "name": "isPublished_1_isApproved_1_order_1",
+        "collection": "reviews",
+        "key": {
+          "isPublished": 1,
+          "isApproved": 1,
+          "order": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "isPublished",
+        "isApproved",
+        "order"
+      ],
+      "queriesFound": [
+        {
+          "location": "review.controller.ts",
+          "lineNumber": 102,
+          "queryType": "find",
+          "fields": [
+            "isPublished",
+            "isApproved"
+          ],
+          "description": "Get published approved reviews"
+        },
+        {
+          "location": "review.controller.ts",
+          "lineNumber": 104,
+          "queryType": "sort",
+          "fields": [
+            "order"
+          ],
+          "description": "Sort reviews by display order"
+        }
+      ],
+      "classification": "REQUIRED",
+      "reasoning": "Composite index (3 fields) used in 2 query patterns",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Essential for application functionality",
+      "schemaLocation": "src/models/review.model.ts"
+    },
+    {
+      "index": {
+        "name": "source_1",
+        "collection": "reviews",
+        "key": {
+          "source": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "source"
+      ],
+      "queriesFound": [
+        {
+          "location": "review.controller.ts",
+          "lineNumber": 102,
+          "queryType": "find",
+          "fields": [
+            "source"
+          ],
+          "description": "Filter reviews by source (Google, TripAdvisor)"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/review.model.ts"
+    },
+    {
+      "index": {
+        "name": "rating_1",
+        "collection": "reviews",
+        "key": {
+          "rating": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "rating"
+      ],
+      "queriesFound": [
+        {
+          "location": "review.controller.ts",
+          "lineNumber": 134,
+          "queryType": "aggregate",
+          "fields": [
+            "rating"
+          ],
+          "description": "Calculate average rating and distribution"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/review.model.ts"
+    },
+    {
+      "index": {
+        "name": "reviewDate_-1",
+        "collection": "reviews",
+        "key": {
+          "reviewDate": -1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "reviewDate"
+      ],
+      "queriesFound": [
+        {
+          "location": "review.controller.ts",
+          "lineNumber": 104,
+          "queryType": "sort",
+          "fields": [
+            "reviewDate"
+          ],
+          "description": "Sort reviews by most recent"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/review.model.ts"
+    },
+    {
+      "index": {
+        "name": "slug_1",
+        "collection": "menucategories",
+        "key": {
+          "slug": 1
+        },
+        "unique": true
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "slug"
+      ],
+      "queriesFound": [
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 61,
+          "queryType": "findOne",
+          "fields": [
+            "slug"
+          ],
+          "description": "Check slug uniqueness"
+        },
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 94,
+          "queryType": "findOne",
+          "fields": [
+            "slug"
+          ],
+          "description": "Get public category by slug"
+        }
+      ],
+      "classification": "REQUIRED",
+      "reasoning": "Unique index declared in current schema and actively used in 2 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Essential for application functionality",
+      "schemaLocation": "src/models/menu-category.model.ts (unique field)",
+      "schemaOptions": {
+        "unique": true
+      },
+      "duplicateCheck": {
+        "checked": true,
+        "localDuplicates": 0,
+        "atlasDuplicates": 0,
+        "safe": true
+      }
+    },
+    {
+      "index": {
+        "name": "isActive_1_order_1",
+        "collection": "menucategories",
+        "key": {
+          "isActive": 1,
+          "order": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "isActive",
+        "order"
+      ],
+      "queriesFound": [
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 78,
+          "queryType": "find",
+          "fields": [
+            "isActive"
+          ],
+          "description": "Get active categories"
+        },
+        {
+          "location": "menu.controller.ts",
+          "lineNumber": 80,
+          "queryType": "sort",
+          "fields": [
+            "order"
+          ],
+          "description": "Sort categories by display order"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 2 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/menu-category.model.ts"
+    },
+    {
+      "index": {
+        "name": "updatedAt_-1",
+        "collection": "settings",
+        "key": {
+          "updatedAt": -1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "updatedAt"
+      ],
+      "queriesFound": [
+        {
+          "location": "settings.controller.ts",
+          "lineNumber": 108,
+          "queryType": "findOne",
+          "fields": [],
+          "description": "Get singleton settings (always findOne)"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/settings.model.ts"
+    },
+    {
+      "index": {
+        "name": "email_1",
+        "collection": "users",
+        "key": {
+          "email": 1
+        },
+        "unique": true
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "email"
+      ],
+      "queriesFound": [
+        {
+          "location": "auth.controller.ts",
+          "lineNumber": 46,
+          "queryType": "findByEmail",
+          "fields": [
+            "email"
+          ],
+          "description": "Login authentication"
+        },
+        {
+          "location": "user.model.ts",
+          "lineNumber": 0,
+          "queryType": "findOne",
+          "fields": [
+            "email"
+          ],
+          "description": "Static method findByEmail"
+        }
+      ],
+      "classification": "REQUIRED",
+      "reasoning": "Unique index declared in current schema and actively used in 2 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Essential for application functionality",
+      "schemaLocation": "src/models/user.model.ts (unique field)",
+      "schemaOptions": {
+        "unique": true
+      },
+      "duplicateCheck": {
+        "checked": true,
+        "localDuplicates": 0,
+        "atlasDuplicates": 0,
+        "safe": true
+      }
+    },
+    {
+      "index": {
+        "name": "role_1",
+        "collection": "users",
+        "key": {
+          "role": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "role"
+      ],
+      "queriesFound": [
+        {
+          "location": "admin.controller.ts",
+          "lineNumber": 0,
+          "queryType": "find",
+          "fields": [
+            "role"
+          ],
+          "description": "Filter users by role (admin, manager)"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/user.model.ts"
+    },
+    {
+      "index": {
+        "name": "isActive_1",
+        "collection": "users",
+        "key": {
+          "isActive": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "isActive"
+      ],
+      "queriesFound": [
+        {
+          "location": "admin.controller.ts",
+          "lineNumber": 0,
+          "queryType": "find",
+          "fields": [
+            "isActive"
+          ],
+          "description": "Filter active users"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/user.model.ts"
+    },
+    {
+      "index": {
+        "name": "category_1_isVisible_1_order_1",
+        "collection": "media",
+        "key": {
+          "category": 1,
+          "isVisible": 1,
+          "order": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "category",
+        "isVisible",
+        "order"
+      ],
+      "queriesFound": [
+        {
+          "location": "gallery.controller.ts",
+          "lineNumber": 56,
+          "queryType": "find",
+          "fields": [
+            "category",
+            "isVisible"
+          ],
+          "description": "Get visible media by category"
+        },
+        {
+          "location": "gallery.controller.ts",
+          "lineNumber": 58,
+          "queryType": "sort",
+          "fields": [
+            "order"
+          ],
+          "description": "Sort media by display order"
+        }
+      ],
+      "classification": "REQUIRED",
+      "reasoning": "Composite index (3 fields) used in 2 query patterns",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Essential for application functionality",
+      "schemaLocation": "src/models/media.model.ts"
+    },
+    {
+      "index": {
+        "name": "type_1_category_1",
+        "collection": "media",
+        "key": {
+          "type": 1,
+          "category": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "type",
+        "category"
+      ],
+      "queriesFound": [
+        {
+          "location": "gallery.controller.ts",
+          "lineNumber": 56,
+          "queryType": "find",
+          "fields": [
+            "type",
+            "category"
+          ],
+          "description": "Filter by media type (image/video) + category"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/media.model.ts"
+    },
+    {
+      "index": {
+        "name": "isVisible_1_order_1",
+        "collection": "media",
+        "key": {
+          "isVisible": 1,
+          "order": 1
+        }
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "isVisible",
+        "order"
+      ],
+      "queriesFound": [
+        {
+          "location": "gallery.controller.ts",
+          "lineNumber": 108,
+          "queryType": "find",
+          "fields": [
+            "isVisible"
+          ],
+          "description": "Admin: get all visible media"
+        },
+        {
+          "location": "gallery.controller.ts",
+          "lineNumber": 110,
+          "queryType": "sort",
+          "fields": [
+            "order"
+          ],
+          "description": "Sort all media by order"
+        }
+      ],
+      "classification": "RECOMMENDED",
+      "reasoning": "Declared in current schema and used in 2 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Improves performance for active queries",
+      "schemaLocation": "src/models/media.model.ts"
+    },
+    {
+      "index": {
+        "name": "publicId_1",
+        "collection": "media",
+        "key": {
+          "publicId": 1
+        },
+        "unique": true
+      },
+      "declaredInSchema": true,
+      "fieldsUsed": [
+        "publicId"
+      ],
+      "queriesFound": [
+        {
+          "location": "upload.service.ts",
+          "lineNumber": 0,
+          "queryType": "findOne",
+          "fields": [
+            "publicId"
+          ],
+          "description": "Prevent duplicate uploads by Cloudinary public_id"
+        }
+      ],
+      "classification": "REQUIRED",
+      "reasoning": "Unique index declared in current schema and actively used in 1 queries",
+      "risks": [],
+      "recommendation": "✅ RECREATE ON ATLAS: Essential for application functionality",
+      "schemaLocation": "src/models/media.model.ts",
+      "duplicateCheck": {
+        "checked": true,
+        "localDuplicates": 0,
+        "atlasDuplicates": 0,
+        "safe": true
+      }
+    }
+  ],
+  "recommendations": {
+    "toRecreate": [
+      "reservations.date_1_status_1",
+      "reservations.customer.email_1",
+      "reservations.status_1_createdAt_-1",
+      "reservations.date_1_time_1",
+      "reservations.reminderSent_1_date_1_status_1",
+      "menuitems.slug_1",
+      "menuitems.category_1_isAvailable_1_order_1",
+      "menuitems.isFeatured_1_isAvailable_1",
+      "menuitems.tags_1",
+      "reviews.isPublished_1_isApproved_1_order_1",
+      "reviews.source_1",
+      "reviews.rating_1",
+      "reviews.reviewDate_-1",
+      "menucategories.slug_1",
+      "menucategories.isActive_1_order_1",
+      "settings.updatedAt_-1",
+      "users.email_1",
+      "users.role_1",
+      "users.isActive_1",
+      "media.category_1_isVisible_1_order_1",
+      "media.type_1_category_1",
+      "media.isVisible_1_order_1",
+      "media.publicId_1"
+    ],
+    "notToRecreate": [],
+    "toMonitor": []
+  },
+  "guarantees": {
+    "modificationsApplied": 0,
+    "dataModified": false,
+    "indexesModified": false
+  },
+  "verdict": "READY_FOR_REVIEW"
+}

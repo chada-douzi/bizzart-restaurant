@@ -1,0 +1,728 @@
+[
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060807/bizzart/menu/IMG_9699_g5ubkl.jpg",
+    "count": 6,
+    "plats": [
+      {
+        "nom": "Escalope à la crème",
+        "menuItemId": "6a845a7a2876405dd5375da6",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Eau Gazeuse",
+        "menuItemId": "6a845a7b2876405dd5375e30",
+        "category": "Soda",
+        "status": "pending"
+      },
+      {
+        "nom": "Soda",
+        "menuItemId": "6a845a7b2876405dd5375e33",
+        "category": "Soda",
+        "status": "pending"
+      },
+      {
+        "nom": "Citronnade",
+        "menuItemId": "6a845a7b2876405dd5375e39",
+        "category": "Soda",
+        "status": "pending"
+      },
+      {
+        "nom": "Côte à L'os Grillée",
+        "menuItemId": "6a845a7b2876405dd5375de5",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Pizza Fruit de mer",
+        "menuItemId": "6a845a7a2876405dd5375d7f",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060783/bizzart/menu/EB2F2B90-88F1-44EB-90BF-BFDB31B8B15E_ui0hpb.png",
+    "count": 5,
+    "plats": [
+      {
+        "nom": "Salade César",
+        "menuItemId": "6a845a7a2876405dd5375d8b",
+        "category": "Salade",
+        "status": "pending"
+      },
+      {
+        "nom": "Salade Bizz'Art",
+        "menuItemId": "6a845a7a2876405dd5375d8e",
+        "category": "Salade",
+        "status": "pending"
+      },
+      {
+        "nom": "Salade du Chef",
+        "menuItemId": "6a845a7a2876405dd5375d91",
+        "category": "Salade",
+        "status": "pending"
+      },
+      {
+        "nom": "Steak Farci",
+        "menuItemId": "6a845a7b2876405dd5375dd0",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Côtelette d'agneau",
+        "menuItemId": "6a845a7b2876405dd5375de2",
+        "category": "Viandes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060811/bizzart/menu/IMG_9720_jytrma.jpg",
+    "count": 5,
+    "plats": [
+      {
+        "nom": "Poulet Mexicain",
+        "menuItemId": "6a845a7b2876405dd5375e0c",
+        "category": "Tacos",
+        "status": "pending"
+      },
+      {
+        "nom": "Foie Grillé",
+        "menuItemId": "6a845a7b2876405dd5375dd3",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Escalope sauce Épinard",
+        "menuItemId": "6a845a7a2876405dd5375dac",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Seiche gratinée aux crevettes et au miel",
+        "menuItemId": "6a845a7b2876405dd5375dfd",
+        "category": "Fruits de mer",
+        "status": "pending"
+      },
+      {
+        "nom": "Lasagne Fruits De Mer",
+        "menuItemId": "6a845a7a2876405dd5375d43",
+        "category": "Pâtes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060800/bizzart/menu/FB_IMG_1786831623991_kranmd.jpg",
+    "count": 5,
+    "plats": [
+      {
+        "nom": "Poulet grillé",
+        "menuItemId": "6a845a7b2876405dd5375e1b",
+        "category": "MAkIOUB",
+        "status": "pending"
+      },
+      {
+        "nom": "Poisson du jour",
+        "menuItemId": "6a845a7b2876405dd5375df7",
+        "category": "Fruits de mer",
+        "status": "pending"
+      },
+      {
+        "nom": "Pétillante",
+        "menuItemId": "6a845a7b2876405dd5375e36",
+        "category": "Soda",
+        "status": "pending"
+      },
+      {
+        "nom": "Salade Roquette",
+        "menuItemId": "6a845a7a2876405dd5375d9d",
+        "category": "Salade",
+        "status": "pending"
+      },
+      {
+        "nom": "Suprême Maison",
+        "menuItemId": "6a845a7b2876405dd5375dc4",
+        "category": "Volailles",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060767/bizzart/menu/r07qxo_-_R_Download_9_bp8oao.jpg",
+    "count": 5,
+    "plats": [
+      {
+        "nom": "Symphonie Fruits de mer",
+        "menuItemId": "6a845a7b2876405dd5375e00",
+        "category": "Fruits de mer",
+        "status": "pending"
+      },
+      {
+        "nom": "Ravioli Saumon",
+        "menuItemId": "6a845a7a2876405dd5375d34",
+        "category": "Pâtes",
+        "status": "pending"
+      },
+      {
+        "nom": "Pâtes sauce pesto",
+        "menuItemId": "6a845a7a2876405dd5375d3d",
+        "category": "Pâtes",
+        "status": "pending"
+      },
+      {
+        "nom": "Pizza Bizz'art",
+        "menuItemId": "6a845a7a2876405dd5375d76",
+        "category": "Les Pizzas",
+        "status": "pending"
+      },
+      {
+        "nom": "Filet de boeuf",
+        "menuItemId": "6a845a7b2876405dd5375deb",
+        "category": "Viandes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060753/bizzart/menu/r07qxo_-_R_Download_11_ak1ici.jpg",
+    "count": 4,
+    "plats": [
+      {
+        "nom": "Pâtes BIZZ'Art",
+        "menuItemId": "6a845a7a2876405dd5375d1f",
+        "category": "Pâtes",
+        "status": "validated"
+      },
+      {
+        "nom": "Involtini",
+        "menuItemId": "6a845a7b2876405dd5375dbb",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Pizza Anglaise",
+        "menuItemId": "6a845a7a2876405dd5375d79",
+        "category": "Les Pizzas",
+        "status": "pending"
+      },
+      {
+        "nom": "Pizza Chevrettes",
+        "menuItemId": "6a845a7a2876405dd5375d88",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060771/bizzart/menu/A7D9ECFF-989F-45B7-8E9F-1AA5833C3B1D_uwxwjx.png",
+    "count": 4,
+    "plats": [
+      {
+        "nom": "Escalope Ou Cuisse de Poulet",
+        "menuItemId": "6a845a7a2876405dd5375da0",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Viande Hachée",
+        "menuItemId": "6a845a7b2876405dd5375e15",
+        "category": "Tacos",
+        "status": "pending"
+      },
+      {
+        "nom": "Gratin Fruits de Mer",
+        "menuItemId": "6a845a7a2876405dd5375d55",
+        "category": "Plats Espagnol",
+        "status": "pending"
+      },
+      {
+        "nom": "Ravioli Crevette",
+        "menuItemId": "6a845a7a2876405dd5375d37",
+        "category": "Pâtes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060804/bizzart/menu/IMG_0237_nkagke.jpg",
+    "count": 4,
+    "plats": [
+      {
+        "nom": "Pâtes Bolognaise",
+        "menuItemId": "6a845a7a2876405dd5375d22",
+        "category": "Pâtes",
+        "status": "pending"
+      },
+      {
+        "nom": "Cordon Bleu",
+        "menuItemId": "6a845a7b2876405dd5375e12",
+        "category": "Tacos",
+        "status": "pending"
+      },
+      {
+        "nom": "Piquante",
+        "menuItemId": "6a845a7a2876405dd5375d67",
+        "category": "Les Pizzas",
+        "status": "pending"
+      },
+      {
+        "nom": "Pepperoni",
+        "menuItemId": "6a845a7a2876405dd5375d70",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060785/bizzart/menu/F04A3E91-B691-4A8E-8F76-665B275F1812_wdtkew.png",
+    "count": 4,
+    "plats": [
+      {
+        "nom": "Pizza Thon",
+        "menuItemId": "6a845a7a2876405dd5375d5b",
+        "category": "Les Pizzas",
+        "status": "pending"
+      },
+      {
+        "nom": "Escalope sauce Champignon",
+        "menuItemId": "6a845a7a2876405dd5375da9",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Escalope Bizz'Art",
+        "menuItemId": "6a845a7a2876405dd5375db5",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Symphonie Terre-Mer",
+        "menuItemId": "6a845a7b2876405dd5375e06",
+        "category": "Fruits de mer",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060780/bizzart/menu/DDBA871E-ADDC-4602-AA42-E875DD1D7559_ao2cts.png",
+    "count": 4,
+    "plats": [
+      {
+        "nom": "Pâtes l'Arrabiata",
+        "menuItemId": "6a845a7a2876405dd5375d25",
+        "category": "Pâtes",
+        "status": "pending"
+      },
+      {
+        "nom": "Pâtes Maison",
+        "menuItemId": "6a845a7a2876405dd5375d2b",
+        "category": "Pâtes",
+        "status": "pending"
+      },
+      {
+        "nom": "Pâtes à L'italienne",
+        "menuItemId": "6a845a7a2876405dd5375d2e",
+        "category": "Pâtes",
+        "status": "pending"
+      },
+      {
+        "nom": "Suprême",
+        "menuItemId": "6a845a7b2876405dd5375dc1",
+        "category": "Volailles",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060790/bizzart/menu/FB_IMG_1786831385645_vzx61b.jpg",
+    "count": 4,
+    "plats": [
+      {
+        "nom": "Poulet Mexicain",
+        "menuItemId": "6a845a7b2876405dd5375e1e",
+        "category": "MAkIOUB",
+        "status": "pending"
+      },
+      {
+        "nom": "Cordon Bleu",
+        "menuItemId": "6a845a7b2876405dd5375e24",
+        "category": "MAkIOUB",
+        "status": "pending"
+      },
+      {
+        "nom": "Escalope du Chef",
+        "menuItemId": "6a845a7a2876405dd5375db8",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Filet de boeuf sauce au choix",
+        "menuItemId": "6a845a7b2876405dd5375dee",
+        "category": "Viandes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060788/bizzart/menu/FB_IMG_1786831381120_cigb5d.jpg",
+    "count": 3,
+    "plats": [
+      {
+        "nom": "Steak Grillé",
+        "menuItemId": "6a845a7b2876405dd5375dca",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Poulet grillé",
+        "menuItemId": "6a845a7b2876405dd5375e09",
+        "category": "Tacos",
+        "status": "pending"
+      },
+      {
+        "nom": "4 Saisons",
+        "menuItemId": "6a845a7a2876405dd5375d73",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060793/bizzart/menu/FB_IMG_1786831394707_fictxa.jpg",
+    "count": 3,
+    "plats": [
+      {
+        "nom": "Thon",
+        "menuItemId": "6a845a7b2876405dd5375e18",
+        "category": "MAkIOUB",
+        "status": "pending"
+      },
+      {
+        "nom": "Eau Minérale 1L",
+        "menuItemId": "6a845a7b2876405dd5375e2d",
+        "category": "Soda",
+        "status": "pending"
+      },
+      {
+        "nom": "Spécial",
+        "menuItemId": "6a845a7b2876405dd5375e27",
+        "category": "MAkIOUB",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060776/bizzart/menu/CE03FC6E-28EB-438B-A580-ACDE0EE43DB5_mc3e21.png",
+    "count": 3,
+    "plats": [
+      {
+        "nom": "Paella Royale",
+        "menuItemId": "6a845a7a2876405dd5375d49",
+        "category": "Plats Espagnol",
+        "status": "pending"
+      },
+      {
+        "nom": "Grillade Mixte",
+        "menuItemId": "6a845a7b2876405dd5375dd9",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Ravioli Viande",
+        "menuItemId": "6a845a7a2876405dd5375d3a",
+        "category": "Pâtes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060803/bizzart/menu/FD0F8561-B4E5-413D-98F4-FA5778A54F7B_sh80xf.png",
+    "count": 3,
+    "plats": [
+      {
+        "nom": "Gratin Poulet",
+        "menuItemId": "6a845a7a2876405dd5375d52",
+        "category": "Plats Espagnol",
+        "status": "pending"
+      },
+      {
+        "nom": "Symphonie Terre-Mer",
+        "menuItemId": "6a845a7b2876405dd5375e03",
+        "category": "Fruits de mer",
+        "status": "pending"
+      },
+      {
+        "nom": "Poulet à l'italienne",
+        "menuItemId": "6a845a7b2876405dd5375dc7",
+        "category": "Volailles",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060762/bizzart/menu/r07qxo_-_R_Download_6_h7axod.jpg",
+    "count": 3,
+    "plats": [
+      {
+        "nom": "Salade de Crevettes Panées",
+        "menuItemId": "6a845a7a2876405dd5375d97",
+        "category": "Salade",
+        "status": "pending"
+      },
+      {
+        "nom": "Côte à L'os Bizz'Art",
+        "menuItemId": "6a845a7b2876405dd5375de8",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Lasagne Bolognaise",
+        "menuItemId": "6a845a7a2876405dd5375d40",
+        "category": "Pâtes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060759/bizzart/menu/r07qxo_-_R_Download_4_clavnd.jpg",
+    "count": 3,
+    "plats": [
+      {
+        "nom": "Escalope sauce Gorgonzola",
+        "menuItemId": "6a845a7a2876405dd5375daf",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Grillade Royale",
+        "menuItemId": "6a845a7b2876405dd5375ddc",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Orangina",
+        "menuItemId": "6a845a7b2876405dd5375e3f",
+        "category": "Soda",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060795/bizzart/menu/FB_IMG_1786831464636_u2po6i.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Paella 1 Personne",
+        "menuItemId": "6a845a7a2876405dd5375d46",
+        "category": "Plats Espagnol",
+        "status": "pending"
+      },
+      {
+        "nom": "Escalope Orientale",
+        "menuItemId": "6a845a7b2876405dd5375dbe",
+        "category": "Volailles",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060755/bizzart/menu/r07qxo_-_R_Download_12_nffdek.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Plateau Fruits de mer",
+        "menuItemId": "6a845a7b2876405dd5375df1",
+        "category": "Fruits de mer",
+        "status": "pending"
+      },
+      {
+        "nom": "Salade Saumon",
+        "menuItemId": "6a845a7a2876405dd5375d9a",
+        "category": "Salade",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060782/bizzart/menu/E82B1115-081E-4CAB-8E58-F86532F170CC_ea60pq.png",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Eau Minérale 1/2L",
+        "menuItemId": "6a845a7b2876405dd5375e2a",
+        "category": "Soda",
+        "status": "pending"
+      },
+      {
+        "nom": "Crevettes sautées ou grillées",
+        "menuItemId": "6a845a7b2876405dd5375df4",
+        "category": "Fruits de mer",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060798/bizzart/menu/FB_IMG_1786831543045_pyswfe.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Escalope Panée",
+        "menuItemId": "6a845a7a2876405dd5375da3",
+        "category": "Volailles",
+        "status": "pending"
+      },
+      {
+        "nom": "Sprite",
+        "menuItemId": "6a845a7b2876405dd5375e42",
+        "category": "Soda",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060765/bizzart/menu/r07qxo_-_R_Download_8_jeurew.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Steak",
+        "menuItemId": "6a845a7b2876405dd5375dcd",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Pâtes Fruits de Mer",
+        "menuItemId": "6a845a7a2876405dd5375d31",
+        "category": "Pâtes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060796/bizzart/menu/FB_IMG_1786831504871_bopbcd.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Risotto Bizz'Art",
+        "menuItemId": "6a845a7a2876405dd5375d4c",
+        "category": "Plats Espagnol",
+        "status": "pending"
+      },
+      {
+        "nom": "Cordon Bleu",
+        "menuItemId": "6a845a7a2876405dd5375db2",
+        "category": "Volailles",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060756/bizzart/menu/r07qxo_-_R_Download_13_djmfzt.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Pizza 4 Fromages sauce tomate",
+        "menuItemId": "6a845a7a2876405dd5375d5e",
+        "category": "Les Pizzas",
+        "status": "pending"
+      },
+      {
+        "nom": "Pizza Saumon",
+        "menuItemId": "6a845a7a2876405dd5375d82",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060763/bizzart/menu/r07qxo_-_R_Download_7_usi3f8.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Poulet Pané",
+        "menuItemId": "6a845a7b2876405dd5375e0f",
+        "category": "Tacos",
+        "status": "pending"
+      },
+      {
+        "nom": "Pizza 4 Fromages sauce blanche",
+        "menuItemId": "6a845a7a2876405dd5375d61",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060758/bizzart/menu/r07qxo_-_R_Download_3_ah6kjf.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Fruits de Mer Sautés",
+        "menuItemId": "6a845a7b2876405dd5375dfa",
+        "category": "Fruits de mer",
+        "status": "pending"
+      },
+      {
+        "nom": "Panorama de Viande",
+        "menuItemId": "6a845a7b2876405dd5375ddf",
+        "category": "Viandes",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060789/bizzart/menu/FB_IMG_1786831383530_jofqku.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Poulet Pané",
+        "menuItemId": "6a845a7b2876405dd5375e21",
+        "category": "MAkIOUB",
+        "status": "pending"
+      },
+      {
+        "nom": "Napolitaine",
+        "menuItemId": "6a845a7a2876405dd5375d6d",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060791/bizzart/menu/FB_IMG_1786831387595_vrtvut.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Foie à la Lyonnaise",
+        "menuItemId": "6a845a7b2876405dd5375dd6",
+        "category": "Viandes",
+        "status": "pending"
+      },
+      {
+        "nom": "Chicken",
+        "menuItemId": "6a845a7a2876405dd5375d6a",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "url": "https://res.cloudinary.com/gmpztbom/image/upload/v1787060768/bizzart/menu/r07qxo_-_R_Download_hgh4w0.jpg",
+    "count": 2,
+    "plats": [
+      {
+        "nom": "Délio",
+        "menuItemId": "6a845a7b2876405dd5375e3c",
+        "category": "Soda",
+        "status": "pending"
+      },
+      {
+        "nom": "Pizza Végétarienne",
+        "menuItemId": "6a845a7a2876405dd5375d85",
+        "category": "Les Pizzas",
+        "status": "pending"
+      }
+    ]
+  }
+]

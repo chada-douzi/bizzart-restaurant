@@ -1,0 +1,6 @@
+# Conserver tous les backups localement
+*
+
+# Sauf .gitkeep
+!.gitkeep
+!.gitignore

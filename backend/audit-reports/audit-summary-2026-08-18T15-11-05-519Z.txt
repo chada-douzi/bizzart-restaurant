@@ -1,0 +1,59 @@
+
+╔════════════════════════════════════════════════════════════════╗
+║  RAPPORT D'AUDIT COMPLET - MÉDIAS & PLATS                      ║
+╚════════════════════════════════════════════════════════════════╝
+
+Généré le : 18/08/2026 16:11:05
+
+═══════════════════════════════════════════════════════════════════
+RÉSUMÉ GLOBAL
+═══════════════════════════════════════════════════════════════════
+
+Médias :
+  • Total : 56
+  • Cloudinary : 40
+  • Local : 16
+
+Plats :
+  • Total : 98
+  • Catégories : 11
+  • Sans image : 0
+
+Mappings :
+  • HIGH CONFIDENCE : 0
+  • MEDIUM CONFIDENCE : 20
+  • LOW CONFIDENCE : 34
+  • NO MATCH : 2
+
+Anomalies :
+  • Total : 65
+  • Critiques : 16
+  • Warnings : 9
+  • Info : 40
+
+Autres :
+  • Médias inutilisés : 45
+
+═══════════════════════════════════════════════════════════════════
+RECOMMANDATIONS
+═══════════════════════════════════════════════════════════════════
+
+  ⚠ 20 mappings MEDIUM CONFIDENCE nécessitent une révision manuelle
+  ⚠ 34 mappings LOW CONFIDENCE nécessitent une vérification approfondie
+  ❌ 2 plats n'ont aucune correspondance évidente
+  📦 45 médias ne sont associés à aucun plat
+  ⬆️ 16 médias locaux peuvent être migrés vers Cloudinary
+  🚨 16 anomalies critiques doivent être corrigées avant migration
+
+═══════════════════════════════════════════════════════════════════
+CONFIRMATION DE SÉCURITÉ
+═══════════════════════════════════════════════════════════════════
+
+✓ Aucune donnée MongoDB modifiée
+✓ Aucun média Cloudinary supprimé
+✓ Aucune URL remplacée automatiquement
+✓ Mode lecture seule respecté
+
+⏸️  EN ATTENTE DE VALIDATION MANUELLE
+
+Consultez les rapports détaillés avant toute migration.
