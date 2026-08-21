@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://api.bizzart-monastir.com/api',
-  apiBaseUrl: 'https://api.bizzart-monastir.com',
+  apiUrl: 'https://bizzart-restaurant.onrender.com/api',
+  apiBaseUrl: 'https://bizzart-restaurant.onrender.com',
 };
