@@ -32,7 +32,7 @@ export function getAuthCookieOptions(expiresInMs: number): CookieOptions {
   return {
     httpOnly: true,                          // Never accessible via JS
     secure: isProduction,                    // HTTPS only in production
-    sameSite: isProduction ? 'strict' : 'lax', // CSRF protection
+    sameSite: isProduction ? 'none' : 'lax', // CSRF protection
     maxAge: expiresInMs,                     // Milliseconds
     path: '/',                               // Available on all paths
   };
@@ -44,7 +44,7 @@ export function getClearCookieOptions(): CookieOptions {
   return {
     httpOnly: true,
     secure: isProduction,
-    sameSite: isProduction ? 'strict' : 'lax',
+    sameSite: isProduction ? 'none' : 'lax',
     path: '/',
   };
 }

@@ -13,22 +13,40 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   get<T>(endpoint: string): Observable<ApiResponse<T>> {
-    return this.http.get<ApiResponse<T>>(`${this.baseUrl}${endpoint}`);
+    return this.http.get<ApiResponse<T>>(
+      `${this.baseUrl}${endpoint}`,
+      { withCredentials: true }
+    );
   }
 
   post<T>(endpoint: string, data: any): Observable<ApiResponse<T>> {
-    return this.http.post<ApiResponse<T>>(`${this.baseUrl}${endpoint}`, data);
+    return this.http.post<ApiResponse<T>>(
+      `${this.baseUrl}${endpoint}`,
+      data,
+      { withCredentials: true }
+    );
   }
 
   put<T>(endpoint: string, data: any): Observable<ApiResponse<T>> {
-    return this.http.put<ApiResponse<T>>(`${this.baseUrl}${endpoint}`, data);
+    return this.http.put<ApiResponse<T>>(
+      `${this.baseUrl}${endpoint}`,
+      data,
+      { withCredentials: true }
+    );
   }
 
   patch<T>(endpoint: string, data: any): Observable<ApiResponse<T>> {
-    return this.http.patch<ApiResponse<T>>(`${this.baseUrl}${endpoint}`, data);
+    return this.http.patch<ApiResponse<T>>(
+      `${this.baseUrl}${endpoint}`,
+      data,
+      { withCredentials: true }
+    );
   }
 
   delete<T>(endpoint: string): Observable<ApiResponse<T>> {
-    return this.http.delete<ApiResponse<T>>(`${this.baseUrl}${endpoint}`);
+    return this.http.delete<ApiResponse<T>>(
+      `${this.baseUrl}${endpoint}`,
+      { withCredentials: true }
+    );
   }
 }
