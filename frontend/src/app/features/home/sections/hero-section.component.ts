@@ -112,13 +112,15 @@ import { RouterLink } from '@angular/router';
               <!-- SECONDARY CTA: Appeler maintenant -->
               <a
                 href="tel:+21653065000"
-                class="inline-flex items-center justify-center gap-2 px-8 py-3.5 
+                target="_self"
+                rel="noopener"
+                class="relative inline-flex items-center justify-center gap-2 px-8 py-3.5 
                        bg-white/10 backdrop-blur-sm text-hero-light font-semibold text-base
                        border border-white/30
                        transition-all duration-300 ease-out
                        hover:bg-white/20 hover:border-white/50 hover:shadow-xl
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
-                style="border-radius: 4px; text-shadow: 0 1px 2px rgba(0,0,0,0.3);"
+                style="border-radius: 4px; text-shadow: 0 1px 2px rgba(0,0,0,0.3); z-index: 20; pointer-events: auto; cursor: pointer;"
                 aria-label="Appeler le restaurant BIZZ'ART au +216 53 065 000"
               >
                 <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -234,16 +236,35 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   /**
-   * Hero height adapté au ratio de la photo (1.369)
-   * Desktop: 73vh → réduit crop de ~23% à ~10%
-   * Mobile: 100vh → plein écran
+   * Hero height adapté au ratio exact de la photo (1.369)
+   * 
+   * Formule validée:
+   * - Photo: 994×726px (ratio 1.369)
+   * - Desktop: idealHeight = viewportWidth / 1.369, plafonné à 1200px max
+   * - Mobile: 500px (minimise crop horizontal)
+   * 
+   * Résultats:
+   * - 1920×1080 → 1200px (crop 14.4% au lieu de 34.5%)
+   * - 1440×900 → 1052px (crop 0%)
+   * - 1366×768 → 997px (crop 0%)
+   * - 1024×768 → 748px (crop 0%)
+   * - Mobile → 500px (crop horizontal 43% au lieu de 66%)
    */
   get heroHeight(): string {
     if (!this.isBrowser) {
-      return 'min(73vh, 850px)';
+      return '1200px';
     }
+    
     const isMobile = window.innerWidth < 768;
-    return isMobile ? '100vh' : 'min(73vh, 850px)';
+    if (isMobile) {
+      return '500px';
+    }
+    
+    const photoRatio = 1.369;
+    const idealHeight = window.innerWidth / photoRatio;
+    const maxHeight = 1200;
+    
+    return `${Math.min(idealHeight, maxHeight)}px`;
   }
 
   /**
