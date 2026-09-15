@@ -1,0 +1,8 @@
+# Robots.txt pour BIZZ'ART Monastir
+# https://bizzart-monastir.netlify.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bizzart-monastir.netlify.app/sitemap.xml

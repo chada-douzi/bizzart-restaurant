@@ -23,7 +23,7 @@ export class SeoService {
   private defaultTitle = 'BIZZ\'ART Monastir - Restaurant Italien & Fruits de Mer';
   private defaultDescription = 'Découvrez BIZZ\'ART Monastir, restaurant italien et fruits de mer à Monastir. Réservez votre table en ligne.';
   private defaultImage = '/images/og-image.svg';
-  private baseUrl = 'https://bizzart-monastir.com';
+  private baseUrl = 'https://bizzart-monastir.netlify.app';
 
   constructor() {
     // Update canonical URL on route change
