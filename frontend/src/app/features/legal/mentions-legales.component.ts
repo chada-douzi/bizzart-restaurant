@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
         <section class="mb-10">
           <h2 class="text-2xl font-display font-semibold text-dark-900 mb-4">Éditeur du site</h2>
           <p class="text-dark-600 leading-relaxed">
-            Le site <strong>bizzart-monastir.com</strong> est édité par le restaurant BIZZ'ART,
+            Le site <strong>bizzart-monastir.netlify.app</strong> est édité par le restaurant BIZZ'ART,
             établissement situé à Monastir, Tunisie.
           </p>
         </section>

@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
   private settingsService = inject(SettingsService);
 
   // Static fallbacks — used when settings API hasn't responded yet
-  private readonly SITE_URL = 'https://bizzart-monastir.com';
+  private readonly SITE_URL = 'https://bizzart-monastir.netlify.app';
   private readonly OG_IMAGE = '/images/og-image.svg';
 
   ngOnInit(): void {

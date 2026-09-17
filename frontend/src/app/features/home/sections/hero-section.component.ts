@@ -63,8 +63,20 @@ import { RouterLink } from '@angular/router';
           
           <div class="max-w-2xl">
             
-            <!-- Editorial Title: Over photo -->
-            <h1 class="font-serif font-bold leading-[0.88] mb-10 lg:mb-14 animate-fade-in-up">
+            <!-- SEO H1: Visible but visually secondary -->
+            <h1 
+              class="font-serif font-semibold mb-3 lg:mb-4 animate-fade-in-up lg:whitespace-nowrap"
+              style="font-size: clamp(1.125rem, 1.5vw, 1.375rem); 
+                     letter-spacing: 0.01em;
+                     color: var(--hero-light);
+                     opacity: 0.85;
+                     text-shadow: 0 1px 6px rgba(0,0,0,0.3);"
+            >
+              BIZZ'ART — Restaurant à Monastir
+            </h1>
+            
+            <!-- Editorial Tagline: Over photo (visual element) -->
+            <div class="font-serif font-bold leading-[0.88] mb-10 lg:mb-14 animate-fade-in-up animation-delay-100" role="presentation">
               <span 
                 class="block text-hero-light mb-3"
                 style="font-size: clamp(2.5rem, 6vw, 4.5rem); 
@@ -89,7 +101,7 @@ import { RouterLink } from '@angular/router';
               >
                 L'instant.
               </span>
-            </h1>
+            </div>
 
             <!-- CTAs: 3 actions strictement alignées sur une ligne (desktop/tablet) -->
             <div class="flex flex-col md:flex-row md:items-center md:justify-start gap-4 animate-fade-in-up animation-delay-200">
@@ -209,6 +221,11 @@ import { RouterLink } from '@angular/router';
 
     .animate-fade-in-up {
       animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .animation-delay-100 {
+      animation-delay: 0.1s;
+      opacity: 0;
     }
 
     .animation-delay-200 {
