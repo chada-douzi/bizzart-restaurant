@@ -76,7 +76,7 @@ import { RouterLink } from '@angular/router';
             </h1>
             
             <!-- Editorial Tagline: Over photo (visual element) -->
-            <div class="font-serif font-bold leading-[0.88] mb-10 lg:mb-14 animate-fade-in-up animation-delay-100" role="presentation">
+            <div class="font-serif font-bold leading-[0.88] mb-6 sm:mb-10 lg:mb-14 animate-fade-in-up animation-delay-100" role="presentation">
               <span 
                 class="block text-hero-light mb-3"
                 style="font-size: clamp(2.5rem, 6vw, 4.5rem); 
@@ -103,13 +103,13 @@ import { RouterLink } from '@angular/router';
               </span>
             </div>
 
-            <!-- CTAs: 3 actions strictement alignées sur une ligne (desktop/tablet) -->
-            <div class="flex flex-col md:flex-row md:items-center md:justify-start gap-4 animate-fade-in-up animation-delay-200">
+            <!-- CTAs: 3 actions compactes mobile, alignées desktop -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-3 sm:gap-4 animate-fade-in-up animation-delay-200">
               
               <!-- PRIMARY CTA: Réserver une table -->
               <a
                 routerLink="/reservation"
-                class="inline-flex items-center justify-center px-8 py-3.5 
+                class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-3.5
                        bg-cta-primary text-cta-primary-text font-semibold text-base
                        transition-all duration-300 ease-out
                        hover:bg-cta-primary-hover hover:shadow-2xl hover:shadow-cta-primary/60 hover:scale-[1.02]
@@ -126,7 +126,7 @@ import { RouterLink } from '@angular/router';
                 href="tel:+21653065000"
                 target="_self"
                 rel="noopener"
-                class="relative inline-flex items-center justify-center gap-2 px-8 py-3.5 
+                class="relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5
                        bg-white/10 backdrop-blur-sm text-hero-light font-semibold text-base
                        border border-white/30
                        transition-all duration-300 ease-out
@@ -144,7 +144,7 @@ import { RouterLink } from '@angular/router';
               <!-- SECONDARY CTA: Découvrir le menu -->
               <a
                 routerLink="/menu"
-                class="inline-flex items-center justify-center gap-2 px-8 py-3.5 
+                class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5
                        bg-white/10 backdrop-blur-sm text-hero-light font-semibold text-base
                        border border-white/30
                        transition-all duration-300 ease-out
@@ -253,32 +253,37 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   /**
-   * Hero height adapté au ratio exact de la photo (1.369)
+   * Hero height adapté au ratio de la photo et au viewport
+   *
+   * Photo: hero-restaurant-facade.jpg (994×726px, ratio 1.369)
+   *
+   * Strategy:
+   * - Mobile (<640px): 65vh — permet de voir plus de photo, contenu compact
+   * - Tablet (640-1024px): 70vh — bon équilibre photo/contenu
+   * - Desktop (≥1024px): ratio-based with 1200px cap — minimise crop
    * 
-   * Formule validée:
-   * - Photo: 994×726px (ratio 1.369)
-   * - Desktop: idealHeight = viewportWidth / 1.369, plafonné à 1200px max
-   * - Mobile: 500px (minimise crop horizontal)
-   * 
-   * Résultats:
-   * - 1920×1080 → 1200px (crop 14.4% au lieu de 34.5%)
-   * - 1440×900 → 1052px (crop 0%)
-   * - 1366×768 → 997px (crop 0%)
-   * - 1024×768 → 748px (crop 0%)
-   * - Mobile → 500px (crop horizontal 43% au lieu de 66%)
+   * Mobile object-position: center 35% — meilleur cadrage de la façade
    */
   get heroHeight(): string {
     if (!this.isBrowser) {
       return '1200px';
     }
     
-    const isMobile = window.innerWidth < 768;
-    if (isMobile) {
-      return '500px';
+    const width = window.innerWidth;
+
+    // Mobile: 65vh pour un vrai Hero sans écraser la photo
+    if (width < 640) {
+      return '65vh';
     }
-    
+
+    // Tablet: 70vh pour équilibre
+    if (width < 1024) {
+      return '70vh';
+    }
+
+    // Desktop: ratio-based
     const photoRatio = 1.369;
-    const idealHeight = window.innerWidth / photoRatio;
+    const idealHeight = width / photoRatio;
     const maxHeight = 1200;
     
     return `${Math.min(idealHeight, maxHeight)}px`;
@@ -286,15 +291,15 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
 
   /**
    * Position de l'image adaptée au viewport
-   * Desktop: center center
-   * Mobile: center 40% (remonte légèrement la façade)
+   * Mobile: center 35% — meilleur cadrage de la façade BIZZ'ART
+   * Tablet/Desktop: center center — composition équilibrée
    */
   get imagePosition(): string {
     if (!this.isBrowser) {
       return 'center center';
     }
-    const isMobile = window.innerWidth < 768;
-    return isMobile ? 'center 40%' : 'center center';
+    const width = window.innerWidth;
+    return width < 640 ? 'center 35%' : 'center center';
   }
 
   ngOnInit(): void {
