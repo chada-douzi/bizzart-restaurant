@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ReservationService, PublicReservationResponse } from '../../core/services/reservation.service';
 import { CreateReservationDto } from '../../core/models/reservation.model';
 import { SettingsService, PublicSettings } from '../../core/services/settings.service';
+import { SeoService } from '../../core/services/seo.service';
 
 type FormStep = 'form' | 'submitting' | 'success' | 'error';
 
@@ -299,9 +300,15 @@ export class ReservationComponent implements OnInit {
   constructor(
     private reservationService: ReservationService,
     private settingsService: SettingsService,
+    private seoService: SeoService,
   ) {}
 
   ngOnInit(): void {
+    this.seoService.updateSeo({
+      title: "Réserver une table — BIZZ'ART Monastir",
+      description: "Réservez votre table chez BIZZ'ART Monastir et profitez d'une expérience culinaire unique.",
+    });
+
     const cached = this.settingsService.publicSettings();
     if (cached) {
       this.applySettings(cached);

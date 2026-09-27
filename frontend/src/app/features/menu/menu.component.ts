@@ -336,8 +336,8 @@ export class MenuComponent implements OnInit {
     const s = this.settingsService.publicSettings();
     const title    = s?.seo?.metaTitle?.fr     || "Notre Carte — BIZZ'ART Monastir";
     const desc     = s?.seo?.metaDescription?.fr
-      || "Découvrez la carte de BIZZ'ART Monastir : entrées, plats, desserts et boissons de notre restaurant méditerranéen.";
-    const keywords = s?.seo?.keywords?.join(', ') || 'menu restaurant, carte, plats, BIZZ\'ART Monastir';
+      || "Découvrez la carte de BIZZ'ART Monastir : pizzas artisanales, pâtes fraîches, grillades, fruits de mer et desserts maison.";
+    const keywords = s?.seo?.keywords?.join(', ') || 'menu restaurant, carte, plats, pizzeria, BIZZ\'ART Monastir';
     this.seoService.updateSeo({ title, description: desc, keywords });
     this.load();
   }

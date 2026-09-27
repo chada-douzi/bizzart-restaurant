@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
 
   // Static fallbacks — used when settings API hasn't responded yet
   private readonly SITE_URL = 'https://bizzart-monastir.netlify.app';
-  private readonly OG_IMAGE = '/images/og-image.svg';
+  private readonly OG_IMAGE = '/images/hero/hero-restaurant-facade.jpg';
 
   ngOnInit(): void {
     const s = this.settingsService.publicSettings();
@@ -52,17 +52,17 @@ export class HomeComponent implements OnInit {
     // Prefer dynamic settings, fall back to static values
     const restaurantName = s?.restaurantName || "BIZZ'ART";
     const descriptionFr = s?.seo?.metaDescription?.fr ||
-      "Découvrez BIZZ'ART, restaurant à Monastir. Cuisine méditerranéenne authentique. Réservation en ligne.";
+      "Découvrez BIZZ'ART Monastir : pizzas artisanales, pâtes fraîches, grillades et fruits de mer. Cuisine méditerranéenne authentique au cœur de Monastir.";
     const metaTitleFr = s?.seo?.metaTitle?.fr ||
-      "BIZZ'ART - Restaurant Méditerranéen à Monastir";
+      "BIZZ'ART Monastir — Restaurant Méditerranéen & Pizzeria Artisanale";
     const keywords = s?.seo?.keywords?.join(', ') ||
-      "restaurant Monastir, BIZZ'ART Monastir, cuisine méditerranéenne";
+      "BIZZ'ART, restaurant Monastir, pizzeria Monastir, cuisine italienne Tunisie";
 
     this.seoService.updateSeo({
       title: metaTitleFr,
       description: descriptionFr,
       keywords,
-      image: s?.branding?.logo || this.OG_IMAGE,
+      image: this.OG_IMAGE,
       url: this.SITE_URL,
     });
 
