@@ -333,11 +333,11 @@ export class MenuComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const s = this.settingsService.publicSettings();
-    const title    = s?.seo?.metaTitle?.fr     || "Notre Carte — BIZZ'ART Monastir";
-    const desc     = s?.seo?.metaDescription?.fr
-      || "Découvrez la carte de BIZZ'ART Monastir : pizzas artisanales, pâtes fraîches, grillades, fruits de mer et desserts maison.";
-    const keywords = s?.seo?.keywords?.join(', ') || 'menu restaurant, carte, plats, pizzeria, BIZZ\'ART Monastir';
+    const title = "Menu BIZZ'ART Monastir — Pizzas, Pâtes, Grillades & Fruits de Mer";
+    const desc =
+      "Découvrez le menu de BIZZ'ART Monastir : pizzas artisanales, pâtes, grillades, fruits de mer et desserts maison.";
+    const keywords =
+      "menu BIZZ'ART Monastir, carte restaurant Monastir, pizza Monastir, pâtes Monastir, grillades Monastir, fruits de mer Monastir";
     this.seoService.updateSeo({ title, description: desc, keywords });
     this.load();
   }
